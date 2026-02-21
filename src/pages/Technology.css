@@ -1,0 +1,52 @@
+.techPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg,#0f2f33,#08191b);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
+}
+
+.techContainer {
+  width: 500px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(204,173,96,0.2);
+  padding: 25px;
+}
+
+.techHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.techHeader h2 {
+  color: #e7f6f2;
+  font-weight: 500;
+}
+
+.techHeader span {
+  color: #ccad60;
+}
+
+.techList {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.techList a {
+  text-decoration: none;
+  color: #9bb8b3;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.techList a:hover {
+  color: #ccad60;
+  transform: translateX(5px);
+}

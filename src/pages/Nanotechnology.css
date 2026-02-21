@@ -1,0 +1,281 @@
+.nano-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+.nano-hero {
+  min-height: 100vh;
+background:
+  linear-gradient(
+    rgba(15, 32, 39, 0.75),
+    rgba(44, 83, 100, 0.75)
+  ),
+  url("../assets/nano-hero.jpg");
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 20px;
+}
+
+
+.nano-hero h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nano-hero p {
+  max-width: 720px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.nano-hero::after {
+  content: "";
+  width: 90px;
+  height: 3px;
+  background: #ffcc70;
+  display: block;
+  margin: 35px auto 0;
+  border-radius: 999px;
+}
+
+.nano-section {
+  padding: 80px 10%;
+}
+
+.nano-dark {
+  background: #2c5364;
+  color: white;
+  padding: 80px 10%;
+}
+
+.nano-light {
+  background: #f4f7f9;
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+
+.nano-dark {
+  background: linear-gradient(135deg,#1a2f38,#243f4a);
+  color: white;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+.split {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.split img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.center {
+  text-align: center;
+}
+
+.nano-cta {
+  background: linear-gradient(135deg,#0f2027,#203a43);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.btn {
+  padding: 14px 34px;
+  background: linear-gradient(135deg,#ffcc70,#ffb347);
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255,204,112,0.4);
+}
+
+/* Ayurveda Intro Section */
+.ayurveda-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.ayurveda-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.ayurveda-text {
+  flex: 1;
+}
+
+.ayurveda-tag {
+  display: inline-block;
+  background: #e6f4ef;
+  color: #1b7f6b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.ayurveda-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.ayurveda-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.ayurveda-text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.ayurveda-text ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1b7f6b;
+  font-weight: 500;
+}
+
+/* Image */
+.ayurveda-image {
+  flex: 1;
+}
+
+.ayurveda-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ayurveda-wrapper {
+    flex-direction: column;
+  }
+
+  .ayurveda-text h2 {
+    font-size: 32px;
+  }
+}
+
+/* SECTION */
+.science-section {
+  padding: 80px 40px;
+  background: #f8f9fa;
+}
+
+/* CONTAINER */
+.science-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LEFT TEXT */
+.science-content {
+  flex: 1;
+}
+
+.science-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.science-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* RIGHT IMAGE */
+.science-image {
+  flex: 1;
+}
+
+.science-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+
+  .science-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .science-image img {
+    max-width: 100%;
+  }
+
+}

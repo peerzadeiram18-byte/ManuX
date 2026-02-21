@@ -1,0 +1,45 @@
+.reel-card {
+  width: 210px;              /* FIXED width */
+  aspect-ratio: 9/16;        /* perfect reel ratio */
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  background: black;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.reel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* VERY IMPORTANT */
+}
+
+
+/* Desktop large screens */
+@media (min-width: 1400px) {
+  .reel-card {
+    width: 230px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .reel-card {
+    width: 200px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .reel-card {
+    width: 180px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .reel-card {
+    width: 70vw;   /* premium mobile look */
+  }
+}

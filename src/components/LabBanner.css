@@ -1,0 +1,96 @@
+.labBanner {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.labOverlay {
+  width: 95%;
+  max-width: 1400px;
+  border-radius: 20px;
+  padding: 50px 60px;
+
+  /* ORANGE GRADIENT LIKE IMAGE */
+      background:
+                 linear-gradient(135deg,#102f34,#0b2226,#071518);
+      border: 1px solid rgba(204,173,96,0.25);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6),
+            inset 0 0 40px rgba(94,167,135,0.08);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.labLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color:#5ea787;
+
+}
+
+.smallText {
+  font-size: 18px;
+  opacity: 0.9;
+  color:#ccad60;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* CENTER TEXT */
+.labCenter h2 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #e7f6f2;
+
+}
+
+.labCenter p {
+  font-size: 18px;
+  opacity: 0.9;
+  color: #9bb8b3;
+
+}
+
+/* BUTTON */
+.labBtn {
+  background: linear-gradient(135deg,#d11212,#ff3b3b);
+  color:white;
+  box-shadow:0 6px 18px rgba(255,0,0,0.35);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.labBtn:hover {
+  background: linear-gradient(135deg,#ff3b3b,#ff6b6b);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .labOverlay {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .labCenter h2 {
+    font-size: 28px;
+  }
+
+  .labRight {
+    margin-top: 20px;
+  }
+}

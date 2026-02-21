@@ -1,0 +1,54 @@
+.categories {
+    padding: 50px 0 70px;   /* side padding hata diya */
+    width: 100%;
+    overflow: hidden;  background:
+    radial-gradient(circle at 30% 20%, rgba(94,167,135,0.15), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(204,173,96,0.15), transparent 60%),
+    linear-gradient(180deg,#0f2f33,#08191b);
+}
+
+.cat-wrapper {
+  max-width: 1400px;   /* bada karo */
+  margin: 0 auto;
+  padding: 0 20px;     /* controlled spacing */
+  position: relative;
+}
+
+.cat-container {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;   /* side padding remove */
+}
+
+.cat-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* arrows */
+.cat-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left { left: 6px; }
+.right { right: 6px; }
+
+.cat-container > *:first-child {
+  margin-left: 4px;
+}
+
+.cat-container > *:last-child {
+  margin-right: 4px;
+}
+
