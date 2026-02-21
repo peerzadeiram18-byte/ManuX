@@ -193,3 +193,256 @@ body {
   color: #444;
   font-weight: 400;
 }
+
+/*split section */
+
+.plasma-split {
+  background: radial-gradient(
+    circle at top left,
+    #1b0033,
+    #050008
+  );
+}
+
+.split-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    rgba(160, 68, 255, 0.25),
+    transparent
+  );
+  pointer-events: none;
+}
+/* TEXT SIDE */
+.split-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.split-text h2 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  color: #f3e8ff;
+}
+
+.split-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d6c9ff;
+  opacity: 0.9;
+}
+
+/* IMAGE SIDE */
+.split-image {
+  flex: 1;
+  position: relative;
+}
+
+.split-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(160, 68, 255, 0.25);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Hover effect */
+.split-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 40px 120px rgba(160, 68, 255, 0.45);
+}
+
+@media (max-width: 900px) {
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .split-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .split-text {
+    max-width: 100%;
+  }
+
+  .split-image img {
+    margin-top: 30px;
+  }
+}
+/*section light*/
+
+.benefit-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 40px 30px;
+  color: white;
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.8)
+  );
+}
+
+/* CONTENT ABOVE OVERLAY */
+.benefit-card h3,
+.benefit-card p {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ================= LUXURY DARK SECTION ================= */
+
+.luxury-section {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #0a0a1a, #14002e);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.luxury-content {
+  max-width: 850px;
+}
+
+.luxury-content h2 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 0 5px 25px rgba(123, 47, 247, 0.6);
+}
+
+.luxury-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+/* ================= PRODUCT LIGHT SECTION ================= */
+
+.product-section {
+  padding: 120px 20px;
+  background: linear-gradient(to right, #f8f9fc, #eef1f7);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-content {
+  max-width: 850px;
+}
+
+.product-content h2 {
+  font-size: 38px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.product-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Decorative Gradient Line */
+
+.section-line {
+  width: 80px;
+  height: 4px;
+  margin: 0 auto 30px auto;
+  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  border-radius: 20px;
+}
+
+/* ================= SUSTAINABILITY SECTION ================= */
+
+.sustainability-section {
+  padding: 120px 10%;
+  background: linear-gradient(135deg, #0f0f1a, #1c002e);
+  color: white;
+}
+
+.sustainability-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* IMAGE SIDE */
+.sustainability-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sustainability-image img {
+  width: 100%;
+  max-width: 420px;   /* Important – controls size */
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: 0.4s ease;
+}
+
+.sustainability-image img:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT SIDE */
+.sustainability-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.sustainability-text h2 {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.sustainability-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+/* Decorative Line */
+.section-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #7b2ff7, #00f5a0);
+  margin-bottom: 25px;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .sustainability-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sustainability-text {
+    max-width: 100%;
+  }
+}

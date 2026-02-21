@@ -1,44 +1,58 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./PlantStemCell.css";
+import heroImage from "../assets/stem-hero.jpg";
+import labImage from "../assets/lab.jpg";
+
+import sustainabilityImg from "../assets/sustainability.jpg";
 
 export default function PlantStemCell() {
   return (
     <div className="plant-container">
 
       {/* 1️⃣ Animated Luxury Hero */}
-      <section className="hero">
-        <motion.div 
-          className="hero-content"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h1>Plant Stem Cell Technology</h1>
-          <p>
-            Where Botanical Intelligence Meets Regenerative Biotechnology
-          </p>
-          <button className="gold-btn">Discover the Science</button>
-        </motion.div>
-      </section>
+  <section
+  className="hero"
+  style={{
+    backgroundImage: `url(${heroImage})`,
+  }}
+>
+  <img src={heroImage} alt="test" width="300" />
+  <div className="hero-overlay"></div>
+
+  <div className="hero-content">
+    <h1>Plant Stem Cell Technology</h1>
+    <p>
+      Where Botanical Intelligence Meets Regenerative Biotechnology
+    </p>
+    <button className="gold-btn">Discover the Science</button>
+  </div>
+</section>
 
       {/* 2️⃣ Scientific Introduction */}
-      <section className="light-section">
-        <motion.div 
-          className="content-wrapper"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2>Redefining Regenerative Skincare</h2>
-          <p>
-            At <strong>ManuX NanoBioCeuticals</strong>, we cultivate plant stem
-            cells using advanced cell culture technology to unlock potent
-            phytonutrients that support skin renewal, antioxidant protection,
-            and visible rejuvenation.
-          </p>
-        </motion.div>
-      </section>
+<section className="intro-section">
+  <motion.div
+    className="intro-box"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <span className="section-tag">Botanical Biotechnology</span>
+
+    <h2>
+      Redefining <span>Regenerative</span> Skincare
+    </h2>
+
+    <div className="gold-line"></div>
+
+    <p>
+      At <strong>ManuX NanoBioCeuticals</strong>, we cultivate plant stem
+      cells using advanced cell culture technology to unlock high-potency
+      phytonutrients that support skin renewal, antioxidant defense,
+      and visible rejuvenation.
+    </p>
+  </motion.div>
+</section>
 
       {/* 3️⃣ Split Biotech Section */}
       <section className="split-section dark-section">
@@ -63,7 +77,7 @@ export default function PlantStemCell() {
           initial={{ opacity: 0, x: 60 }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/images/lab.jpg" alt="Biotech Lab" />
+        <img src={labImage} alt="Biotech Lab" />
         </motion.div>
       </section>
 
@@ -101,20 +115,33 @@ export default function PlantStemCell() {
       </section>
 
       {/* 5️⃣ Sustainability Luxury Block */}
-      <section className="dark-section center-section">
-        <motion.div
-          whileInView={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2>Sustainable Scientific Excellence</h2>
-          <p>
-            Our lab-grown plant extracts eliminate agricultural waste,
-            minimize water usage, and provide a consistent, pesticide-free
-            ingredient supply — merging innovation with environmental care.
-          </p>
-        </motion.div>
-      </section>
+      <section className="sustain-section">
+  <motion.div
+    className="sustain-container"
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <div className="sustain-text">
+      <h2>Sustainable Scientific Excellence</h2>
+      <p>
+        A standout characteristic of plant stem cell technology 
+        is its sustainability. Lab-produced plant stem cell extracts are,
+         surprisingly, the most sustainable way to utilize the potency of 
+         these ingredients. Instead of wasting an entire plant and the resources 
+         it requires to thrive, this process allows researchers to obtain only what 
+         they need. This method uses less water than field farming, requires little soil, 
+         and eliminates the need for pesticides. It also offers a clean and consistent supply of these extracts, 
+         as they are not limited to harvest or seasons, making it a technology that allows us to make the most of
+         nature while also protecting it.
+     </p>
+    </div>
+
+    <div className="sustain-image">
+      <img src={sustainabilityImg} alt="Sustainable Lab" />
+    </div>
+  </motion.div>
+</section>
 
       {/* 6️⃣ Applications */}
       <section className="light-section">
