@@ -30,6 +30,7 @@ import LabBanner from "../components/LabBanner";
 
 
 
+
 function Home() {
 
   const images = [lab1, lab2, lab3];
@@ -192,39 +193,59 @@ function Home() {
 
     <div className="research-grid">
 
-      <div className="research-card">
-        <h4>Science-First Formulation</h4>
-        <p>
-          Every formulation begins with biological pathways, molecular behaviour,
-          and delivery efficiency — not marketing trends or surface claims.
-        </p>
-      </div>
-
-      <div className="research-card">
-        <h4>Multi-Technology Ecosystem</h4>
-        <p>
-          Ayurvedic nanotechnology, plant stem cell science, enzymatic processing,
-          microbiome intelligence, and plasma activation work in synergy.
-        </p>
-      </div>
-
-      <div className="research-card">
-        <h4>Delivery & Bioavailability</h4>
-        <p>
-          We engineer systems for enhanced absorption, stability, and
-          cell-level compatibility to ensure real-world performance.
-        </p>
-      </div>
-
-      <div className="research-card">
-        <h4>Safety & Biological Harmony</h4>
-        <p>
-          Designed for sensitive life stages and long-term use —
-          non-aggressive, biocompatible, and globally compliant.
-        </p>
-      </div>
-
+  <div
+    className="research-card"
+    style={{ backgroundImage: "url('/research/card1.jpg')" }}
+  >
+    <div className="card-overlay">
+      <h4>Science-First Formulation</h4>
+      <p>
+        Every formulation begins with biological pathways, molecular behaviour,
+        and delivery efficiency — not marketing trends or surface claims.
+      </p>
     </div>
+  </div>
+
+  <div
+    className="research-card"
+    style={{ backgroundImage: "url('/research/card2.jpg')" }}
+  >
+    <div className="card-overlay">
+      <h4>Multi-Technology Ecosystem</h4>
+      <p>
+        Ayurvedic nanotechnology, plant stem cell science, enzymatic processing,
+        microbiome intelligence, and plasma activation work in synergy.
+      </p>
+    </div>
+  </div>
+
+  <div
+    className="research-card"
+    style={{ backgroundImage: "url('/research/card3.jpg')" }}
+  >
+    <div className="card-overlay">
+      <h4>Delivery & Bioavailability</h4>
+      <p>
+        We engineer systems for enhanced absorption, stability, and
+        cell-level compatibility to ensure real-world performance.
+      </p>
+    </div>
+  </div>
+
+  <div
+    className="research-card"
+    style={{ backgroundImage: "url('/research/card4.jpg')" }}
+  >
+    <div className="card-overlay">
+      <h4>Safety & Biological Harmony</h4>
+      <p>
+        Designed for sensitive life stages and long-term use —
+        non-aggressive, biocompatible, and globally compliant.
+      </p>
+    </div>
+  </div>
+
+</div>
 
     <div className="research-footer">
       <strong>Nothing is ornamental.</strong>

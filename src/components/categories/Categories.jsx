@@ -29,7 +29,16 @@ export default function Categories() {
   };
 
   return (
+
+    
     <section className="categories">
+
+            {/* ✅ HEADING ADD HERE */}
+      <div className="cat-heading">
+        <h2>Explore Our Collections</h2>
+        <p>Discover products crafted for your beauty ritual</p>
+      </div>
+
       <div className="cat-wrapper">
 
         <button className="cat-btn left" onClick={scrollLeft}>

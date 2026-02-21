@@ -9,6 +9,10 @@ const reelsData = [
   { video: "/videos/reel3.mp4", title: "Hair Repair", desc: "Deep nourishment" },
   { video: "/videos/reel4.mp4", title: "Kesari Perfume", desc: "Luxury fragrance" },
   { video: "/videos/reel5.mp4", title: "Face Cleanser", desc: "Gentle wash" },
+    // 👉 New Reels Add Here
+  { video: "/videos/reel6.mp4", title: "Plant Stem Serum", desc: "Anti-aging glow" },
+  { video: "/videos/reel7.mp4", title: "Herbal Shampoo", desc: "Stronger & shinier hair" },
+
 ];
 
 export default function ReelsSection() {

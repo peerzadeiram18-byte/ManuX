@@ -24,54 +24,51 @@ import Partnership from "./pages/Partnership";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AdminDashboard from "./pages/AdminDashboard";
-
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
 
+
+        <ScrollToTop />   {/* 👈 ADD THIS HERE */}
+
         <Navbar />
 
-        <Routes>
+    <Routes>
 
-          {/* Public Pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-             {/* Technology Pages */}
-          
-          <Route path="/technology/nanotechnology" element={<Nanotechnology />} />
-          <Route path="/technology/plasma-technology" element={<PlasmaTechnology />} />
-          <Route path="/technology/plant-stem-cell" element={<PlantStemCell />} />
+  {/* Public */}
+  <Route path="/" element={<Home />} />
+  <Route path="/login" element={<Login />} />
 
-          <Route path="/research" element={<Research />} />
-          <Route path="/ingredients" element={<Ingredients />} />
-          <Route path="/ayurveda" element={<Ayurveda />} />
-          <Route path="/partnership" element={<Partnership />} />
-          <Route path="/contact" element={<Contact />} />
+  {/* Protected Group */}
+  <Route element={<ProtectedRoute />}>
+
+    <Route path="/research" element={<Research />} />
+    <Route path="/ingredients" element={<Ingredients />} />
+    <Route path="/ayurveda" element={<Ayurveda />} />
+    <Route path="/partnership" element={<Partnership />} />
+    <Route path="/contact" element={<Contact />} />
+
+    <Route path="/technology/nanotechnology" element={<Nanotechnology />} />
+    <Route path="/technology/plasma-technology" element={<PlasmaTechnology />} />
+    <Route path="/technology/plant-stem-cell" element={<PlantStemCell />} />
+
+  </Route>
+
+  {/* Admin */}
+  <Route
+    path="/admin"
+    element={
+      <AdminRoute>
+        <AdminDashboard />
+      </AdminRoute>
+    }
+  />
+
+</Routes>
 
         
-
-          {/* Protected Pages */}
-          <Route
-            path="/about"
-            element={
-              <ProtectedRoute>
-                <About />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Admin */}
-          <Route
-            path="/admin"
-            element={
-              <AdminRoute>
-                <AdminDashboard />
-              </AdminRoute>
-            }
-          />
-
-        </Routes>
 
         <Footer />
 
