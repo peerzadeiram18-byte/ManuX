@@ -257,22 +257,23 @@ function Home() {
 </section>
 
 
-<section className="BeforeAfter" >
+<section className="ba-section">
 
-  {/* Heading Text */}
   <div className="ba-text">
     <h2>Over 1 Million People Trust ManuX NanoBioCeuticals</h2>
-    <p>Every formulation decision is guided by biological rationale, delivery science, safety profiling, and long-term impact</p>
-  </div>{/* Images */}
+    <p>
+      Every formulation decision is guided by biological rationale,
+      delivery science, safety profiling, and long-term impact
+    </p>
+  </div>
 
-  <div className="BeforeAfter">
- <div style={{display:"flex",gap:"30px",justifyContent:"center"}}>
+  <div className="ba-container">
+    <div className="ba-grid">
       <BeforeAfter beforeImg={before2} afterImg={after2} />
       <BeforeAfter beforeImg={before1} afterImg={after1} />
       <BeforeAfter beforeImg={before3} afterImg={after3} />
-
     </div>
-   </div>
+  </div>
 
 </section>
 

@@ -12,15 +12,15 @@ export default function PlantStemCell() {
 
       {/* 1️⃣ Animated Luxury Hero */}
   <section
-  className="hero"
+  className="hero1"
   style={{
     backgroundImage: `url(${heroImage})`,
   }}
 >
   <img src={heroImage} alt="test" width="300" />
-  <div className="hero-overlay"></div>
+  <div className="hero1-overlay"></div>
 
-  <div className="hero-content">
+  <div className="hero1-content">
     <h1>Plant Stem Cell Technology</h1>
     <p>
       Where Botanical Intelligence Meets Regenerative Biotechnology

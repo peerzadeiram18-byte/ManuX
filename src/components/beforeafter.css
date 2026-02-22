@@ -1,16 +1,23 @@
+/* ===========================
+   BEFORE AFTER – FINAL CSS
+=========================== */
+
 .ba-container {
   width: 100%;
   max-width: 900px;
   margin: 60px auto;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  padding: 20;
-  
- 
 }
 
+/* GRID */
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 
-
+/* IMAGE WRAPPER */
 .ba-image-wrapper {
   position: relative;
   width: 100%;
@@ -18,27 +25,67 @@
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  
 }
 
+/* IMAGES */
 .ba-img {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 
+/* AFTER IMAGE */
 .ba-after {
-  transition: 0.1s;
-  
+  transition: 0.15s ease;
 }
 
+/* SLIDER */
 .ba-slider {
   position: absolute;
   width: 100%;
-  bottom: 20px;
+  bottom: 16px;
   left: 0;
   cursor: pointer;
-  background: black;
+  background: rgba(0,0,0,0.7);
+}
+
+/* ======================
+   TABLET
+====================== */
+@media (max-width: 1024px) {
+  .ba-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ======================
+   MOBILE 🔥
+====================== */
+@media (max-width: 768px) {
+  .ba-grid {
+    grid-template-columns: 1fr; /* ek ke niche ek */
+  }
+
+  .ba-container {
+    padding: 14px;
+  }
+
+  .ba-image-wrapper {
+    height: 260px;
+  }
+
+  .ba-slider {
+    bottom: 10px;
+  }
+}
+
+/* ======================
+   SMALL MOBILE
+====================== */
+@media (max-width: 480px) {
+  .ba-image-wrapper {
+    height: 220px;
+  }
 }

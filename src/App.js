@@ -30,8 +30,8 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
 
-
-        <ScrollToTop />   {/* 👈 ADD THIS HERE */}
+       
+  <ScrollToTop />   {/* 👈 ADD THIS HERE */}
 
         <Navbar />
 
