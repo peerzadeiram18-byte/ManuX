@@ -170,12 +170,12 @@ function Home() {
 </section>
 
 {/* ===== RESEARCH CORE SECTION ===== */}
-<section className="research-core">
+<section className="researchh-core">
 
-  <div className="research-container">
+  <div className="researchh-container">
 
-    <div className="research-header">
-      <span className="research-tag">
+    <div className="researchh-header">
+      <span className="researchh-tag">
         RESEARCH • MOLECULAR SCIENCE • DELIVERY SYSTEMS
       </span>
 
@@ -184,20 +184,20 @@ function Home() {
         with Advanced Molecular Science
       </h2>
 
-      <p className="research-intro">
+      <p className="researchh-intro">
         ManuX NanoBioCeuticals operates as a science-first research platform,
         integrating classical ayurvedic intelligence with nano-scale engineering,
         cell-responsive delivery systems, and advanced biological processing.
       </p>
     </div>
 
-    <div className="research-grid">
+    <div className="researchh-grid">
 
   <div
-    className="research-card"
+    className="researchh-card"
     style={{ backgroundImage: "url('/research/card1.jpg')" }}
   >
-    <div className="card-overlay">
+    <div className="cardh-overlay">
       <h4>Science-First Formulation</h4>
       <p>
         Every formulation begins with biological pathways, molecular behaviour,
@@ -207,10 +207,10 @@ function Home() {
   </div>
 
   <div
-    className="research-card"
+    className="researchh-card"
     style={{ backgroundImage: "url('/research/card2.jpg')" }}
   >
-    <div className="card-overlay">
+    <div className="cardh-overlay">
       <h4>Multi-Technology Ecosystem</h4>
       <p>
         Ayurvedic nanotechnology, plant stem cell science, enzymatic processing,
@@ -220,10 +220,10 @@ function Home() {
   </div>
 
   <div
-    className="research-card"
+    className="researchh-card"
     style={{ backgroundImage: "url('/research/card3.jpg')" }}
   >
-    <div className="card-overlay">
+    <div className="cardh-overlay">
       <h4>Delivery & Bioavailability</h4>
       <p>
         We engineer systems for enhanced absorption, stability, and
@@ -233,10 +233,10 @@ function Home() {
   </div>
 
   <div
-    className="research-card"
+    className="researchh-card"
     style={{ backgroundImage: "url('/research/card4.jpg')" }}
   >
-    <div className="card-overlay">
+    <div className="cardh-overlay">
       <h4>Safety & Biological Harmony</h4>
       <p>
         Designed for sensitive life stages and long-term use —
@@ -247,7 +247,7 @@ function Home() {
 
 </div>
 
-    <div className="research-footer">
+    <div className="researchh-footer">
       <strong>Nothing is ornamental.</strong>
       <span>Everything is functional, validated, and biologically aligned.</span>
     </div>

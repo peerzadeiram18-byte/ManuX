@@ -97,7 +97,7 @@ const Navbar = () => {
             Ingredients
           </NavLink>
           <NavLink
-            to="/Ayurvedic Science"
+            to="/Ayurveda"
             onClick={() => setMobileMenu(false)}
           >
             Ayurvedic Science

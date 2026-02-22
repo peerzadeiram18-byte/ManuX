@@ -55,7 +55,7 @@ function Nanotechnology() {
       {/* 3️⃣ Why Nano Grid */}
       <section className="nano-dark">
         <h2 className="section-title">Why Nanotechnology?</h2>
-        <div className="grid">
+        <div className="nano-grid">
           <div className="card">
             <img src="https://images.unsplash.com/photo-1581091870627-3f3a8e50f1d4" alt="" />
             <h3>Enhanced Absorption</h3>
@@ -111,7 +111,7 @@ function Nanotechnology() {
       {/* 5️⃣ Skin Benefits Section */}
       <section className="nano-light">
         <h2 className="section-title">Comprehensive Skin Solutions</h2>
-        <div className="grid">
+        <div className="nano-grid1">
           <div className="card">
             <h3>UV & Pollution Protection</h3>
             <p>Acts as a natural barrier against environmental damage.</p>
@@ -145,7 +145,7 @@ function Nanotechnology() {
       {/* 7️⃣ Expertise Section */}
       <section className="nano-section">
         <h2 className="section-title">Our Nano Expertise</h2>
-        <div className="grid">
+        <div className="nano-grid2">
           <div className="card">
             <h3>Anti-Aging Liposomes</h3>
           </div>

@@ -7,7 +7,7 @@ export default function Ayurveda() {
     <div className="ayurveda-page">
 
       {/* HERO SECTION */}
-      <section className="hero-section">
+        <section className="ayu-hero">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,13 +21,12 @@ export default function Ayurveda() {
           validated, biologically compatible, and globally relevant solutions.
         </p>
 
-        <button className="primary-btn">
-          Explore Our Research
-        </button>
+           <button className="ayu-primary-btn">Explore Our Research</button>
+
       </section>
 
       {/* MISSION SECTION */}
-      <section className="mission-section">
+      <section className="ayu-mission">
         <div className="mission-text">
           <h2>Our Mission</h2>
           <p>
@@ -41,7 +40,7 @@ export default function Ayurveda() {
           </p>
         </div>
 
-        <div className="mission-card">
+        <div className="ayu-mission-card">
           <ul>
             <li>✔ Efficacy & Performance Validation</li>
             <li>✔ Molecular-Level Ingredient Study</li>
@@ -52,22 +51,23 @@ export default function Ayurveda() {
       </section>
 
       {/* RESEARCH SECTION */}
-      <section className="research-section">
+  <section className="ayu-research">
         <h2>Research-Led Formulation Development</h2>
         <p>
           Each formulation is developed through structured scientific evaluation.
         </p>
 
-        <div className="research-grid">
-          <div className="research-card">Mechanism-of-Action Analysis</div>
-          <div className="research-card">Ingredient Behaviour at Molecular & Cellular Levels</div>
-          <div className="research-card">Delivery Efficiency & Absorption Dynamics</div>
-          <div className="research-card">Stability, Compatibility & Safety Profiling</div>
+        <div className="ayu-research-grid">
+          <div className="ayu-research-card">Mechanism-of-Action Analysis</div>
+          <div className="ayu-research-card">Ingredient Behaviour at Molecular & Cellular Levels</div>
+          <div className="ayu-research-card">Delivery Efficiency & Absorption Dynamics</div>
+          <div className="ayu-research-card">Stability, Compatibility & Safety Profiling</div>
         </div>
       </section>
 
       {/* DISCIPLINE SECTION */}
-      <section className="discipline-section">
+        <section className="ayu-discipline">
+
         <h2>Scientific Accountability & Biological Responsibility</h2>
         <p>
           Our development framework ensures measurable validation systems,
@@ -76,14 +76,14 @@ export default function Ayurveda() {
       </section>
 
       {/* GLOBAL SECTION */}
-      <section className="global-section">
+      <section className="ayu-global">
         <h2>Globally Relevant. Biologically Responsible.</h2>
         <p>
           ManuX NanoBioCeuticals aims to position Ayurvedic science within
           modern biomedical frameworks while preserving natural integrity.
         </p>
 
-        <button className="secondary-btn">
+        <button className="ayu-secondary-btn">
           Contact Scientific Team
         </button>
       </section>

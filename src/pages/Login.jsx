@@ -35,10 +35,7 @@ export default function Login() {
         {/* LEFT IMAGE */}
         <div className="loginImage">
           <img src={loginImg} alt="login visual" />
-          <div className="overlayText">
-            <h1>AYURVEDA SCIENCE</h1>
-            <p>Natural Care for Modern Life</p>
-          </div>
+         
         </div>
 
         {/* RIGHT CARD */}

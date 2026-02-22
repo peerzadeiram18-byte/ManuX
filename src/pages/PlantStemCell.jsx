@@ -143,6 +143,15 @@ export default function PlantStemCell() {
   </motion.div>
 </section>
 
+ {/* 7️⃣ Premium Highlight Strip */}
+      <section className="highlight-strip">
+        <h2>Luxury Meets Biotechnology</h2>
+        <p>
+          ManuX NanoBioCeuticals pioneers regenerative plant science for
+          next-generation cosmetic innovation.
+        </p>
+      </section>
+
       {/* 6️⃣ Applications */}
       <section className="light-section">
         <h2 className="center-title">Applications in Luxury Cosmetics</h2>
@@ -155,14 +164,7 @@ export default function PlantStemCell() {
         </div>
       </section>
 
-      {/* 7️⃣ Premium Highlight Strip */}
-      <section className="highlight-strip">
-        <h2>Luxury Meets Biotechnology</h2>
-        <p>
-          ManuX NanoBioCeuticals pioneers regenerative plant science for
-          next-generation cosmetic innovation.
-        </p>
-      </section>
+     
 
       {/* 8️⃣ CTA */}
       <section className="cta-section">
