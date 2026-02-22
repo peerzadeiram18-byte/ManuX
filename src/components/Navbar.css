@@ -2,10 +2,25 @@
 .navbar {
   position: sticky;
   top: 0;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   padding: 15px 5%;
+    border-radius: 0 0 20px 20px;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #f5f7fa,
+    #e6ecf1
+  );
 }
 
 /* MAIN ROW */
@@ -20,14 +35,16 @@
 
 /* LEFT - LOGO */
 .nav-left img {
-  height: 70px;
+  height: 90px;
 }
 
 /* CENTER - SEARCH */
 .search-container {
   display: flex;
   align-items: center;
-  background: #f5f5f5;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 30px;
   height: 42px;
   width: clamp(180px, 20vw, 280px);
@@ -79,6 +96,9 @@
   align-items:center;
   padding: 14px 5%;
   border-top:1px solid #eee;
+   background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 
@@ -138,7 +158,9 @@
   position:absolute;
   top:40px;
   left:0;
-  background:white;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   min-width:240px;
   border-radius:12px;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
