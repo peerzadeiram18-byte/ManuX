@@ -64,16 +64,29 @@
    MOBILE 🔥
 ====================== */
 @media (max-width: 768px) {
+
+
+
   .ba-grid {
     grid-template-columns: 1fr; /* ek ke niche ek */
+    
   }
 
   .ba-container {
     padding: 14px;
   }
 
-  .ba-image-wrapper {
-    height: 260px;
+   .ba-image-wrapper {
+    height: auto;        /* 👈 fix */
+    aspect-ratio: 4 / 3; /* responsive image */
+    overflow: hidden;
+  }
+
+  .ba-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .ba-slider {
