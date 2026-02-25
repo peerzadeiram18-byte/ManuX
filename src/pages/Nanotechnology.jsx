@@ -53,34 +53,31 @@ function Nanotechnology() {
 
 
       {/* 3️⃣ Why Nano Grid */}
-      <section className="nano-dark">
-        <h2 className="section-title">Why Nanotechnology?</h2>
-        <div className="nano-grid">
-          <div className="card">
-            <img src="https://images.unsplash.com/photo-1581091870627-3f3a8e50f1d4" alt="" />
-            <h3>Enhanced Absorption</h3>
-            <p>Deep penetration into skin layers for superior nourishment.</p>
-          </div>
+    <section className="nano-dark">
+  <h2 className="section-title">Why Nanotechnology?</h2>
 
-          <div className="card">
-            <img src="https://images.unsplash.com/photo-1588776814546-bb6c7c6f5c52" alt="" />
-            <h3>Increased Potency</h3>
-            <p>Amplified effectiveness with minimal application.</p>
-          </div>
+  <div className="nano-grid1">
+    <div className="nano-card">
+      <h3>Enhanced Absorption</h3>
+      <p>Deep penetration into skin layers for superior nourishment.</p>
+    </div>
 
-          <div className="card">
-            <img src="https://images.unsplash.com/photo-1603575448363-3a3b7d5f78e7" alt="" />
-            <h3>Rapid Results</h3>
-            <p>Visible transformation in a shorter time span.</p>
-          </div>
+    <div className="nano-card">
+      <h3>Increased Potency</h3>
+      <p>Amplified effectiveness with minimal application.</p>
+    </div>
 
-          <div className="card">
-            
-            <h3>Superior Stability</h3>
-            <p>Improved formulation longevity and efficacy.</p>
-          </div>
-        </div>
-      </section>
+    <div className="nano-card">
+      <h3>Rapid Results</h3>
+      <p>Visible transformation in a shorter time span.</p>
+    </div>
+
+    <div className="nano-card">
+      <h3>Superior Stability</h3>
+      <p>Improved formulation longevity and efficacy.</p>
+    </div>
+  </div>
+</section>
 
       {/* 4️⃣ Science Section */}
   <section className="science-section">

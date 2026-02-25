@@ -10,42 +10,48 @@ export default function PlantStemCell() {
   return (
     <div className="plant-container">
 
-      {/* 1️⃣ Animated Luxury Hero */}
-  <section
-  className="hero1"
+{/* 1️⃣ Animated Luxury Hero */}
+<section
+  className="ayu-hero"
   style={{
     backgroundImage: `url(${heroImage})`,
   }}
 >
-  <img src={heroImage} alt="test" width="300" />
-  <div className="hero1-overlay"></div>
+  <div className="ayu-hero-overlay"></div>
 
-  <div className="hero1-content">
-    <h1>Plant Stem Cell Technology</h1>
-    <p>
+  <div className="ayu-hero-content">
+    <h1 className="ayu-hero-title">
+      Plant Stem Cell Technology
+    </h1>
+
+    <p className="ayu-hero-subtitle">
       Where Botanical Intelligence Meets Regenerative Biotechnology
     </p>
-    <button className="gold-btn">Discover the Science</button>
+
+    <button className="ayu-hero-btn">
+      Discover the Science
+    </button>
   </div>
 </section>
-
-      {/* 2️⃣ Scientific Introduction */}
-<section className="intro-section">
+{/* 2️⃣ Scientific Introduction */}
+<section className="ayu-intro">
   <motion.div
-    className="intro-box"
+    className="ayu-intro-box"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
   >
-    <span className="section-tag">Botanical Biotechnology</span>
+    <span className="ayu-intro-tag">
+      Botanical Biotechnology
+    </span>
 
-    <h2>
+    <h2 className="ayu-intro-title">
       Redefining <span>Regenerative</span> Skincare
     </h2>
 
-    <div className="gold-line"></div>
+    <div className="ayu-intro-line"></div>
 
-    <p>
+    <p className="ayu-intro-text">
       At <strong>ManuX NanoBioCeuticals</strong>, we cultivate plant stem
       cells using advanced cell culture technology to unlock high-potency
       phytonutrients that support skin renewal, antioxidant defense,
@@ -54,32 +60,39 @@ export default function PlantStemCell() {
   </motion.div>
 </section>
 
-      {/* 3️⃣ Split Biotech Section */}
-      <section className="split-section dark-section">
-        <motion.div 
-          className="split-text"
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -60 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2>The Laboratory Process</h2>
-          <p>
-            Through environmental simulation and precision stress induction,
-            plant cells generate high-potency antioxidants, peptides, and
-            bioactive molecules — carefully extracted for luxury skincare
-            formulations.
-          </p>
-        </motion.div>
+     {/* 3️⃣ Split Biotech Section */}
+<section className="ayu-split">
 
-        <motion.div 
-          className="split-image"
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 60 }}
-          transition={{ duration: 0.8 }}
-        >
-        <img src={labImage} alt="Biotech Lab" />
-        </motion.div>
-      </section>
+  <motion.div 
+    className="ayu-split-text"
+    whileInView={{ opacity: 1, x: 0 }}
+    initial={{ opacity: 0, x: -60 }}
+    transition={{ duration: 0.8 }}
+  >
+    <h2 className="ayu-split-title">
+      The Laboratory Process
+    </h2>
+
+    <div className="ayu-split-line"></div>
+
+    <p className="ayu-split-description">
+      Through environmental simulation and precision stress induction,
+      plant cells generate high-potency antioxidants, peptides, and
+      bioactive molecules — carefully extracted for luxury skincare
+      formulations.
+    </p>
+  </motion.div>
+
+  <motion.div 
+    className="ayu-split-image"
+    whileInView={{ opacity: 1, x: 0 }}
+    initial={{ opacity: 0, x: 60 }}
+    transition={{ duration: 0.8 }}
+  >
+    <img src={labImage} alt="Biotech Lab" />
+  </motion.div>
+
+</section>
 
       {/* 4️⃣ Glassmorphism Benefit Cards */}
       <section className="glass-section">
@@ -143,34 +156,43 @@ export default function PlantStemCell() {
   </motion.div>
 </section>
 
- {/* 7️⃣ Premium Highlight Strip */}
-      <section className="highlight-strip">
-        <h2>Luxury Meets Biotechnology</h2>
-        <p>
-          ManuX NanoBioCeuticals pioneers regenerative plant science for
-          next-generation cosmetic innovation.
-        </p>
-      </section>
+{/* 7️⃣ Premium Highlight Strip */}
+<section className="ayu-highlight">
+  <h2 className="ayu-highlight-title">
+    Luxury Meets Biotechnology
+  </h2>
+  <p className="ayu-highlight-text">
+    ManuX NanoBioCeuticals pioneers regenerative plant science for
+    next-generation cosmetic innovation.
+  </p>
+</section>
 
-      {/* 6️⃣ Applications */}
-      <section className="light-section">
-        <h2 className="center-title">Applications in Luxury Cosmetics</h2>
+    {/* 6️⃣ Applications */}
+<section className="ayu-applications">
+  <h2 className="ayu-app-title">
+    Applications in Luxury Cosmetics
+  </h2>
 
-        <div className="application-grid">
-          <div>Advanced Serums</div>
-          <div>Anti-Aging Creams</div>
-          <div>Repair Concentrates</div>
-          <div>Hydration Masks</div>
-        </div>
-      </section>
+  <div className="ayu-app-grid">
+    <div className="ayu-app-card">Advanced Serums</div>
+    <div className="ayu-app-card">Anti-Aging Creams</div>
+    <div className="ayu-app-card">Repair Concentrates</div>
+    <div className="ayu-app-card">Hydration Masks</div>
+  </div>
+</section>
 
      
 
       {/* 8️⃣ CTA */}
-      <section className="cta-section">
-        <h2>Experience the Future of Botanical Biotech</h2>
-        <button className="gold-btn">Partner With Us</button>
-      </section>
+    <section className="ayu-cta">
+  <h2 className="ayu-cta-title">
+    Elevate Your Formulations with Advanced Bio-Innovation
+  </h2>
+
+  <button className="ayu-cta-btn">
+    Explore Solutions
+  </button>
+</section>
 
     </div>
   );

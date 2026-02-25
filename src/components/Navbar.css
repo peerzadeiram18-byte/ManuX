@@ -353,40 +353,58 @@ body {
   }
 
   .nav-right {
-    display: none;
+    display: flex;
   }
 
   .hamburger {
     display: block;
   }
 
-  .menubar {
+   .menubar {
     position: fixed;
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 260px;
-    padding-top: 80px;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-    transition: 0.4s ease;
+    width: 280px;
+    background: #ffffff;
+    padding-top: 70px;
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    
   }
+
 
   .menubar.active {
     right: 0;
   }
 
-  .menu-links {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 25px;
-    gap: 20px;
+    .menu-links a {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
   }
+
 
   .menu-links a,
   .nav-link {
     font-size: 16px;
     width: 100%;
     cursor: pointer;
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Hide desktop menu */
+  .menubar:not(.active) {
+    pointer-events: none;
   }
 
   /* MOBILE DROPDOWN */

@@ -107,10 +107,10 @@ function Home() {
     <div className="triple-img center">
       <img src={heroImg} alt="center"/>
 
-      <div className="hero-text">
+     {/* <div className="hero-text">
         <h4>AYURVEDA’S SECRET</h4>
         <h1>B2B BEAUTY SOLUTIONS</h1>
-      </div>
+      </div>*/}
     </div>
 
     {/* Right Image */}

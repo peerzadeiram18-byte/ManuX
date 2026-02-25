@@ -13,8 +13,10 @@
   padding: 50px 60px;
 
   /* ORANGE GRADIENT LIKE IMAGE */
-      background:
-                 linear-gradient(135deg,#102f34,#0b2226,#071518);
+     background:
+  radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%), /* red glow */
+  radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%), /* navy glow */
+  linear-gradient(180deg, #0F2544, #0A0A0A);
       border: 1px solid rgba(204,173,96,0.25);
       box-shadow: 0 10px 40px rgba(0,0,0,0.6),
             inset 0 0 40px rgba(94,167,135,0.08);

@@ -49,6 +49,7 @@ function App() {
     <Route path="/ayurveda" element={<Ayurveda />} />
     <Route path="/partnership" element={<Partnership />} />
     <Route path="/contact" element={<Contact />} />
+     <Route path="/About" element={<About Us />} />
 
     <Route path="/technology/nanotechnology" element={<Nanotechnology />} />
     <Route path="/technology/plasma-technology" element={<PlasmaTechnology />} />

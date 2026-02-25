@@ -70,6 +70,7 @@ background:
   text-align: center;
   margin-bottom: 50px;
   font-size: 36px;
+  
 }
 
 .nano-grid {
@@ -82,6 +83,7 @@ background:
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  
 }
 
 .nano-grid2 {
@@ -90,7 +92,7 @@ background:
   gap: 20px;
 }
 .card {
-  background: rgba(255,255,255,0.85);
+  background: transparent;
   backdrop-filter: blur(8px);
   border-radius: 18px;
   padding: 30px;
@@ -106,8 +108,11 @@ background:
 
 
 .nano-dark {
-  background: linear-gradient(135deg,#1a2f38,#243f4a);
-  color: white;
+background:
+    radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
+    linear-gradient(180deg, #0F2544, #0A0A0A); 
+     color: white;
 }
 
 .card img {
@@ -133,12 +138,7 @@ background:
   text-align: center;
 }
 
-.nano-cta {
-  background: linear-gradient(135deg,#0f2027,#203a43);
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-}
+
 
 .btn {
   padding: 14px 34px;
@@ -289,4 +289,181 @@ background:
     max-width: 100%;
   }
 
+}
+
+
+/* =========================
+   NANO TECHNOLOGY SECTION
+   ========================= */
+
+.nano-dark {
+background:
+    radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
+    linear-gradient(180deg, #0F2544, #0A0A0A);  padding: 80px 20px;
+  color: #fff;
+}
+
+.nano-dark .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  color: #e6f4ef;
+}
+
+/* GRID */
+.nano-grid1 {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.nano-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* subtle glow line */
+.nano-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.nano-card:hover::before {
+  opacity: 1;
+}
+
+.nano-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* TEXT */
+.nano-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.nano-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .nano-grid1 {
+    grid-template-columns: 1fr;
+  }
+
+  .nano-dark .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nano-dark {
+    padding: 60px 15px;
+  }
+
+  .nano-card {
+    padding: 28px 22px;
+  }
+
+  .nano-card h3 {
+    font-size: 1.35rem;
+  }
+}
+
+.nano-cta {
+  position: relative;
+  padding: 120px 20px;
+  text-align: center;
+  color: #f5f7fa;
+
+  background:
+    radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
+    linear-gradient(180deg, #0F2544, #0A0A0A);
+
+  overflow: hidden;
+}
+
+.nano-cta h2 {
+  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.nano-cta p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #d6dde8;
+}
+.nano-cta .btn {
+  padding: 16px 44px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #c1121f,
+    #0f2544
+  );
+
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 15px 40px rgba(193,18,31,0.35);
+  transition: all 0.35s ease;
+}
+
+.nano-cta .btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 25px 70px rgba(193,18,31,0.55);
+}
+
+.nano-cta::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle, rgba(193,18,31,0.12), transparent 65%);
+  animation: glowMove 10s linear infinite;
+}
+
+@keyframes glowMove {
+  0% { transform: translateX(-10%) translateY(-10%); }
+  100% { transform: translateX(10%) translateY(10%); }
+}
+@media (max-width: 768px) {
+  .nano-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .nano-cta p {
+    font-size: 1rem;
+  }
 }

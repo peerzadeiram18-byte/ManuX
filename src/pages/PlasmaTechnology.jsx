@@ -15,19 +15,25 @@ const PlasmaTechnology = () => {
     <div className="plasma-page">
 
       {/* 1. HERO SECTION */}
-      <section className="hero"
-      style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <div className="hero-content">
-          <h1>Plasma Technology</h1>
-          <h2>The Pinnacle of Skincare Innovation</h2>
-          <p>
-            At ManuX NanoBioCeuticals, we harness the fourth state of matter
-            to redefine luxury skincare through advanced plasma energy science.
-          </p>
-          <button className="primary-btn">Explore Innovation</button>
-        </div>
-      </section>
+  <section
+  className="plasma-hero"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+  <div className="plasma-hero-overlay"></div>
+
+  <div className="plasma-hero-content">
+    <h1>Plasma Technology</h1>
+    <h2>The Pinnacle of Skincare Innovation</h2>
+    <p>
+      At ManuX NanoBioCeuticals, we harness the fourth state of matter
+      to redefine luxury skincare through advanced plasma energy science.
+    </p>
+
+    <button className="plasma-cta-btn">
+      Explore Innovation
+    </button>
+  </div>
+</section>
 
       {/* 2. INTRO SECTION */}
     <section className="intro-section">
@@ -64,7 +70,7 @@ const PlasmaTechnology = () => {
      <section className="section light">
   <h2 className="center">Transformative Benefits</h2>
 
-  <div className="card-grid">
+  <div className="card1-grid">
 
     <div
       className="card benefit-card"
@@ -124,31 +130,46 @@ const PlasmaTechnology = () => {
     </p>
   </div>
 </section>
-     {/* 7. SUSTAINABILITY */}
-<section className="sustainability-section">
-  <div className="sustainability-container">
 
-    <div className="sustainability-image">
-      <img src={ecoImage} alt="Eco Friendly" />
+
+{/* 7. SUSTAINABILITY */}
+<section className="eco-vision-block">
+  <div className="eco-vision-wrapper">
+
+    <div className="eco-visual">
+      <img src={ecoImage} alt="Eco Friendly Innovation" />
     </div>
 
-    <div className="sustainability-text">
-      <h2>Commitment to Sustainability</h2>
-      <div className="section-line"></div>
-      <p>
+    <div className="eco-content">
+      <h2 className="eco-heading">
+        Commitment to Sustainability
+      </h2>
+
+      <div className="eco-divider"></div>
+
+      <p className="eco-description">
         Our innovation aligns with eco-conscious values, ensuring both
-        powerful skincare and a healthier planet.
+        powerful skincare and a healthier planet. Our plasma technology
+        not only elevates skincare efficacy but also supports our green
+        philosophy for long-term environmental responsibility.
       </p>
     </div>
 
   </div>
 </section>
 
-      {/* 8. CTA */}
-      <section className="cta">
-        <h2>Experience Plasma Innovation</h2>
-        <button className="primary-btn">Shop Now</button>
-      </section>
+     {/* 8. Plasma Final CTA */}
+<section className="plasma-final-cta">
+  <div className="plasma-final-inner">
+    <h2 className="plasma-final-title">
+      Experience Plasma Innovation
+    </h2>
+
+    <button className="plasma-final-action">
+      Shop Now
+    </button>
+  </div>
+</section>
 
     </div>
   );
