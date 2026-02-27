@@ -51,7 +51,7 @@ const Contact = () => {
 
     {/* RIGHT SIDE – CONTACT FORM */}
     <div className="cx-form-container">
-      <h2>Contect Us</h2>
+      <h2>Contact Us</h2>
 
       <form className="cx-contact-form">
 
