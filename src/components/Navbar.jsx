@@ -67,6 +67,12 @@ const Navbar = () => {
           <NavLink to="/" onClick={() => setMobileMenu(false)}>
             Home
           </NavLink>
+       {/*}   {mobileMenu && (
+  <div
+    className="overlay2"
+    onClick={() => setMobileMenu(false)}
+  ></div>
+)}*/}
 
           {/* TECHNOLOGY DROPDOWN */}
           <div className="dropdown">
@@ -93,17 +99,17 @@ const Navbar = () => {
           <NavLink to="/research" onClick={() => setMobileMenu(false)}>
             Research & Insights
           </NavLink>
-          <NavLink to="/ingredients" onClick={() => setMobileMenu(false)}>
+         {/*} <NavLink to="/ingredients" onClick={() => setMobileMenu(false)}>
             Ingredients
-          </NavLink>
+          </NavLink>*/}
           <NavLink
             to="/Ayurveda"
             onClick={() => setMobileMenu(false)}
           >
             Ayurvedic Science
           </NavLink>
-          <NavLink to="/partnership" onClick={() => setMobileMenu(false)}>
-            Partnership
+          <NavLink to="/OurTeam" onClick={() => setMobileMenu(false)}>
+            Our Team
           </NavLink>
           <NavLink to="/about" onClick={() => setMobileMenu(false)}>
             About Us

@@ -127,40 +127,112 @@
 /* ==============================
    RESPONSIVE DESIGN
    ============================== */
+    @media (max-width: 1200px) {
 
-@media (max-width: 992px) {
-  .manux-about-card {
-    padding: 60px 40px;
+  .about-hero1 h1 {
+    font-size: 48px;
+  }
+
+  .subtitle1 {
+    font-size: 24px;
   }
 
   .manux-about-heading {
-    font-size: 42px;
+    font-size: 44px;
+  }
+
+  .manux-about-card {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .about-hero1 {
+    height: 70vh;
+  }
+
+  .about-hero1 h1 {
+    font-size: 40px;
+  }
+
+  .subtitle1 {
+    font-size: 22px;
+  }
+
+  .manux-about-heading {
+    font-size: 38px;
+  }
+
+  .manux-about-text {
+    font-size: 17px;
+  }
+
+  .manux-about-card {
+    padding: 50px 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .manux-about-card {
-    padding: 50px 25px;
-    border-radius: 20px;
+
+  .about-hero1 {
+    height: 60vh;
+    padding: 0 15px;
+  }
+
+  .about-hero1 h1 {
+    font-size: 32px;
+  }
+
+  .subtitle1 {
+    font-size: 18px;
+  }
+
+  .manux-about-wrap {
+    padding: 60px 15px;
   }
 
   .manux-about-heading {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .manux-about-text {
     font-size: 16px;
   }
+
+  .manux-about-card {
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
 }
 
+
 @media (max-width: 480px) {
+
+  .about-hero1 {
+    height: 55vh;
+  }
+
+  .about-hero1 h1 {
+    font-size: 26px;
+  }
+
+  .subtitle1 {
+    font-size: 16px;
+  }
+
   .manux-about-heading {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .manux-about-text {
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .manux-about-tag {
     font-size: 11px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 }
 
@@ -170,7 +242,7 @@
 
 .manux-foundation-section {
   background: linear-gradient(to right, #E5E6E8, #f4f4f4);
-  padding: 90px 20px;
+  padding: 80px 10px;
 }
 
 /* GRID LAYOUT */
@@ -308,7 +380,7 @@
     #0A0A0A,
     #0F2544
   );
-  padding: 120px 20px;
+  padding: 100px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -415,7 +487,7 @@
 
 .manux-precisionX-section {
   background: linear-gradient(135deg, #0A0A0A, #0F2544);
-  padding: 100px 20px;
+  padding: 90px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -807,7 +879,7 @@
 
 .ethics-wrap {
   width: 100%;
-  padding: 100px 10px;
+  padding: 90px 10px;
   background: #fdfefe;
   position: relative;
   overflow: hidden;
@@ -855,7 +927,7 @@
 .ethics-line {
   width: 80px;
   height: 3px;
-  background: linear-gradient(to right, #0f2f33, #ccad60);
+  background: linear-gradient(to right, #0f2f33, #131a7a);
   margin: 0 auto 30px auto;
   border-radius: 5px;
 }
@@ -907,7 +979,7 @@
 
 .global-impact-section {
   width: 100%;
-  padding: 120px 20px;
+  padding: 100px 20px;
   background: linear-gradient(135deg, #0A0A0A, #0F2544);
 
   position: relative;
@@ -1002,7 +1074,7 @@
 
   .global-highlight-box {
     border-left: none;
-    border-top: 4px solid #ccad60;
+    border-top: 4px solid #f00511;
   }
 
   .global-impact-title {

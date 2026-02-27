@@ -1,28 +1,34 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
-  const [role, setRole] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [role, setRole] = useState(localStorage.getItem("role"));
 
   const login = (data) => {
-    // backend se jo response aayega wo yaha set hoga
     setUser(data.user);
     setToken(data.token);
-     setRole(data.user.role); // NEW
+    setRole(data.user.role);
+
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("role", data.user.role);
   };
 
   const logout = () => {
     setUser(null);
     setToken(null);
+    setRole(null);
+
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
   };
 
   return (
     <AuthContext.Provider value={{ user, token, role, login, logout }}>
       {children}
-      
     </AuthContext.Provider>
   );
 };

@@ -242,7 +242,7 @@ body {
 /* ================= RESEARCH CATEGORY SECTION ================= */
 
 .category-section {
-  padding: 130px 6%;
+  padding: 100px 6%;
   background: #E5E6E8;
   position: relative;
 }
@@ -298,6 +298,28 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+color: #191936; /* text visible */
+
+ position: relative;
+  z-index: 1;
+
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+
+.category-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Top Accent Line */
@@ -490,7 +512,7 @@ body {
 /* ================= FUTURE SECTION ================= */
 
 .future-section {
-  padding: 7rem 1.5rem;
+  padding: 5rem 1.5rem;
   background: linear-gradient(
     to bottom,
     #c0bcbc,
@@ -558,7 +580,7 @@ body {
 /* ================= RESEARCH CTA SECTION ================= */
 
 .cta-section {
-  padding: 120px 6%;
+  padding: 100px 6%;
   background: #0F2544;
   position: relative;
   overflow: hidden;

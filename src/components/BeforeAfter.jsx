@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./beforeafter.css";
 
+
 function BeforeAfter({ beforeImg, afterImg }) {
   const [position, setPosition] = useState(50);
 
+
   return (
-    <div className="ba-container">
+    <div className="ba-container ">
       <div className="ba-image-wrapper">
 
         <img src={beforeImg} alt="before" className="ba-img" />

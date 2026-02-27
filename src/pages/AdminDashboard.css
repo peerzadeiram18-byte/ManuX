@@ -1,0 +1,86 @@
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: linear-gradient(135deg, #0F2544, #0A0A0A);
+  color: #E5E6E8;
+}
+
+.admin-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.admin-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.admin-card h2 {
+  margin-bottom: 20px;
+  color: #C1121F;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1a2d4a;
+  color: #E5E6E8;
+}
+
+.admin-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.admin-form button {
+  padding: 12px;
+  background: #C1121F;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-form button:hover {
+  background: #a50f18;
+}
+
+.product-item {
+  background: #1a2d4a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  margin: 0;
+  color: #E5E6E8;
+}
+
+.product-item p {
+  margin: 5px 0;
+  color: #C1121F;
+  font-weight: 600;
+}
+
+.product-item span {
+  color: #6E7178;
+  font-size: 14px;
+}
+
+.empty-text {
+  color: #6E7178;
+}

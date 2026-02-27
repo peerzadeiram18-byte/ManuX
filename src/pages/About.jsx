@@ -89,7 +89,7 @@ const About = () => {
     </span>
 
     <h2 className="manux-b2b-heading">
-      B2B Innovation & <span>Formulation Platform</span>
+      B2B<span> Innovation & Formulation</span> Platform
     </h2>
 
     <div className="manux-b2b-divider"></div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import { useState, useEffect } from "react";
+
 import lab1 from "../assets/lab1.jpg";
 import lab2 from "../assets/lab2.jpg";
 import lab3 from "../assets/lab3.jpg";
@@ -31,6 +32,8 @@ import LabBanner from "../components/LabBanner";
 
 
 
+
+
 function Home() {
 
   const images = [lab1, lab2, lab3];
@@ -44,6 +47,72 @@ function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+  const sections = document.querySelectorAll(".reveal-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  return () => observer.disconnect();
+}, []);
+
+
+
+useEffect(() => {
+  const section = document.querySelector(".reveal-research");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  if (section) observer.observe(section);
+
+  return () => observer.disconnect();
+}, []);
+
+
+
+useEffect(() => {
+  const section = document.querySelector(".ba-reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  if (section) observer.observe(section);
+
+  return () => observer.disconnect();
+}, []);
+
+
+
 
   return (
     <div>
@@ -123,9 +192,8 @@ function Home() {
 </section>
 
 {/* ===== ABOUT INTRO SECTION ===== */}
-<section className="about-intro">
-
-  <div className="about-intro-container">
+<section className="about-intro reveal-section">
+  <div className="about-intro-container reveal-content">
 
     <h2>ManuX NanoBioCeuticals</h2>
 
@@ -170,7 +238,7 @@ function Home() {
 </section>
 
 {/* ===== RESEARCH CORE SECTION ===== */}
-<section className="researchh-core">
+<section className="researchh-core reveal-research">
 
   <div className="researchh-container">
 
@@ -257,7 +325,7 @@ function Home() {
 </section>
 
 
-<section className="ba-section">
+<section className="ba-container ba-reveal">
 
   <div className="ba-text">
     <h2>Over 1 Million People Trust ManuX NanoBioCeuticals</h2>

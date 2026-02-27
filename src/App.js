@@ -20,7 +20,7 @@ import PlantStemCell from "./pages/PlantStemCell";
 import Research from "./pages/Research";
 import Ingredients from "./pages/Ingredients";
 import Ayurveda from "./pages/Ayurveda";
-import Partnership from "./pages/Partnership";
+import OurTeam from "./pages/OurTeam";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -47,7 +47,7 @@ function App() {
     <Route path="/research" element={<Research />} />
     <Route path="/ingredients" element={<Ingredients />} />
     <Route path="/ayurveda" element={<Ayurveda />} />
-    <Route path="/partnership" element={<Partnership />} />
+    <Route path="/OurTeam" element={<OurTeam />} />
     <Route path="/contact" element={<Contact />} />
      <Route path="/About" element={<About Us />} />
 
@@ -57,15 +57,18 @@ function App() {
 
   </Route>
 
-  {/* Admin */}
-  <Route
-    path="/admin"
-    element={
-      <AdminRoute>
-        <AdminDashboard />
-      </AdminRoute>
-    }
-  />
+ {/* Admin Login (Public) */}
+<Route path="/admin-login" element={<Login />} />
+
+{/* Admin Dashboard (Protected) */}
+<Route
+  path="/admin/dashboard"
+  element={
+    <AdminRoute>
+      <AdminDashboard />
+    </AdminRoute>
+  }
+/>
 
 </Routes>
 

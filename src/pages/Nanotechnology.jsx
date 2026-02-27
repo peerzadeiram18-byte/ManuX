@@ -4,6 +4,12 @@ import ayurvedaImg from "../assets/ayurveda1.jpg";
 import nanoImg from "../assets/nano.jpg";
 
 
+import uvImg from "../assets/uv.jpg";
+import oilImg from "../assets/oil.jpg";
+import repairImg from "../assets/repair.jpg";
+import finishImg from "../assets/finish.jpg";
+
+
 
 function Nanotechnology() {
   return (
@@ -105,28 +111,45 @@ function Nanotechnology() {
 </section>
 
 
+
       {/* 5️⃣ Skin Benefits Section */}
       <section className="nano-light">
-        <h2 className="section-title">Comprehensive Skin Solutions</h2>
-        <div className="nano-grid1">
-          <div className="card">
-            <h3>UV & Pollution Protection</h3>
-            <p>Acts as a natural barrier against environmental damage.</p>
-          </div>
-          <div className="card">
-            <h3>Oil & Sebum Control</h3>
-            <p>Balances excessive sebum production effectively.</p>
-          </div>
-          <div className="card">
-            <h3>Fine Line Repair</h3>
-            <p>Targets wrinkles and periorbital areas with precision.</p>
-          </div>
-          <div className="card">
-            <h3>Long-Lasting Finish</h3>
-            <p>Provides refined, smooth and radiant skin texture.</p>
-          </div>
-        </div>
-      </section>
+  <h2 className="section-title">Comprehensive Skin Solutions</h2>
+
+  <div className="nano-grid1">
+
+    <div className="card1" style={{ backgroundImage: `url(${uvImg})` }}>
+      <div className="card1-overlay">
+        <h3>UV & Pollution Protection</h3>
+        <p>Acts as a natural barrier against environmental damage.</p>
+      </div>
+    </div>
+
+    <div className="card1" style={{ backgroundImage: `url(${oilImg})` }}>
+      <div className="card1-overlay">
+        <h3>Oil & Sebum Control</h3>
+        <p>Balances excessive sebum production effectively.</p>
+      </div>
+    </div>
+
+    <div className="card1" style={{ backgroundImage: `url(${repairImg})` }}>
+      <div className="card1-overlay">
+        <h3>Fine Line Repair</h3>
+        <p>Targets wrinkles and periorbital areas with precision.</p>
+      </div>
+    </div>
+
+    <div className="card1" style={{ backgroundImage: `url(${finishImg})` }}>
+      <div className="card1-overlay">
+        <h3>Long-Lasting Finish</h3>
+        <p>Provides refined, smooth and radiant skin texture.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
       {/* 6️⃣ Pure Formulation Section */}
       <section className="nano-dark">

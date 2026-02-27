@@ -11,7 +11,7 @@ body {
 
 .ayu-hero{
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -146,17 +146,13 @@ body {
 ===================================== */
 
 .ayu-split{
-  padding: 120px 8%;
+  padding: 90px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 70px;
   flex-wrap: wrap;
-  background: linear-gradient(
-    135deg,
-    #0F2544,
-    #0A0A0A
-  );
+background: linear-gradient(135deg, #0F2544, #f5f2f2);
   color: #E5E6E8;
   position: relative;
   overflow: hidden;
@@ -201,7 +197,7 @@ body {
 .ayu-split-description{
   font-size: 1.05rem;
   line-height: 1.9;
-  color: #6E7178;
+  color: #f5f5f7;
 }
 
 /* IMAGE SIDE */
@@ -310,7 +306,7 @@ body {
 ===================================== */
 
 .ayu-intro{
-  padding: 120px 8%;
+  padding: 100px 8%;
   background: linear-gradient(
     135deg,
     #E5E6E8,
@@ -419,9 +415,8 @@ body {
 /* ================= GLASS SECTION ================= */
 
 .glass-section {
-  padding: 120px 6%;
-  background: linear-gradient(135deg, #0F2544, #0A0A0A);
-  text-align: center;
+  padding: 100px 6%;
+background: linear-gradient(135deg, #0F2544, #0A0A0A);  text-align: center;
   color: #E5E6E8;
   position: relative;
   overflow: hidden;
@@ -528,7 +523,7 @@ body {
     180deg,
     #ffffff,
     #E5E6E8
-  );  padding: 100px 8%;
+  );  padding: 90px 8%;
   color: rgb(28, 26, 26);
 }
 
@@ -681,7 +676,7 @@ body {
 ===================================== */
 
 .ayu-applications{
-  padding: 6.5rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   background: linear-gradient(
     180deg,
     #E5E6E8,
@@ -722,16 +717,30 @@ body {
 /* CARD */
 .ayu-app-card{
   background: #ffffff;
-  padding: 2.5rem 1.5rem;
+   padding: 1.5rem;          /* ❌ 6.5rem hatao */
   border-radius: 18px;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #0A0A0A;
+ 
+   color: #060101;              /* white better on image */
   border: 1px solid #E5E6E8;
   box-shadow: 0 15px 40px rgba(15,37,68,0.08);
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+
+   /* 👇 ADD THESE */
+  display: flex;
+  align-items: flex-end;   /* bottom */
+  justify-content: center; /* center horizontally */
+  text-align: center;
+
+  height: 300px;           /* 👈 fixed height zaroori hai */
+
+
 }
 
 /* bottom red hover line */

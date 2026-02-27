@@ -16,17 +16,30 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+  e.preventDefault();
+  setError("");
 
-    try {
-      const data = await loginUser(email, password);
-      login(data);
-      navigate("/technology");
-    } catch {
-      setError("Wrong email or password");
+  try {
+    const data = await loginUser(email, password);
+
+    login(data); // context me save karega role
+
+    // 👇 ROLE CHECK KARKE REDIRECT
+    if (data.user.role === "admin") {
+      navigate("/admin/dashboard");
+    } else {
+      navigate("/");
     }
-  };
+
+  } catch {
+    setError("Wrong email or password");
+  }
+};
+
+
+
+
+
 
   return (
     <div className="loginPage">

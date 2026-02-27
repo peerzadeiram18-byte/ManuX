@@ -2,6 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Research.css";
 
+import skinImg from "../assets/Rskin.jpg";
+import hairImg from "../assets/Rhair.jpg";
+import babyImg from "../assets/Rbaby.jpg";
+import petImg from "../assets/Rpet.jpg";
+import menImg from "../assets/Rmen.jpg";
+import pregnancyImg from "../assets/Rpregnancy.jpg";
+import ayurvedaImg from "../assets/Rayurveda.jpg";
+import nutraImg from "../assets/Rnutra.jpg";
+
 
 export default function ResearchInsightsPage() {
   return (
@@ -90,17 +99,19 @@ export default function ResearchInsightsPage() {
 
     <div className="category-grid">
       {[
-        "Skin Care",
-        "Hair Care",
-        "Baby Care",
-        "Pet Care",
-        "Men’s Care",
-        "Pregnancy Care",
-        "Ayurvedic Medicines",
-        "Nutraceuticals",
-      ].map((item, index) => (
-        <div key={index} className="category-card">
-          {item}
+        { title: "Skin Care", img: skinImg },
+  { title: "Hair Care", img: hairImg },
+  { title: "Baby Care", img: babyImg },
+  { title: "Pet Care", img: petImg },
+  { title: "Men’s Care", img: menImg },
+  { title: "Pregnancy Care", img: pregnancyImg },
+  { title: "Ayurvedic Medicines", img: ayurvedaImg },
+  { title: "Nutraceuticals", img: nutraImg },
+].map((item, index) => (
+        <div key={index} className="category-card" 
+         style={{ backgroundImage: `url(${item.img})` }}
+         >
+          {item.title}
         </div>
       ))}
     </div>

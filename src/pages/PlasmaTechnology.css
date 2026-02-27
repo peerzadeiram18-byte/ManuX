@@ -11,7 +11,7 @@ body {
 
 .plasma-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -188,7 +188,7 @@ body {
 
 /* INTRO SECTION */
 .intro-section {
-  padding: 120px 20px;
+  padding: 100px 20px;
   background: linear-gradient(to right, #f8f9fc, #eef1f7);
   display: flex;
   justify-content: center;
@@ -308,6 +308,10 @@ background:
     margin-top: 30px;
   }
 }
+
+
+
+
 /*section light*/
 
 .benefit-card {
@@ -341,6 +345,8 @@ background:
   text-align: center;
   
 }
+
+
 
 
 /* ================= LUXURY DARK SECTION ================= */
@@ -416,7 +422,7 @@ background:
 /* ================= ECO VISION BLOCK ================= */
 
 .eco-vision-block {
-  padding: 130px 6%;
+  padding: 100px 6%;
   background: linear-gradient(160deg, #0A0A0A, #0F2544 60%, #06121f);
   position: relative;
   overflow: hidden;
@@ -581,11 +587,11 @@ background:
 /* ================= PLASMA FINAL CTA ================= */
 
 .plasma-final-cta {
-  padding: 120px 6%;
+  padding: 90px 8%;
     background: linear-gradient(
-    180deg,
-    #ffffff,
-    #E5E6E8
+    360deg,
+   #E5E6E8, #ffffff
+    
   );
   position: relative;
   overflow: hidden;

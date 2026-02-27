@@ -1,0 +1,880 @@
+/* =====================================
+   MANUX TEAM SECTION - UNIQUE + ANIMATED
+===================================== */
+
+.mx-team-section {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* Dark Gradient Overlay */
+.mx-team-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 37, 68, 0.92),
+    rgba(10, 10, 10, 0.88)
+  );
+  z-index: 1;
+}
+
+/* Content */
+.mx-team-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+  color: #E5E6E8;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: mxFadeUp 1.2s ease forwards;
+}
+
+/* Title */
+.mx-team-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #E5E6E8;
+}
+
+/* Divider */
+.mx-team-divider {
+  width: 90px;
+  height: 4px;
+  background: #C1121F;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+/* Text */
+.mx-team-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #6E7178;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* ========================
+   Animation Keyframes
+======================== */
+
+@keyframes mxFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+
+@media (max-width: 992px) {
+  .mx-team-title {
+    font-size: 36px;
+  }
+
+  .mx-team-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mx-team-section {
+    padding: 60px 15px;
+    min-height: 70vh;
+  }
+
+  .mx-team-title {
+    font-size: 28px;
+  }
+
+  .mx-team-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 992px) {
+  .mx-team-title {
+    font-size: 36px;
+  }
+
+  .mx-team-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mx-team-section {
+    padding: 60px 15px;
+  }
+
+  .mx-team-title {
+    font-size: 28px;
+  }
+
+  .mx-team-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+
+
+
+/* =========================================
+   MANUX CEO SECTION - UNIQUE LIGHT DESIGN
+========================================= */
+
+.mx-ceo-section {
+  width: 100%;
+  padding: 60px 10px;
+
+  /* Light Gradient Background */
+  background: linear-gradient(
+    135deg,
+    #E5E6E8,
+    #ffffff,
+    #f5f7fa
+  );
+}
+
+.mx-ceo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE */
+.mx-ceo-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mx-ceo-image-wrapper img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 37, 68, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.mx-ceo-image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.mx-ceo-content {
+  flex: 1.5;
+}
+
+.mx-ceo-name {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0F2544;
+  margin-bottom: 8px;
+}
+
+.mx-ceo-role {
+  font-size: 18px;
+  color: #C1121F;
+  margin-bottom: 20px;
+}
+
+.mx-ceo-line {
+  width: 70px;
+  height: 3px;
+  background: #0F2544;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.mx-ceo-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6E7178;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+  .mx-ceo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx-ceo-content {
+    flex: unset;
+  }
+
+  .mx-ceo-name {
+    font-size: 28px;
+  }
+
+  .mx-ceo-role {
+    font-size: 16px;
+  }
+
+  .mx-ceo-line {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .mx-ceo-section {
+    padding: 70px 15px;
+  }
+
+  .mx-ceo-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+
+
+
+/* ========================================
+   MXNANO SECTION (ISOLATED CSS)
+======================================== */
+
+.mxnano-section {
+  width: 100%;
+  padding: 110px 8%;
+  background: linear-gradient(135deg, #0F2544, #0A0A0A);
+  overflow: hidden;
+}
+
+.mxnano-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+/* TEXT */
+.mxnano-content {
+  flex: 1.4;
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 1s ease;
+}
+
+.mxnano-name {
+  font-size: 36px;
+  font-weight: 700;
+  color: #E5E6E8;
+  margin-bottom: 10px;
+}
+
+.mxnano-role {
+  font-size: 20px;
+  color: #C1121F;
+  margin-bottom: 20px;
+}
+
+.mxnano-line {
+  width: 75px;
+  height: 3px;
+  background: #C1121F;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.mxnano-description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6E7178;
+}
+
+/* IMAGE */
+.mxnano-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(120px);
+  transition: all 1s ease;
+}
+
+.mxnano-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 22px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+
+.mxnano-image img:hover {
+  transform: scale(1.05);
+}
+
+/* SHOW ANIMATION */
+.mxnano-section.show .mxnano-content,
+.mxnano-section.show .mxnano-image {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .mxnano-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .mxnano-name {
+    font-size: 28px;
+  }
+
+  .mxnano-line {
+    margin: 20px auto;
+  }
+}
+/* =========================================
+   SLIDE ANIMATION - RIGHT TO LEFT
+========================================= */
+
+/* Initial Hidden State */
+.mx-nano-content,
+.mx-nano-image-wrapper {
+  opacity: 0;
+}
+
+/* IMAGE SLIDES FROM RIGHT */
+.mx-nano-image-wrapper {
+  transform: translateX(80px);
+  animation: mxSlideRightToLeft 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* TEXT SLIDES FROM RIGHT */
+.mx-nano-content {
+  transform: translateX(60px);
+  animation: mxSlideRightToLeft 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* KEYFRAMES */
+@keyframes mxSlideRightToLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+/* =========================================
+   MANUX PROJECT MANAGER SECTION - LIGHT
+========================================= */
+
+.mx-pm-section {
+  width: 100%;
+  padding: 100px 20px;
+
+  /* Light soft gradient background */
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #E5E6E8
+  );
+}
+
+.mx-pm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE */
+.mx-pm-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mx-pm-image-wrapper img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 37, 68, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.mx-pm-image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.mx-pm-content {
+  flex: 1.5;
+}
+
+.mx-pm-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0F2544;
+  margin-bottom: 8px;
+}
+
+.mx-pm-role {
+  font-size: 18px;
+  color: #C1121F;
+  margin-bottom: 20px;
+}
+
+.mx-pm-line {
+  width: 70px;
+  height: 3px;
+  background: #0F2544;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.mx-pm-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6E7178;
+}
+
+/* =========================================
+   SIMPLE FADE-UP ANIMATION
+========================================= */
+
+.mx-pm-container {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: mxPmFadeUp 1s ease forwards;
+}
+
+@keyframes mxPmFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+  .mx-pm-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx-pm-name {
+    font-size: 26px;
+  }
+
+  .mx-pm-role {
+    font-size: 16px;
+  }
+
+  .mx-pm-line {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .mx-pm-section {
+    padding: 70px 15px;
+  }
+
+  .mx-pm-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   SCROLL TRIGGERED LEFT → RIGHT ANIMATION
+========================================= */
+
+/* Initial Hidden State */
+.mx-pm-image-wrapper,
+.mx-pm-content {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 1s ease;
+}
+
+/* When Visible */
+.mx-pm-show .mx-pm-image-wrapper {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mx-pm-show .mx-pm-content {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+
+/* =========================================
+   RASASHASTRA DARK SECTION
+========================================= */
+
+.mx-rasa-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: linear-gradient(
+    135deg,
+    #0F2544,
+    #0A0A0A
+  );
+}
+
+.mx-rasa-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE */
+.mx-rasa-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mx-rasa-image-wrapper img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+}
+
+ .mx-rasa-image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.mx-rasa-content {
+  flex: 1.5;
+}
+
+.mx-rasa-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #E5E6E8;
+  margin-bottom: 8px;
+}
+
+.mx-rasa-role {
+  font-size: 18px;
+  color: #C1121F;
+  margin-bottom: 20px;
+}
+
+.mx-rasa-line {
+  width: 70px;
+  height: 3px;
+  background: #C1121F;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.mx-rasa-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6E7178;
+}
+
+/* =========================================
+   RIGHT → LEFT SCROLL ANIMATION
+========================================= */
+
+.mx-rasa-image-wrapper,
+.mx-rasa-content {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
+
+.mx-rasa-show .mx-rasa-image-wrapper {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mx-rasa-show .mx-rasa-content {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+  .mx-rasa-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx-rasa-line {
+    margin: 20px auto;
+  }
+
+  .mx-rasa-name {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mx-rasa-section {
+    padding: 70px 15px;
+  }
+
+  .mx-rasa-description {
+    font-size: 15px;
+  }
+}
+
+
+/* ===============================
+   PANCHAKARMA SECTION
+=================================*/
+
+.panchakarma-section {
+  width: 100%;
+  padding: 90px 8%;
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #E5E6E8
+  );
+  overflow: hidden;
+}
+
+/* Layout */
+.panchakarma-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateX(-120px);
+  animation: slideLeftToRight 1.2s ease forwards;
+}
+
+/* Image */
+.panchakarma-content img {
+  width: 320px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+
+.panchakarma-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Text */
+.panchakarma-content .text {
+  flex: 1;
+}
+
+.panchakarma-content h2 {
+  font-size: 42px;
+  color: #10244d;
+  margin-bottom: 10px;
+}
+
+.panchakarma-content h4 {
+  font-size: 20px;
+  color: #C1121F;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.panchakarma-content p {
+  font-size: 18px;
+  color: #6E7178;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* Animation Keyframes */
+@keyframes slideLeftToRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=================================*/
+
+@media (max-width: 992px) {
+  .panchakarma-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .panchakarma-content img {
+    width: 260px;
+  }
+
+  .panchakarma-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .panchakarma-section {
+    padding: 70px 6%;
+  }
+
+  .panchakarma-content h2 {
+    font-size: 26px;
+  }
+
+  .panchakarma-content p {
+    font-size: 15px;
+  }
+}
+
+/* Initial Hidden State */
+.panchakarma-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+
+  opacity: 0;
+  transform: translateX(-120px);
+  transition: all 1s ease;
+}
+
+/* When Visible */
+.panchakarma-section.show .panchakarma-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+
+.team-wrapper {
+  background: linear-gradient(180deg,#0f2f33,#08191b);
+  color: white;
+  font-family: sans-serif;
+}
+
+.team-intro {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.team-intro h1 {
+  font-size: 48px;
+  color: #ccad60;
+  margin-bottom: 20px;
+}
+
+.team-intro p {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.team-section {
+  padding: 80px 10%;
+}
+
+.team-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.team-content img {
+  width: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid #ccad60;
+}
+
+.team-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.team-content h4 {
+  color: #ccad60;
+  margin-bottom: 20px;
+}
+
+.team-content p {
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* Alternate layout */
+.reverse .team-content {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .team-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse .team-content {
+    flex-direction: column;
+  }
+
+  .team-content img {
+    width: 250px;
+  }
+}

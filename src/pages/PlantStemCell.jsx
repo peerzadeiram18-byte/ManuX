@@ -6,6 +6,11 @@ import labImage from "../assets/lab.jpg";
 
 import sustainabilityImg from "../assets/sustainability.jpg";
 
+import serumImg from "../assets/serum.jpg";
+import creamImg from "../assets/cream.jpg";
+import repairImg from "../assets/repair1.jpg";
+import maskImg from "../assets/mask.jpg";
+
 export default function PlantStemCell() {
   return (
     <div className="plant-container">
@@ -33,6 +38,8 @@ export default function PlantStemCell() {
     </button>
   </div>
 </section>
+
+
 {/* 2️⃣ Scientific Introduction */}
 <section className="ayu-intro">
   <motion.div
@@ -139,12 +146,9 @@ export default function PlantStemCell() {
       <h2>Sustainable Scientific Excellence</h2>
       <p>
         A standout characteristic of plant stem cell technology 
-        is its sustainability. Lab-produced plant stem cell extracts are,
-         surprisingly, the most sustainable way to utilize the potency of 
-         these ingredients. Instead of wasting an entire plant and the resources 
+        is its sustainability. Instead of wasting an entire plant and the resources 
          it requires to thrive, this process allows researchers to obtain only what 
-         they need. This method uses less water than field farming, requires little soil, 
-         and eliminates the need for pesticides. It also offers a clean and consistent supply of these extracts, 
+         they need.  It also offers a clean and consistent supply of these extracts, 
          as they are not limited to harvest or seasons, making it a technology that allows us to make the most of
          nature while also protecting it.
      </p>
@@ -167,20 +171,46 @@ export default function PlantStemCell() {
   </p>
 </section>
 
+
     {/* 6️⃣ Applications */}
+    
 <section className="ayu-applications">
   <h2 className="ayu-app-title">
     Applications in Luxury Cosmetics
   </h2>
 
   <div className="ayu-app-grid">
-    <div className="ayu-app-card">Advanced Serums</div>
-    <div className="ayu-app-card">Anti-Aging Creams</div>
-    <div className="ayu-app-card">Repair Concentrates</div>
-    <div className="ayu-app-card">Hydration Masks</div>
+
+    <div
+      className="ayu-app-card"
+      style={{ backgroundImage: `url(${serumImg})` }}
+    >
+      Advanced Serums
+    </div>
+
+    <div
+      className="ayu-app-card"
+      style={{ backgroundImage: `url(${creamImg})` }}
+    >
+      Anti-Aging Creams
+    </div>
+
+    <div
+      className="ayu-app-card"
+      style={{ backgroundImage: `url(${repairImg})` }}
+    >
+      Repair Concentrates
+    </div>
+
+    <div
+      className="ayu-app-card"
+      style={{ backgroundImage: `url(${maskImg})` }}
+    >
+      Hydration Masks
+    </div>
+
   </div>
 </section>
-
      
 
       {/* 8️⃣ CTA */}
