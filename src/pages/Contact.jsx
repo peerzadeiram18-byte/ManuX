@@ -3,7 +3,7 @@ import "./Contact.css";
 
 import heroBg from "../assets/contact-hero.jpg";
 
-
+import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -33,6 +33,10 @@ const Contact = () => {
 
     {/* LEFT SIDE – OFFICE INFO */}
     <div className="cx-info-card">
+  
+  <div className="info-block">
+    <FaBuilding className="info-icon" />
+    <div>
       <h3>Corporate Office</h3>
       <p>
         ManuX NanoBioCeuticals<br />
@@ -40,14 +44,27 @@ const Contact = () => {
         Road No. 7, TSIIC, IALA, Mallapur IDA<br />
         Nacharam, Hyderabad – Telangana, India
       </p>
+    </div>
+  </div>
 
+  <div className="info-block">
+    <FaEnvelope className="info-icon" />
+    <div>
       <h3>Email</h3>
       <p>info@manuxnbc.com</p>
       <p>info@theaojas.com</p>
+    </div>
+  </div>
 
+  <div className="info-block">
+    <FaPhoneAlt className="info-icon" />
+    <div>
       <h3>Phone</h3>
       <p>+91 99498 96254</p>
     </div>
+  </div>
+
+</div>
 
     {/* RIGHT SIDE – CONTACT FORM */}
     <div className="cx-form-container">

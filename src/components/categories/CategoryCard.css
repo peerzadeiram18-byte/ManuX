@@ -1,4 +1,4 @@
-.category-card {
+.category-card1 {
   width: 170px;
   height: 210px;
   border-radius: 18px;
@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-.category-card img {
+.category-card1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -16,7 +16,7 @@
 }
 
 /* overlay */
-.category-overlay {
+.category-overlay1 {
   position: absolute;
   inset: 0;
   display: flex;
@@ -30,7 +30,7 @@
   transition: background .3s;
 }
 
-.category-overlay h3 {
+.category-overlay1 h3 {
   margin-bottom: 8px;
   font-size: 14px;
 }
@@ -48,10 +48,10 @@
 }
 
 /* hover effect */
-.category-card:hover img {
+.category-card1:hover img {
   transform: scale(1.08);
 }
 
-.category-card:hover .category-overlay {
+.category-card1:hover .category-overlay {
   background: rgba(0,0,0,0.45);
 }
