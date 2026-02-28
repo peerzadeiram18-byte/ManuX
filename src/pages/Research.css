@@ -45,7 +45,7 @@ body {
 }
 
 .research-title {
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -1px;
@@ -75,7 +75,7 @@ body {
 /* ================= SECTION HEADINGS ================= */
 
 .section-title {
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -180,7 +180,7 @@ body {
 }
 
 .philosophy-title {
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
   color: #0f172a;
@@ -428,7 +428,7 @@ color: #191936; /* text visible */
 }
 
 .ethics-title {
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   font-weight: 700;
   color: #0f172a;
@@ -529,7 +529,7 @@ color: #191936; /* text visible */
 /* TITLE */
 
 .future-title {
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 700;
   color: #0f172a;

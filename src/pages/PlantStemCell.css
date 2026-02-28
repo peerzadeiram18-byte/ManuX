@@ -60,7 +60,6 @@ body {
 /* Heading */
 .ayu-hero-title{
   font-size: clamp(2.5rem,6vw,4rem);
-  font-family: 'Playfair Display', serif;
   margin-bottom: 1.5rem;
   line-height: 1.1;
   color: #ffffff;
@@ -181,7 +180,6 @@ background: linear-gradient(135deg, #0F2544, #f5f2f2);
 
 .ayu-split-title{
   font-size: clamp(2rem,4vw,2.8rem);
-  font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -347,7 +345,7 @@ background: linear-gradient(135deg, #0F2544, #f5f2f2);
 /* HEADING */
 .ayu-intro-title{
   font-size: clamp(2rem,4vw,3rem);
-  font-family: 'Playfair Display', serif;
+  /*font-family: 'Playfair Display', serif;*/
   margin-bottom: 20px;
   color: #0F2544;
 }
@@ -619,7 +617,7 @@ background: linear-gradient(135deg, #0F2544, #0A0A0A);  text-align: center;
 
 /* Heading */
 .ayu-highlight-title{
-  font-family:'Playfair Display', serif;
+ /* font-family:'Playfair Display', serif;*/
   font-size: clamp(2rem,4vw,2.8rem);
   margin-bottom: 1.2rem;
   color: #ffffff;
@@ -687,7 +685,7 @@ background: linear-gradient(135deg, #0F2544, #0A0A0A);  text-align: center;
 
 /* Title */
 .ayu-app-title{
-  font-family:'Playfair Display', serif;
+/*  font-family:'Playfair Display', serif;*/
   font-size: clamp(2rem,4vw,2.6rem);
   color: #0F2544;
   margin-bottom: 3.5rem;

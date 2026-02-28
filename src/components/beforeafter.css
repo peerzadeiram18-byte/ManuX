@@ -8,6 +8,7 @@
   margin: 20px auto;   /* ⬅️ top-bottom kam */
   padding: 16px;       /* ⬅️ side padding kam */
   border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* GRID */

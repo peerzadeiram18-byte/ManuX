@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © {new Date().getFullYear()} The Aojas. All rights reserved.
+        © {new Date().getFullYear()}   2026 ManuX Nanobioceuticals. All rights reserved
       </div>
     </footer>
   );

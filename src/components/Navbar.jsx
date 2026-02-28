@@ -11,7 +11,7 @@ const Navbar = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false); // mobile dropdown toggle
-
+  const[openMenu,setOpenMenu]=useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -63,6 +63,7 @@ const Navbar = () => {
 
       {/* ===== MENU BAR ===== */}
       <div className={`menubar ${mobileMenu ? "active" : ""}`}>
+        
         <div className="menu-links">
           <NavLink to="/" onClick={() => setMobileMenu(false)}>
             Home
@@ -88,11 +89,38 @@ const Navbar = () => {
                 openDropdown ? "show-dropdown" : ""
               }`}
             >
-              <Link to="/technology/nanotechnology">Nanotechnology</Link>
-              <Link to="/technology/plasma-technology">Plasma Technology</Link>
-              <Link to="/technology/plant-stem-cell">
-                Plant Stem Cell Technology
-              </Link>
+
+
+             <Link
+    to="/technology/nanotechnology" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+    Nanotechnology
+  </Link>
+
+  <Link
+    to="/technology/plasma-technology"
+    onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+    Plasma Technology
+  </Link>
+
+  <Link
+    to="/technology/plant-stem-cell"
+    onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+    Plant Stem Cell Technology
+  </Link>
+
+
             </div>
           </div>
 

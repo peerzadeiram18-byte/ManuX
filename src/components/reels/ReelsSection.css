@@ -6,6 +6,8 @@
   max-width: 1400px;   /* thoda bada */
   margin: 0 auto;
   padding: 0 20px;     /* controlled spacing */
+      font-family: 'Poppins', sans-serif;
+
 }
 
 .nav-btn {
@@ -68,6 +70,8 @@
   letter-spacing: 1.5px;
   margin-bottom: 6px;
   color: #d8c27a;
+      font-family: 'Poppins', sans-serif;
+
 
   
 }
@@ -78,6 +82,8 @@
   color: #c3d9d4;
   line-height: 1.5;
   max-width: 520px;
+      font-family: 'Poppins', sans-serif;
+
   
 }
 

@@ -140,18 +140,22 @@ background: linear-gradient(
 .cx-form-container {
   width: 60%;
   background: #ffffff;
-  padding: 60px 100px;
+  padding: 60px 70px;
   box-shadow: 0 30px 50px rgba(0,0,0,0.08);
-  margin-left: -70px; /* overlap effect */
+  margin-left: -30px; /* overlap effect */
   border-radius: 30px;
+  
+
 }
 
 .cx-form-container h2 {
   color: #0F2544;
   margin-bottom: 30px;
-  font-size: 26px;
-}
+  font-size: 28px;
+  font-weight: 500px;
+  padding-left: 170px;
 
+}
 /* ================================
    FORM STYLING
 ================================ */
