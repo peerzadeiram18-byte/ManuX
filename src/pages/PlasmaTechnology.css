@@ -1,6 +1,6 @@
 body {
   margin: 0;
-font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Avenir Next', sans-serif;
 }
 
 .plasma-page {
@@ -192,8 +192,7 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   background: linear-gradient(to right, #f8f9fc, #eef1f7);
   display: flex;
   justify-content: center;
-font-family: 'Plus Jakarta Sans', sans-serif;
-
+font-family: 'Avenir Next', sans-serif;
 }
 
 .intro-section:hover {
@@ -204,8 +203,7 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 .intro-container {
   max-width: 900px;
   text-align: center;
-font-family: 'Plus Jakarta Sans', sans-serif;
-
+font-family: 'Avenir Next', sans-serif;
 }
 
 /* Heading */

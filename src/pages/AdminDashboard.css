@@ -2,8 +2,7 @@
   padding: 40px;
   background: #0946a1;
   min-height: 100vh;
-font-family: 'Plus Jakarta Sans', sans-serif;
-}
+font-family: 'Avenir Next', sans-serif;}
 
 .admin-title {
   text-align: center;
@@ -107,8 +106,7 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 .admin-layout {
   display: flex;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-}
+font-family: 'Avenir Next', sans-serif;}
 
 /* ================= SIDEBAR ================= */
 

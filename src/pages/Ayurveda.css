@@ -3,7 +3,7 @@
 .ayurveda-page{
   width:100%;
   overflow-x:hidden;
-font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Avenir Next', sans-serif;
   background:#ffffff;
 }
 
@@ -69,8 +69,7 @@ font-size:clamp(2.6rem,5vw,3.6rem);
   color:#e5e7eb;
    position: relative;
    /*font-family: 'Poppins', sans-serif;*/
-   font-family: 'Plus Jakarta Sans', sans-serif;
-
+font-family: 'Avenir Next', sans-serif;
 }
 
 /* BUTTON */
@@ -88,8 +87,7 @@ font-size:clamp(2.6rem,5vw,3.6rem);
   box-shadow:0 10px 30px rgba(0,0,0,0.35);
   transition:all 0.35s ease;
    position: relative;
-font-family: 'Plus Jakarta Sans', sans-serif;
-}
+font-family: 'Avenir Next', sans-serif;}
 
 .ayu-primary-btn:hover{
   transform:translateY(-4px);
@@ -174,8 +172,7 @@ font-family: 'Plus Jakarta Sans', sans-serif;
   position: relative;
     font-weight: 400;
 
-  font-family: 'Plus Jakarta Sans', sans-serif;
-
+font-family: 'Avenir Next', sans-serif;
 }
 
 /* Accent underline */
