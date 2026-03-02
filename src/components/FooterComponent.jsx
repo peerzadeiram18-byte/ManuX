@@ -127,11 +127,15 @@ const FooterComponent = () => {
 
         <div className="footer-col">
           <h3>Follow Us</h3>
+          
           <div className="socials">
-            <span>Instagram</span>
-            <span>Facebook</span>
-            <span>Twitter</span>
+            <ul>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+              </ul>
           </div>
+        
         </div>
       </div>
 

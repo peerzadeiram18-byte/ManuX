@@ -3,10 +3,12 @@
 ============================= */
 
 .footer {
-  background: #ffffff;
-  padding-top: 70px;
+  background: #f0f0f0;
+  padding-top: 60px;
   border-top: 1px solid #f1f1f1;
-font-family: 'Avenir Next', sans-serif;}
+font-family: 'Avenir Next', sans-serif;
+padding-bottom: 0px;
+}
 
 /* ===== TOP SECTION ===== */
 
@@ -120,7 +122,7 @@ font-family: 'Avenir Next', sans-serif;}
   flex-wrap: wrap;
 }
 
-.socials span {
+.socials li {
   font-size: 14px;
   color: #555;
   cursor: pointer;
@@ -128,7 +130,7 @@ font-family: 'Avenir Next', sans-serif;}
   position: relative;
 }
 
-.socials span::after {
+.socials li::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -139,18 +141,18 @@ font-family: 'Avenir Next', sans-serif;}
   transition: 0.3s;
 }
 
-.socials span:hover {
+.socials li:hover {
   color: #C1121F;
 }
 
-.socials span:hover::after {
+.socials li:hover::after {
   width: 100%;
 }
 
 /* ===== BOTTOM BAR ===== */
 
 .footer-bottom {
-  margin-top: 70px;
+  margin-top: 10px;
   padding: 25px 0;
   text-align: center;
   font-size: 13px;

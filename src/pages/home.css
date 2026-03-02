@@ -95,11 +95,23 @@ font-family: 'Avenir Next', sans-serif;}
 
 }
 
+@media (max-width: 1200px){
+
+ .home-hero {
+    min-height: 100vh;          /* full screen */
+    display: flex;
+    align-items: center;        /* vertical center */
+    justify-content: center;
+  }
+
+
+}
+
 
 @media (max-width: 768px) {
 
   .home-hero {
-    min-height: 90vh;          /* full screen */
+    min-height: 80vh;          /* full screen */
     display: flex;
     align-items: center;        /* vertical center */
     justify-content: center;
