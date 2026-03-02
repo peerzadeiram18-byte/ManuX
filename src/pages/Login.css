@@ -5,7 +5,7 @@
   justify-content:center;
   align-items:center;
   background: linear-gradient(135deg,#f6f7fb,#e9ecf5);
-  font-family: 'Segoe UI', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* MAIN BOX */
@@ -85,7 +85,7 @@
 .login-btn {
   padding: 8px 18px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 30px;
   border: 2px solid #e11d2e;
   background: transparent;
@@ -105,7 +105,7 @@
   
   padding:14px;
   font-size:15px;
-  font-weight:600;
+  font-weight:400;
   border-radius:30px;
   border:none;
   background: linear-gradient(135deg,#6c63ff,#5a54e8);

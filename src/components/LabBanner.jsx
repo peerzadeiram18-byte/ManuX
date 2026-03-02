@@ -19,7 +19,7 @@ const LabBanner = () => {
 
         {/* Center content */}
         <div className="labCenter">
-          <h2> reminded for every skin, everywhere</h2>
+          <h2> Reminded for every skin, everywhere</h2>
           <p>Professional skincare treatments with modern technology & fast visible results</p>
         </div>
 

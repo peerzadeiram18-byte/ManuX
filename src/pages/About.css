@@ -1,5 +1,5 @@
 .about-page {
-  font-family: 'Inter', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
   color: #0e2a24;
 }
 
@@ -12,7 +12,7 @@
 
 /* HERO */
 .about-page1 {
-  font-family: 'Poppins', sans-serif;  
+font-family: 'Plus Jakarta Sans', sans-serif;
   background: #E5E6E8;
   color: #0A0A0A;
   overflow-x: hidden;
@@ -50,11 +50,12 @@
   color: white;
   max-width: 800px;
   padding: 20px;
+
 }
 
 .about-hero1 h1 {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .subtitle1 {
@@ -90,14 +91,14 @@
   font-size: 13px;
   letter-spacing: 4px;
   color: #C1121F;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 25px;
 }
 
 /* Heading */
 .manux-about-heading {
   font-size: 54px;
-  font-weight: 600;
+  font-weight: 400;
   color: #1e293b;
   line-height: 1.2;
 }
@@ -260,7 +261,7 @@
 .manux-foundation-tag {
   font-size: 13px;
   letter-spacing: 4px;
-  font-weight: 600;
+  font-weight: 400;
   color: #C1121F;
   margin-bottom: 20px;
   display: inline-block;
@@ -268,7 +269,7 @@
 
 .manux-foundation-heading {
   font-size: 52px;
-  font-weight: 600;
+  font-weight: 400;
   color: #0A0A0A;
   line-height: 1.2;
   margin-bottom: 25px;
@@ -411,7 +412,7 @@
   display: inline-block;
   font-size: 13px;
   letter-spacing: 4px;
-  font-weight: 600;
+  font-weight: 400;
   color: #C1121F;
   margin-bottom: 25px;
 }
@@ -419,7 +420,7 @@
 /* heading */
 .manux-b2b-heading {
   font-size: 52px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
   line-height: 1.2;
 }
@@ -547,7 +548,7 @@
 .manux-precisionX-tag {
   font-size: 13px;
   letter-spacing: 4px;
-  font-weight: 600;
+  font-weight: 400;
   color: #C1121F;
   display: inline-block;
   margin-bottom: 25px;
@@ -556,7 +557,7 @@
 /* HEADING */
 .manux-precisionX-heading {
   font-size: 46px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 25px;
@@ -642,7 +643,7 @@
 .manux-science-tag {
   font-size: 13px;
   letter-spacing: 4px;
-  font-weight: 600;
+  font-weight: 400;
   color: #C1121F;
   display: inline-block;
   margin-bottom: 20px;
@@ -652,7 +653,7 @@
 .manux-science-heading {
   font-size: 46px;
   color: #0A0A0A;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .manux-science-divider {
@@ -774,7 +775,7 @@
 .manux-domain-tagX {
   font-size: 13px;
   letter-spacing: 4px;
-  font-weight: 600;
+  font-weight: 400;
   color: #C1121F;
   display: inline-block;
   margin-bottom: 20px;
@@ -783,7 +784,7 @@
 /* HEADING */
 .manux-domain-headingX {
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
 }
 
@@ -918,7 +919,7 @@
 
 .ethics-content h2 {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 400;
   color: #0f2f33;
   margin-bottom: 20px;
 }
@@ -1017,7 +1018,7 @@
 
 .global-impact-title {
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
   margin-bottom: 25px;
   line-height: 1.3;

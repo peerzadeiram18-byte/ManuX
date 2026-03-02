@@ -5,6 +5,8 @@ import heroBg from "../assets/contact-hero.jpg";
 
 import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
+import contactBg from "../assets/contact-bg.jpg";
+
 const Contact = () => {
   return (
     <div className="cx-contact-page">
@@ -28,7 +30,9 @@ const Contact = () => {
 
 
 {/* CONTACT + FORM SECTION */}
-<section className="cx-contact-info">
+<section className="cx-contact-info"  
+style={{ backgroundImage: `url(${contactBg})` }}
+>
   <div className="cx-info-wrapper">
 
     {/* LEFT SIDE – OFFICE INFO */}

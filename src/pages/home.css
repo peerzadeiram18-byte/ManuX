@@ -4,16 +4,17 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-font-family: 'Avenir Next', sans-serif;}
+font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
 html,body{
   overflow-x:hidden;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .home-hero {
   position: relative;
-  height: 70vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
    background:
@@ -131,7 +132,7 @@ html,body{
   justify-content: center;
   padding: 0 20px;
    max-width: 1300px;
-   font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif;*/
   
 
     align-items: center;     /* 👈 horizontal center */
@@ -143,11 +144,12 @@ html,body{
 
 .hero-tag{
   color: white;
+  font-size: 20px;
 }
 /* HEADING */
 .hero-content h1 {
   font-size: clamp(32px, 4vw, 52px);
-  font-weight: 550;
+  font-weight: 400;
   line-height: 1.2;
   margin-top: 20px;
   color:white;
@@ -162,7 +164,7 @@ html,body{
   margin-top: 20px;
   font-size: clamp(14px, 1.2vw, 18px);
   
-   max-width: 950px;
+   max-width: 970px;
     color:  white;
 ;
 }
@@ -181,7 +183,7 @@ html,body{
    padding: 12px 28px;
   border-radius: 50px;
   border: none;
-  font-weight: 600;
+  font-weight: 400;
  font-size: 15px;
   color: white;
   cursor: pointer;
@@ -201,7 +203,7 @@ html,body{
    padding:12px 28px;
   border-radius: 50px;
   border: none;
-  font-weight: 600;
+  font-weight: 400;
  font-size: 15px;
   cursor: pointer;
   background: rgb(17, 4, 77);
@@ -294,20 +296,20 @@ html,body{
   top:40px;
   left:40px;
   color:white;
-   font-family: 'Playfair Display', serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 
 .hero-text h4{
-  font-weight:500;
+  font-weight:400;
   letter-spacing:2px;
-   font-family: 'Playfair Display', serif;
+   /*font-family: 'Playfair Display', serif;*/
 }
 
 .hero-text h1{
   font-size:38px;
   margin-top:10px;
-   font-family: 'Playfair Display', serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 
@@ -399,7 +401,7 @@ background:
   margin:auto;
   text-align:center;
   color:#e6f2ef;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
   backdrop-filter:blur(8px);
   background:rgba(255,255,255,0.03);
   border-radius:20px;
@@ -409,10 +411,12 @@ background:
 /* Title */
 .about-intro h2{
   font-size:44px;
+    font-weight:400;
+
   letter-spacing:1px;
   margin-bottom:10px;
   color:#d8c27a;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Subtitle */
@@ -421,7 +425,7 @@ background:
   font-size:20px;
   margin-bottom:25px;
   color:#cfe8de;
-   font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* First important paragraph */
@@ -429,7 +433,7 @@ background:
   font-size:19px;
   line-height:1.7;
   margin-bottom:25px;
-   font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Normal paragraphs */
@@ -437,7 +441,7 @@ background:
   line-height:1.8;
   margin-bottom:20px;
   color:#c3d9d4;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Highlight Statement */
@@ -445,14 +449,15 @@ background:
   margin-top:35px;
   padding-top:25px;
   border-top:1px solid rgba(255,255,255,0.1);
-   font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-weight: 400;
 }
 
 .about-highlight span{
   display:block;
   font-size:18px;
   opacity:0.8;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .about-highlight strong{
@@ -461,7 +466,9 @@ background:
   font-size:24px;
   color:#e6c76a;
   letter-spacing:1px;
-  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* ===================================
@@ -483,7 +490,7 @@ background:
   opacity: 0;
   transform: scale(0.95);
   transition: all 1.4s ease;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .reveal-section.active .reveal-content {
@@ -564,12 +571,12 @@ background:
 /* Heading text */
 .ba-text h2{
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 400;
   color: #2b2b2b;
   margin-bottom: 12px;
   letter-spacing: 0.5px;
   text-align: center;
-   font-family: 'Playfair Display', serif;
+   font-family: 'Plus Jakarta Sans', sans-serif;
    padding-top: 30px;
   
   
@@ -586,7 +593,7 @@ background:
   margin-right: auto;
   line-height: 1.6;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   
 }
 .nano-grid {
@@ -640,7 +647,7 @@ background:
   margin:0 auto;
   padding:0 4%;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .researchh-header{
@@ -648,20 +655,21 @@ background:
   max-width: 1200px;
   margin-bottom:70px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .researchh-tag{
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 2px;
   color: #9dd6b5;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .researchh-header h2{
- font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 44px;
+  font-weight: 400;
   margin-top:16px;
   margin-bottom:22px;
   line-height:1.2;
@@ -673,12 +681,12 @@ background:
 .researchh-intro{
   max-width:780px;
   margin:0 auto;
-  font-size: 18px;
+  font-size: 19px;
   opacity:0.85;
   line-height: 1.7;
   color: #cfe8de;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .researchh-grid{
@@ -762,27 +770,29 @@ background:
    color: rgba(255,255,255,0.9);
   font-size: 15px;
   line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .researchh-footer{
   margin-top: 70px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .researchh-footer strong{
   display: block;
   font-size: 22px;
   color: #e6c76a;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-weight: 400;
+
 }
 
 .researchh-footer span{
   font-size: 16px;
   opacity: 0.8;
    color: #979692;
-   font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Mobile */
@@ -1006,16 +1016,16 @@ background:
   font-family: 'Poppins', sans-serif;
 }
 .ba-container ba-reveal{
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 .ba-text h2{
-    font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 
 .ba-text p{
-    font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 /* Alternate direction */

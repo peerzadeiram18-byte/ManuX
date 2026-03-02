@@ -151,16 +151,24 @@ function Nanotechnology() {
 
 
 
-      {/* 6️⃣ Pure Formulation Section */}
-      <section className="nano-dark">
-        <div className="container center">
-          <h2>100% Plant-Based Nano Herbal Extracts</h2>
-          <p>
-            Our formulations contain no chemicals, no alcohol, and no harsh
-            ingredients. Every product is crafted from pure plant materials.
-          </p>
-        </div>
-      </section>
+    {/* 6️⃣ Pure Formulation Section */}
+<section className="nano-dark">
+  <div className="nano-container">
+    <h2>100% Plant-Based Nano Herbal Extracts</h2>
+    <p>
+      Our formulations contain no chemicals, no alcohol, and no harsh
+      ingredients. Every product is crafted from pure plant materials.
+    </p>
+
+    <div className="nano-features">
+      <div className="nano-box">No Chemicals</div>
+      <div className="nano-box">No Alcohol</div>
+      <div className="nano-box">100% Plant-Based</div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* 7️⃣ Expertise Section */}
       <section className="nano-section">

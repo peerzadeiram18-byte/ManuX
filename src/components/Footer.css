@@ -1,85 +1,205 @@
+/* =============================
+   MANUX PREMIUM FOOTER DESIGN
+============================= */
 
-/* ================= FOOTER CSS ================= */
-
-/* paste below in Footer.css */
-
-.footer{
-  background:#ffffff;
-  border-top:1px solid #eee;
-  margin-top:20px;
+.footer {
+  background: #ffffff;
+  padding-top: 70px;
+  border-top: 1px solid #f1f1f1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.footer-top{
-  max-width:1200px;
-  margin:auto;
-  padding:25px 20px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:200px;
+/* ===== TOP SECTION ===== */
+
+.footer-top {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 60px;
 }
 
-.footer-logo{
-  color:#e11d2e;
-  margin-bottom:12px;
+/* ===== BRAND SECTION ===== */
+
+.footer-logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #C1121F;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
 }
 
-.footer-text{
-  color:#555;
-  line-height:1.6;
+.footer-text {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+  max-width: 320px;
 }
 
-.footer-col h3{
-  margin-bottom:14px;
-  color:#222;
+/* ===== COLUMN HEADINGS ===== */
+
+.footer-col h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  color: #C1121F;
+  position: relative;
 }
 
-.footer-col ul{
-  list-style:none;
-  padding:0;
+/* Elegant underline effect */
+.footer-col h3::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #C1121F;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
 }
 
-.footer-col li{
-  margin-bottom:10px;
-  color:#555;
-  cursor:pointer;
-  transition:.3s;
+/* ===== LINKS ===== */
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer-col li:hover{
-  color:#e11d2e;
-  transform:translateX(3px);
+.footer-col li {
+  margin-bottom: 12px;
 }
 
-.socials span{
-  display:inline-block;
-  margin-right:14px;
-  color:#555;
-  cursor:pointer;
-  transition:.3s;
+.footer-col a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14.5px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.socials span:hover{
-  color:#e11d2e;
+.footer-col a:hover {
+  color: #C1121F;
+  transform: translateX(6px);
 }
 
-.footer-bottom{
-  border-top:1px solid #eee;
-  text-align:center;
-  padding:18px;
-  color:#777;
-  font-size:14px;
+/* ===== DROPDOWN ===== */
+
+.footer-dropdown-title {
+  cursor: pointer;
+  color: #555;
+  font-size: 14.5px;
+  transition: 0.3s ease;
 }
 
-@media(max-width:900px){
-  .footer-top{
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
+.footer-dropdown-title:hover {
+  color: #C1121F;
+}
+
+.footer-submenu {
+  margin-top: 8px;
+  padding-left: 15px;
+  border-left: 2px solid #f3d2d5;
+}
+
+.footer-submenu li {
+  margin-bottom: 8px;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+.footer-col li:not(a) {
+  color: #555;
+  font-size: 14.5px;
+}
+
+/* ===== SOCIALS ===== */
+
+.socials {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.socials span {
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.socials span::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #C1121F;
+  transition: 0.3s;
+}
+
+.socials span:hover {
+  color: #C1121F;
+}
+
+.socials span:hover::after {
+  width: 100%;
+}
+
+/* ===== BOTTOM BAR ===== */
+
+.footer-bottom {
+  margin-top: 70px;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid #f1f1f1;
+  letter-spacing: 0.3px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+@media (max-width: 1100px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 }
 
-@media(max-width:500px){
-  .footer-top{
-    grid-template-columns:1fr;
-    text-align:center;
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-text {
+    max-width: 100%;
+  }
+
+  .footer-col h3::after {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer-logo {
+    font-size: 22px;
+  }
+
+  .footer-col h3 {
+    font-size: 16px;
+  }
+
+  .footer-col a {
+    font-size: 14px;
   }
 }

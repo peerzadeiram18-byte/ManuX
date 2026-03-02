@@ -24,11 +24,28 @@ import OurTeam from "./pages/OurTeam";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AdminDashboard from "./pages/AdminDashboard";
+ 
+//import ProductList from "./pages/ProductList";
+//import ProductForm from "./pages/ProductForm";
+
 import ScrollToTop from "./components/ScrollToTop";
+
+
+import { ProductProvider } from "./context/ProductContext";
+
+import Register from "./pages/Register";
+
+
+
 function App() {
+
+  
   return (
+
+
     <BrowserRouter>
       <AuthProvider>
+        <ProductProvider>
 
        
   <ScrollToTop />   {/* 👈 ADD THIS HERE */}
@@ -49,7 +66,12 @@ function App() {
     <Route path="/ayurveda" element={<Ayurveda />} />
     <Route path="/OurTeam" element={<OurTeam />} />
     <Route path="/contact" element={<Contact />} />
-     <Route path="/About" element={<About Us />} />
+     <Route path="/About" element={<About />} />
+    {/*<Route path="/AdminDashboard" element={<AdminDashboard />} />*/}
+
+    <Route path="/register" element={<Register />} />
+
+
 
     <Route path="/technology/nanotechnology" element={<Nanotechnology />} />
     <Route path="/technology/plasma-technology" element={<PlasmaTechnology />} />
@@ -62,7 +84,7 @@ function App() {
 
 {/* Admin Dashboard (Protected) */}
 <Route
-  path="/admin/dashboard"
+  path="/admin/dashboard/*"
   element={
     <AdminRoute>
       <AdminDashboard />
@@ -72,12 +94,15 @@ function App() {
 
 </Routes>
 
-        
+   
 
         <Footer />
+        </ProductProvider>
 
       </AuthProvider>
     </BrowserRouter>
+
+    
   );
 }
 

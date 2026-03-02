@@ -14,6 +14,8 @@
   justify-content: center;
   padding: 80px 20px;
   overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 
 /* Dark Gradient Overlay */
@@ -35,6 +37,8 @@
   max-width: 900px;
   text-align: center;
   color: #E5E6E8;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
 
   /* Animation */
   opacity: 0;
@@ -45,7 +49,7 @@
 /* Title */
 .mx-team-title {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: #E5E6E8;
@@ -193,7 +197,7 @@
 
 .mx-ceo-name {
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 400;
   color: #0F2544;
   margin-bottom: 8px;
 }
@@ -285,11 +289,16 @@
   opacity: 0;
   transform: translateX(80px);
   transition: all 1s ease;
+    font-weight: 400;
+
 }
 
+.mxnano-content h2{
+  font-weight: 400;
+}
 .mxnano-name {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 400;
   color: #E5E6E8;
   margin-bottom: 10px;
 }
@@ -443,8 +452,8 @@
 }
 
 .mx-pm-name {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 400;
   color: #0F2544;
   margin-bottom: 8px;
 }
@@ -593,7 +602,7 @@
 
 .mx-rasa-name {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 400;
   color: #E5E6E8;
   margin-bottom: 8px;
 }
@@ -721,6 +730,9 @@
   font-size: 42px;
   color: #10244d;
   margin-bottom: 10px;
+  font-weight: 400;
+
+
 }
 
 .panchakarma-content h4 {
@@ -805,7 +817,7 @@
 .team-wrapper {
   background: linear-gradient(180deg,#0f2f33,#08191b);
   color: white;
-  font-family: sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .team-intro {
@@ -846,6 +858,7 @@
 .team-content h2 {
   font-size: 32px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .team-content h4 {

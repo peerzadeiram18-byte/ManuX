@@ -4,7 +4,7 @@
 
 .cx-contact-page {
   background: #0F2544;
-  font-family: 'Poppins', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* ===================================
@@ -86,11 +86,15 @@
 ================================ */
 
 .cx-contact-info {
-  background-color: #E5E6E8;
+ 
   padding: 50px 10px;
   display: flex;
   justify-content: center;
-   border-radius: 30px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .cx-info-wrapper {
@@ -99,6 +103,7 @@
   display: flex;
   position: relative;
   border-radius: 30px;
+  align-items: center;
 }
 
 /* ================================
@@ -106,31 +111,50 @@
 ================================ */
 
 .cx-info-card {
-  width: 40%;
-background: linear-gradient(
+ width: 40%;
+ background: linear-gradient(
     135deg,
     #0A0A0A,
     #0F2544
   );
   color: white;
-  padding: 50px 40px;
-  box-shadow: 0 30px 50px rgba(5, 5, 5, 0.15);
-  z-index: 2;
-  border-radius:30px;
+ 
+  padding: 60px 50px;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+
   
 }
 
+/* EACH INFO BLOCK */
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.info-block:last-child {
+  margin-bottom: 0;
+}
+
 .cx-info-card h3 {
-  margin-top: 25px;
+  margin-top: 10px;
+
+   font-size: 20px;
+  font-weight: 200;
   margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 600;
+
 }
 
 .cx-info-card p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 10px;
+    font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+
 }
 
 /* ================================
@@ -150,12 +174,60 @@ background: linear-gradient(
 
 .cx-form-container h2 {
   color: #0F2544;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-size: 28px;
-  font-weight: 500px;
+  font-weight: 200;
   padding-left: 170px;
 
 }
+  /* ===== Tablet ===== */
+@media (max-width: 992px) {
+  .cx-form-container h2 {
+    padding-left: 80px;
+    font-size: 24px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .cx-form-container h2 {
+    padding-left: 0;        /* 🔥 remove left spacing */
+    text-align: center;     /* 🔥 center heading */
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .cx-info-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cx-contact-info {
+    padding: 80px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cx-contact-info {
+    padding: 70px 20px;
+  }
+
+  .cx-info-card,
+  .cx-form-container {
+      padding: 40px 25px;
+  }
+
+  .info-block {
+    flex-direction: column;
+    gap: 10px;
+     gap: 15px;
+    margin-bottom: 35px;
+  }
+}
+
 /* ================================
    FORM STYLING
 ================================ */
@@ -202,7 +274,7 @@ background: linear-gradient(
   border: none;
   background: #C1121F;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
@@ -219,10 +291,12 @@ background: linear-gradient(
     135deg,
     #0A0A0A,
     #0F2544
-  );  padding: 50px;
+  ); 
+  padding: 50px;
   border-radius: 30px;
   color: white;
   max-width: 700px;
+  
 }
 
 /* 👇 THIS FIXES ICON POSITION */
@@ -235,9 +309,9 @@ background: linear-gradient(
 }
 
 .info-icon {
-  font-size: 25px;
+  font-size: 20px;
   min-width: 40px;   /* IMPORTANT */
-  margin-top: 25px;   /* Small adjustment */
+  margin-top: 10px;   /* Small adjustment */
 }
 
 .info-text h3 {
@@ -316,7 +390,7 @@ background: linear-gradient(
   letter-spacing: 3px;
   color: #C1121F;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Heading */
@@ -324,7 +398,7 @@ background: linear-gradient(
   color: #E5E6E8;
   font-size: 48px;
   margin-bottom: 25px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Divider */
@@ -455,7 +529,7 @@ background: linear-gradient(
   font-size: 13px;
   letter-spacing: 3px;
   color: #C1121F;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -463,7 +537,7 @@ background: linear-gradient(
 .cx-global-box h2 {
   font-size: 48px;
   color: #0F2544;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 

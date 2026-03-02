@@ -7,6 +7,7 @@ import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+
 const Navbar = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -44,7 +45,10 @@ const Navbar = () => {
         <div className="nav-right">
           <FaRegStar />
           <FaBell />
-          <FaUser />
+          <FaUser 
+           className="user-icon"
+           onClick={() => navigate("/register")}
+          />
 
           {user ? (
             <>
@@ -145,9 +149,59 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
           </NavLink>
+
+          {/*} <div className="dropdown">
+            <span
+              className="nav-link"
+              onClick={() => setOpenDropdown(!openDropdown)}
+            >
+              AdminDashboard
+            </span>
+
+            <div
+              className={`dropdown-menu ${
+                openDropdown ? "show-dropdown" : ""
+              }`}
+            >
+             <Link
+
+    to="/AdminDashboard/Productsform" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+Product form  </Link>
+
+  <Link
+    to="/AdminDashboard/ProductList"
+    onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+Product List  </Link>
+
+ <Link
+    to="/AdminDashboard/UserList"
+    onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+    Plant Stem Cell Technology
+  </Link>
+
+
+            </div>
+
+          </div>          
+*/}
         </div>
+     
       </div>
     </div>
+            
+
   );
 };
 
