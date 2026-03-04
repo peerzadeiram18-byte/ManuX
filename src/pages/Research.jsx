@@ -11,13 +11,18 @@ import pregnancyImg from "../assets/Rpregnancy.jpg";
 import ayurvedaImg from "../assets/Rayurveda.jpg";
 import nutraImg from "../assets/Rnutra.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 
 export default function ResearchInsightsPage() {
   return (
-   <div className="bg-white text-gray-800">
+   <div className="bg-white text-gray-800"
+       style={{ backgroundImage: `url(${bgImage})` }}
+   >
   {/* ================= HERO SECTION ================= */}
   <section className="research-hero">
-  <img src="/research-hero.jpg" alt="Research Background" />
+  {/*<img src="/research-hero.jpg" alt="Research Background" />*/}
 
   <div className="research-overlay"></div>
 

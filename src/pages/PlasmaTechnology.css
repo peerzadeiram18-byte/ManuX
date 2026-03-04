@@ -5,6 +5,11 @@ font-family: 'Avenir Next', sans-serif;
 
 .plasma-page {
   overflow-x: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* ================= PLASMA HERO SECTION ================= */
@@ -22,19 +27,27 @@ font-family: 'Avenir Next', sans-serif;
   text-align: center;
   padding: 0 6%;
   overflow: hidden;
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* Deep luxury overlay */
-.plasma-hero-overlay {
+/*.plasma-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
     rgba(10, 10, 20, 0.9),
     rgba(15, 37, 68, 0.85)
-  );
+  
   z-index: 1;
-}
+}*/
 
 /* Content */
 .plasma-hero-content {
@@ -47,7 +60,7 @@ font-family: 'Avenir Next', sans-serif;
 .plasma-hero-content h1 {
   font-size: clamp(2.5rem, 5vw, 4.2rem);
   font-weight: 400;
-  color: #E5E6E8;
+  color: #1F2A44;
   letter-spacing: 1px;
   margin-bottom: 18px;
   text-shadow: 0 10px 30px rgba(0,0,0,0.7);
@@ -57,7 +70,7 @@ font-family: 'Avenir Next', sans-serif;
 .plasma-hero-content h2 {
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: 400;
-  color: #6E7178;
+  color: #B23A3F;
   margin-bottom: 25px;
 }
 
@@ -65,7 +78,7 @@ font-family: 'Avenir Next', sans-serif;
 .plasma-hero-content p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #cbd5e1;
+  color: #5C6473;
   margin-bottom: 45px;
 }
 
@@ -73,9 +86,9 @@ font-family: 'Avenir Next', sans-serif;
 .plasma-cta-btn {
   padding: 16px 50px;
   border-radius: 60px;
-  border: 1.5px solid #C1121F;
+  border: 1.5px solid #7A2E4D;
   background: transparent;
-  color: #ffffff;
+  color: #B23A3F;
   font-size: 0.95rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -85,7 +98,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* Hover */
 .plasma-cta-btn:hover {
-  background: #C1121F;
+  background: #7A2E4D;
   color: #ffffff;
   transform: translateY(-6px);
   box-shadow: 0 25px 60px rgba(193,18,31,0.35);
@@ -139,17 +152,18 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .light {
-  background: #ffffff;
+  /*background: #ffffff;*/
   color: #222;
 }
 
 .dark {
-  background: #111;
+  /*background: #111;*/
   color: white;
 }
 
 .center {
   text-align: center;
+  color: #1F2A44;
 }
 
 /* SPLIT LAYOUT */
@@ -157,6 +171,15 @@ font-family: 'Avenir Next', sans-serif;
   display: flex;
   align-items: center;
   gap: 40px;
+
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .split img {
@@ -189,14 +212,22 @@ font-family: 'Avenir Next', sans-serif;
 /* INTRO SECTION */
 .intro-section {
   padding: 100px 20px;
-  background: linear-gradient(to right, #f8f9fc, #eef1f7);
+  /*background: linear-gradient(to right, #f8f9fc, #eef1f7);*/
   display: flex;
   justify-content: center;
 font-family: 'Avenir Next', sans-serif;
+
+
+ border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .intro-section:hover {
-  background: linear-gradient(to right, #eef1f7, #f8f9fc);
+ /* background: linear-gradient(to right, #eef1f7, #f8f9fc);*/
   transition: 0.5s ease;
 }
 
@@ -210,7 +241,7 @@ font-family: 'Avenir Next', sans-serif;
 .intro-container h2 {
   font-size: 38px;
   font-weight: 400;
-  color: #111;
+  color: #1F2A44;
   margin-bottom: 20px;
   
 }
@@ -219,7 +250,7 @@ font-family: 'Avenir Next', sans-serif;
 .line {
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  background: linear-gradient(to right, #7A2E4D, #B23A3F);
   margin: 0 auto 30px auto;
   border-radius: 10px;
 }
@@ -228,17 +259,25 @@ font-family: 'Avenir Next', sans-serif;
 .intro-container p {
   font-size: 18px;
   line-height: 1.8;
-  color: #444;
+  color: #5C6473;
   font-weight: 400;
 }
 
 /*split section */
 
 .plasma-split {
-background:
+/*background:
     radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
     radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
-    linear-gradient(180deg, #0F2544, #0A0A0A);
+    linear-gradient(180deg, #0F2544, #0A0A0A);*/
+
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .split-image::after {
@@ -246,23 +285,29 @@ background:
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  background: linear-gradient(
+  /*background: linear-gradient(
     120deg,
     rgba(160, 68, 255, 0.25),
     transparent
-  );
+  );*/
   pointer-events: none;
+
+
+
+
+  
 }
 /* TEXT SIDE */
 .split-text {
   flex: 1;
   max-width: 520px;
+
 }
 
 .split-text h2 {
   font-size: 3rem;
   margin-bottom: 15px;
-  color: #f3e8ff;
+  color: #1F2A44;
     font-weight: 400;
 
 }
@@ -270,7 +315,7 @@ background:
 .split-text p {
   font-size: 18px;
   line-height: 1.8;
-  color: #d6c9ff;
+  color: #5C6473;
   opacity: 0.9;
 }
 
@@ -283,7 +328,7 @@ background:
 .split-image img {
   width: 100%;
   border-radius: 18px;
-  box-shadow: 0 30px 80px rgba(160, 68, 255, 0.25);
+  /*box-shadow: 0 30px 80px rgba(160, 68, 255, 0.25);*/
   transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
@@ -326,6 +371,14 @@ background:
   position: relative;
   min-height: 260px;
   overflow: hidden;
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* DARK OVERLAY */
@@ -333,11 +386,11 @@ background:
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /*background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.55),
     rgba(0,0,0,0.8)
-  );
+  );*/
 }
 
 /* CONTENT ABOVE OVERLAY */
@@ -356,13 +409,21 @@ background:
 
 .luxury-section {
   padding: 120px 20px;
-background:
+/*background:
     radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
     radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
-    linear-gradient(180deg, #0F2544, #0A0A0A);  display: flex;
+    linear-gradient(180deg, #0F2544, #0A0A0A);  display: flex;*/
   justify-content: center;
   text-align: center;
-  color: white;
+  color: #1F2A44;
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .luxury-content {
@@ -373,23 +434,33 @@ background:
   font-size: 40px;
   font-weight: 400;
   margin-bottom: 20px;
-  text-shadow: 0 5px 25px rgba(123, 47, 247, 0.6);
+  text-shadow: 0 5px 25px #7A2E4D;
 }
 
 .luxury-content p {
   font-size: 18px;
   line-height: 1.8;
-  color: #d1d1d1;
+  color: #5C6473;
 }
 
 /* ================= PRODUCT LIGHT SECTION ================= */
 
 .product-section {
   padding: 120px 20px;
-  background: linear-gradient(to right, #f8f9fc, #eef1f7);
+  /*background: linear-gradient(to right, #f8f9fc, #eef1f7);*/
   display: flex;
   justify-content: center;
   text-align: center;
+
+
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .product-content {
@@ -400,13 +471,13 @@ background:
   font-size: 38px;
   font-weight: 400;
   margin-bottom: 20px;
-  color: #111;
+  color: #1F2A44;
 }
 
 .product-content p {
   font-size: 18px;
   line-height: 1.8;
-  color: #444;
+  color: #5C6473;
     text-align: center;
 }
 
@@ -416,7 +487,7 @@ background:
   width: 80px;
   height: 4px;
   margin: 0 auto 30px auto;
-  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  background: linear-gradient(to right, #7A2E4D, #B23A3F);
   border-radius: 20px;
 }
 
@@ -424,9 +495,18 @@ background:
 
 .eco-vision-block {
   padding: 100px 6%;
-  background: linear-gradient(160deg, #0A0A0A, #0F2544 60%, #06121f);
+/*  background: linear-gradient(160deg, #0A0A0A, #0F2544 60%, #06121f);*/
   position: relative;
   overflow: hidden;
+
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* Soft green glow for sustainability feel */
@@ -473,7 +553,7 @@ background:
 
 /* TEXT SIDE */
 .eco-content {
-  color: #E5E6E8;
+  color: #1F2A44;
 }
 
 .eco-heading {
@@ -486,7 +566,7 @@ background:
 /* Unique Divider (different style) */
 .eco-divider { 
   width: 90px; height: 3px;
- background: #C1121F; 
+ background: #7A2E4D; 
  margin-bottom: 30px; 
  border-radius: 10px;
 }
@@ -495,7 +575,7 @@ background:
 .eco-description {
   font-size: 1rem;
   line-height: 1.9;
-  color: #6E7178;
+  color: #5C6473;
 }
 
 /* ================= ECO RESPONSIVE ================= */
@@ -589,15 +669,24 @@ background:
 
 .plasma-final-cta {
   padding: 90px 8%;
-    background: linear-gradient(
+   /* background: linear-gradient(
     360deg,
    #E5E6E8, #ffffff
     
-  );
+  );*/
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
+
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* Moving light effect feel */
@@ -624,7 +713,7 @@ background:
 .plasma-final-title {
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 400;
-  color: #323333;
+  color: #1F2A44;
   margin-bottom: 45px;
   letter-spacing: 1px;
 }
@@ -636,9 +725,9 @@ background:
   font-weight: 400;
   letter-spacing: 1px;
   border-radius: 8px; /* NOT pill shape */
-  border: 1px solid #C1121F;
+  border: 1px solid #7A2E4D;
   background: transparent;
-  color: #C1121F;
+  color: #B23A3F;
   cursor: pointer;
   transition: all 0.4s ease;
   position: relative;
@@ -650,7 +739,7 @@ background:
   content: "";
   position: absolute;
   inset: 0;
-  background: #C1121F;
+  background: #7A2E4D;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;

@@ -4,6 +4,16 @@
 body {
 font-family: 'Avenir Next', sans-serif;}
 
+.bg-white {
+
+
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
 /* ================= HERO SECTION ================= */
 
 .research-hero {
@@ -13,18 +23,26 @@ font-family: 'Avenir Next', sans-serif;}
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
-.research-hero img {
+/*.research-hero img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1.08);
-}
+}*/
 
-.research-overlay {
+/*.research-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -33,7 +51,7 @@ font-family: 'Avenir Next', sans-serif;}
     rgba(50, 47, 116, 0.55),
     rgba(0,0,0,0.85)
   );
-}
+}*/
 
 .research-hero-content {
   position: relative;
@@ -48,25 +66,25 @@ font-family: 'Avenir Next', sans-serif;}
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 400;
   letter-spacing: -1px;
-  color: #ffffff;
+  color: #1F2A44;
 }
 
 .research-title span {
   display: block;
-  color: #111827;
+  color: #B23A3F;
 }
 
 .research-subtitle {
   margin-top: 24px;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #e5e7eb;
+  color: #5C6473;
 }
 
 .hero-divider {
   width: 90px;
   height: 4px;
-  background: linear-gradient(to right, #303c7c, #e0081e);
+  background: linear-gradient(to right, #7A2E4D, #B23A3F);
   margin: 32px auto 0;
   border-radius: 999px;
 }
@@ -78,7 +96,7 @@ font-family: 'Avenir Next', sans-serif;}
   font-size: 2.4rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
-  color: #111827;
+  color: #1F2A44;
 }
 
 /* ================= LIST STYLE ================= */
@@ -100,7 +118,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .category-card {
   border-radius: 18px;
-  background: white;
+ /* background: white;*/
   padding: 24px;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -114,7 +132,15 @@ font-family: 'Avenir Next', sans-serif;}
 /* ================= CTA ================= */
 
 .cta-section {
-  background: radial-gradient(circle at top, #1f2933, #000);
+  background: transparent;
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .cta-button {
@@ -135,7 +161,16 @@ font-family: 'Avenir Next', sans-serif;}
 
 .philosophy-section {
   padding: 6rem 1.5rem;
-  background: linear-gradient(to right, #f9fafb, #ffffff);
+  /*background: linear-gradient(to right, #f9fafb, #ffffff);*/
+
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .philosophy-container {
@@ -182,7 +217,7 @@ font-family: 'Avenir Next', sans-serif;}
   /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4vw, 3rem);
   
-  color: #0f172a;
+  color: #1F2A44;
   margin-bottom: 2rem;
   font-weight: 400;
 
@@ -201,7 +236,7 @@ font-family: 'Avenir Next', sans-serif;}
   padding-left: 34px;
   margin-bottom: 1.1rem;
   font-size: 1.05rem;
-  color: #334155;
+  color: #5C6473;
   line-height: 1.6;
 }
 
@@ -210,7 +245,7 @@ font-family: 'Avenir Next', sans-serif;}
   position: absolute;
   left: 0;
   top: 2px;
-  color: #c73232;
+  color: #B23A3F;
   font-weight: bold;
 }
 
@@ -218,7 +253,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .philosophy-text {
   font-size: 1.05rem;
-  color: #475569;
+  color: #5C6473;
   line-height: 1.7;
   max-width: 520px;
 }
@@ -244,8 +279,16 @@ font-family: 'Avenir Next', sans-serif;}
 
 .category-section {
   padding: 100px 6%;
-  background: #E5E6E8;
+ /* background: #E5E6E8;*/
   position: relative;
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .category-container {
@@ -263,7 +306,7 @@ font-family: 'Avenir Next', sans-serif;}
 .category-title {
   font-size: 2.8rem;
   font-weight: 400;
-  color: #0F2544;
+  color: #1F2A44;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
@@ -272,7 +315,7 @@ font-family: 'Avenir Next', sans-serif;}
   font-size: 1.05rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #6E7178;
+  color: #5C6473;
   line-height: 1.7;
 }
 
@@ -287,13 +330,13 @@ font-family: 'Avenir Next', sans-serif;}
 /* ---------- CARD ---------- */
 
 .category-card {
-  background: white;
+ /* background: white;*/
   padding: 40px 25px;
   border-radius: 18px;
   text-align: center;
   font-size: 1.05rem;
   font-weight: 400;
-  color: #0A0A0A;
+  color: #1F2A44;
   border: 1px solid rgba(15,37,68,0.08);
   transition: all 0.35s ease;
   cursor: pointer;
@@ -302,7 +345,7 @@ font-family: 'Avenir Next', sans-serif;}
   background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-color: #191936; /* text visible */
+color: #5C6473; /* text visible */
 
  position: relative;
   z-index: 1;
@@ -331,7 +374,7 @@ color: #191936; /* text visible */
   left: 0;
   width: 0%;
   height: 4px;
-  background: #C1121F;
+  background: #7A2E4D;
   transition: width 0.4s ease;
 }
 
@@ -346,7 +389,7 @@ color: #191936; /* text visible */
 }
 
 .category-card:hover {
-  color: #0F2544;
+  color: #B23A3F;
 }
 
 /* ---------- FOOTER TEXT ---------- */
@@ -355,7 +398,7 @@ color: #191936; /* text visible */
   text-align: center;
   margin-top: 70px;
   font-size: 1rem;
-  color: #6E7178;
+  color: #1F2A44;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
@@ -407,7 +450,15 @@ color: #191936; /* text visible */
 
 .ethics-section {
   padding: 6rem 1.5rem;
-  background: linear-gradient(to right, #ffffff, #f8fafc);
+  /*background: linear-gradient(to right, #ffffff, #f8fafc);*/
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .ethics-container {
@@ -432,7 +483,7 @@ color: #191936; /* text visible */
   /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   font-weight: 400;
-  color: #0f172a;
+  color: #1F2A44;
   margin-bottom: 2rem;
 }
 
@@ -449,7 +500,7 @@ color: #191936; /* text visible */
   padding-left: 36px;
   margin-bottom: 1.1rem;
   font-size: 1.05rem;
-  color: #334155;
+  color: #5C6473;
   line-height: 1.6;
 }
 
@@ -458,7 +509,7 @@ color: #191936; /* text visible */
   position: absolute;
   left: 0;
   top: 2px;
-  color: #16a34a;
+  color: #7A2E4D;
   /*font-weight: bold;*/
 }
 
@@ -466,7 +517,7 @@ color: #191936; /* text visible */
 
 .ethics-text {
   font-size: 1.05rem;
-  color: #475569;
+  color: #5C6473;
   line-height: 1.7;
   max-width: 520px;
 }
@@ -514,11 +565,21 @@ color: #191936; /* text visible */
 
 .future-section {
   padding: 5rem 1.5rem;
-  background: linear-gradient(
+  /*background: linear-gradient(
     to bottom,
     #c0bcbc,
     #f9fafb
-  );
+  );*/
+
+
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .future-container {
@@ -533,7 +594,7 @@ color: #191936; /* text visible */
   /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 400;
-  color: #0f172a;
+  color: #1F2A44;
   margin-bottom: 2.5rem;
   line-height: 1.3;
 }
@@ -542,7 +603,7 @@ color: #191936; /* text visible */
 
 .future-text {
   font-size: 1.08rem;
-  color: #475569;
+  color: #5C6473;
   line-height: 1.8;
   margin-bottom: 3rem;
 }
@@ -552,7 +613,7 @@ color: #191936; /* text visible */
 .future-divider {
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, #303c7c, #e0081e);
+  background: linear-gradient(to right, #1F2A44, #7A2E4D);
   margin: 0 auto 3rem;
   border-radius: 999px;
 }
@@ -562,7 +623,7 @@ color: #191936; /* text visible */
 .future-strong {
   font-size: 1.15rem;
   font-weight: 400;
-  color: #111827;
+  color: #1F2A44;
   line-height: 1.8;
 }
 
@@ -582,9 +643,9 @@ color: #191936; /* text visible */
 
 .cta-section {
   padding: 100px 6%;
-  background: #0F2544;
+ /* background: #1F2A44;*/
   position: relative;
-  overflow: hidden;
+ /* overflow: hidden;*/
 }
 
 /* Soft Red Glow Accent */
@@ -593,7 +654,7 @@ color: #191936; /* text visible */
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(193,18,31,0.18), transparent 70%);
+ /* background: radial-gradient(circle, rgba(193,18,31,0.18), transparent 70%);*/
   top: -150px;
   right: -150px;
   z-index: 0;
@@ -612,7 +673,7 @@ color: #191936; /* text visible */
 .cta-title {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 400;
-  color: #E5E6E8;
+  color: #1F2A44;
   margin-bottom: 28px;
   letter-spacing: 0.5px;
 }
@@ -620,14 +681,14 @@ color: #191936; /* text visible */
 /* Text */
 .cta-text {
   font-size: 1.05rem;
-  color: #6E7178;
+  color: #5C6473;
   line-height: 1.8;
   margin-bottom: 50px;
 }
 
 /* Button */
 .cta-button {
-  background: #C1121F;
+  background: #7A2E4D;
   color: #ffffff;
   padding: 18px 48px;
   font-size: 1rem;
@@ -641,10 +702,10 @@ color: #191936; /* text visible */
 
 /* Button Hover */
 .cta-button:hover {
-  background: #ffffff;
-  color: #0F2544;
+  background: transparent;
+  color: #B23A3F;
   transform: translateY(-6px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  box-shadow: 0 25px 60px #7A2E4D;
 }
 
 /* ================= CTA RESPONSIVE ================= */

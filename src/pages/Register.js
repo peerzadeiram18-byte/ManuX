@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 const Register = () => {
   const navigate = useNavigate();
 
@@ -18,7 +21,7 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
     e.preventDefault();
 
     // Save data in localStorage
@@ -26,10 +29,26 @@ const Register = () => {
 
     alert("Account Created Successfully!");
     navigate("/login"); // after register go to login
-  };
+  };*/
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const existingUsers =
+    JSON.parse(localStorage.getItem("users")) || [];
+
+  const updatedUsers = [...existingUsers, formData];
+
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+  alert("Account Created Successfully!");
+  navigate("/login");
+};
 
   return (
-    <div className="register-container">
+    <div className="register-container"
+    style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <form className="register-form" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
 

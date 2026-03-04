@@ -2,10 +2,14 @@
     padding: 50px 0 70px;   /* side padding hata diya */
     width: 100%;
     overflow: hidden;  
-    background:
+   /* background:
   radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%), /* red glow */
-  radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%), /* navy glow */
-  linear-gradient(180deg, #0F2544, #0A0A0A);
+  /*radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%), /* navy glow */
+ /* linear-gradient(180deg, #0F2544, #0A0A0A);*/
+
+ border: 2px solid rgba(204,173,96,0.25);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6),
+  inset 0 0 40px rgba(94,167,135,0.08);
 }
 
 .cat-wrapper {
@@ -65,10 +69,10 @@
   font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  color: #d8c27a;
+  color: #1F2A44;
 }
 
 .cat-heading p {
   font-size: 16px;
-  color: #777;
+  color: #5C6473;
 }

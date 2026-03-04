@@ -7,6 +7,10 @@
   margin: 0 auto;
   padding: 0 20px;     /* controlled spacing */
 font-family: 'Avenir Next', sans-serif;
+
+/*border: 2px solid rgba(204,173,96,0.25);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6),
+  inset 0 0 40px rgba(94,167,135,0.08);*/
 }
 
 .nav-btn {
@@ -35,10 +39,14 @@ font-family: 'Avenir Next', sans-serif;
   padding: 50px 0;   /* side padding hata diya */
   width: 100%;
   overflow: hidden;
-  background:
-  radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%), /* red glow */
-  radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%), /* navy glow */
-  linear-gradient(180deg, #0F2544, #0A0A0A);
+ /* background:
+  /*radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%), /* red glow */
+ /* radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%), /* navy glow */
+  /*linear-gradient(180deg, #0F2544, #0A0A0A);*/
+
+  border: 2px solid rgba(204,173,96,0.25);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6),
+  inset 0 0 40px rgba(94,167,135,0.08);
 }
 
 .reels-container {
@@ -68,7 +76,7 @@ font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
   letter-spacing: 1.5px;
   margin-bottom: 6px;
-  color: #d8c27a;
+  color: #1F2A44;
 font-family: 'Avenir Next', sans-serif;
 
   
@@ -77,8 +85,8 @@ font-family: 'Avenir Next', sans-serif;
 /* PARAGRAPH */
 .reels-header p {
   font-size: 20px;
-  color: #c3d9d4;
-  line-height: 1.5;
+ color:#5C6473;
+   line-height: 1.5;
   max-width: 520px;
 font-family: 'Avenir Next', sans-serif;
   

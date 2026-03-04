@@ -1,14 +1,21 @@
 /* ===========================
    BEFORE AFTER – FINAL CSS
 =========================== */
-
+/*.ba{
+  border: 2px solid rgba(204,173,96,0.25);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6),
+  inset 0 0 40px rgba(94,167,135,0.08);
+}*/
 .ba-container {
   width: 100%;
   max-width: 1300px;   /* ⬅️ 900 → 1300 */
   margin: 20px auto;   /* ⬅️ top-bottom kam */
   padding: 16px;       /* ⬅️ side padding kam */
   border-radius: 10px;
-font-family: 'Avenir Next', sans-serif;}
+font-family: 'Avenir Next', sans-serif;
+
+
+}
 
 /* GRID */
 .ba-grid {

@@ -11,16 +11,21 @@ import creamImg from "../assets/cream.jpg";
 import repairImg from "../assets/repair1.jpg";
 import maskImg from "../assets/mask.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 export default function PlantStemCell() {
   return (
-    <div className="plant-container">
+    <div className="plant-container"
+        style={{ backgroundImage: `url(${bgImage})` }}
+
+    >
 
 {/* 1️⃣ Animated Luxury Hero */}
 <section
   className="ayu-hero"
-  style={{
-    backgroundImage: `url(${heroImage})`,
-  }}
+  //style={{
+   // backgroundImage: `url(${heroImage})`, }}
 >
   <div className="ayu-hero-overlay"></div>
 

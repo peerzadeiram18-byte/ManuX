@@ -9,11 +9,16 @@ import oilImg from "../assets/oil.jpg";
 import repairImg from "../assets/repair.jpg";
 import finishImg from "../assets/finish.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 
 
 function Nanotechnology() {
   return (
-    <div className="nano-page">
+    <div className="nano-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       {/* 1️⃣ Hero Section */}
       <section className="nano-hero">

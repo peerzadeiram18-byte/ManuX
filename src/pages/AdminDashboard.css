@@ -46,7 +46,7 @@ font-family: 'Avenir Next', sans-serif;}
 }
 
 .product-item {
-  background: #fafafa;
+ /* background: #fafafa;*/
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -95,7 +95,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .user-item {
   padding: 12px;
-  background: #fafafa;
+ /* background: #fafafa;*/
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -106,7 +106,12 @@ font-family: 'Avenir Next', sans-serif;}
 .admin-layout {
   display: flex;
   min-height: 100vh;
-font-family: 'Avenir Next', sans-serif;}
+font-family: 'Avenir Next', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 /* ================= SIDEBAR ================= */
 
@@ -146,7 +151,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .admin-content {
   flex: 1;
-  background: #fbf9f9;
+  /*background: #fbf9f9;*/
   padding: 40px;
 }
 

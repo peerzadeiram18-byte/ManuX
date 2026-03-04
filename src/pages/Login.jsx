@@ -6,6 +6,9 @@ import { useAuth } from "../context/AuthContext";
 import { loginUser } from "../services/authService";
 import { useNavigate } from "react-router-dom";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 export default function Login() {
 
   const [email, setEmail] = useState("");
@@ -42,7 +45,9 @@ export default function Login() {
 
 
   return (
-    <div className="loginPage">
+    <div className="loginPage"
+        style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <div className="loginContainer">
 
         {/* LEFT IMAGE */}

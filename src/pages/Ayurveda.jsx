@@ -1,20 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Ayurveda.css";
-import heroImage from "../assets/ayurveda-hero.jpg";
+//import heroImage from "../assets/ayurveda-hero.jpg";
 
 import icon1 from "../assets/research-icon-1.png";
 import icon2 from "../assets/research-icon-2.png";
 import icon3 from "../assets/research-icon-3.png";
 import icon4 from "../assets/research-icon-4.png";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 export default function Ayurveda() {
   return (
-    <div className="ayurveda-page">
+    <div className="ayurveda-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       {/* HERO SECTION */}
         <section className="ayu-hero"
-        style={{ backgroundImage: `url(${heroImage})` }}>
+      /* style={{ backgroundImage: `url(${heroImage})` }}*/>
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}

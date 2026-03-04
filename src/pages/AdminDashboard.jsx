@@ -2,10 +2,17 @@ import { Link, Routes, Route } from "react-router-dom";
 import ProductForm from "./ProductForm";
 import ProductList from "./ProductList";
 import "./AdminDashboard.css";
+import UserList from "./UserList";
+
+import bgImage from "../assets/backgroundimage.jpg";
 
 export default function AdminDashboard() {
   return (
-    <div className="admin-layout">
+
+    
+    <div className="admin-layout"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
       
       {/* SIDEBAR */}
       <div className="admin-sidebar">
@@ -29,6 +36,16 @@ export default function AdminDashboard() {
               Products List
             </Link>
           </li>
+
+          <li>
+           <Link
+                to="/admin/dashboard/user-list"
+                style={{ color: "white", textDecoration: "none" }}
+             >
+                  Users List
+          </Link>
+        </li>
+
         </ul>
       </div>
 
@@ -40,6 +57,7 @@ export default function AdminDashboard() {
   <Route path="/" element={<h1>Dashboard</h1>} />
   <Route path="product-form" element={<ProductForm />} />
   <Route path="product-list" element={<ProductList />} />
+   <Route path="user-list" element={<UserList />} />
 </Routes>
 
       </div>

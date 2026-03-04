@@ -7,6 +7,7 @@ function BeforeAfter({ beforeImg, afterImg }) {
 
 
   return (
+    <div className="ba"> 
     <div className="ba-container ">
       <div className="ba-image-wrapper">
 
@@ -29,6 +30,7 @@ function BeforeAfter({ beforeImg, afterImg }) {
         />
 
       </div>
+    </div>
     </div>
   );
 }

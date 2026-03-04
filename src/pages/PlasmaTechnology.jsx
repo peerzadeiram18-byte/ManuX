@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlasmaTechnology.css";
-import bgImage from "../assets/plasma-bg.jpg";
+//import bgImage from "../assets/plasma-bg.jpg";
 import plasmaImage from "../assets/plasma-science.jpg";
 
 import deepImg from "../assets/deep.jpg";
@@ -10,14 +10,19 @@ import hydrateImg from "../assets/hydration.jpg";
 
 import ecoImage from "../assets/eco.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 const PlasmaTechnology = () => {
   return (
-    <div className="plasma-page">
+    <div className="plasma-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       {/* 1. HERO SECTION */}
   <section
   className="plasma-hero"
-  style={{ backgroundImage: `url(${bgImage})` }}
+ // style={{ backgroundImage: `url(${bgImage})` }}
 >
   <div className="plasma-hero-overlay"></div>
 

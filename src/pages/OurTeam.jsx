@@ -8,6 +8,9 @@ import leo from "../assets/leo.jpg";
 import ramakiran from "../assets/ramakiran.jpg";
 import ishwar from "../assets/ishwar.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 const OurTeam = () => {
   const sectionRef = useRef(null);
 
@@ -118,12 +121,14 @@ useEffect(() => {
 
 
   return (
-    <div className="team-wrapper">
+    <div className="team-wrapper"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       {/* HERO SECTION */}
       <section
         className="mx-team-section"
-        style={{ backgroundImage: `url(${teamBg})` }}
+       // style={{ backgroundImage: `url(${teamBg})` }}
       >
         <div className="mx-team-overlay"></div>
         <div className="mx-team-content">
@@ -266,8 +271,12 @@ useEffect(() => {
   <div className="panchakarma-content">
     <img src={ishwar} alt="Dr. Ishwarakeerthi" />
     <div className="text">
+
+
       <h2>Dr. Ishwarakeerthi</h2>
       <h4>Panchakarma Specialist</h4>
+
+       <div className="panchakarma-content-line"></div>
       <p>
         Specialist in holistic healing combining academic excellence
         with clinical expertise.

@@ -4,8 +4,14 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  background: linear-gradient(135deg,#f6f7fb,#e9ecf5);
+  /*background: linear-gradient(135deg,#f6f7fb,#e9ecf5);*/
 font-family: 'Avenir Next', sans-serif;
+
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 /* MAIN BOX */
@@ -13,7 +19,7 @@ font-family: 'Avenir Next', sans-serif;
   display:flex;
   width:900px;
   height:500px;
-  background:white;
+  background:transparent;
   border-radius:20px;
   overflow:hidden;
   box-shadow:0 20px 60px rgba(0,0,0,0.15);
@@ -26,7 +32,7 @@ font-family: 'Avenir Next', sans-serif;
   display:flex;
   align-items:center;       /* vertical center */
   justify-content:center;   /* horizontal center */
-  background: white;          /* optional */
+  background: transparent;          /* optional */
 }
 
 
@@ -55,7 +61,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .subtitle{
-  color:#777;
+  color:#5C6473;
   margin-bottom:30px;
 }
 
@@ -87,7 +93,7 @@ font-family: 'Avenir Next', sans-serif;
   font-size: 14px;
   font-weight: 400;
   border-radius: 30px;
-  border: 2px solid #e11d2e;
+  border: 2px solid #7A2E4D;
   background: transparent;
   color: #e11d2e;
   cursor: pointer;
@@ -95,7 +101,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .login-btn:hover {
-  background: #e11d2e;
+  background: #7A2E4D;
   color: white;
 }
 
@@ -108,7 +114,7 @@ font-family: 'Avenir Next', sans-serif;
   font-weight:400;
   border-radius:30px;
   border:none;
-  background: linear-gradient(135deg,#6c63ff,#5a54e8);
+  background: #7A2E4D;
   color:white;
   cursor:pointer;
   transition:0.3s ease;
@@ -118,7 +124,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .loginBtn:hover{
   transform:translateY(-2px);
-  box-shadow:0 12px 30px rgba(108,99,255,0.45);
+  box-shadow:0 12px 30px #7A2E4D;
 }
 
 .loginBtn:active{

@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import { motion } from "framer-motion";
 
-import heroBg from "../assets/about-hero.jpg";
+//import heroBg from "../assets/about-hero.jpg";
 import precisionImg from "../assets/MOLECULAR PRECISION.jpg";
 
 import sciImg1 from "../assets/science1.jpg";
@@ -15,6 +15,10 @@ import domainImg2 from "../assets/domain2.jpg";
 import domainImg3 from "../assets/domain3.jpg";
 import domainImg4 from "../assets/domain4.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
@@ -23,12 +27,17 @@ const fadeUp = {
 
 const About = () => {
   return (
-        <div className="about-page1">
+
+    
+    
+        <div className="about-page1"
+         style={{ backgroundImage: `url(${bgImage})` }}
+        >
 
       {/* HERO SECTION */}
      <section 
   className="about-hero1"
-  style={{ backgroundImage: `url(${heroBg})` }}
+  //style={{ backgroundImage: `url(${heroBg})` }}
 >
   <div className="overlay1"></div>
 

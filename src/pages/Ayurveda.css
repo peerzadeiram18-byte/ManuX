@@ -4,16 +4,22 @@
   width:100%;
   overflow-x:hidden;
 font-family: 'Avenir Next', sans-serif;
-  background:#ffffff;
+ /* background:#ffffff;*/
+
+
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* ================= HERO ================= */
 
 .ayu-hero {
   position: relative;
-  min-height: 95vh;
+  min-height: 80vh;
   padding: 6rem 1.5rem;
-  color: #ffffff;
+  color: #1F2A44;
   text-align: center;
 
   display: flex;
@@ -25,19 +31,27 @@ font-family: 'Avenir Next', sans-serif;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .ayu-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-   background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     #0F2544,
     #0A0A0A,
      transparent 60%
      
-  );
+  );*/
 /*
   background:
     radial-gradient(circle at 20% 30%, rgba(34,197,94,0.15), transparent 60%),
@@ -66,7 +80,7 @@ font-size:clamp(2.6rem,5vw,3.6rem);
   margin-top:1.5rem;
   font-size:1.1rem;
   line-height:1.8;
-  color:#e5e7eb;
+  color:#5C6473;
    position: relative;
    /*font-family: 'Poppins', sans-serif;*/
 font-family: 'Avenir Next', sans-serif;
@@ -83,7 +97,7 @@ font-family: 'Avenir Next', sans-serif;
   font-weight:400px;
   cursor:pointer;
   color:#94989c;
-  background:rgb(11, 11, 60);
+ /* background:rgb(11, 11, 60);*/
   box-shadow:0 10px 30px rgba(0,0,0,0.35);
   transition:all 0.35s ease;
    position: relative;
@@ -92,7 +106,7 @@ font-family: 'Avenir Next', sans-serif;}
 .ayu-primary-btn:hover{
   transform:translateY(-4px);
   box-shadow:0 20px 45px rgba(0,0,0,0.45);
-  background:red;
+  background:#7A2E4D;
 }
 
 @media (max-width: 1024px) {
@@ -162,13 +176,15 @@ font-family: 'Avenir Next', sans-serif;}
   grid-template-columns: 1.1fr 0.9fr;
   gap: 4rem;
   align-items: center;
+
+    
 }
 
 .mission-text h2 {
  /* font-family: 'Playfair Display', serif;*/
   font-size: 2.6rem;
   margin-bottom: 1.6rem;
-  color: #0F2544;
+  color: #1F2A44;
   position: relative;
     font-weight: 400;
 
@@ -182,14 +198,14 @@ font-family: 'Avenir Next', sans-serif;
   width: 70px;
   height: 4px;
   margin-top: 12px;
-  background: linear-gradient(to right, #C1121F, #0F2544);
+ /* background: linear-gradient(to right, #C1121F, #0F2544);*/
   border-radius: 4px;
 }
 
 .mission-text p {
   font-size: 1.05rem;
   line-height: 1.85;
-  color: #6E7178;
+  color: #5C6473;
   margin-bottom: 1.3rem;
 }
 
@@ -230,7 +246,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .ayu-mission-card li {
   font-size: 1.05rem;
-  color: #0A0A0A;
+  color: #1F2A44;
   margin-bottom: 1.2rem;
   padding-left: 28px;
   position: relative;
@@ -292,19 +308,27 @@ font-family: 'Avenir Next', sans-serif;
 
 .ayu-research {
   padding: 100px 6%;
-  background: #E5E6E8;
+ /* background: #E5E6E8;*/
   text-align: center;
+
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .ayu-research h2 {
   font-size: 2.5rem;
-  color: #0F2544;
+  color: #1F2A44;
   margin-bottom: 15px;
   font-weight: 400;
 }
 
 .ayu-research p {
-  color: #6E7178;
+  color: #5C6473;
   margin-bottom: 80px;
 }
 
@@ -359,7 +383,7 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-research-card h3 {
   font-size: 1rem;
   font-weight: 400;
-  color: #0A0A0A;
+  color: #5C6473;
   line-height: 1.6;
 }
 
@@ -450,14 +474,22 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-discipline{
   padding: 7rem 1.5rem;
   text-align: center;
-  background: linear-gradient(
+  /*background: linear-gradient(
     180deg,
     #0F2544,
     #0A0A0A
-  );
-  color: #E5E6E8;
+  );*/
+  color: #5C6473;
   position: relative;
   overflow: hidden;
+
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* subtle red glow effect */
@@ -466,7 +498,7 @@ font-family: 'Avenir Next', sans-serif;
   position:absolute;
   width:300px;
   height:300px;
-  background:#C1121F;
+  background:#B23A3F;
   opacity:0.08;
   filter:blur(120px);
   top:-100px;
@@ -478,7 +510,7 @@ font-family: 'Avenir Next', sans-serif;
  /* font-family: 'Playfair Display', serif;*/
   font-size: 2.6rem;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: #1F2A44;
   position: relative;
     font-weight: 400;
 
@@ -503,7 +535,7 @@ font-family: 'Avenir Next', sans-serif;
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #6E7178;
+  color: #5C6473;
 }
 
 /* ===============================
@@ -547,14 +579,22 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-global{
   padding: 7rem 1.5rem;
   text-align: center;
-  background: linear-gradient(
+  /*background: linear-gradient(
     135deg,
     #0F2544,
     #0A0A0A
-  );
-  color: #E5E6E8;
+  );*/
+  color: #B23A3F;
   position: relative;
   overflow: hidden;
+
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* subtle red glow */
@@ -575,7 +615,7 @@ font-family: 'Avenir Next', sans-serif;
  /* font-family: 'Playfair Display', serif;*/
   font-size: 2.6rem;
   margin-bottom: 1.3rem;
-  color: #ffffff;
+  color: #1F2A44;
   position: relative;
   font-weight: 400;
 }
@@ -596,7 +636,7 @@ font-family: 'Avenir Next', sans-serif;
   max-width: 760px;
   margin: 0 auto 3.5rem;
   font-size: 1.1rem;
-  color: #6E7178;
+  color: #5C6473;
   line-height: 1.8;
 }
 
@@ -611,14 +651,14 @@ font-family: 'Avenir Next', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   cursor: pointer;
-  background: transparent;
+  background: #7A2E4D;
   color: #E5E6E8;
   transition: all 0.35s ease;
 }
 
 /* hover effect */
 .ayu-secondary-btn:hover{
-  background: #C1121F;
+  background: #7A2E4D;
   color: #ffffff;
   transform: translateY(-4px);
   box-shadow: 0 18px 45px rgba(193,18,31,0.35);

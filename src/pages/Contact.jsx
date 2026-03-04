@@ -7,15 +7,21 @@ import { FaBuilding, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 import contactBg from "../assets/contact-bg.jpg";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 const Contact = () => {
   return (
-    <div className="cx-contact-page">
+    <div className="cx-contact-page"
+      style={{ backgroundImage: `url(${bgImage})` }}
+
+    >
 
       
     {/* HERO SECTION */}
 <section
   className="cxh-hero"
-  style={{ backgroundImage: `url(${heroBg})` }}
+  //style={{ backgroundImage: `url(${heroBg})` }}
 >
   <div className="cxh-overlay"></div>
 
@@ -31,7 +37,7 @@ const Contact = () => {
 
 {/* CONTACT + FORM SECTION */}
 <section className="cx-contact-info"  
-style={{ backgroundImage: `url(${contactBg})` }}
+//style={{ backgroundImage: `url(${contactBg})` }}
 >
   <div className="cx-info-wrapper">
 

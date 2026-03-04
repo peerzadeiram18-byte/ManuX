@@ -6,6 +6,8 @@
   position: relative;
   flex-shrink: 0;
   cursor: pointer;
+
+  
 }
 
 .category-card1 img {
@@ -46,6 +48,8 @@ font-family: 'Avenir Next', sans-serif;
   align-items: center;
   justify-content: center;
   font-size: 12px;
+
+  
 }
 
 /* hover effect */

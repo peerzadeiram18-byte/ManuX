@@ -26,13 +26,13 @@ padding-bottom: 0px;
 .footer-logo {
   font-size: 26px;
   font-weight: 700;
-  color: #C1121F;
+  color: #B23A3F;
   margin-bottom: 18px;
   letter-spacing: 0.5px;
 }
 
 .footer-text {
-  color: #555;
+  color: #5C6473;
   line-height: 1.8;
   font-size: 15px;
   max-width: 320px;
@@ -44,7 +44,7 @@ padding-bottom: 0px;
   font-size: 17px;
   font-weight: 600;
   margin-bottom: 22px;
-  color: #C1121F;
+  color: #B23A3F;
   position: relative;
 }
 
@@ -53,7 +53,7 @@ padding-bottom: 0px;
   content: "";
   width: 30px;
   height: 2px;
-  background: #C1121F;
+  background: #B23A3F;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -73,14 +73,14 @@ padding-bottom: 0px;
 
 .footer-col a {
   text-decoration: none;
-  color: #555;
+  color: #5C6473;
   font-size: 14.5px;
   transition: all 0.3s ease;
   display: inline-block;
 }
 
 .footer-col a:hover {
-  color: #C1121F;
+  color: #B23A3F;
   transform: translateX(6px);
 }
 
@@ -88,13 +88,13 @@ padding-bottom: 0px;
 
 .footer-dropdown-title {
   cursor: pointer;
-  color: #555;
+  color: #5C6473;
   font-size: 14.5px;
   transition: 0.3s ease;
 }
 
 .footer-dropdown-title:hover {
-  color: #C1121F;
+  color: #B23A3F;
 }
 
 .footer-submenu {
@@ -110,7 +110,7 @@ padding-bottom: 0px;
 /* ===== CONTACT SECTION ===== */
 
 .footer-col li:not(a) {
-  color: #555;
+  color: #5C6473;
   font-size: 14.5px;
 }
 
@@ -124,7 +124,7 @@ padding-bottom: 0px;
 
 .socials li {
   font-size: 14px;
-  color: #555;
+  color: #5C6473;
   cursor: pointer;
   transition: 0.3s;
   position: relative;
@@ -137,12 +137,12 @@ padding-bottom: 0px;
   left: 0;
   width: 0%;
   height: 1px;
-  background: #C1121F;
+  background: #B23A3F;
   transition: 0.3s;
 }
 
 .socials li:hover {
-  color: #C1121F;
+  color: #B23A3F;
 }
 
 .socials li:hover::after {
@@ -156,7 +156,7 @@ padding-bottom: 0px;
   padding: 25px 0;
   text-align: center;
   font-size: 13px;
-  color: #777;
+  color: #5C6473;
   border-top: 1px solid #f1f1f1;
   letter-spacing: 0.3px;
 }

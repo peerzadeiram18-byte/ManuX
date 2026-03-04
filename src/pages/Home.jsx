@@ -2,9 +2,9 @@ import React from "react";
 import "./home.css";
 import { useState, useEffect } from "react";
 
-import lab1 from "../assets/lab1.jpg";
+/*import lab1 from "../assets/lab1.jpg";
 import lab2 from "../assets/lab2.jpg";
-import lab3 from "../assets/lab3.jpg";
+import lab3 from "../assets/lab3.jpg";*/
 
 import imgLeft from "../assets/left.jpg";
 import heroImg from "../assets/ayurveda.jpg";
@@ -27,6 +27,8 @@ import Categories from "../components/categories/Categories";
 
 import LabBanner from "../components/LabBanner";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
 
 
 
@@ -36,7 +38,7 @@ import LabBanner from "../components/LabBanner";
 
 function Home() {
 
-  const images = [lab1, lab2, lab3];
+ {/*} const images = [lab1, lab2, lab3];
 
   const [current, setCurrent] = useState(0);
 
@@ -46,7 +48,7 @@ function Home() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, []);*/}
 
   useEffect(() => {
   const sections = document.querySelectorAll(".reveal-section");
@@ -115,20 +117,24 @@ useEffect(() => {
 
 
   return (
-    <div>
+           <div className="home-page"
+           style={{ backgroundImage: `url(${bgImage})` }}
+           >
 
       <section className="home-hero">
     
 
 
         {/* Background Image */}
-       <div
+     { /* <div
              className="hero-bg"
-           style={{ backgroundImage: `url(${images[current]})` }}
-       ></div>  
+         //  style={{ backgroundImage: `url(${images[current]})` }}
+       ></div>  */}
 
         {/* Overlay */}
         <div className="hero-overlay"></div>
+
+         <div className="hero-box">   {/* 👈 YE NAYA WRAPPER ADD KARNA HAI */}
 
         {/* Content */}
         <div className="hero-content">
@@ -161,6 +167,7 @@ useEffect(() => {
 
 
         </div>
+          </div>
       </section>
 
     <section className="triple-hero">
@@ -325,7 +332,7 @@ useEffect(() => {
 </section>
 
 
-<section className="ba-container ba-reveal">
+{/*<section className="ba-container ba-reveal">
 
   <div className="ba-text">
     <h2>Over 1 Million People Trust ManuX NanoBioCeuticals</h2>
@@ -343,7 +350,7 @@ useEffect(() => {
     </div>
   </div>
 
-</section>
+</section>*/}
 
 <section>
     <div>
