@@ -17,7 +17,7 @@ font-family: 'Avenir Next', sans-serif;
    AYU HERO – PREMIUM BIOTECH VERSION
 ===================================== */
 
-.ayu-hero {
+.ayu-hero1 {
   position: relative;
   min-height: 60vh;
   background-size: cover;
@@ -36,7 +36,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* Dark brand overlay */
-.ayu-hero-overlay{
+.ayu-hero1-overlay{
   position: absolute;
   inset: 0;
   /*background: linear-gradient(
@@ -48,7 +48,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* subtle red glow */
-.ayu-hero::before{
+.ayu-hero1::before{
   content:"";
   position:absolute;
   width:450px;
@@ -62,37 +62,41 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* Content */
-.ayu-hero-content{
+.ayu-hero1-content{
   position: relative;
   z-index: 2;
   max-width: 900px;
-  padding: 20px;
+  padding: 10px;
   color: #E5E6E8;
     font-weight: 400;
+ 
+    padding-top: 50px;
+    
 
 }
 
 /* Heading */
-.ayu-hero-title{
-  font-size: clamp(2.5rem,6vw,4rem);
-  margin-bottom: 1.5rem;
+.ayu-hero1-title{
+  font-size: 55px;
+  margin-bottom: 0.5rem;
   line-height: 1.1;
   color: #1F2A44;
-  padding-top: 120px;
+  padding-top: 250px;
 
 }
 
 /* Subtitle */
-.ayu-hero-subtitle{
+.ayu-hero1-subtitle {
   font-size: 1.2rem;
   max-width: 700px;
-  margin: 0 auto 2.5rem;
+  margin: 2px auto 1.9rem;
   color: #1F2A44;
   line-height: 1.7;
+  padding-top: 2px;
 }
 
 /* Button */
-.ayu-hero-btn{
+.ayu-hero1-btn{
   padding: 14px 48px;
   font-size: 1rem;
   font-weight: 400;
@@ -105,14 +109,14 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* Hover */
-.ayu-hero-btn:hover{
+.ayu-hero1-btn:hover{
   background:#7A2E4D;
   color:#ffffff;
   transform: translateY(-4px);
   box-shadow: 0 20px 50px rgba(193,18,31,0.35);
 }
 
-.ayu-hero-btn:active{
+.ayu-hero1-btn:active{
   transform: scale(0.96);
 }
 
@@ -122,26 +126,26 @@ font-family: 'Avenir Next', sans-serif;
 
 @media (max-width:768px){
 
-  .ayu-hero{
+  .ayu-hero1{
     padding: 4rem 1.5rem;
   }
 
-  .ayu-hero-subtitle{
+  .ayu-hero1-subtitle{
     font-size: 1rem;
   }
 }
 
 @media (max-width:480px){
 
-  .ayu-hero-title{
+  .ayu-hero1-title{
     font-size: 2rem;
   }
 
-  .ayu-hero-subtitle{
+  .ayu-hero1-subtitle{
     font-size: 0.95rem;
   }
 
-  .ayu-hero-btn{
+  .ayu-hero1-btn{
     padding: 12px 32px;
     font-size: 0.9rem;
   }
@@ -162,7 +166,7 @@ font-family: 'Avenir Next', sans-serif;
 ===================================== */
 
 .ayu-split{
-  padding: 90px 7%;
+  padding: 60px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,14 +178,18 @@ font-family: 'Avenir Next', sans-serif;
   overflow: hidden;
     font-weight: 400;
 
-
-
      border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+     box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+  background:
+            radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+            radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
+            linear-gradient(135deg,#8f97b5,#b2b8cf,#d0d4e3);
+
+  background-size: 40px 40px, 80px 80px, cover;
 
 }
 
@@ -225,7 +233,7 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-split-description{
   font-size: 1.05rem;
   line-height: 1.9;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* IMAGE SIDE */
@@ -365,11 +373,14 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-intro-box{
   max-width: 900px;
   text-align: center;
-  background: #ffffff;
+  order: 2px solid white;
+  box-shadow: 0 10px 40px rgba(254, 254, 254, 0.6),
+  inset 0 0 40px rgba(94,167,135,0.08);
+  backdrop-filter:blur(8px);
   padding: 70px 60px;
   border-radius: 28px;
   box-shadow: 0 25px 60px rgba(15,37,68,0.08);
-  border: 1px solid #E5E6E8;
+  border: 2px solid white;
   transition: 0.35s ease;
 }
 
@@ -417,7 +428,7 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-intro-text{
   font-size: 1.05rem;
   line-height: 1.9;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* =====================================
@@ -473,7 +484,7 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
+
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
@@ -499,6 +510,7 @@ font-family: 'Avenir Next', sans-serif;
   z-index: 2;
   letter-spacing: 1px;
     font-weight: 400;
+
 
 }
 
@@ -534,7 +546,7 @@ font-family: 'Avenir Next', sans-serif;
 .glass-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #6E7178;
+  color: #1F2A44;
 }
 
 /* Hover Effect */
@@ -586,16 +598,22 @@ font-family: 'Avenir Next', sans-serif;
     #ffffff,
     #E5E6E8
   ); */
-   padding: 90px 8%;
+  padding: 90px 8%;
   color:#1F2A44;
 
 
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+    background:
+             radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+             radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
+             linear-gradient(135deg,#8f97b5,#b2b8cf,#d0d4e3);
+
+    background-size: 40px 40px, 80px 80px, cover;
 }
 
 /* FLEX LAYOUT */
@@ -625,7 +643,7 @@ font-family: 'Avenir Next', sans-serif;
   line-height: 1.8;
   opacity: 0.9;
   margin-bottom: 30px;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 
@@ -680,7 +698,7 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
+
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
@@ -728,7 +746,7 @@ font-family: 'Avenir Next', sans-serif;
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* =====================================
@@ -769,14 +787,19 @@ font-family: 'Avenir Next', sans-serif;
   );*/
   text-align: center;
 
-
-
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+    background:
+             radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+             radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
+             linear-gradient(135deg,#8f97b5,#b2b8cf,#d0d4e3);
+
+    background-size:40px 40px,80px 80px,cover;
+
 }
 
 /* Title */
@@ -903,7 +926,7 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
+
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),

@@ -35,9 +35,7 @@ background:/*
 
 
      border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+     box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -48,7 +46,7 @@ background:/*
   font-weight: 400;
   letter-spacing: 1px;
   color: #1F2A44;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 .nano-hero p {
@@ -65,12 +63,22 @@ background:/*
   height: 3px;
   background: #7A2E4D;
   display: block;
-  margin: 35px auto 0;
+  margin: 25px auto 0;
   border-radius: 999px;
 }
 
 .nano-section {
   padding: 80px 10%;
+
+
+    background: linear-gradient(
+  145deg,
+  #d7d8e2 0%,
+  #cfd1dc 30%,
+  #c6c9d7 55%,
+  #bcc0d1 75%,
+  #b3b7c9 100%
+);
 }
 
 /*.nano-dark {
@@ -131,16 +139,17 @@ background:/*
 }
 
 
-.nano-dark {
+.nano-dark1 {
 /*background:
     radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
     radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
     linear-gradient(180deg, #0F2544, #0A0A0A); 
      color: white;*/
 
-        border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
 
+
+
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
@@ -338,10 +347,16 @@ background:/*
   padding: 70px 10px;
  /* background: #f8f9fa;*/
 
+   background: linear-gradient(
+  145deg,
+  #d7d8e2 0%,
+  #cfd1dc 30%,
+  #c6c9d7 55%,
+  #bcc0d1 75%,
+  #b3b7c9 100%
+);
 
-    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
@@ -377,7 +392,7 @@ background:/*
     rgba(0,0,0,0.4),
     rgba(0,0,0,0.75)
   );*/
-  color: #fff;
+  color: #1F2A44;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -459,18 +474,26 @@ background:/*
    NANO TECHNOLOGY SECTION
    ========================= */
 
-.nano-dark {
+.nano-dark1 {
 /*background:
     radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
     radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
     linear-gradient(180deg, #0F2544, #0A0A0A);  padding: 80px 20px;*/
   color: #1F2A44;
+  padding: 80px 6%;
+
+  background: linear-gradient(
+  145deg,
+  #d7d8e2 0%,
+  #cfd1dc 30%,
+  #c6c9d7 55%,
+  #bcc0d1 75%,
+  #b3b7c9 100%
+);
 
 
      border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+     box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -662,11 +685,8 @@ background:/*
   padding: 80px 6%;
 
 
-
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   border: 1.5px solid white; /* white border */
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -704,6 +724,8 @@ background:/*
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+
+  
 }
 
 /* GLASS BOX */
@@ -715,6 +737,9 @@ background:/*
   border: 1px solid rgba(255, 255, 255, 0.15);
   font-weight: 500;
   transition: 0.3s ease;
+  
+
+  border: 2px solid rgba(255, 255, 255, 0.6); /* white border */
 }
 
 /* HOVER EFFECT */
@@ -756,4 +781,144 @@ background:/*
   .nano-box {
     width: 100%;
   }
+}
+
+
+
+
+
+
+.nano-expertise-section{
+padding:80px 5%;
+background:#f4f6fb;
+text-align:center;
+}
+
+.nano-expertise-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.nano-card{
+height:260px;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+background-size:cover;
+background-position:center;
+position:relative;
+overflow:hidden;
+}
+
+.nano-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.35);
+}
+
+.nano-card h3{
+position:relative;
+color:white;
+font-size:22px;
+z-index:2;
+text-align:center;
+padding:10px;
+}
+
+
+/* SECTION */
+.nano-expertise-section{
+padding:60px 5%;
+text-align:center;
+background:#f5f7fb;
+}
+
+/* TITLE */
+.section-title{
+font-size:36px;
+margin-bottom:40px;
+color:#0F2544;
+}
+
+/* GRID */
+.nano-expertise-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+/* CARD */
+.nano-card{
+height:260px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+background-size:cover;
+background-position:center;
+position:relative;
+overflow:hidden;
+transition:0.4s;
+}
+
+/* DARK OVERLAY */
+.nano-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.35);
+}
+
+/* TEXT */
+.nano-card h3{
+position:relative;
+z-index:2;
+color:white;
+font-size:22px;
+text-align:center;
+padding:10px;
+
+padding-top: 170px;
+}
+
+/* HOVER */
+.nano-card:hover{
+transform:scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* LAPTOP */
+@media (max-width:1024px){
+.nano-expertise-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* MOBILE */
+@media (max-width:600px){
+.nano-expertise-section{
+padding:60px 20px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.nano-expertise-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.nano-card{
+height:220px;
+}
+
+.nano-card h3{
+font-size:18px;
+}
 }

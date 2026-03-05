@@ -128,9 +128,9 @@ useEffect(() => {
       {/* HERO SECTION */}
       <section
         className="mx-team-section"
-       // style={{ backgroundImage: `url(${teamBg})` }}
+       style={{ backgroundImage: `url(${teamBg})` }}
       >
-        <div className="mx-team-overlay"></div>
+        <div className="mx-team-overlay">
         <div className="mx-team-content">
           <h1 className="mx-team-title">Our Team</h1>
           <div className="mx-team-divider"></div>
@@ -139,6 +139,7 @@ useEffect(() => {
             hands with a deep sense of belonging to offer the highest quality
             production and distribution at ManuX.
           </p>
+        </div>
         </div>
       </section>
 

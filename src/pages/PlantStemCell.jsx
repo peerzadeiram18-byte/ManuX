@@ -23,24 +23,24 @@ export default function PlantStemCell() {
 
 {/* 1️⃣ Animated Luxury Hero */}
 <section
-  className="ayu-hero"
+  className="ayu-hero1"
   style={{
    backgroundImage: `url(${heroImage})`, }}
 >
-  <div className="ayu-hero-overlay"></div>
+  <div className="ayu-hero1-overlay"></div>
 
-  <div className="ayu-hero-content">
-    <h1 className="ayu-hero-title">
+  <div className="ayu-hero1-content">
+    <h1 className="ayu-hero1-title">
       Plant Stem Cell Technology
     </h1>
 
-    <p className="ayu-hero-subtitle">
+    <p className="ayu-hero1-subtitle">
       Where Botanical Intelligence Meets Regenerative Biotechnology
     </p>
 
-    <button className="ayu-hero-btn">
+    {/*<button className="ayu-hero1-btn">
       Discover the Science
-    </button>
+    </button>*/}
   </div>
 </section>
 

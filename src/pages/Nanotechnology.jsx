@@ -12,6 +12,13 @@ import finishImg from "../assets/finish.jpg";
 import bgImage from "../assets/backgroundimage.jpg";
 
 
+import nanoImg1 from "../assets/nano1.jpg";
+import nanoImg2 from "../assets/nano2.jpg";
+import nanoImg3 from "../assets/nano3.jpg";
+import nanoImg4 from "../assets/nano4.jpg";
+
+
+
 
 
 function Nanotechnology() {
@@ -64,7 +71,7 @@ function Nanotechnology() {
 
 
       {/* 3️⃣ Why Nano Grid */}
-    <section className="nano-dark">
+    <section className="nano-dark1">
   <h2 className="section-title">Why Nanotechnology?</h2>
 
   <div className="nano-grid1">
@@ -175,24 +182,44 @@ function Nanotechnology() {
 
 
 
-      {/* 7️⃣ Expertise Section */}
-      <section className="nano-section">
-        <h2 className="section-title">Our Nano Expertise</h2>
-        <div className="nano-grid2">
-          <div className="card">
-            <h3>Anti-Aging Liposomes</h3>
-          </div>
-          <div className="card">
-            <h3>Anti-Acne Nano Therapy</h3>
-          </div>
-          <div className="card">
-            <h3>Under-Eye Repair</h3>
-          </div>
-          <div className="card">
-            <h3>Skin Radiance & Hair Growth</h3>
-          </div>
-        </div>
-      </section>
+     {/* 7️⃣ Expertise Section */}
+<section className="nano-expertise-section">
+  <h2 className="section-title">Our Nano Expertise</h2>
+
+  <div className="nano-expertise-grid">
+
+    <div
+      className="nano-card"
+      style={{ backgroundImage: `url(${nanoImg1})` }}
+    >
+      <h3>Anti-Aging Liposomes</h3>
+    </div>
+
+    <div
+      className="nano-card"
+      style={{ backgroundImage: `url(${nanoImg2})` }}
+    >
+      <h3>Anti-Acne Nano Therapy</h3>
+    </div>
+
+    <div
+      className="nano-card"
+      style={{ backgroundImage: `url(${nanoImg3})` }}
+    >
+      <h3>Under-Eye Repair</h3>
+    </div>
+
+    <div
+      className="nano-card"
+      style={{ backgroundImage: `url(${nanoImg4})` }}
+    >
+      <h3>Skin Radiance & Hair Growth</h3>
+    </div>
+
+  </div>
+          </section>
+
+
 
       {/* 8️⃣ CTA Section */}
       <section className="nano-cta">

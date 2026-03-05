@@ -11,45 +11,73 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
+  justify-content: flex-start;   /* LEFT SIDE */
+  padding: 80px 200px;
   overflow: hidden;
-font-family: 'Avenir Next', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
 
 
- border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 /* Dark Gradient Overlay */
-/*.mx-team-overlay {
-  position: absolute;
+.mx-team-overlay {
+/*  position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
     rgba(15, 37, 68, 0.92),
     rgba(10, 10, 10, 0.88)
   );
-  z-index: 1;
-}*/
+  z-index: 1;*/
+
+
+    position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 90%;
+  padding: 60px 40px;
+
+  background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(8px);            /* glass effect */
+
+  border: 1.9px solid white; /* white border */
+  border-radius: 50px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Content */
 .mx-team-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  text-align: center;
+  max-width: 550px;
+   text-align: left;   /* TEXT LEFT */
   color: #1F2A44;
-font-family: 'Avenir Next', sans-serif;
+  font-family: 'Avenir Next', sans-serif;
 
   /* Animation */
   opacity: 0;
   transform: translateY(40px);
   animation: mxFadeUp 1.2s ease forwards;
+
+ 
+
+
+
+  
+  
+
+  
 }
 
 /* Title */
@@ -59,24 +87,33 @@ font-family: 'Avenir Next', sans-serif;
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: #1F2A44;
+ 
+  
 }
 
 /* Divider */
 .mx-team-divider {
-  width: 90px;
+  width: 70px;
   height: 4px;
   background: #7A2E4D;
-  margin: 0 auto 30px auto;
+  margin: 30 auto 30px auto;
   border-radius: 2px;
+
+ 
+
+   
+
 }
 
 /* Text */
 .mx-team-text {
   font-size: 18px;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
   max-width: 750px;
-  margin: 0 auto;
+  margin: 30px auto;
+
+
 }
 
 /* ========================
@@ -168,8 +205,7 @@ font-family: 'Avenir Next', sans-serif;
     #f5f7fa
   );*/
 
-
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   border-radius: 30px;
 
   box-shadow:
@@ -233,7 +269,7 @@ font-family: 'Avenir Next', sans-serif;
 .mx-ceo-description {
   font-size: 16px;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* =========================================
@@ -342,7 +378,7 @@ font-family: 'Avenir Next', sans-serif;
 .mxnano-description {
   font-size: 17px;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* IMAGE */
@@ -505,7 +541,7 @@ font-family: 'Avenir Next', sans-serif;
 .mx-pm-description {
   font-size: 16px;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* =========================================
@@ -662,7 +698,7 @@ font-family: 'Avenir Next', sans-serif;
 .mx-rasa-description {
   font-size: 16px;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* =========================================
@@ -799,7 +835,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .panchakarma-content p {
   font-size: 18px;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.7;
   max-width: 800px;
 }

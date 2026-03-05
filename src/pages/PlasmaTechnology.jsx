@@ -34,9 +34,9 @@ const PlasmaTechnology = () => {
       to redefine luxury skincare through advanced plasma energy science.
     </p>
 
-    <button className="plasma-cta-btn">
+   {/* <button className="plasma-cta-btn">
       Explore Innovation
-    </button>
+    </button>*/}
   </div>
 </section>
 
@@ -80,6 +80,8 @@ const PlasmaTechnology = () => {
     <div
       className="card benefit-card"
       style={{ backgroundImage: `url(${deepImg})` }}
+      // style={{ backgroundImage: `url(${cellImg})` }}
+
     >
       <h3>Deep Penetration</h3>
       <p>Ensures active nutrients reach deeper skin layers.</p>
@@ -95,7 +97,9 @@ const PlasmaTechnology = () => {
 
     <div
       className="card benefit-card"
-      style={{ backgroundImage: `url(${protectImg})` }}
+     // style={{ backgroundImage: `url(${protectImg})` }}
+      style={{ backgroundImage: `url(${cellImg})` }}
+    
     >
       <h3>Enhanced Protection</h3>
       <p>Shields from UV rays and environmental stressors.</p>
@@ -103,7 +107,9 @@ const PlasmaTechnology = () => {
 
     <div
       className="card benefit-card"
-      style={{ backgroundImage: `url(${hydrateImg})` }}
+     // style={{ backgroundImage: `url(${hydrateImg})` }}
+      style={{ backgroundImage: `url(${cellImg})` }}
+    
     >
       <h3>Revolutionary Hydration</h3>
       <p>Delivers long-lasting deep moisture.</p>

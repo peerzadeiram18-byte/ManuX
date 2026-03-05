@@ -20,6 +20,9 @@ export default function Ayurveda() {
       {/* HERO SECTION */}
         <section className="ayu-hero"
       /* style={{ backgroundImage: `url(${heroImage})` }}*/>
+
+
+        <div className="ayu-hero6">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +37,7 @@ export default function Ayurveda() {
         </p>
 
            <button className="ayu-primary-btn">Explore Our Research</button>
-
+</div>
       </section>
 
       {/* MISSION SECTION */}

@@ -30,7 +30,7 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
+
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
@@ -65,7 +65,7 @@ font-family: 'Avenir Next', sans-serif;
   margin-bottom: 0px;
   text-shadow: 0 10px 30px rgba(0,0,0,0.7);
 
-  padding-top: 130px;
+  padding-top: 200px;
 }
 
 /* Subheading */
@@ -85,7 +85,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* UNIQUE BUTTON (no repeat) */
-.plasma-cta-btn {
+/*.plasma-cta-btn {
   padding: 16px 50px;
   border-radius: 60px;
   border: 1.5px solid #7A2E4D;
@@ -99,13 +99,13 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* Hover */
-.plasma-cta-btn:hover {
+/*.plasma-cta-btn:hover {
   background: #7A2E4D;
   color: #ffffff;
   transform: translateY(-6px);
   box-shadow: 0 25px 60px rgba(193,18,31,0.35);
 }
-
+*/
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
@@ -176,10 +176,11 @@ font-family: 'Avenir Next', sans-serif;
 
 
 
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
 
-  box-shadow:
+
+
+   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -274,9 +275,22 @@ font-family: 'Avenir Next', sans-serif;
     linear-gradient(180deg, #0F2544, #0A0A0A);*/
 
 
-     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
 
+    background: linear-gradient(
+  280deg,
+
+  
+   #f1f3f9 0%,
+  #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
+
+
+
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
@@ -369,7 +383,7 @@ font-family: 'Avenir Next', sans-serif;
   background-position: center;
   border-radius: 20px;
   padding: 40px 30px;
-  color: white;
+  color: 1F2A44;
   position: relative;
   min-height: 260px;
   overflow: hidden;
@@ -415,21 +429,35 @@ font-family: 'Avenir Next', sans-serif;
     radial-gradient(circle at 30% 20%, rgba(193,18,31,0.18), transparent 60%),
     radial-gradient(circle at 80% 70%, rgba(15,37,68,0.25), transparent 60%),
     linear-gradient(180deg, #0F2544, #0A0A0A);  display: flex;*/
+ display: flex;
   justify-content: center;
   text-align: center;
   color: #1F2A44;
 
-
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+  background: linear-gradient(
+       280deg,
+
+  
+   #f1f3f9 0%,
+   #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
 }
 
 .luxury-content {
   max-width: 850px;
+
+  justify-content: center;
+  text-align: center;
 }
 
 .luxury-content h2 {
@@ -437,6 +465,8 @@ font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
   margin-bottom: 20px;
   text-shadow: 0 5px 25px #7A2E4D;
+
+ /* padding-left: 100px;*/
 }
 
 .luxury-content p {
@@ -504,11 +534,21 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+      background: linear-gradient(
+       280deg,
+
+  
+   #f1f3f9 0%,
+   #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
 }
 
 /* Soft green glow for sustainability feel */
