@@ -24,8 +24,8 @@ export default function PlantStemCell() {
 {/* 1️⃣ Animated Luxury Hero */}
 <section
   className="ayu-hero"
-  //style={{
-   // backgroundImage: `url(${heroImage})`, }}
+  style={{
+   backgroundImage: `url(${heroImage})`, }}
 >
   <div className="ayu-hero-overlay"></div>
 

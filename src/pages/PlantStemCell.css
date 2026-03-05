@@ -17,9 +17,9 @@ font-family: 'Avenir Next', sans-serif;
    AYU HERO – PREMIUM BIOTECH VERSION
 ===================================== */
 
-.ayu-hero{
+.ayu-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,10 +29,7 @@ font-family: 'Avenir Next', sans-serif;
   text-align: center;
   overflow: hidden;
 
-
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
@@ -81,6 +78,8 @@ font-family: 'Avenir Next', sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.1;
   color: #1F2A44;
+  padding-top: 120px;
+
 }
 
 /* Subtitle */
@@ -88,7 +87,7 @@ font-family: 'Avenir Next', sans-serif;
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 2.5rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.7;
 }
 

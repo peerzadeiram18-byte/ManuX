@@ -16,7 +16,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .plasma-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -25,7 +25,7 @@ font-family: 'Avenir Next', sans-serif;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 6%;
+  padding: 0 4%;
   overflow: hidden;
 
 
@@ -62,24 +62,26 @@ font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
   color: #1F2A44;
   letter-spacing: 1px;
-  margin-bottom: 18px;
+  margin-bottom: 0px;
   text-shadow: 0 10px 30px rgba(0,0,0,0.7);
+
+  padding-top: 130px;
 }
 
 /* Subheading */
-.plasma-hero-content h2 {
+/*.plasma-hero-content h2 {
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: 400;
-  color: #B23A3F;
-  margin-bottom: 25px;
-}
+  color: #1F2A44;
+  margin-bottom: 0px;
+}*/
 
 /* Paragraph */
 .plasma-hero-content p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #5C6473;
-  margin-bottom: 45px;
+  color: #1F2A44;
+  margin-bottom: 0px;
 }
 
 /* UNIQUE BUTTON (no repeat) */
@@ -88,7 +90,7 @@ font-family: 'Avenir Next', sans-serif;
   border-radius: 60px;
   border: 1.5px solid #7A2E4D;
   background: transparent;
-  color: #B23A3F;
+  color: #1F2A44;
   font-size: 0.95rem;
   font-weight: 400;
   letter-spacing: 1px;

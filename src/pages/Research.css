@@ -325,16 +325,18 @@ font-family: 'Avenir Next', sans-serif;}
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+
 }
 
 /* ---------- CARD ---------- */
 
 .category-card {
  /* background: white;*/
-  padding: 40px 25px;
+  padding: 130px 25px;
   border-radius: 18px;
-  text-align: center;
-  font-size: 1.05rem;
+  text-align: start;
+  font-size: 1.10rem;
+  
   font-weight: 400;
   color: #1F2A44;
   border: 1px solid rgba(15,37,68,0.08);
@@ -349,6 +351,7 @@ color: #5C6473; /* text visible */
 
  position: relative;
   z-index: 1;
+  
 
 }
 
@@ -364,6 +367,8 @@ color: #5C6473; /* text visible */
 .category-card > * {
   position: relative;
   z-index: 2;
+
+ 
 }
 
 /* Top Accent Line */

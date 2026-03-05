@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlasmaTechnology.css";
-//import bgImage from "../assets/plasma-bg.jpg";
+import plasImage from "../assets/plasma-bg.jpg";
 import plasmaImage from "../assets/plasma-science.jpg";
 
 import deepImg from "../assets/deep.jpg";
@@ -22,13 +22,13 @@ const PlasmaTechnology = () => {
       {/* 1. HERO SECTION */}
   <section
   className="plasma-hero"
- // style={{ backgroundImage: `url(${bgImage})` }}
+  style={{ backgroundImage: `url(${plasImage})` }}
 >
   <div className="plasma-hero-overlay"></div>
 
   <div className="plasma-hero-content">
     <h1>Plasma Technology</h1>
-    <h2>The Pinnacle of Skincare Innovation</h2>
+    {/*<h2>The Pinnacle of Skincare Innovation</h2>*/}
     <p>
       At ManuX NanoBioCeuticals, we harness the fourth state of matter
       to redefine luxury skincare through advanced plasma energy science.

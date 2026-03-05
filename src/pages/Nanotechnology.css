@@ -9,13 +9,13 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .nano-hero {
-  min-height: 70vh;
-/*background:
+  min-height: 60vh;
+background:/*
   linear-gradient(
     rgba(15, 32, 39, 0.75),
     rgba(44, 83, 100, 0.75)
-  ),
-  url("../assets/nano-hero.jpg");*/
+  ),*/
+  url("../assets/nano-hero.jpg");
 
 
   background-size: cover;
@@ -48,6 +48,7 @@ font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   color: #1F2A44;
+  padding-top: 150px;
 }
 
 .nano-hero p {
