@@ -325,11 +325,17 @@
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+    background: linear-gradient(
+  135deg,
+  #b8b8e8,
+  #a7a7d6,
+  #c9c9f0
+);
 }
 
 .mxnano-container {
@@ -635,11 +641,17 @@
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+  background: linear-gradient(
+  135deg,
+  #b8b8e8,
+  #a7a7d6,
+  #c9c9f0
+);
 }
 
 .mx-rasa-container {

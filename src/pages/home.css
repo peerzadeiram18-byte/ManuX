@@ -177,7 +177,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .hero-tag{
   color: #B23A3F;
-  font-size: 19px;
+  font-size: 20px;
 }
 /* HEADING */
 .hero-content h1 {
@@ -186,7 +186,7 @@ font-family: 'Avenir Next', sans-serif;}
   line-height: 1.2;
   margin-top: 20px;
   color:#1F2A44;
-  font-size: 40px;
+  font-size: 41px;
 
 }
 
@@ -194,7 +194,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 /* TEXT */
 .hero-content p {
-  margin-top: 20px;
+  margin-top: 21px;
   font-size: clamp(14px, 1.2vw, 18px);
   
    max-width: 970px;
@@ -217,7 +217,7 @@ font-family: 'Avenir Next', sans-serif;}
   border-radius: 50px;
   border: none;
   font-weight: 400;
- font-size: 15px;
+ font-size: 16px;
   color: #ffffff;
   cursor: pointer;
   background: #7A2E4D;
@@ -237,7 +237,7 @@ font-family: 'Avenir Next', sans-serif;}
   border-radius: 50px;
   border: none;
   font-weight: 400;
- font-size: 15px;
+ font-size: 16px;
   cursor: pointer;
   background: #7A2E4D;
   color: #ffffff;
@@ -385,7 +385,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .hero-text h1{
-  font-size:38px;
+  font-size:39px;
   margin-top:10px;
 font-family: 'Avenir Next', sans-serif;
 }
@@ -497,7 +497,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* Title */
 .about-intro h2{
-  font-size:44px;
+  font-size:45px;
     font-weight:400;
 
   letter-spacing:1px;
@@ -508,14 +508,14 @@ font-family: 'Avenir Next', sans-serif;}
 /* Subtitle */
 .about-intro h4{
   font-weight:400;
-  font-size:20px;
+  font-size:21px;
   margin-bottom:25px;
   color:#B23A3F;
 font-family: 'Avenir Next', sans-serif;}
 
 /* First important paragraph */
 .about-intro .lead{
-  font-size:19px;
+  font-size:20px;
   line-height:1.7;
   margin-bottom:25px;
 font-family: 'Avenir Next', sans-serif;}
@@ -525,7 +525,10 @@ font-family: 'Avenir Next', sans-serif;}
   line-height:1.8;
   margin-bottom:20px;
    color: #5C6473;
-font-family: 'Avenir Next', sans-serif;}
+font-family: 'Avenir Next', sans-serif;
+font-size: 18px;
+}
+
 
 /* Highlight Statement */
 .about-highlight{
@@ -537,7 +540,7 @@ font-family: 'Avenir Next', sans-serif;font-weight: 400;
 
 .about-highlight span{
   display:block;
-  font-size:18px;
+  font-size:19px;
   opacity:0.8;
    color:#B23A3F;
 font-family: 'Avenir Next', sans-serif;}
@@ -545,7 +548,7 @@ font-family: 'Avenir Next', sans-serif;}
 .about-highlight strong{
   display:block;
   margin-top:8px;
-  font-size:24px;
+  font-size:25px;
   color:#1F2A44;
   letter-spacing:1px;
   font-weight: 400;
@@ -653,7 +656,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* Heading text */
 .ba-text h2{
-  font-size: 38px;
+  font-size: 39px;
   font-weight: 400;
   color: #1F2A44;
   margin-bottom: 12px;
@@ -668,7 +671,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* Subheading */
 .ba-text p{
-  font-size: 20px;
+  font-size: 21px;
   color: #5C6473;
   margin-bottom: 50px;
   max-width: 700px;
@@ -745,7 +748,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .researchh-tag{
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 2px;
   color: #B23A3F;
   text-align: center;
@@ -766,7 +769,7 @@ font-family: 'Avenir Next', sans-serif;  font-size: 44px;
 .researchh-intro{
   max-width:780px;
   margin:0 auto;
-  font-size: 19px;
+  font-size: 20px;
   opacity:0.85;
   line-height: 1.7;
  color:#5C6473;
@@ -857,11 +860,15 @@ font-family: 'Avenir Next', sans-serif;}
 .cardh-overlay h4{
   padding-top: 150px ;
     color: #1F2A44;
+    font-size: 18px;
+
 }
+
+
 
 .researchh-card p{
    color: #5C6473;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6;
 font-family: 'Avenir Next', sans-serif;
 padding-top: 10px;
@@ -875,15 +882,16 @@ font-family: 'Avenir Next', sans-serif;
 
 .researchh-footer strong{
   display: block;
-  font-size: 22px;
+  font-size: 24px;
   color: #1F2A44;
 font-family: 'Avenir Next', sans-serif;
 font-weight: 400;
+padding-bottom: 10px;
 
 }
 
 .researchh-footer span{
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.8;
  color:#B23A3F;
  font-family: 'Avenir Next', sans-serif;
@@ -1023,7 +1031,7 @@ font-weight: 400;
 
   /* Paragraph readable */
   .research-card p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
   }
 }

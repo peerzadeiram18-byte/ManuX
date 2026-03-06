@@ -24,7 +24,7 @@ export default function ResearchInsightsPage() {
   <section className="research-hero">
   {/*<img src="/research-hero.jpg" alt="Research Background" />*/}
 
-  <div className="research-overlay"></div>
+  <div className="research-overlay">
 
   <div className="research-hero-content">
     <motion.h1
@@ -48,6 +48,7 @@ export default function ResearchInsightsPage() {
     </motion.p>
 
     <div className="hero-divider"></div>
+  </div>
   </div>
 </section>
 

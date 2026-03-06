@@ -518,7 +518,7 @@ background:/*
 }
 
 /* CARD */
-.nano-card {
+.nano-card2 {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
   border-radius: 22px;
@@ -530,7 +530,7 @@ background:/*
 }
 
 /* subtle glow line */
-.nano-card::before {
+.nano-card2::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -540,23 +540,23 @@ background:/*
   transition: opacity 0.4s ease;
 }
 
-.nano-card:hover::before {
+.nano-card2:hover::before {
   opacity: 1;
 }
 
-.nano-card:hover {
+.nano-card2:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 60px #1F2A44;
 }
 
 /* TEXT */
-.nano-card h3 {
+.nano-card2 h3 {
   font-size: 1.5rem;
   margin-bottom: 12px;
   color:#1F2A44 ;
 }
 
-.nano-card p {
+.nano-card2 p {
   font-size: 1.05rem;
   line-height: 1.6;
   opacity: 0.9;

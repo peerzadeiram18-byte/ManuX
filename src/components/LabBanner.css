@@ -39,7 +39,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .smallText {
-  font-size: 18px;
+  font-size: 19px;
   opacity: 0.9;
   color:#1F2A44;
   letter-spacing:1.5px;
@@ -48,7 +48,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* CENTER TEXT */
 .labCenter h2 {
-  font-size: 42px;
+  font-size: 43px;
   font-weight: 400;
   margin-bottom: 10px;
   color: #B23A3F;
@@ -56,7 +56,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .labCenter p {
-  font-size: 18px;
+  font-size: 19px;
   opacity: 0.9;
   color: #5C6473;
 
@@ -70,7 +70,7 @@ font-family: 'Avenir Next', sans-serif;
   border: none;
   padding: 14px 28px;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;

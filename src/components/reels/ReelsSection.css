@@ -23,7 +23,7 @@ font-family: 'Avenir Next', sans-serif;
   background: white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 19px;
   transition: 0.3s;
 }
 
@@ -72,7 +72,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* HEADING */
 .reels-header h2 {
-  font-size: 30px;
+  font-size: 31px;
   font-weight: 400;
   letter-spacing: 1.5px;
   margin-bottom: 6px;
@@ -84,7 +84,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* PARAGRAPH */
 .reels-header p {
-  font-size: 20px;
+  font-size: 21px;
  color:#5C6473;
    line-height: 1.5;
   max-width: 520px;

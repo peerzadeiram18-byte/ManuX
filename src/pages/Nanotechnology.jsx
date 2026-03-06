@@ -75,22 +75,22 @@ function Nanotechnology() {
   <h2 className="section-title">Why Nanotechnology?</h2>
 
   <div className="nano-grid1">
-    <div className="nano-card">
+    <div className="nano-card2">
       <h3>Enhanced Absorption</h3>
       <p>Deep penetration into skin layers for superior nourishment.</p>
     </div>
 
-    <div className="nano-card">
+    <div className="nano-card2">
       <h3>Increased Potency</h3>
       <p>Amplified effectiveness with minimal application.</p>
     </div>
 
-    <div className="nano-card">
+    <div className="nano-card2">
       <h3>Rapid Results</h3>
       <p>Visible transformation in a shorter time span.</p>
     </div>
 
-    <div className="nano-card">
+    <div className="nano-card2">
       <h3>Superior Stability</h3>
       <p>Improved formulation longevity and efficacy.</p>
     </div>
@@ -197,14 +197,18 @@ function Nanotechnology() {
 
     <div
       className="nano-card"
-      style={{ backgroundImage: `url(${nanoImg2})` }}
+     // style={{ backgroundImage: `url(${nanoImg2})` }}
+        style={{ backgroundImage: `url(${nanoImg3})` }}
     >
       <h3>Anti-Acne Nano Therapy</h3>
     </div>
 
     <div
       className="nano-card"
-      style={{ backgroundImage: `url(${nanoImg3})` }}
+     // style={{ backgroundImage: `url(${nanoImg3})` }}
+
+       style={{ backgroundImage: `url(${nanoImg2})` }}
+
     >
       <h3>Under-Eye Repair</h3>
     </div>

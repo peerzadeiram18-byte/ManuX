@@ -42,16 +42,12 @@ font-family: 'Avenir Next', sans-serif;}
   transform: scale(1.08);
 }*/
 
-/*.research-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.75),
-    rgba(50, 47, 116, 0.55),
-    rgba(0,0,0,0.85)
-  );
-}*/
+research-overlay {
+
+
+
+
+}
 
 .research-hero-content {
   position: relative;
