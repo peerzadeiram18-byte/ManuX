@@ -26,7 +26,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .about-hero1 {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -36,9 +36,7 @@ font-family: 'Avenir Next', sans-serif;
   justify-content: center;
 
     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+    box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -51,6 +49,8 @@ font-family: 'Avenir Next', sans-serif;
     rgba(15,37,68,0.85),
     rgba(10,10,10,0.85)
   );*/
+
+  
 }
 
 /* Content above overlay */
@@ -62,6 +62,18 @@ font-family: 'Avenir Next', sans-serif;
   max-width: 800px;
   padding: 20px;
 
+
+
+    padding: 4.2rem 3rem;
+    border-radius: 26px;
+    box-shadow:
+    0 25px 55px rgba(15, 37, 68, 0.12),
+    inset 0 0 0 1px rgba(15, 37, 68, 0.08);
+    overflow: hidden;
+    border: 1.9px solid white;
+    background: rgba(255, 255, 255, 0.08);  /* light transparent */
+    backdrop-filter: blur(8px); 
+
 }
 
 .about-hero1 h1 {
@@ -72,7 +84,7 @@ font-family: 'Avenir Next', sans-serif;
 .subtitle1 {
   margin-top: 20px;
   font-size: 30px;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* ==============================
@@ -86,9 +98,7 @@ font-family: 'Avenir Next', sans-serif;
   justify-content: center;
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
@@ -102,12 +112,17 @@ font-family: 'Avenir Next', sans-serif;
   border-radius: 28px;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+
+
+  border: 1.9px solid white;
+  background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(8px); 
 }
 
 /* Small Top Tag */
 .manux-about-tag {
   display: inline-block;
-  font-size: 13px;
+  font-size: 18px;
   letter-spacing: 4px;
   color: #B23A3F;
   font-weight: 400;
@@ -138,7 +153,7 @@ font-family: 'Avenir Next', sans-serif;
 /* Paragraph */
 .manux-about-text {
   font-size: 19px;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
@@ -266,9 +281,7 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
@@ -287,9 +300,9 @@ font-family: 'Avenir Next', sans-serif;
 /* LEFT SIDE */
 
 .manux-foundation-tag {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 600;
   color: #B23A3F;
   margin-bottom: 20px;
   display: inline-block;
@@ -327,6 +340,11 @@ font-family: 'Avenir Next', sans-serif;
   border-radius: 28px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.08);
   transition: 0.4s ease;
+
+
+  border: 1.9px solid white;
+  background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(12px); 
 }
 
 .manux-foundation-card:hover {
@@ -358,7 +376,7 @@ font-family: 'Avenir Next', sans-serif;
 .manux-foundation-item p {
   font-size: 18px;
   line-height: 1.9;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* ==============================
@@ -414,11 +432,18 @@ font-family: 'Avenir Next', sans-serif;
   overflow: hidden;
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -432,6 +457,10 @@ font-family: 'Avenir Next', sans-serif;
   height: 400px;
   background: radial-gradient(circle, rgba(193,18,31,0.15), transparent 70%);
   z-index: 0;
+
+/*
+  inset:0;
+  background: rgba(0,0,0,0.45);*/
 }
 
 /* container */
@@ -441,14 +470,17 @@ font-family: 'Avenir Next', sans-serif;
   text-align: center;
   position: relative;
   z-index: 2;
+
+
+ max-width:900px;
 }
 
 /* small tag */
 .manux-b2b-tag {
   display: inline-block;
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 600;
   color: #B23A3F;
   margin-bottom: 25px;
 }
@@ -478,7 +510,7 @@ font-family: 'Avenir Next', sans-serif;
 .manux-b2b-text {
   font-size: 19px;
   line-height: 1.9;
-  color: #5C6473;
+  color: #1F2A44;
   max-width: 750px;
   margin: 0 auto;
 }
@@ -527,6 +559,10 @@ font-family: 'Avenir Next', sans-serif;
   padding: 90px 20px;
   position: relative;
   overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   
 }
@@ -580,13 +616,15 @@ font-family: 'Avenir Next', sans-serif;
   padding: 60px 55px;
   border-radius: 30px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+
+  border: 1.5px solid white;
 }
 
 /* TAG */
 .manux-precisionX-tag {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 600;
   color: #B23A3F;
   display: inline-block;
   margin-bottom: 25px;
@@ -618,7 +656,7 @@ font-family: 'Avenir Next', sans-serif;
 .manux-precisionX-text {
   font-size: 18px;
   line-height: 1.9;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* ==============================
@@ -687,9 +725,9 @@ font-family: 'Avenir Next', sans-serif;
 
 /* TAG */
 .manux-science-tag {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 600;
   color: #B23A3F;
   display: inline-block;
   margin-bottom: 20px;
@@ -716,7 +754,7 @@ font-family: 'Avenir Next', sans-serif;
   margin: 0 auto 60px;
   font-size: 18px;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* GRID */
@@ -811,11 +849,13 @@ font-family: 'Avenir Next', sans-serif;
   overflow: hidden;
 
      border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+     box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .manux-domain-containerX {
@@ -826,9 +866,9 @@ font-family: 'Avenir Next', sans-serif;
 
 /* TAG */
 .manux-domain-tagX {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 600;
   color: #C1121F;
   display: inline-block;
   margin-bottom: 20px;
@@ -939,9 +979,7 @@ font-family: 'Avenir Next', sans-serif;
   overflow: hidden;
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -982,6 +1020,8 @@ font-family: 'Avenir Next', sans-serif;
   font-weight: 400;
   color: #1F2A44;
   margin-bottom: 20px;
+  padding-left: 120px;
+  
 }
 
 /* Decorative line */
@@ -995,7 +1035,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .ethics-content p {
   font-size: 18px;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.9;
   max-width: 700px;
   margin: auto;
@@ -1046,10 +1086,15 @@ font-family: 'Avenir Next', sans-serif;
   position: relative;
   overflow: hidden;
 
-     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
 
-  box-shadow:
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+     box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -1093,7 +1138,7 @@ font-family: 'Avenir Next', sans-serif;
 
 .global-impact-text {
   font-size: 18px;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.9;
   max-width: 550px;
 }
@@ -1110,13 +1155,20 @@ font-family: 'Avenir Next', sans-serif;
   background: rgba(255, 255, 255, 0.04);
   padding: 40px;
   border-left: 4px solid #7A2E4D;
-  color: #5C6473;
+  color: #1F2A44;
   font-size: 17px;
   line-height: 1.8;
   border-radius: 12px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(50px);
   max-width: 420px;
   transition: 0.4s ease;
+
+  border-top: 1px solid #7A2E4D;
+  
+  border-right: 1px solid #7A2E4D;
+
+  
+  border-bottom: 1px solid #7A2E4D;
 }
 
 .global-highlight-box:hover {

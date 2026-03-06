@@ -18,7 +18,7 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-hero {
   position: relative;
   min-height: 80vh;
-  padding: 6rem 1.5rem;
+  padding: 5rem 1.5rem;
   color: #1F2A44;
   text-align: center;
 
@@ -69,7 +69,7 @@ position: relative;
   z-index: 2;
   max-width: 1200px;
   width: 90%;
-  padding: 100px 50px;
+  padding: 60px 20px;
 
   background: rgba(255, 255, 255, 0.08);  /* light transparent */
   backdrop-filter: blur(8px);            /* glass effect */
@@ -106,7 +106,7 @@ font-size:clamp(2.6rem,5vw,3.6rem);
   margin-top:1.5rem;
   font-size:1.1rem;
   line-height:1.8;
-  color:#5C6473;
+  color:#1F2A44;
    position: relative;
    /*font-family: 'Poppins', sans-serif;*/
 font-family: 'Avenir Next', sans-serif;
@@ -122,7 +122,7 @@ font-family: 'Avenir Next', sans-serif;
   font-size:1rem;
   font-weight:400px;
   cursor:pointer;
-  color:#94989c;
+  color:#1F2A44;
  /* background:rgb(11, 11, 60);*/
   box-shadow:0 10px 30px rgba(0,0,0,0.35);
   transition:all 0.35s ease;
@@ -133,6 +133,7 @@ font-family: 'Avenir Next', sans-serif;}
   transform:translateY(-4px);
   box-shadow:0 20px 45px rgba(0,0,0,0.45);
   background:#7A2E4D;
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -231,7 +232,7 @@ font-family: 'Avenir Next', sans-serif;
 .mission-text p {
   font-size: 1.05rem;
   line-height: 1.85;
-  color: #5C6473;
+  color: #1F2A44;
   margin-bottom: 1.3rem;
 }
 
@@ -251,6 +252,13 @@ font-family: 'Avenir Next', sans-serif;
     inset 0 0 0 1px rgba(15, 37, 68, 0.08);
 
   overflow: hidden;
+
+
+ border: 1.9px solid white;
+
+    background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(8px);  
+
 }
 .ayu-mission-card::before {
   content: "";
@@ -354,7 +362,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .ayu-research p {
-  color: #5C6473;
+  color: #1F2A44;
   margin-bottom: 80px;
 }
 
@@ -374,6 +382,10 @@ font-family: 'Avenir Next', sans-serif;
   box-shadow: 0 15px 40px rgba(0,0,0,0.06);
   transition: 0.4s ease;
   overflow: visible; /* IMPORTANT */
+
+
+ /* background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(8px);
 }
 
 /* Hover */
@@ -389,6 +401,7 @@ font-family: 'Avenir Next', sans-serif;
   left: 50%;
   transform: translateX(-50%);
   background: #ffffff;
+  
   width: 90px;
   height: 90px;
   border-radius: 20px;
@@ -396,11 +409,14 @@ font-family: 'Avenir Next', sans-serif;
   align-items: center;
   justify-content: center;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+
+    background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(2px);  
 }
 
 /* ICON IMAGE */
 .ayu-icon-wrap img {
-  width: 55px;
+  width: 60px;
   height: 55px;
   object-fit: contain;
 }
@@ -409,7 +425,7 @@ font-family: 'Avenir Next', sans-serif;
 .ayu-research-card h3 {
   font-size: 1rem;
   font-weight: 400;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.6;
 }
 
@@ -505,12 +521,19 @@ font-family: 'Avenir Next', sans-serif;
     #0F2544,
     #0A0A0A
   );*/
-  color: #5C6473;
+  color: #1F2A44;
   position: relative;
   overflow: hidden;
 
 
-     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   border-radius: 30px;
 
   box-shadow:
@@ -561,7 +584,7 @@ font-family: 'Avenir Next', sans-serif;
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 /* ===============================
@@ -615,10 +638,15 @@ font-family: 'Avenir Next', sans-serif;
   overflow: hidden;
 
 
-     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 
-  box-shadow:
+
+     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
+     box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -662,7 +690,7 @@ font-family: 'Avenir Next', sans-serif;
   max-width: 760px;
   margin: 0 auto 3.5rem;
   font-size: 1.1rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.8;
 }
 

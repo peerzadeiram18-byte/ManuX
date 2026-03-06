@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import { motion } from "framer-motion";
 
-//import heroBg from "../assets/about-hero.jpg";
+import heroBg from "../assets/about-hero.jpg";
 import precisionImg from "../assets/MOLECULAR PRECISION.jpg";
 
 import sciImg1 from "../assets/science1.jpg";
@@ -17,6 +17,10 @@ import domainImg4 from "../assets/domain4.jpg";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
+import SEO from "../components/SEO";
+
+
+import b2bBg from "../assets/b2b-background.jpg";
 
 
 const fadeUp = {
@@ -28,7 +32,13 @@ const fadeUp = {
 const About = () => {
   return (
 
-    
+        <>
+      <SEO
+        title="About ManuX NanoBioCeuticals"
+        description="Learn about ManuX NanoBioCeuticals, a research-driven Ayurvedic nanobiotechnology organization combining traditional botanical science with advanced molecular innovation."
+        keywords="ManuX, Ayurvedic nanotechnology, nanobiotechnology research, ayurveda science, herbal biotechnology"
+      />
+
     
         <div className="about-page1"
          style={{ backgroundImage: `url(${bgImage})` }}
@@ -37,16 +47,16 @@ const About = () => {
       {/* HERO SECTION */}
      <section 
   className="about-hero1"
-  //style={{ backgroundImage: `url(${heroBg})` }}
+  style={{ backgroundImage: `url(${heroBg})` }}
 >
   <div className="overlay1"></div>
 
-  <motion.div 
-    className="hero-content1"
-    initial="hidden1"
-    animate="show"
-    variants={fadeUp}
-  >
+<motion.div 
+  className="hero-content1"
+  initial="hidden"
+  animate="show"
+  variants={fadeUp}
+>
     <h1>About ManuX NanoBioCeuticals</h1>
     <p className="subtitle1">
       A Research-Driven Ayurvedic Nanobiotechnology Organisation
@@ -63,9 +73,9 @@ const About = () => {
       a research-driven ayurvedic nanobiotechnology organization
     </span>
 
-    <h2 className="manux-about-heading">
-      Tradition  <span>Meets Molecula </span> Science
-    </h2>
+  <h2 className="manux-about-heading">
+  Tradition <span>Meets Molecular</span> Science
+</h2>
 
     <div className="manux-about-divider"></div>
 
@@ -90,7 +100,10 @@ const About = () => {
 
 
     {/* 3️⃣ B2B INNOVATION PLATFORM */}
-<section className="manux-b2b-section">
+<section className="manux-b2b-section"
+
+ style={{ backgroundImage: `url(${b2bBg})` }}
+>
   <div className="manux-b2b-container">
 
     <span className="manux-b2b-tag">
@@ -161,14 +174,16 @@ const About = () => {
 
 
 {/* 4️⃣ TRADITION + MOLECULAR PRECISION */}
-<section className="manux-precisionX-section">
+<section className="manux-precisionX-section"
+ style={{ backgroundImage: `url(${b2bBg})` }}
+
+>
   <div className="manux-precisionX-container">
 
     {/* LEFT IMAGE WITH GLOW */}
     <div className="manux-precisionX-imageWrap">
       <div className="manux-precisionX-glow"></div>
-      <img src={precisionImg} alt="Molecular Precision" />
-    </div>
+<img src={precisionImg} alt="Ayurvedic nanotechnology molecular precision research" />    </div>
 
     {/* RIGHT GLASS CONTENT */}
     <div className="manux-precisionX-content">
@@ -257,7 +272,10 @@ const About = () => {
 
 
 {/* 6️⃣ MULTIPLE DOMAINS */}
-<section className="manux-domain-sectionX">
+<section className="manux-domain-sectionX"
+ style={{ backgroundImage: `url(${b2bBg})` }}
+
+>
   <div className="manux-domain-containerX">
 
     <span className="manux-domain-tagX">
@@ -327,7 +345,10 @@ const About = () => {
 
 
      {/* 8️⃣ GLOBAL COLLABORATION */}
-<section className="global-impact-section">
+<section className="global-impact-section"
+ style={{ backgroundImage: `url(${b2bBg})` }}
+
+>
   <div className="global-impact-wrapper">
     
     <div className="global-impact-left">
@@ -353,7 +374,14 @@ const About = () => {
 
 
 
-    </div>
+    
+
+      </div>
+    </>
+  
+
+
+
   );
 };
 

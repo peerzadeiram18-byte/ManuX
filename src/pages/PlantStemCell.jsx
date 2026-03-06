@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, percent } from "framer-motion";
 import "./PlantStemCell.css";
 import heroImage from "../assets/stem-hero.jpg";
 import labImage from "../assets/lab.jpg";
@@ -100,6 +100,7 @@ export default function PlantStemCell() {
     whileInView={{ opacity: 1, x: 0 }}
     initial={{ opacity: 0, x: 60 }}
     transition={{ duration: 0.8 }}
+   
   >
     <img src={labImage} alt="Biotech Lab" />
   </motion.div>

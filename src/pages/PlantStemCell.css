@@ -12,6 +12,8 @@ font-family: 'Avenir Next', sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  
+
  }
 /* =====================================
    AYU HERO – PREMIUM BIOTECH VERSION
@@ -33,6 +35,9 @@ font-family: 'Avenir Next', sans-serif;
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+    
 }
 
 /* Dark brand overlay */
@@ -45,6 +50,9 @@ font-family: 'Avenir Next', sans-serif;
     rgba(10,10,10,0.85)
   );*/
   z-index: 1;
+
+   /* background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+   /* backdrop-filter: blur(4px); /* Blurry glass effect */
 }
 
 /* subtle red glow */
@@ -184,12 +192,8 @@ font-family: 'Avenir Next', sans-serif;
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
 
-  background:
-            radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
-            radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
-            linear-gradient(135deg,#8f97b5,#b2b8cf,#d0d4e3);
-
-  background-size: 40px 40px, 80px 80px, cover;
+    background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+    backdrop-filter: blur(4px); /* Blurry glass effect */
 
 }
 
@@ -363,7 +367,6 @@ font-family: 'Avenir Next', sans-serif;
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
 
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
@@ -608,12 +611,8 @@ font-family: 'Avenir Next', sans-serif;
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
 
-    background:
-             radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
-             radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
-             linear-gradient(135deg,#8f97b5,#b2b8cf,#d0d4e3);
-
-    background-size: 40px 40px, 80px 80px, cover;
+    background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+    backdrop-filter: blur(4px); /* Blurry glass effect */
 }
 
 /* FLEX LAYOUT */
@@ -793,12 +792,10 @@ font-family: 'Avenir Next', sans-serif;
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
 
-    background:
-             radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
-             radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
-             linear-gradient(135deg,#8f97b5,#b2b8cf,#d0d4e3);
+    background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+    backdrop-filter: blur(4px); /* Blurry glass effect */
 
-    background-size:40px 40px,80px 80px,cover;
+  
 
 }
 

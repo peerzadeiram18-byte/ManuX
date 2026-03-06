@@ -9,6 +9,9 @@ import Navbar from "./components/Navbar";
 import "./components/Navbar.css";
 import Footer from "./components/FooterComponent";
 
+
+import { HelmetProvider } from 'react-helmet-async';
+
 /* Pages */
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -42,7 +45,7 @@ function App() {
   
   return (
 
-
+<HelmetProvider>
     <BrowserRouter>
       <AuthProvider>
         <ProductProvider>
@@ -102,7 +105,7 @@ function App() {
       </AuthProvider>
     </BrowserRouter>
 
-    
+    </HelmetProvider>
   );
 }
 

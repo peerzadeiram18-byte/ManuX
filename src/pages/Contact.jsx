@@ -21,7 +21,7 @@ const Contact = () => {
     {/* HERO SECTION */}
 <section
   className="cxh-hero"
-  //style={{ backgroundImage: `url(${heroBg})` }}
+  style={{ backgroundImage: `url(${heroBg})` }}
 >
   <div className="cxh-overlay"></div>
 
@@ -42,7 +42,7 @@ const Contact = () => {
   <div className="cx-info-wrapper">
 
     {/* LEFT SIDE – OFFICE INFO */}
-    <div className="cx-info-card">
+    <div className="cx-info-card1">
   
   <div className="info-block">
     <FaBuilding className="info-icon" />

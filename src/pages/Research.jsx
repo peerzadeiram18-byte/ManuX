@@ -22,7 +22,7 @@ export default function ResearchInsightsPage() {
    >
   {/* ================= HERO SECTION ================= */}
   <section className="research-hero">
-  {/*<img src="/research-hero.jpg" alt="Research Background" />*/}
+  <img src="/research-hero.jpg" alt="Research Background" />
 
   <div className="research-overlay">
 
@@ -91,8 +91,14 @@ export default function ResearchInsightsPage() {
 
      
      {/* ================= SECTION 2 ================= */}
-<section className="category-section">
+<section
+  className="category-section"
+  style={{ backgroundImage: "url('/research-hero.jpg')" }}
+>
+  
+  
   <div className="category-container">
+    
     
     <div className="category-header">
       <h2 className="category-title">
@@ -136,8 +142,8 @@ export default function ResearchInsightsPage() {
   <div className="ethics-container">
 
     {/* CONTENT */}
-    <div className="ethics-content">
-      <h2 className="ethics-title">
+    <div className="ethics-content7">
+      <h2 className="ethics-title1">
         Ethics, Safety & Responsibility by Design
       </h2>
 
@@ -167,7 +173,10 @@ export default function ResearchInsightsPage() {
 
 
 {/* ================= SECTION 4 ================= */}
-<section className="future-section">
+<section className="future-section"
+style={{ backgroundImage: "url('/research-hero.jpg')" }}
+
+>
   <div className="future-container">
 
     <h2 className="future-title">

@@ -28,26 +28,41 @@ font-family: 'Avenir Next', sans-serif;
   padding: 0 4%;
   overflow: hidden;
 
-
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-
-
+  
+  
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+    
+
 }
 
 /* Deep luxury overlay */
-/*.plasma-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 20, 0.9),
-    rgba(15, 37, 68, 0.85)
+.plasma-hero-overlay {
+  position: relative;
+
+
+  max-width: 1500px;
+  width: 150%;
+
+  min-height: 60vh;
+    /* light transparent */
+  backdrop-filter: blur(4px);            /* glass effect */
+ background-size: cover;
   
-  z-index: 1;
-}*/
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
 
 /* Content */
 .plasma-hero-content {
@@ -156,6 +171,20 @@ font-family: 'Avenir Next', sans-serif;
 .light {
   /*background: #ffffff;*/
   color: #222;
+
+    background: linear-gradient(
+    280deg,
+
+  
+   #f1f3f9 0%,
+   #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
+  
+
 }
 
 .dark {
@@ -175,7 +204,7 @@ font-family: 'Avenir Next', sans-serif;
   gap: 40px;
 
 
-
+  
 
 
 
@@ -220,11 +249,21 @@ font-family: 'Avenir Next', sans-serif;
   justify-content: center;
 font-family: 'Avenir Next', sans-serif;
 
+    background: linear-gradient(
+    280deg,
+
+  
+   #f1f3f9 0%,
+   #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
+
 
  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+ box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -276,17 +315,7 @@ font-family: 'Avenir Next', sans-serif;
 
 
 
-    background: linear-gradient(
-  280deg,
 
-  
-   #f1f3f9 0%,
-  #cfd5ea 40%,
-   #9aa3c8 70%,
-   #7B82AC 100%
-  
-
-);
 
 
 
@@ -389,9 +418,9 @@ font-family: 'Avenir Next', sans-serif;
   overflow: hidden;
 
 
-   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
 
+
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
@@ -440,17 +469,7 @@ font-family: 'Avenir Next', sans-serif;
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
 
-  background: linear-gradient(
-       280deg,
 
-  
-   #f1f3f9 0%,
-   #cfd5ea 40%,
-   #9aa3c8 70%,
-   #7B82AC 100%
-  
-
-);
 }
 
 .luxury-content {
@@ -484,13 +503,21 @@ font-family: 'Avenir Next', sans-serif;
   justify-content: center;
   text-align: center;
 
+    background: linear-gradient(
+    280deg,
 
+  
+   #f1f3f9 0%,
+   #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -538,17 +565,7 @@ font-family: 'Avenir Next', sans-serif;
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
-      background: linear-gradient(
-       280deg,
-
-  
-   #f1f3f9 0%,
-   #cfd5ea 40%,
-   #9aa3c8 70%,
-   #7B82AC 100%
-  
-
-);
+ 
 }
 
 /* Soft green glow for sustainability feel */
@@ -721,12 +738,20 @@ font-family: 'Avenir Next', sans-serif;
   display: flex;
   justify-content: center;
 
+    background: linear-gradient(
+    280deg,
 
+  
+   #f1f3f9 0%,
+   #cfd5ea 40%,
+   #9aa3c8 70%,
+   #7B82AC 100%
+  
+
+);
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }

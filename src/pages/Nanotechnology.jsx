@@ -17,6 +17,8 @@ import nanoImg2 from "../assets/nano2.jpg";
 import nanoImg3 from "../assets/nano3.jpg";
 import nanoImg4 from "../assets/nano4.jpg";
 
+import nutraImg from "../assets/Rnutra.jpg";
+
 
 
 
@@ -115,7 +117,7 @@ function Nanotechnology() {
 
     {/* RIGHT IMAGE */}
     <div className="science-image">
-      <img src={nanoImg} alt="Nano Technology" />
+      <img src={nutraImg } alt="Nano Technology" />
     </div>
 
   </div>

@@ -24,7 +24,7 @@ const PlasmaTechnology = () => {
   className="plasma-hero"
   style={{ backgroundImage: `url(${plasImage})` }}
 >
-  <div className="plasma-hero-overlay"></div>
+  <div className="plasma-hero-overlay">
 
   <div className="plasma-hero-content">
     <h1>Plasma Technology</h1>
@@ -37,6 +37,8 @@ const PlasmaTechnology = () => {
    {/* <button className="plasma-cta-btn">
       Explore Innovation
     </button>*/}
+  </div>
+
   </div>
 </section>
 
@@ -79,8 +81,8 @@ const PlasmaTechnology = () => {
 
     <div
       className="card benefit-card"
-      style={{ backgroundImage: `url(${deepImg})` }}
-      // style={{ backgroundImage: `url(${cellImg})` }}
+      //style={{ backgroundImage: `url(${deepImg})` }}
+      style={{ backgroundImage: `url(${cellImg})` }}
 
     >
       <h3>Deep Penetration</h3>

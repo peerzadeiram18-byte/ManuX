@@ -24,29 +24,54 @@ font-family: 'Avenir Next', sans-serif;}
   justify-content: center;
   overflow: hidden;
 
+  
+
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+      /* background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+   /* backdrop-filter: blur(4px); /* Blurry glass effect */
 }
 
-/*.research-hero img {
+.research-hero img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1.08);
-}*/
 
-research-overlay {
+    /* background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+   /* backdrop-filter: blur(4px); /* Blurry glass effect */
+ 
+}
 
+.research-overlay {
 
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 90%;
+  padding: 100px 50px;
 
+  background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(8px);            /* glass effect */
 
+  border: 1.9px solid white; /* white border */
+  border-radius: 50px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
 }
 
 .research-hero-content {
@@ -74,7 +99,7 @@ research-overlay {
   margin-top: 24px;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #5C6473;
+  color: #1F2A44;
 }
 
 .hero-divider {
@@ -106,7 +131,7 @@ research-overlay {
   content: "•";
   position: absolute;
   left: 0;
-  color: #303c7c;
+  color: #1F2A44;
   font-weight: bold;
 }
 
@@ -232,7 +257,7 @@ research-overlay {
   padding-left: 34px;
   margin-bottom: 1.1rem;
   font-size: 1.05rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.6;
 }
 
@@ -249,7 +274,7 @@ research-overlay {
 
 .philosophy-text {
   font-size: 1.05rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.7;
   max-width: 520px;
 }
@@ -280,11 +305,15 @@ research-overlay {
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 5%;
 }
 
 .category-container {
@@ -311,7 +340,7 @@ research-overlay {
   font-size: 1.05rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.7;
 }
 
@@ -343,7 +372,7 @@ research-overlay {
   background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-color: #5C6473; /* text visible */
+color: #1F2A44; /* text visible */
 
  position: relative;
   z-index: 1;
@@ -450,16 +479,17 @@ color: #5C6473; /* text visible */
 /* ================= ETHICS SECTION ================= */
 
 .ethics-section {
-  padding: 6rem 1.5rem;
+  padding: 5rem 1.5rem;
   /*background: linear-gradient(to right, #ffffff, #f8fafc);*/
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+
 }
 
 .ethics-container {
@@ -469,21 +499,45 @@ color: #5C6473; /* text visible */
   grid-template-columns: 1fr 1.1fr;
   gap: 4rem;
   align-items: center;
+
+  color: #1F2A44;
+
+
+
+  
 }
 
 /* CONTENT */
 
-.ethics-content {
-  background: white;
-  padding: 3.5rem 3rem;
+.ethics-content7 {
+  /*background: white;*/
+  padding: 2.5rem 3rem;
   border-radius: 24px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+
+
+
+  background: rgba(255, 255, 255, 0.08);  /* light transparent */
+  backdrop-filter: blur(8px);            /* glass effect */
+
+  border: 1.9px solid white; /* white border */
+  border-radius: 50px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+
+
 }
 
-.ethics-title {
+.ethics-title1 {
   /*font-family: 'Playfair Display', serif;*/
   font-size: clamp(2.2rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 500;
   color: #1F2A44;
   margin-bottom: 2rem;
 }
@@ -493,7 +547,7 @@ color: #5C6473; /* text visible */
 .ethics-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .ethics-list li {
@@ -501,7 +555,7 @@ color: #5C6473; /* text visible */
   padding-left: 36px;
   margin-bottom: 1.1rem;
   font-size: 1.05rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.6;
 }
 
@@ -518,7 +572,7 @@ color: #5C6473; /* text visible */
 
 .ethics-text {
   font-size: 1.05rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.7;
   max-width: 520px;
 }
@@ -572,13 +626,15 @@ color: #5C6473; /* text visible */
     #f9fafb
   );*/
 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 5%;
 
 
 
    border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  border-radius: 30px;
-
-  box-shadow:
+   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
@@ -604,7 +660,7 @@ color: #5C6473; /* text visible */
 
 .future-text {
   font-size: 1.08rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.8;
   margin-bottom: 3rem;
 }
@@ -682,7 +738,7 @@ color: #5C6473; /* text visible */
 /* Text */
 .cta-text {
   font-size: 1.05rem;
-  color: #5C6473;
+  color: #1F2A44;
   line-height: 1.8;
   margin-bottom: 50px;
 }

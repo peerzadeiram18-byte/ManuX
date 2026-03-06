@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Ayurveda.css";
-//import heroImage from "../assets/ayurveda-hero.jpg";
+import heroImage from "../assets/ayurveda-hero.jpg";
 
 import icon1 from "../assets/research-icon-1.png";
 import icon2 from "../assets/research-icon-2.png";
@@ -19,7 +19,9 @@ export default function Ayurveda() {
 
       {/* HERO SECTION */}
         <section className="ayu-hero"
-      /* style={{ backgroundImage: `url(${heroImage})` }}*/>
+       style={{ backgroundImage: `url(${heroImage})` }}
+       
+       >
 
 
         <div className="ayu-hero6">
@@ -68,7 +70,10 @@ export default function Ayurveda() {
 
 
       {/* DISCIPLINE SECTION */}
-        <section className="ayu-discipline">
+        <section className="ayu-discipline"
+       style={{ backgroundImage: `url(${heroImage})` }}
+
+        >
 
         <h2>Scientific Accountability & Biological Responsibility</h2>
         <p>
@@ -118,7 +123,10 @@ export default function Ayurveda() {
 </section>
 
       {/* GLOBAL SECTION */}
-      <section className="ayu-global">
+      <section className="ayu-global"
+             style={{ backgroundImage: `url(${heroImage})` }}
+
+      >
         <h2>Globally Relevant. Biologically Responsible.</h2>
         <p>
           ManuX NanoBioCeuticals aims to position Ayurvedic science within
