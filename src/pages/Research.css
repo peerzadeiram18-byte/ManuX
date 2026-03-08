@@ -357,10 +357,12 @@ font-family: 'Avenir Next', sans-serif;}
 
 .category-card {
  /* background: white;*/
-  padding: 130px 25px;
+ /* padding: 130px 25px;*/
   border-radius: 18px;
   text-align: start;
   font-size: 1.10rem;
+
+    height: 230px;
   
   font-weight: 400;
   color: #1F2A44;
@@ -376,6 +378,10 @@ color: #1F2A44; /* text visible */
 
  position: relative;
   z-index: 1;
+
+
+   display: flex;
+  align-items: flex-end;
   
 
 }
@@ -386,6 +392,13 @@ color: #1F2A44; /* text visible */
   inset: 0;
 
   z-index: 0;
+
+
+    background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.45)
+  );
 }
 
 
@@ -406,6 +419,8 @@ color: #1F2A44; /* text visible */
   height: 4px;
   background: #7A2E4D;
   transition: width 0.4s ease;
+
+    z-index: 3;
 }
 
 /* Hover Effect */
@@ -471,6 +486,8 @@ color: #1F2A44; /* text visible */
 
   .category-card {
     padding: 30px 20px;
+        height: 230px;
+
   }
 }
 

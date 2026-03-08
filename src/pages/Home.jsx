@@ -219,12 +219,12 @@ useEffect(() => {
       development across personal care, wellness, and therapeutic categories.
     </p>
 
-    <p>
+   {/* <p>
       Operating at the convergence of classical ayurvedic intelligence and modern
       biological science, ManuX enables brands and institutions to develop
       high-performance, biocompatible, and compliance-ready solutions designed
       for real-world efficacy and long-term safety.
-    </p>
+    </p>*/}
 
     <div className="about-highlight">
       <span>We do not formulate for appearances.</span>

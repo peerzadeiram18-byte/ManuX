@@ -50,7 +50,7 @@ font-family: 'Avenir Next', sans-serif;
 
   min-height: 60vh;
     /* light transparent */
-  backdrop-filter: blur(4px);            /* glass effect */
+ /* backdrop-filter: blur(4px);            /* glass effect */
  background-size: cover;
   
   box-shadow:
@@ -80,7 +80,7 @@ font-family: 'Avenir Next', sans-serif;
   margin-bottom: 0px;
   text-shadow: 0 10px 30px rgba(0,0,0,0.7);
 
-  padding-top: 200px;
+  padding-top: 160px;
 }
 
 /* Subheading */
@@ -412,19 +412,25 @@ font-family: 'Avenir Next', sans-serif;
   background-position: center;
   border-radius: 20px;
   padding: 40px 30px;
-  color: 1F2A44;
+  color: #1F2A44;
   position: relative;
   min-height: 260px;
   overflow: hidden;
 
+ 
 
+ 
 
 
   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+
+
 }
+
 
 /* DARK OVERLAY */
 .benefit-card::before {
@@ -436,15 +442,27 @@ font-family: 'Avenir Next', sans-serif;
     rgba(0,0,0,0.55),
     rgba(0,0,0,0.8)
   );*/
+
+   backdrop-filter: blur(4px);            /* glass effect */
+ background-size: cover;
+
+
 }
 
 /* CONTENT ABOVE OVERLAY */
-.benefit-card h3,
+.benefit-card h3{
+
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+}
+
+
 .benefit-card p {
   position: relative;
-  z-index: 2;
   text-align: center;
-  
+  padding-top: 5px;
+
 }
 
 

@@ -117,7 +117,7 @@ function Nanotechnology() {
 
     {/* RIGHT IMAGE */}
     <div className="science-image">
-      <img src={nutraImg } alt="Nano Technology" />
+      <img src={nanoImg } alt="Nano Technology" />
     </div>
 
   </div>
