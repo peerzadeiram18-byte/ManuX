@@ -1,4 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+
+//import React, { useState } from "react";
+
+
 import "./Navbar.css";
 import { FaSearch, FaRegStar, FaBell, FaUser } from "react-icons/fa";
 import logo from "./logo.png";
@@ -15,6 +20,19 @@ const Navbar = () => {
   const[openMenu,setOpenMenu]=useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+  const handleClickOutside = () => {
+    setOpenDropdown(false);
+  };
+
+  document.addEventListener("click", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("click", handleClickOutside);
+  };
+}, []);
 
   return (
     <div className="navbar">
@@ -80,7 +98,9 @@ const Navbar = () => {
 )}*/}
 
           {/* TECHNOLOGY DROPDOWN */}
-          <div className="dropdown">
+          <div className="dropdown"
+          onClick={(e) => e.stopPropagation()}
+          >
             <span
               className="nav-link"
               onClick={() => setOpenDropdown(!openDropdown)}
