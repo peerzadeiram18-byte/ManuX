@@ -59,6 +59,7 @@ function App() {
 
   {/* Public */}
   <Route path="/" element={<Home />} />
+  <Route path="/register" element={<Register />} />
   <Route path="/login" element={<Login />} />
 
   {/* Protected Group */}
@@ -72,7 +73,7 @@ function App() {
      <Route path="/About" element={<About />} />
     {/*<Route path="/AdminDashboard" element={<AdminDashboard />} />*/}
 
-    <Route path="/register" element={<Register />} />
+    {/*<Route path="/register" element={<Register />} />*/}
 
 
 

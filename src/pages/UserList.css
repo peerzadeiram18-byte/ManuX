@@ -1,0 +1,294 @@
+/* ===== USER LIST SECTION ===== */
+
+/*.ul-container{
+padding:60px 5%;
+background:#f4f6f9;
+min-height:100vh;
+font-family: "Segoe UI", sans-serif;
+}*/
+
+.ul-container{
+padding:60px 6%;
+background:#f4f6f9;
+min-height:100vh;
+font-family: "Segoe UI", sans-serif;
+max-width:1200px;
+margin:auto;
+}
+
+
+/* TITLE */
+
+/*.ul-title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+color:#0F2544;
+font-weight:600;
+}
+*/
+
+
+
+.ul-title{
+font-size:32px;
+color:#0F2544;
+font-weight:600;
+margin:0;
+}
+/* TABLE WRAPPER */
+
+.ul-table-wrapper{
+overflow-x:auto;
+background:white;
+border-radius:14px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* TABLE */
+
+.ul-table{
+width:100%;
+border-collapse:collapse;
+min-width:600px;
+}
+
+/* HEADER */
+
+.ul-table thead{
+background:#0F2544;
+color:white;
+}
+
+.ul-table th{
+padding:16px;
+text-align:left;
+font-size:15px;
+font-weight:500;
+}
+
+/* BODY */
+
+.ul-table td{
+padding:14px 16px;
+border-bottom:1px solid #eee;
+font-size:14px;
+color:#333;
+}
+
+/* ROW HOVER */
+
+.ul-table tbody tr:hover{
+background:#f9fafc;
+}
+
+/* INPUT */
+
+.ul-input{
+width:100%;
+padding:8px 10px;
+border-radius:6px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+/* ACTIONS */
+
+.ul-actions{
+display:flex;
+gap:10px;
+}
+
+/* BUTTONS */
+
+.ul-edit-btn{
+background:#0F2544;
+color:white;
+border:none;
+padding:7px 14px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+
+.ul-delete-btn{
+background:#B23A3F;
+color:white;
+border:none;
+padding:7px 14px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+
+.ul-save-btn{
+background:#2e8b57;
+color:white;
+border:none;
+padding:7px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* HOVER EFFECT */
+
+.ul-edit-btn:hover{
+background:#1b3d73;
+}
+
+.ul-delete-btn:hover{
+background:#8f2a2e;
+}
+
+.ul-save-btn:hover{
+background:#256f45;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width:768px){
+
+.ul-title{
+font-size:26px;
+}
+
+.ul-table th,
+.ul-table td{
+padding:12px;
+font-size:13px;
+}
+
+.ul-actions{
+flex-direction:column;
+}
+
+}
+
+@media (max-width:480px){
+
+.ul-container{
+padding:40px 15px;
+}
+
+.ul-title{
+font-size:22px;
+}
+
+}
+
+
+
+/* ===== USER SEARCH BOX ===== */
+
+/*.ul-search-box{
+width:100%;
+display:flex;
+justify-content:flex-end;
+margin-bottom:30px;
+}*/
+
+.ul-search-box{
+display:flex;
+justify-content:flex-end;
+}
+
+
+/* SEARCH INPUT */
+
+.ul-search-box input{
+width:280px;
+padding:12px 18px;
+border-radius:30px;
+border:1px solid #dcdfe6;
+font-size:14px;
+outline:none;
+background:#fff;
+color:#333;
+
+transition:all 0.3s ease;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+/* PLACEHOLDER */
+
+.ul-search-box input::placeholder{
+color:#999;
+font-size:14px;
+}
+
+/* FOCUS EFFECT */
+
+.ul-search-box input:focus{
+border-color:#0F2544;
+box-shadow:0 0 0 3px rgba(15,37,68,0.08);
+transform:scale(1.02);
+}
+
+/* HOVER */
+
+.ul-search-box input:hover{
+border-color:#b9c0cc;
+}
+
+
+/* TABLET */
+
+@media (max-width:768px){
+
+.ul-search-box{
+justify-content:center;
+}
+
+.ul-search-box input{
+width:80%;
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width:480px){
+
+.ul-search-box input{
+width:100%;
+font-size:13px;
+padding:10px 15px;
+}
+
+}
+
+
+
+/* HEADER LAYOUT */
+
+.ul-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:35px;
+flex-wrap:wrap;
+gap:20px;
+}
+
+
+/*User List                         Search Box
+------------------------------------------------
+| SR | Name | Email | Password | Actions |*/
+
+@media (max-width:768px){
+
+.ul-header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.ul-search-box{
+width:100%;
+}
+
+.ul-search-box input{
+width:100%;
+}
+
+}

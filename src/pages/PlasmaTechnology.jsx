@@ -3,14 +3,20 @@ import "./PlasmaTechnology.css";
 import plasImage from "../assets/plasma-bg.jpg";
 import plasmaImage from "../assets/plasma-science.jpg";
 
-import deepImg from "../assets/deep.jpg";
-import cellImg from "../assets/cellular.jpg";
-import protectImg from "../assets/protection.jpg";
-import hydrateImg from "../assets/hydration.jpg";
+//import deepImg from "../assets/deep.jpg";
+//import cellImg from "../assets/cellular.jpg";
+//import protectImg from "../assets/protection.jpg";
+//import hydrateImg from "../assets/hydration.jpg";
 
 import ecoImage from "../assets/eco.jpg";
 
 import bgImage from "../assets/backgroundimage.jpg";
+
+
+import deepImg from "../assets/deepImg.jpg";
+import cellImg from "../assets/cellImg.jpg";
+import protectImg from "../assets/protectImg.jpg";
+import hydrateImg from "../assets/hydrateImg.jpg";
 
 
 const PlasmaTechnology = () => {
@@ -56,34 +62,37 @@ const PlasmaTechnology = () => {
       </section>
 
 
-      {/* 3. SCIENCE SPLIT SECTION */}
-      <section className="section split dark plasma-split">
-             <div className="split-text">
-               <h2>The Science of Plasma</h2>
-              <div className="line"></div>
-                 <p>
-                   Plasma, known as the fourth state of matter, contains ions and
-                   electrons that enhance cellular communication and stimulate
-                    natural skin repair processes.
-                 </p>
-             </div>
+{/* 3. SCIENCE SPLIT SECTION */}
+<section 
+  className="section split dark plasma-split"
+  style={{ backgroundImage: `url(${plasmaImage})` }}
+>
 
-              <div className="split-image">
-               <img src={plasmaImage} alt="Plasma Technology" />
-                </div>
-              </section>
+  {/*<div className="split-text">
+    <h2>The Science of Plasma</h2>
+    <div className="line"></div>
+
+    <p>
+      Plasma, known as the fourth state of matter, contains ions and
+      electrons that enhance cellular communication and stimulate
+      natural skin repair processes.
+    </p>
+  </div>*/}
+
+</section>
+
+
+
 
       {/* 4. BENEFITS SECTION */}
-     <section className="section light">
+<section className="section light">
   <h2 className="center">Transformative Benefits</h2>
 
   <div className="card1-grid">
 
     <div
       className="card benefit-card"
-      //style={{ backgroundImage: `url(${deepImg})` }}
-      style={{ backgroundImage: `url(${cellImg})` }}
-
+      style={{ backgroundImage: `url(${deepImg})` }}
     >
       <h3>Deep Penetration</h3>
       <p>Ensures active nutrients reach deeper skin layers.</p>
@@ -99,9 +108,7 @@ const PlasmaTechnology = () => {
 
     <div
       className="card benefit-card"
-     // style={{ backgroundImage: `url(${protectImg})` }}
-      style={{ backgroundImage: `url(${cellImg})` }}
-    
+      style={{ backgroundImage: `url(${protectImg})` }}
     >
       <h3>Enhanced Protection</h3>
       <p>Shields from UV rays and environmental stressors.</p>
@@ -109,9 +116,7 @@ const PlasmaTechnology = () => {
 
     <div
       className="card benefit-card"
-     // style={{ backgroundImage: `url(${hydrateImg})` }}
-      style={{ backgroundImage: `url(${cellImg})` }}
-    
+      style={{ backgroundImage: `url(${hydrateImg})` }}
     >
       <h3>Revolutionary Hydration</h3>
       <p>Delivers long-lasting deep moisture.</p>
@@ -119,6 +124,9 @@ const PlasmaTechnology = () => {
 
   </div>
 </section>
+
+
+
 
      {/* 5. PLASMA LUXURY EXPERIENCE */}
 <section className="luxury-section">

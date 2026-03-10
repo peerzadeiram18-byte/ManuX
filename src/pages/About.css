@@ -54,7 +54,7 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* Content above overlay */
-.hero-content1 {
+/*.hero-content1 {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -64,7 +64,7 @@ font-family: 'Avenir Next', sans-serif;
  
 
 
-    padding: 3.2rem 0rem;
+   /* padding: 3.2rem 0rem;
     border-radius: 26px;
     box-shadow:
     0 25px 55px rgba(15, 37, 68, 0.12),
@@ -72,17 +72,47 @@ font-family: 'Avenir Next', sans-serif;
     overflow: hidden;
     border: 1.9px solid white;
     background: rgba(255, 255, 255, 0.08);  /* light transparent */
-    backdrop-filter: blur(8px); 
+   /* backdrop-filter: blur(8px); 
 
     padding-right: 300px;
     
 
+}*/
+
+
+
+.hero-content1 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #1F2A44;
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+
+  padding: 40px 30px;
+
+  border-radius: 26px;
+  box-shadow:
+    0 25px 55px rgba(15, 37, 68, 0.12),
+    inset 0 0 0 1px rgba(15, 37, 68, 0.08);
+
+  border: 1.9px solid white;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
 }
 
-.about-hero1 h1 {
+/*.about-hero1 h1 {
   font-size: 60px;
   font-weight: 400;
   padding-left: 100px;
+}*/
+
+
+.about-hero1 h1 {
+  font-size: clamp(28px, 5vw, 60px);
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .subtitle1 {
@@ -248,10 +278,24 @@ font-family: 'Avenir Next', sans-serif;
 
 @media (max-width: 480px) {
 
-  .about-hero1 {
+  /*.about-hero1 {
     height: 55vh;
   }
+*/
 
+
+@media (max-width: 768px) {
+
+  .about-hero1 {
+    height: auto;
+    padding: 60px 15px;
+  }
+
+  .hero-content1 {
+    padding: 30px 0px;
+  }
+
+}
   .about-hero1 h1 {
     font-size: 26px;
   }
@@ -583,10 +627,17 @@ font-family: 'Avenir Next', sans-serif;
 
 /* IMAGE SIDE */
 
-.manux-precisionX-imageWrap {
+/*.manux-precisionX-imageWrap {
   position: relative;
    width: 500px;
   height: 500px;
+}*/
+
+.manux-precisionX-imageWrap {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
 .manux-precisionX-glow {
@@ -668,7 +719,7 @@ font-family: 'Avenir Next', sans-serif;
 /* ==============================
    RESPONSIVE
    ============================== */
-
+/*
 @media (max-width: 992px) {
   .manux-precisionX-container {
     grid-template-columns: 1fr;
@@ -703,9 +754,55 @@ font-family: 'Avenir Next', sans-serif;
     font-size: 24px;
   }
 }
+*/
+
+@media (max-width: 992px) {
+
+  .manux-precisionX-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .manux-precisionX-imageWrap {
+    max-width: 420px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .manux-precisionX-section {
+    padding: 70px 20px;
+  }
+
+  .manux-precisionX-divider {
+ margin: 25px auto;
+  }
 
 
+  .manux-precisionX-imageWrap {
+    max-width: 320px;
+  }
 
+  .manux-precisionX-heading {
+    font-size: 28px;
+  }
+
+  .manux-precisionX-text {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .manux-precisionX-imageWrap {
+    max-width: 260px;
+  }
+
+}
 /* ==============================
    MANUX SCIENCE SECTION
    ============================== */
@@ -1015,19 +1112,29 @@ font-family: 'Avenir Next', sans-serif;
 
 .ethics-inner {
   max-width: 900px;
+    width: 90%;
   margin: auto;
   text-align: center;
   position: relative;
   z-index: 2;
 }
 
-.ethics-content h2 {
+/*.ethics-content h2 {
   font-size: 40px;
   font-weight: 400;
   color: #1F2A44;
   margin-bottom: 20px;
   padding-left: 120px;
   
+}*/
+
+
+.ethics-content h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #1F2A44;
+  margin-bottom: 20px;
+  /*padding-left: 120px;*/
 }
 
 /* Decorative line */
@@ -1039,14 +1146,22 @@ font-family: 'Avenir Next', sans-serif;
   border-radius: 5px;
 }
 
-.ethics-content p {
+/*.ethics-content p {
   font-size: 18px;
   color: #1F2A44;
   line-height: 1.9;
   max-width: 700px;
   margin: auto;
 }
+*/
 
+.ethics-content p {
+  font-size: clamp(15px, 2vw, 18px);
+  color: #1F2A44;
+  line-height: 1.9;
+  max-width: 700px;
+  margin: auto;
+}
 /* ===============================
    RESPONSIVE
 ================================ */
@@ -1061,9 +1176,9 @@ font-family: 'Avenir Next', sans-serif;
   }
 }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .ethics-wrap {
-    padding: 90px 15px;
+    padding: 70px 0px;
   }
 
   .ethics-content h2 {
@@ -1078,7 +1193,30 @@ font-family: 'Avenir Next', sans-serif;
     width: 60px;
   }
 }
+*/
 
+@media (max-width: 600px) {
+
+  .ethics-wrap {
+    padding: 60px 0px;
+  }
+
+  .ethics-content h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .ethics-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .ethics-line {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+
+}
 
 /* =====================================
    GLOBAL IMPACT – DARK UNIQUE DESIGN

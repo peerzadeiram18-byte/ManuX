@@ -134,13 +134,13 @@ useEffect(() => {
         {/* Overlay */}
         <div className="hero-overlay"></div>
 
-         <div className="hero-box">   {/* 👈 YE NAYA WRAPPER ADD KARNA HAI */}
+         <div className="hero-box7">   {/* 👈 YE NAYA WRAPPER ADD KARNA HAI */}
 
         {/* Content */}
         <div className="hero-content">
 
           <span className="hero-tag">
-            AYURVEDA • BIOTECHNOLOGY • CELL CULTURE
+            AYURVEDA • PLASMA NANU SCIENCE • CELL CULTURE
           </span>
 
           <h1>

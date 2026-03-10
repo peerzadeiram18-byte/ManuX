@@ -1,4 +1,4 @@
-/*.register-container {
+.register-container {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -39,8 +39,7 @@
 
 .register-form button:hover {
   background: #0F2544;
-}*/
-
+}
 
 
 
@@ -49,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
- /* background: linear-gradient(135deg, #0F2544, #C1121F);*/
+  background: linear-gradient(135deg, #0F2544, #C1121F);
 
   background-size: cover;
   background-position: center;

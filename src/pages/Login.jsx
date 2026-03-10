@@ -1,5 +1,131 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { useAuth } from "../context/AuthContext";
+import { loginUser } from "../services/authService";
+import { useNavigate } from "react-router-dom";
+
+export default function Login({ closeModal }) {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+ const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      const data = await loginUser(email, password);
+
+      login(data);
+
+      if (data.user.role === "admin") {
+        navigate("/admin/dashboard");
+      } else {
+        navigate("/");
+      }
+
+      closeModal(); // modal close
+
+    } catch {
+      setError("Wrong email or password");
+    }
+  };
+
+
+  /*const handleSubmit = (e) => {
+  e.preventDefault();
+  setError("");
+
+  const storedUsers =
+    JSON.parse(localStorage.getItem("users")) || [];
+
+  const foundUser = storedUsers.find(
+    (user) =>
+      user.email === email &&
+      user.password === password
+  );
+
+  if (foundUser) {
+
+    login(foundUser);
+
+    if (foundUser.role === "admin") {
+      navigate("/admin/dashboard");
+    } else {
+      navigate("/");
+    }
+
+    closeModal();
+
+  } else {
+    setError("Wrong email or password");
+  }
+};*/
+
+  return (
+    <div className="loginModal">
+
+      <div className="loginCard">
+
+        <button className="closeBtn" onClick={closeModal}>✖</button>
+
+        <h2>Welcome Back</h2>
+        <p className="subtitle">Login to continue</p>
+
+        <form className="loginForm" onSubmit={handleSubmit}>
+
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
+            required
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
+            required
+          />
+
+          {error && <p className="errorText">{error}</p>}
+
+          <button className="loginBtn" type="submit">
+            Login
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/*import React, { useState } from "react";
+import "./Login.css";
 import loginImg from "../assets/login.jpg";
 
 import { useAuth } from "../context/AuthContext";
@@ -51,13 +177,13 @@ export default function Login() {
       <div className="loginContainer">
 
         {/* LEFT IMAGE */}
-        <div className="loginImage">
+       {/*} <div className="loginImage">
           <img src={loginImg} alt="login visual" />
          
         </div>
 
         {/* RIGHT CARD */}
-        <div className="loginCard">
+       {/*} <div className="loginCard">
           <h2>Welcome Back</h2>
           <p className="subtitle">Login to continue</p>
 
@@ -96,3 +222,4 @@ export default function Login() {
     </div>
   );
 }
+*/}

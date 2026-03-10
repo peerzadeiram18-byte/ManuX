@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import Login from "../pages/Login";
 
 //import React, { useState } from "react";
 
@@ -18,8 +19,44 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false); // mobile dropdown toggle
   const[openMenu,setOpenMenu]=useState(false);
-  const { user, logout } = useAuth();
+  //const { user, logout } = useAuth();
+
+const { user, role, logout } = useAuth();
+
   const navigate = useNavigate();
+
+  const [showLogin,setShowLogin]=useState(false);
+
+
+
+
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+
+  const searchData = [
+  { name: "Skin Care", path: "/skincare" },
+  { name: "Hair Care", path: "/haircare" },
+  { name: "Baby Care", path: "/babycare" },
+  { name: "Pet Care", path: "/petcare" },
+  { name: "Men Care", path: "/menscare" },
+  { name: "Pregnancy Care", path: "/pregnancycare" },
+  { name: "Ayurvedic Science", path: "/Ayurveda" },
+  { name: "Research & Insights", path: "/research" },
+  { name: "Nanotechnology", path: "/technology/nanotechnology" },
+  { name: "Plasma Technology", path: "/technology/plasma-technology" },
+  { name: "Plant Stem Cell Technology", path: "/technology/plant-stem-cell" },
+  { name: "About Us", path: "/about" },
+  { name: "Contact", path: "/contact" }
+];
+
+const filteredResults = searchData.filter((item) =>
+  item.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
+
+
+
 
 
   useEffect(() => {
@@ -51,13 +88,37 @@ const Navbar = () => {
         </div>
 
         {/* CENTER - SEARCH */}
-        <div className={`search-container ${openSearch ? "active" : ""}`}>
-          <FaSearch
-            className="search-icon"
-            onClick={() => setOpenSearch(!openSearch)}
-          />
-          <input type="text" placeholder="Search products..." />
-        </div>
+      <div className={`search-container ${openSearch ? "active" : ""}`}>
+  <FaSearch
+    className="search-icon"
+    onClick={() => setOpenSearch(!openSearch)}
+  />
+
+  <input
+    type="text"
+    placeholder="Search products..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+  />
+
+
+  {searchTerm && (
+  <div className="search-results">
+    {filteredResults.map((item, index) => (
+      <div
+        key={index}
+        className="search-item"
+        onClick={() => {
+          navigate(item.path);
+          setSearchTerm("");
+        }}
+      >
+        {item.name}
+      </div>
+    ))}
+  </div>
+)}
+</div>
 
         {/* RIGHT - ICONS + LOGIN */}
         <div className="nav-right">
@@ -68,18 +129,45 @@ const Navbar = () => {
            onClick={() => navigate("/register")}
           />
 
-          {user ? (
+          {/*{user ? (
             <>
               <span className="username">Hi, {user.name}</span>
-              <button className="login-btn" onClick={logout}>
+              <button className="login-btn" onClick={logout}
+              >
                 Logout
               </button>
+
             </>
           ) : (
             <button className="login-btn" onClick={() => navigate("/login")}>
               Login
             </button>
           )}
+*/}
+
+{user ? (
+  <>
+    <button className="login-btn" onClick={logout}>
+      Logout
+    </button>
+  </>
+) : (
+  <>
+    <button
+      className="login-btn"
+      onClick={() => setShowLogin(true)}
+    >
+      Login
+    </button>
+
+    {showLogin && (
+      <Login closeModal={() => setShowLogin(false)} />
+    )}
+  </>
+)}
+
+
+          
         </div>
       </div>
 
@@ -169,6 +257,18 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
           </NavLink>
+              
+
+              {/* ADMIN DASHBOARD */}
+
+          {role === "admin" && (
+                  <NavLink
+                      to="/admin/dashboard"
+                 onClick={() => setMobileMenu(false)}
+                  >
+                       Admin Dashboard
+                </NavLink>
+                    )}
 
           {/*} <div className="dropdown">
             <span

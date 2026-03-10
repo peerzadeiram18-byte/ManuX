@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
-
 import bgImage from "../assets/backgroundimage.jpg";
 
-
 const Register = () => {
+
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -21,23 +20,43 @@ const Register = () => {
     });
   };
 
-  /*const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Save data in localStorage
-    localStorage.setItem("user", JSON.stringify(formData));
+    const existingUsers =
+      JSON.parse(localStorage.getItem("users")) || [];
+
+    const updatedUsers = [...existingUsers, formData];
+
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
 
     alert("Account Created Successfully!");
-    navigate("/login"); // after register go to login
-  };*/
+    navigate("/login");
+  };
 
-  const handleSubmit = (e) => {
+/*
+const handleSubmit = (e) => {
   e.preventDefault();
 
   const existingUsers =
     JSON.parse(localStorage.getItem("users")) || [];
 
-  const updatedUsers = [...existingUsers, formData];
+  // check duplicate email
+  const userExists = existingUsers.find(
+    (user) => user.email === formData.email
+  );
+
+  if (userExists) {
+    alert("Email already registered!");
+    return;
+  }
+
+  const newUser = {
+    ...formData,
+    role: "user"
+  };
+
+  const updatedUsers = [...existingUsers, newUser];
 
   localStorage.setItem("users", JSON.stringify(updatedUsers));
 
@@ -45,14 +64,24 @@ const Register = () => {
   navigate("/login");
 };
 
+*/
+
+
+
+
+
+  
+
   return (
-    <div className="register-container"
-    style={{ backgroundImage: `url(${bgImage})` }}
+    <div
+      className="register-container"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
+
       <form className="register-form" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
 
-        <input 
+        <input
           type="text"
           name="name"
           placeholder="Full Name"
@@ -60,7 +89,7 @@ const Register = () => {
           required
         />
 
-        <input 
+        <input
           type="email"
           name="email"
           placeholder="Email"
@@ -68,7 +97,7 @@ const Register = () => {
           required
         />
 
-        <input 
+        <input
           type="password"
           name="password"
           placeholder="Password"
@@ -79,10 +108,12 @@ const Register = () => {
         <button type="submit">Create Account</button>
 
         <p className="login-link">
-          Already have an account? 
+          Already have an account?
           <span onClick={() => navigate("/login")}> Login</span>
         </p>
+
       </form>
+
     </div>
   );
 };

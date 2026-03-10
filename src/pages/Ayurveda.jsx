@@ -38,7 +38,7 @@ export default function Ayurveda() {
           validated, biologically compatible, and globally relevant solutions.
         </p>
 
-           <button className="ayu-primary-btn">Explore Our Research</button>
+          {/* <button className="ayu-primary-btn">Explore Our Research</button>*/}
 </div>
       </section>
 

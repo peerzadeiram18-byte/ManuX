@@ -1,4 +1,6 @@
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route, Navigate } from "react-router-dom";
+
+//import { Link, Routes, Route } from "react-router-dom";
 import ProductForm from "./ProductForm";
 import ProductList from "./ProductList";
 import "./AdminDashboard.css";
@@ -20,9 +22,13 @@ export default function AdminDashboard() {
 
         <ul className="menu">
           <li>
-           <Link to="/admin/dashboard"style={{color:"white", textDecoration:"none"}}>
+          {/* <Link to="/admin/dashboard"style={{color:"white", textDecoration:"none"}}>
               Dashboard
-            </Link>
+            </Link>*/}
+
+              <span className="menu-dashboard">
+                  Dashboard
+              </span>
           </li>
 
           <li>
@@ -54,7 +60,10 @@ export default function AdminDashboard() {
 
 
 <Routes>
-  <Route path="/" element={<h1>Dashboard</h1>} />
+
+    {/* Default route → Product Form open hoga */}
+  <Route index element={<Navigate to="product-form" />} />
+{/*  <Route path="/" element={<h1>Dashboard</h1>} />*/}
   <Route path="product-form" element={<ProductForm />} />
   <Route path="product-list" element={<ProductList />} />
    <Route path="user-list" element={<UserList />} />

@@ -1,17 +1,15 @@
 import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
+import "./ProductForm.css";
 
 export default function ProductForm() {
 
-  const { addProduct } = useContext(ProductContext); // ✅ ye line missing thi
-
+  const { addProduct } = useContext(ProductContext);
 
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,11 +22,7 @@ export default function ProductForm() {
       image
     };
 
-   // const existing = JSON.parse(localStorage.getItem("products")) || [];
-   // existing.push(newProduct);
-   // localStorage.setItem("products", JSON.stringify(existing));
-
-    addProduct(newProduct);  // ✅ context me add ho raha
+    addProduct(newProduct);
 
     alert("Product Added!");
 
@@ -39,44 +33,51 @@ export default function ProductForm() {
   };
 
   return (
-    <div className="admin-card">
-      <h2>Add Product</h2>
+    <div className="admin-page">
 
-      <form className="admin-form" onSubmit={handleSubmit}>
+      <div className="admin-card">
 
-        <input
-          type="text"
-          placeholder="Product Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+        <h2>Add Product</h2>
 
-        <input
-          type="text"
-          placeholder="Category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          required
-        />
+        <form className="admin-form" onSubmit={handleSubmit}>
 
-        <textarea
-          placeholder="Description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        />
+          <input
+            type="text"
+            placeholder="Product Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
 
-        <input
-          type="text"
-          placeholder="Image path (ex: /assets/product1.jpg)"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          required
-        />
+          <input
+            type="text"
+            placeholder="Category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            required
+          />
 
-        <button type="submit">Add Product</button>
-      </form>
+          <textarea
+            placeholder="Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Image path (ex: /assets/product1.jpg)"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            required
+          />
+
+          <button type="submit">Add Product</button>
+
+        </form>
+
+      </div>
+
     </div>
   );
 }

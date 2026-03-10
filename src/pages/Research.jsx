@@ -12,6 +12,7 @@ import ayurvedaImg from "../assets/Rayurveda.jpg";
 import nutraImg from "../assets/Rnutra.jpg";
 
 import bgImage from "../assets/backgroundimage.jpg";
+import heroBg  from "../assets/research-hero7.jpg"; 
 
 
 
@@ -21,10 +22,13 @@ export default function ResearchInsightsPage() {
        style={{ backgroundImage: `url(${bgImage})` }}
    >
   {/* ================= HERO SECTION ================= */}
-  <section className="research-hero">
-  <img src="/research-hero.jpg" alt="Research Background" />
+  <section className="research-hero"
+    style={{ backgroundImage: `url(${heroBg})` }}
+  
+  >
+  {/*<img src="/research-hero7.jpg" alt="Research hero" />*/}
 
-  <div className="research-overlay">
+  <div className="research-overlay"> 
 
   <div className="research-hero-content">
     <motion.h1

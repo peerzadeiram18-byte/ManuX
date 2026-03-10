@@ -54,7 +54,7 @@ background:/*
   margin-top: 10px;
   font-size: 1.1rem;
   opacity: 0.95;
-  color:#5C6473 ;
+  color:#1F2A44 ;
 }
 
 .nano-hero::after {
@@ -66,6 +66,50 @@ background:/*
   margin: 20px auto 0;
   border-radius: 999px;
 }
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .nano-hero {
+    min-height: 60vh;
+    padding: 60px 20px;
+  }
+
+  .nano-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .nano-hero p {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .nano-hero {
+    min-height: 55vh;
+    padding: 50px 15px;
+  }
+
+  .nano-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .nano-hero p {
+    font-size: 1.0rem;
+  }
+
+}
+
+
+
 
 .nano-section {
   padding: 80px 10%;
@@ -378,7 +422,7 @@ background: linear-gradient(
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease;
+ /* transition: transform 0.4s ease;*/
   margin-top: 30px;
 }
 
@@ -413,7 +457,7 @@ object-fit:cover;
   line-height: 1.6;
 }
 
-/* Hover Effect */
+/*/* Hover Effect */
 .card1:hover {
   transform: translateY(-10px);
 }

@@ -70,6 +70,33 @@ body {
   margin-left: 10px;
 }
 
+
+.search-container{
+position:relative;
+}
+
+.search-results{
+position:absolute;
+top:40px;
+left:0;
+width:220px;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+border-radius:10px;
+overflow:hidden;
+z-index:999;
+}
+
+.search-item{
+padding:10px 15px;
+cursor:pointer;
+font-size:14px;
+}
+
+.search-item:hover{
+background:#f5f5f5;
+}
+
 @media (max-width: 768px) {
 
   .nav-right {
@@ -241,8 +268,10 @@ color:#e11d2e;
 
 
 /* DROPDOWN WRAPPER */
-.dropdown {
-  position: relative;
+/* DROPDOWN WRAPPER */
+.dropdown{
+  position:relative;
+  cursor:pointer;
 }
 
 /* DROPDOWN MENU DEFAULT HIDDEN */

@@ -1,4 +1,180 @@
-/* ====== GLOBAL LAYOUT ====== */
+
+/* ===== PRODUCT MANAGEMENT PAGE ===== */
+
+.pm-container{
+padding:40px;
+min-height:100vh;
+background:linear-gradient(
+rgba(255,255,255,0.85),
+rgba(255,255,255,0.85)
+),
+/*url("/assets/admin-bg.jpg") center/cover no-repeat;*/
+}
+
+/* ===== TITLE ===== */
+
+.pm-title{
+text-align:center;
+font-size:28px;
+color:#1F2A44;
+margin-bottom:25px;
+font-weight:700;
+}
+
+/* ===== SEARCH BAR ===== */
+
+.pm-search-bar{
+display:flex;
+justify-content:flex-start;
+margin-bottom:20px;
+}
+
+.pm-search-input{
+width:260px;
+padding:10px 14px;
+
+border-radius:8px;
+border:1px solid #d2d6df;
+
+outline:none;
+
+font-size:14px;
+
+background:white;
+
+transition:0.3s;
+}
+
+.pm-search-input:focus{
+border-color:#B23A3F;
+box-shadow:0 0 0 2px rgba(178,58,63,0.2);
+}
+
+/* ===== TABLE CARD ===== */
+
+.pm-table-card{
+background:white;
+border-radius:12px;
+/*padding:15px;*/
+
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+overflow-x:auto;
+}
+
+/* ===== TABLE ===== */
+
+.pm-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.pm-table thead{
+background:#1F2A44;
+color:white;
+}
+
+.pm-table th{
+padding:14px;
+text-align:left;
+font-weight:500;
+}
+
+.pm-table td{
+padding:14px;
+border-bottom:1px solid #eee;
+color:#5C6473;
+}
+
+/*.pm-table tr:hover{
+background:#f7f9fc;
+}
+*/
+/* ===== IMAGE ===== */
+
+.pm-img{
+width:50px;
+height:50px;
+object-fit:cover;
+border-radius:6px;
+}
+
+/* ===== BUTTONS ===== */
+
+.pm-btn{
+padding:6px 12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+margin-right:6px;
+transition:0.25s;
+}
+
+.pm-edit{
+background:#FFC107;
+color:black;
+}
+
+.pm-delete{
+background:#B23A3F;
+color:white;
+}
+
+.pm-btn:hover{
+transform:translateY(-2px);
+opacity:0.9;
+}
+
+/* ===== PAGINATION ===== */
+
+.pm-pagination{
+text-align:center;
+margin-top:20px;
+}
+
+.pm-page-btn{
+padding:6px 12px;
+margin:4px;
+border:none;
+border-radius:6px;
+background:#ddd;
+cursor:pointer;
+}
+
+.pm-page-btn.active{
+background:#1F2A44;
+color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== GLOBAL LAYOUT ====== 
 
 .admin-layout {
   display: flex;
@@ -7,7 +183,7 @@ font-family: 'Avenir Next', sans-serif;
   background: #f4f6fa;
 }
 
-/* ====== SIDEBAR ====== */
+/* ====== SIDEBAR ====== 
 
 .sidebar {
   width: 240px;
@@ -42,14 +218,14 @@ font-family: 'Avenir Next', sans-serif;
   background: rgba(255,255,255,0.15);
 }
 
-/* ====== MAIN CONTENT ====== */
+/* ====== MAIN CONTENT ====== 
 
 .main-content {
   flex: 1;
   padding: 30px;
 }
 
-/* ====== HEADER ====== */
+/* ====== HEADER ====== 
 
 .top-header {
   background: white;
@@ -64,7 +240,7 @@ font-family: 'Avenir Next', sans-serif;
   font-size: 24px;
 }
 
-/* ====== SEARCH BAR ====== */
+/* ====== SEARCH BAR ====== 
 
 .top-bar {
   display: flex;
@@ -84,7 +260,7 @@ font-family: 'Avenir Next', sans-serif;
   border-color: #0F2544;
 }
 
-/* ====== TABLE CARD ====== */
+/* ====== TABLE CARD ====== 
 
 .table-wrapper {
   background: white;
@@ -126,7 +302,7 @@ font-family: 'Avenir Next', sans-serif;
   object-fit: cover;
 }
 
-/* ====== BUTTONS ====== */
+/* ====== BUTTONS ====== 
 
 .btn {
   padding: 6px 12px;
@@ -163,7 +339,7 @@ font-family: 'Avenir Next', sans-serif;
   opacity: 0.9;
 }
 
-/* ====== PAGINATION ====== */
+/* ====== PAGINATION ====== 
 
 .pagination {
   margin-top: 20px;
@@ -186,7 +362,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* ====== MODAL ====== */
 
-.modal-overlay {
+/*.modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.45);
@@ -220,7 +396,7 @@ font-family: 'Avenir Next', sans-serif;
 
 /* ====== RESPONSIVE ====== */
 
-@media (max-width: 900px) {
+/*@media (max-width: 900px) {
 
   .sidebar {
     width: 200px;
@@ -257,4 +433,4 @@ font-family: 'Avenir Next', sans-serif;
     width: 90%;
   }
 
-}
+}*/

@@ -9,7 +9,7 @@ font-family: 'Avenir Next', sans-serif;}
   margin-bottom: 40px;
 }
 
-.admin-card {
+/*.admin-card {
   background: rgb(136, 11, 11);
   padding: 25px;
   border-radius: 12px;
@@ -37,7 +37,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .admin-form button:hover {
   background: #14535b;
-}
+}*/
 
 .product-grid {
   display: grid;
@@ -85,7 +85,7 @@ font-family: 'Avenir Next', sans-serif;}
 }
 
 .delete-btn {
-  background: #dc3545;
+  background: #C1121F;
   border: none;
   padding: 6px 12px;
   border-radius: 5px;
@@ -125,9 +125,11 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 .logo {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   font-size: 22px;
   font-weight: bold;
+  color: #C1121F;
+  margin-top: 30px;
 }
 
 .menu {
@@ -141,6 +143,12 @@ font-family: 'Avenir Next', sans-serif;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.menu-dashboard{
+  color:white;
+  font-weight:600;
+  cursor:default;
 }
 
 .menu li:hover {

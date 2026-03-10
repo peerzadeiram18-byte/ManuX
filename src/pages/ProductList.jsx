@@ -13,9 +13,15 @@ export default function ProductList() {
   const itemsPerPage = 5;
 
   // 🔎 Search Filter
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(search.toLowerCase())
+const filteredProducts = products.filter((product) => {
+  const term = search.toLowerCase();
+
+  return (
+    product.name.toLowerCase().includes(term) ||
+    product.category.toLowerCase().includes(term) ||
+    product.description.toLowerCase().includes(term)
   );
+});
 
   // 📄 Pagination Logic
   const indexOfLast = currentPage * itemsPerPage;
@@ -29,26 +35,25 @@ export default function ProductList() {
   };
 
   return (
-    <div className="admin-container">
+              <div className="pm-container">
 
-      <h2 className="admin-title">Product Management (CRUD)</h2>
+                  <h2 className="pm-title">Product Management {/*(CRUD)*/}</h2>
 
-      {/* Search */}
-      <div className="top-bar">
-        <input
-          type="text"
-          placeholder="Search product..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="search-input"
-        />
-      </div>
+                 <div className="pm-search-bar">
+                <input
+                type="text"
+                 placeholder="Search product..."
+                 value={search}
+                  onChange={(e)=>setSearch(e.target.value)}
+                className="pm-search-input"
+                 />
+                  </div>
 
-      <div className="table-wrapper">
-        <table className="admin-table">
+              <div className="pm-table-card">
+              <table className="pm-table">
           <thead>
             <tr>
-              <th>#</th>
+              <th>Sr No</th>
               <th>Name</th>
               <th>Category</th>
               <th>Description</th>
@@ -65,18 +70,17 @@ export default function ProductList() {
                 <td>{product.category}</td>
                 <td>{product.description}</td>
                 <td>
-                  <img src={product.image} alt="" className="table-image" />
-                </td>
+                  <img src={product.image} alt="" className="pm-img" />              
+                  
+                  </td>
                 <td>
-                  <button
-                    className="btn edit-btn"
+                  <button className="pm-btn pm-edit"
                     onClick={() => setEditingProduct(product)}
                   >
                     Edit
                   </button>
 
-                  <button
-                    className="btn delete-btn"
+                  <button className="pm-btn pm-delete"
                     onClick={() => deleteProduct(product.id)}
                   >
                     Delete
@@ -89,11 +93,11 @@ export default function ProductList() {
       </div>
 
       {/* Pagination */}
-      <div className="pagination">
+      <div className="pm-pagination">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
-            className={`page-btn ${currentPage === i + 1 ? "active" : ""}`}
+            className={`pm-page-btn active ${currentPage === i + 1 ? "active" : ""}`}
             onClick={() => setCurrentPage(i + 1)}
           >
             {i + 1}
