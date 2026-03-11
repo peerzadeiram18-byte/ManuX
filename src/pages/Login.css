@@ -8,7 +8,7 @@ left:0;
 width:100%;
 height:100vh;
 
-background: rgba(94, 92, 92, 0.4);
+background: rgba(98, 97, 97, 0.4);
 
 backdrop-filter: blur(6px);
 
@@ -24,7 +24,7 @@ z-index:9999;
 
 .loginCard{
 
-background:transparent;
+background:white;
 
 padding:40px;
 
