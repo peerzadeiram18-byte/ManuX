@@ -41,3 +41,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+/* Toast box */
+.custom-toast {
+  background: black !important;
+  color: white !important;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Progress bar */
+.custom-progress {
+  background: red !important;
+}
+
+/* Container left spacing */
+.custom-toast-container {
+  left: 20px;
+  top: 20px;
+}
