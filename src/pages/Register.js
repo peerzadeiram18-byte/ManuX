@@ -51,7 +51,7 @@ const handleSubmit = (e) => {
 
   setTimeout(() => {
     navigate("/");
-  }, 1500);
+  },  4000);
 };
 
 /*
@@ -98,7 +98,9 @@ const handleSubmit = (e) => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
 
-      <ToastContainer/>
+     {/* <ToastContainer/>*/}
+
+     <ToastContainer autoClose={1000} />
 
       <form className="register-form" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
