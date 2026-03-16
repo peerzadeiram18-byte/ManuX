@@ -76,9 +76,9 @@ const filteredProducts = products.filter((product) => {
                 <td>
                  {/* <img src={product.image} alt="" className="pm-img" />   */}
                 <img
-  src={`${BASE_URL}/uploads/${product.image}`}
-  className="pm-img"
-/>        
+                    src={`${BASE_URL}/uploads/${product.image}`}
+                 className="pm-img"
+                  />        
                   
                   </td>
                 <td>

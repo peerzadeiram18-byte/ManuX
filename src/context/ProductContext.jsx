@@ -1,6 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+
 export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
@@ -12,7 +15,7 @@ export const ProductProvider = ({ children }) => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/products",
+    `${BASE_URL}/api/products`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
