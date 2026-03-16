@@ -42,9 +42,39 @@
   background-size:cover;
   background-position:center;
 
-  overflow:hidden;
+  overflow:hidden; 
+
+
+ /* position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: heroMotion s ease-in-out infinite alternate;
+  transform: scale(1.1);*/
 
 }
+
+/* motion effect */
+
+@keyframes heroMotion {
+
+  0%{
+    transform: scale(1.1) translateX(0px) translateY(0px);
+  }
+
+  50%{
+    transform: scale(1.15) translateX(-20px) translateY(10px);
+  }
+
+  100%{
+    transform: scale(1.1) translateX(20px) translateY(-10px);
+  }
+
+}
+
 
 /* SOFT OVERLAY */
 
@@ -74,7 +104,7 @@
 
 /* GLASS CARD */
 
-.mx-exoHero-card{
+/*.mx-exoHero-card{
 
   padding:60px 70px;
 
@@ -89,7 +119,7 @@
 
   box-shadow:0 20px 60px rgba(0,0,0,0.25);
 
-}
+}*/
 
 /* ACCENT */
 
@@ -99,7 +129,8 @@
   width:80px;
   height:4px;
 
-  background:#B23A3F;
+  background:#C1121F
+;
 
   margin:0 auto 22px auto;
 
@@ -112,7 +143,7 @@
 .mx-exoHero-title{
 
   font-size:48px;
-  color:white;
+  color:#1F2A44;
 
   margin-bottom:18px;
 
@@ -122,13 +153,14 @@
 
 .mx-exoHero-text{
 
-  font-size:18px;
+  font-size:20px;
   line-height:1.8;
 
-  color:white;
-
+  color:#1F2A44;
+ font-weight: 500px;
   max-width:620px;
   margin:auto;
+
 
 }
 
@@ -186,6 +218,9 @@
 
   background:transparent;
 
+
+
+
 }
 
 /* CONTAINER */
@@ -194,6 +229,11 @@
 
   max-width:1100px;
   margin:auto;
+  background: transparent;
+
+    display:flex;
+  align-items:center;
+  margin-right: 100px;
 
 }
 
@@ -201,18 +241,33 @@
 
 .mx-exoScience-card{
 
-  display:flex;
-  align-items:center;
-  gap:40px;
+  /* display:flex;
+  align-items:right;
+  gap:60px;
 
-  padding:50px 60px;
+  padding:50px 200px;
 
   border-radius:22px;
 
-  background:rgba(255,255,255,0.25);
-  backdrop-filter:blur(10px);
+ /* background:rgba(255,255,255,0.25);*/
+ /* backdrop-filter:blur(10px);
 
+  border:1px solid rgba(255,255,255,0.35); */
+
+   display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:60px;
+
+  padding:50px 80px;
+
+  border-radius:22px;
+
+  backdrop-filter:blur(10px);
   border:1px solid rgba(255,255,255,0.35);
+
+   animation: mx-exoSlideRight 1.2s ease forwards;
 
 }
 
@@ -220,7 +275,21 @@
 
 .mx-exoScience-icon{
 
-  font-size:42px;
+  /* font-size:80px;
+
+  width:90px;
+  height:100px;
+
+  display:flex;
+  align-items:center;
+  justify-content:right;
+
+  border-radius:50%; */
+
+  /*background:rgba(255,255,255,0.35);*/
+
+
+  font-size:70px;
 
   width:90px;
   height:90px;
@@ -229,9 +298,6 @@
   align-items:center;
   justify-content:center;
 
-  border-radius:50%;
-
-  background:rgba(255,255,255,0.35);
 
 }
 
@@ -301,6 +367,24 @@
 }
 
 
+
+/* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideRight {
+
+  0%{
+    opacity:0;
+    transform:translateX(-120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
 /* =====================================
    MANUX EXOSOME BIO SECTION
    Unique prefix: mx-exoBio2

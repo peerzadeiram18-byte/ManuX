@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Login from "../pages/Login";
 
 //import React, { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
 
 import "./Navbar.css";
@@ -19,6 +20,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false); // mobile dropdown toggle
   const[openMenu,setOpenMenu]=useState(false);
+  const [openTeamDropdown, setOpenTeamDropdown] = useState(false);
   //const { user, logout } = useAuth();
 
 const { user, role, logout } = useAuth();
@@ -181,8 +183,38 @@ const filteredResults = searchData.filter((item) =>
       <div className={`menubar ${mobileMenu ? "active" : ""}`}>
         
         <div className="menu-links">
+
+
+          {/* MOBILE ICONS */}
+<div className="mobile-icons">
+
+  <FaRegStar />
+
+  <FaBell />
+
+  <FaUser
+    className="user-icon"
+    onClick={() => navigate("/register")}
+  />
+
+  {user ? (
+    <button className="login-btn" onClick={logout}>
+      Logout
+    </button>
+  ) : (
+    <button
+      className="login-btn"
+      onClick={() => setShowLogin(true)}
+    >
+      Login
+    </button>
+  )}
+
+</div>
+
+
           <NavLink to="/" onClick={() => setMobileMenu(false)}>
-            Home
+             Home
           </NavLink>
        {/*}   {mobileMenu && (
   <div
@@ -195,12 +227,12 @@ const filteredResults = searchData.filter((item) =>
           <div className="dropdown"
           onClick={(e) => e.stopPropagation()}
           >
-            <span
-              className="nav-link"
-              onClick={() => setOpenDropdown(!openDropdown)}
-            >
-              Technology
-            </span>
+             <NavLink to="/technology/nanotechnology"
+                 className="nav-link"
+                          onClick={() => setOpenDropdown(!openDropdown)}
+                   >
+            Technology  <FaChevronDown className="dropdown-icon" />
+</NavLink>
 
             <div
               className={`dropdown-menu ${
@@ -278,7 +310,7 @@ const filteredResults = searchData.filter((item) =>
           </div>
 
           <NavLink to="/research" onClick={() => setMobileMenu(false)}>
-            Research & Insights
+            Research 
           </NavLink>
          {/*} <NavLink to="/ingredients" onClick={() => setMobileMenu(false)}>
             Ingredients
@@ -287,20 +319,55 @@ const filteredResults = searchData.filter((item) =>
             Ayurvedic Science
           </NavLink>
           <NavLink to="/ethical-ingredient-sourcing" onClick={() => setMobileMenu(false)}>
-            Ethical Ingredient Sourcing
+             Ingredient 
           </NavLink>
            <NavLink to="/sustainability-responsibility" onClick={() => setMobileMenu(false)}>
-           Sustainability & Responsibility
+           Sustainability 
           </NavLink>
           <NavLink to="/quality-safety-compliance" onClick={() => setMobileMenu(false)}>
-            Quality, Safety & Compliance
+           Safety & Compliance
           </NavLink>
-          <NavLink to="/OurTeam" onClick={() => setMobileMenu(false)}>
-            Our Team
-          </NavLink>
-          <NavLink to="/about" onClick={() => setMobileMenu(false)}>
-            About Us
-          </NavLink>
+         <div
+  className="dropdown team-dropdown"
+  onClick={(e) => e.stopPropagation()}
+>
+
+  <span
+    className="nav-link"
+    onClick={() => setOpenTeamDropdown(!openTeamDropdown)}
+  >
+    Our Team  <FaChevronDown className="dropdown-icon" />
+  </span>
+
+  <div
+    className={`dropdown-menu ${
+      openTeamDropdown ? "show-dropdown" : ""
+    }`}
+  >
+
+    <Link
+      to="/OurTeam"
+      onClick={() => {
+        setMobileMenu(false);
+        setOpenTeamDropdown(false);
+      }}
+    >
+      Team Members
+    </Link>
+
+    <Link
+      to="/about"
+      onClick={() => {
+        setMobileMenu(false);
+        setOpenTeamDropdown(false);
+      }}
+    >
+      About Us
+    </Link>
+
+  </div>
+
+</div>
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
           </NavLink>
@@ -313,6 +380,8 @@ const filteredResults = searchData.filter((item) =>
                        Admin Dashboard
                   </NavLink>
                     )}
+
+                    </div>
 
           {/*} <div className="dropdown">
             <span
@@ -363,7 +432,7 @@ Product List  </Link>
         </div>
      
       </div>
-    </div>
+    
             
 
   );

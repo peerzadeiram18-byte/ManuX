@@ -1,37 +1,13 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/auth";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const loginUser = async (email, password) => {
 
-  const response = await axios.post(`${API_URL}/login`, {
-    email,
-    password
-  });
+  const res = await axios.post(
+    `${BASE_URL}/api/auth/login`,
+    { email, password }
+  );
 
-  return response.data;
-
+  return res.data;
 };
-
-
-
-
-
-
-
-
-// import axios from "axios";
-
-// const API_URL = "http://localhost:5000/api/auth";
-
-// export const loginUser = async (email, password) => {
-
-//   const response = await axios.post(`${API_URL}/login`, {
-//     email,
-//     password
-//   });
-
-//   return response.data;
-
-// };
-  

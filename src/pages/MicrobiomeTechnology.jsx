@@ -2,6 +2,8 @@ import React from "react";
 import "./MicrobiomeTechnology.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import plasImage from "../assets/plasma-bg.jpg";
+import microBg from "../assets/micro-bg.jpg";
+import ecoBg from "../assets/microeco-bg.jpg";
 
 export default function MicrobiomeTechnology() {
   return (
@@ -71,7 +73,9 @@ export default function MicrobiomeTechnology() {
 
     {/* microbiome animation */}
 
-    <div className="mx-microScience-visual">
+    <div className="mx-microScience-visual"
+     style={{ backgroundImage: `url(${microBg})` }}
+    >
 
       <span className="mx-microScience-dot"></span>
       <span className="mx-microScience-dot delay1"></span>
@@ -139,9 +143,12 @@ export default function MicrobiomeTechnology() {
     {/* LEFT SIDE — NODE NETWORK */}
     <div className="mx-microEco-left">
 
-      <div className="mx-microEco-network">
+      <div className="mx-microEco-network"
+      style={{ backgroundImage: `url(${ecoBg})` }}
+      
+      >
 
-        <div className="mx-microEco-core">
+{/* <div className="mx-microEco-core">
           Skin Barrier
         </div>
 
@@ -149,7 +156,7 @@ export default function MicrobiomeTechnology() {
         <span className="mx-microEco-node node2">Probiotics</span>
         <span className="mx-microEco-node node3">Postbiotics</span>
         <span className="mx-microEco-node node4">Microflora</span>
-        <span className="mx-microEco-node node5">Barrier Health</span>
+        <span className="mx-microEco-node node5">Barrier Health</span> */}
 
       </div>
 

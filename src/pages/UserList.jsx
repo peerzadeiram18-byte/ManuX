@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./UserList.css";
 
 import axios from "axios";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function UserList() {
 
@@ -27,14 +28,14 @@ export default function UserList() {
 
     try {
 
-      const res = await axios.get(
-        "http://localhost:5000/api/users",
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`
-          }
-        }
-      );
+     const res = await axios.get(
+  `${BASE_URL}/api/users`,
+  {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`
+    }
+  }
+);
 
            // console.log(res.data); // ✅ yahi correct jagah hai
 
@@ -76,14 +77,14 @@ export default function UserList() {
 
   try {
 
-    await axios.delete(
-      `http://localhost:5000/api/users/${id}`,
-      {
-        headers:{
-          Authorization:`Bearer ${localStorage.getItem("token")}`
-        }
-      }
-    );
+  await axios.delete(
+  `${BASE_URL}/api/users/${id}`,
+  {
+    headers:{
+      Authorization:`Bearer ${localStorage.getItem("token")}`
+    }
+  }
+);
 
     setUsers(users.filter(user => user._id !== id));
 

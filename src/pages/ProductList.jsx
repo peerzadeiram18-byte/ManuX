@@ -2,6 +2,9 @@ import React, { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./ProductList.css";
 
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 export default function ProductList() {
 
   const { products, deleteProduct, updateProduct } = useContext(ProductContext);
@@ -72,11 +75,10 @@ const filteredProducts = products.filter((product) => {
                 <td>{product.description}</td>
                 <td>
                  {/* <img src={product.image} alt="" className="pm-img" />   */}
-                 <img
-                   src={`http://localhost:5000/uploads/${product.image}`}
-                  // alt=""
-                   className="pm-img"
-                  />           
+                <img
+  src={`${BASE_URL}/uploads/${product.image}`}
+  className="pm-img"
+/>        
                   
                   </td>
                 <td>

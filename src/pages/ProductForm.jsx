@@ -3,6 +3,7 @@ import { ProductContext } from "../context/ProductContext";
 import "./ProductForm.css";
 
 import axios from "axios";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
 export default function ProductForm() {
@@ -144,8 +145,8 @@ const handleSubmit = async (e) => {
   try {
 
     const res = await axios.post(
-      "http://localhost:5000/api/products",
-      formData,
+  `${BASE_URL}/api/products`,
+  formData,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

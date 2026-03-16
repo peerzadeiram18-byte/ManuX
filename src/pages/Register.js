@@ -5,6 +5,9 @@ import "./Register.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { toast, ToastContainer } from "react-toastify";
 
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 const Register = () => {
 
   const navigate = useNavigate();
@@ -27,10 +30,10 @@ const Register = () => {
 
     try {
 
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
-        formData
-      );
+     const res = await axios.post(
+  `${BASE_URL}/api/auth/register`,
+  formData
+);
 
       toast.success("Account Created Successfully!");
 

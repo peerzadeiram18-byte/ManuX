@@ -3,6 +3,7 @@ import "./ExosomeTechnology.css";
 import bgImage from "../assets/backgroundimage.jpg";
 
 import exosomeBg from "../assets/exosome-bg.png";
+//import heroBg from "../assets/wave-bg.png";
 
 export default function ExosomeTechnology() {
   return (
@@ -23,6 +24,8 @@ export default function ExosomeTechnology() {
     backgroundSize: "cover",
     backgroundPosition: "center"
   }}
+
+ //style={{ backgroundImage: `url(${heroBg})` }}
 >
 
   <div className="mx-exoHero-overlay"></div>
@@ -91,14 +94,14 @@ export default function ExosomeTechnology() {
   <div className="mx-exoBio2-container">
 
     {/* Left Visual */}
-    <div className="mx-exoBio2-visual">
+    {/* <div className="mx-exoBio2-visual">
 
       <div className="mx-exoBio2-circle">
         <span className="mx-exoBio2-pulse"></span>
         🧬
       </div>
 
-    </div>
+    </div> */}
 
     {/* Right Content */}
     <div className="mx-exoBio2-content">
@@ -112,6 +115,15 @@ export default function ExosomeTechnology() {
         modulation, and cellular signaling, supporting skin renewal and
         biological balance at the cellular level.
       </p>
+
+    </div>
+
+       <div className="mx-exoBio2-visual">
+
+      <div className="mx-exoBio2-circle">
+        <span className="mx-exoBio2-pulse"></span>
+        🧬
+      </div>
 
     </div>
 
