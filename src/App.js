@@ -19,14 +19,23 @@ import Login from "./pages/Login";
 import Nanotechnology from "./pages/Nanotechnology";
 import PlasmaTechnology from "./pages/PlasmaTechnology";
 import PlantStemCell from "./pages/PlantStemCell";
+import EnzymaticTechnology from "./pages/EnzymaticTechnology";
+import MicrobiomeTechnology from "./pages/MicrobiomeTechnology";
+import EmolliHydraTechnology from "./pages/EmolliHydraTechnology";
+import ExosomeTechnology from "./pages/ExosomeTechnology";
+
 
 import Research from "./pages/Research";
 import Ingredients from "./pages/Ingredients";
 import Ayurveda from "./pages/Ayurveda";
+import EthicalIngredientSourcing from "./pages/EthicalIngredientSourcing";
+import SustainabilityResponsibility from "./pages/SustainabilityResponsibility";
+import QualitySafetyCompliance from "./pages/QualitySafetyCompliance";
 import OurTeam from "./pages/OurTeam";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AdminDashboard from "./pages/AdminDashboard";
+
  
 //import ProductList from "./pages/ProductList";
 //import ProductForm from "./pages/ProductForm";
@@ -73,6 +82,9 @@ function App() {
     <Route path="/research" element={<Research />} />
     <Route path="/ingredients" element={<Ingredients />} />
     <Route path="/ayurveda" element={<Ayurveda />} />
+    <Route path="/ethical-ingredient-sourcing"element={<EthicalIngredientSourcing />}/>
+    <Route path="/sustainability-responsibility"element={<SustainabilityResponsibility />}/>
+    <Route path="/quality-safety-compliance"element={<QualitySafetyCompliance />}/>
     <Route path="/OurTeam" element={<OurTeam />} />
     <Route path="/contact" element={<Contact />} />
      <Route path="/About" element={<About />} />
@@ -85,6 +97,10 @@ function App() {
     <Route path="/technology/nanotechnology" element={<Nanotechnology />} />
     <Route path="/technology/plasma-technology" element={<PlasmaTechnology />} />
     <Route path="/technology/plant-stem-cell" element={<PlantStemCell />} />
+    <Route path="/technology/Enzymatic-Technology" element={<EnzymaticTechnology />} />
+    <Route path="/technology/microbiome-technology"element={<MicrobiomeTechnology />}/>
+    <Route path="/technology/emollihydra-technology" element={<EmolliHydraTechnology />}/>
+    <Route path="/technology/exosome-technology"element={<ExosomeTechnology />}/>
 
   </Route>
 

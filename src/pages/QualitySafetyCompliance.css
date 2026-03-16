@@ -1,0 +1,824 @@
+/* FULL PAGE BACKGROUND */
+
+.quality-page{
+  min-height:100vh;
+  width:100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* OVERLAY */
+
+/*.quality-overlay{
+  background:rgba(0,0,0,0.65);
+  min-height:100vh;
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:60px;
+}
+*/
+/* GLASS CARD */
+
+/*  ===============================
+   MX QUALITY VIDEO SECTION
+================================ */
+
+/*.mx-quality-section{
+  position:relative;
+  width:100%;
+  min-height:75vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+  text-align:center;
+  font-family:inherit;
+}
+
+/* VIDEO BACKGROUND */
+
+/*.mx-quality-bg-video{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  z-index:1;
+}
+
+/* DARK OVERLAY */
+
+/*.mx-quality-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  z-index:2;
+}
+*/
+/* CONTENT */
+
+/*.mx-quality-content{
+  position:relative;
+  z-index:3;
+  max-width:850px;
+  padding:40px 20px;
+  color:#1F2A44;
+}
+
+/* HEADING */
+
+/*.mx-quality-content h1{
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:20px;
+  letter-spacing:0.6px;
+}
+
+/* PARAGRAPH */
+
+/*.mx-quality-content p{
+  font-size:18px;
+  line-height:1.8;
+  opacity:0.95;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/*@media (max-width:768px){
+
+  .mx-quality-section{
+    min-height:60vh;
+  }
+
+  .mx-quality-content h1{
+    font-size:32px;
+  }
+
+  .mx-quality-content p{
+    font-size:16px;
+  }
+
+}
+ */
+
+ /* ===============================
+   MX QUALITY IMAGE SECTION
+================================ */
+
+.mx-quality-section{
+  position:relative;
+  width:100%;
+  min-height:60vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+  
+}
+
+/* Overlay for text readability */
+
+/*.mx-quality-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+}
+
+/* Content */
+
+.mx-quality-content{
+  position:relative;
+  z-index:2;
+  max-width:850px;
+  padding:40px 20px;
+  color:#1F2A44;
+}
+
+/* Heading */
+
+.mx-quality-content h1{
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+/* Paragraph */
+
+.mx-quality-content p{
+  font-size:18px;
+  line-height:1.8;
+  opacity:0.95;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+  .mx-quality-content h1{
+    font-size:32px;
+  }
+
+  .mx-quality-content p{
+    font-size:16px;
+  }
+
+}
+
+/* ===============================
+   LICENSE SECTION
+================================ */
+
+.mx-license-section{
+  width:100%;
+  padding:60px 20px;
+  background:transparent;
+
+  display:flex;
+  justify-content:center;
+  margin-bottom: -150px;
+}
+
+/* container */
+
+.mx-license-container{
+  max-width:1200px;
+  width:100%;
+
+  display:flex;
+  align-items:stretch; /* image & text same height */
+
+  gap:50px;
+}
+
+/* IMAGE */
+
+.mx-license-image{
+  flex:1;
+  display:flex;
+}
+
+.mx-license-image img{
+  width:100%;
+  height:70%;
+  object-fit:cover;
+  border-radius:12px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+
+.mx-license-text{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* heading */
+
+.mx-license-text h2{
+  font-size:34px;
+  margin-bottom:20px;
+  color:#1F2A44;
+}
+
+/* paragraph */
+
+.mx-license-text p{
+  font-size:17px;
+  line-height:1.7;
+  color:#444;
+  max-width:520px;
+  margin-bottom: 150px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:900px){
+
+  .mx-license-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .mx-license-text{
+    align-items:center;
+  }
+
+  .mx-license-text p{
+    max-width:100%;
+  }
+
+}
+
+
+/* ===============================
+   QUALITY CONTROL SECTION
+================================ */
+
+.mx-quality-control-section{
+
+  width:100%;
+  padding:50px 20px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+
+  background: linear-gradient(
+  to right,
+  #d4dde1,
+  #e2ecef
+);
+
+}
+
+/* header */
+
+.mx-quality-control-header{
+  max-width:1050px;
+  margin-bottom:60px;
+}
+
+.mx-quality-control-header h2{
+  font-size:40px;
+  margin-bottom:20px;
+  color:#1F2A44;
+}
+
+.mx-quality-control-header p{
+  font-size:18px;
+  line-height:1.7;
+  color:#555;
+}
+
+/* cards grid */
+
+.mx-quality-control-cards{
+
+  max-width:1200px;
+  width:100%;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+
+}
+
+/* card */
+
+.mx-quality-card{
+
+  background:white;
+  padding:30px 25px;
+
+  border-radius:14px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:all 0.3s ease;
+
+}
+
+/* hover effect */
+
+.mx-quality-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.mx-quality-card h3{
+  font-size:20px;
+  margin-bottom:12px;
+  color:#1F2A44;
+}
+
+.mx-quality-card p{
+  font-size:15px;
+  line-height:1.6;
+  color:#666;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* tablet */
+
+@media (max-width:1024px){
+
+  .mx-quality-control-cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* mobile */
+
+@media (max-width:600px){
+
+  .mx-quality-control-cards{
+    grid-template-columns:1fr;
+  }
+
+  .mx-quality-control-header h2{
+    font-size:30px;
+  }
+
+}
+
+
+/* ===============================
+   SAFETY FORMULATION SECTION
+================================ */
+
+.mx-safety-section{
+
+  width:100%;
+  padding:70px 20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:transparent; /* important */
+}
+
+/* content card */
+
+.mx-safety-container{
+
+  max-width:850px;
+  width:100%;
+
+  text-align:center;
+
+  padding:50px 40px;
+
+  border-radius:14px;
+
+  /* glass effect */
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(6px);
+
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+/* heading */
+
+.mx-safety-container h2{
+
+  font-size:38px;
+  margin-bottom:20px;
+  color:#1F2A44;
+}
+
+/* paragraph */
+
+.mx-safety-container p{
+
+  font-size:18px;
+  line-height:1.8;
+  color:#444;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:768px){
+
+  .mx-safety-container{
+    padding:35px 25px;
+  }
+
+  .mx-safety-container h2{
+    font-size:28px;
+  }
+
+  .mx-safety-container p{
+    font-size:16px;
+  }
+
+}
+
+
+/* ===============================
+   DOCUMENTATION SECTION
+================================ */
+
+.mx-doc-section{
+
+  width:100%;
+  padding:70px 20px;
+
+  background: linear-gradient(
+    to right,
+    #d4dde1,
+    #e2ecef
+  );
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* header */
+
+.mx-doc-header{
+  max-width:750px;
+  margin-bottom:60px;
+}
+
+.mx-doc-header h2{
+  font-size:38px;
+  margin-bottom:18px;
+  color:#1F2A44;
+}
+
+.mx-doc-header p{
+  font-size:18px;
+  line-height:1.7;
+  color:#444;
+}
+
+/* cards grid */
+
+.mx-doc-cards{
+  max-width:1100px;
+  width:100%;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* card */
+
+.mx-doc-card{
+
+  background:white;
+  padding:35px 25px;
+
+  border-radius:14px;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.08);
+
+  transition:all 0.3s ease;
+}
+
+/* hover */
+
+.mx-doc-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+.mx-doc-card h3{
+  font-size:20px;
+  margin-bottom:12px;
+  color:#1F2A44;
+}
+
+.mx-doc-card p{
+  font-size:15px;
+  line-height:1.6;
+  color:#555;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:900px){
+
+  .mx-doc-cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media (max-width:600px){
+
+  .mx-doc-cards{
+    grid-template-columns:1fr;
+  }
+
+  .mx-doc-header h2{
+    font-size:28px;
+  }
+
+}
+
+
+/* ===============================
+   CONTINUOUS IMPROVEMENT SECTION
+================================ */
+
+.mx-improve-section{
+
+  width:100%;
+  padding:70px 20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  background:transparent
+
+}
+
+/* container */
+
+.mx-improve-container{
+
+  max-width:800px;
+  width:100%;
+
+
+  padding:50px 40px;
+
+  border-radius:14px;
+
+  /* glass effect */
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(6px);
+
+  border:1px solid #6aa6c9;
+  border-left: 10px solid #6aa6c9 ;
+  border-right: 10px solid #6aa6c9 ;
+}
+
+/* heading */
+
+.mx-improve-container h2{
+
+  font-size:40px;
+  margin-bottom:22px;
+  color:#1F2A44;
+
+  position:relative;
+}
+
+/* underline decoration */
+
+.mx-improve-container h2::after{
+
+  content:"";
+  width:80px;
+  height:3px;
+
+  background:#6aa6c9;
+
+  display:block;
+  margin:14px auto 0;
+
+  border-radius:2px;
+}
+
+/* paragraph */
+
+.mx-improve-container p{
+
+  font-size:18px;
+  line-height:1.8;
+
+  color:#1F2A44;
+
+  max-width:650px;
+  margin:auto;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:768px){
+
+  .mx-improve-section{
+    padding:80px 20px;
+  }
+
+  .mx-improve-container h2{
+    font-size:30px;
+  }
+
+  .mx-improve-container p{
+    font-size:16px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quality-section{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  color:white;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:40px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.2);
+  transition:0.3s;
+}
+
+.quality-section:hover{
+  transform:translateY(-6px);
+}
+
+/* TITLES */
+
+.quality-section h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.quality-section h2{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+/* TEXT */
+
+.quality-section p{
+  font-size:18px;
+  line-height:1.7;
+  color:#eaeaea;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.quality-section{
+  padding:25px;
+}
+
+.quality-section h1{
+  font-size:32px;
+}
+
+.quality-section h2{
+  font-size:24px;
+}
+
+}

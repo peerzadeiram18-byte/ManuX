@@ -1,18 +1,37 @@
+import axios from "axios";
+
+const API_URL = "http://localhost:5000/api/auth";
+
 export const loginUser = async (email, password) => {
 
-  if (email === "admin@gmail.com" && password === "123456") {
-    return {
-      user: { name: "Admin", email, role: "admin" },
-      token: "admin-token"
-    };
-  }
+  const response = await axios.post(`${API_URL}/login`, {
+    email,
+    password
+  });
 
-  if (email === "user@gmail.com" && password === "123456") {
-    return {
-      user: { name: "User", email, role: "user" },
-      token: "user-token"
-    };
-  }
+  return response.data;
 
-  throw new Error("Invalid credentials");
 };
+
+
+
+
+
+
+
+
+// import axios from "axios";
+
+// const API_URL = "http://localhost:5000/api/auth";
+
+// export const loginUser = async (email, password) => {
+
+//   const response = await axios.post(`${API_URL}/login`, {
+//     email,
+//     password
+//   });
+
+//   return response.data;
+
+// };
+  

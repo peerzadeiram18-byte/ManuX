@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./UserList.css";
 
+import axios from "axios";
+
 export default function UserList() {
 
   const [users, setUsers] = useState([]);
@@ -13,25 +15,83 @@ export default function UserList() {
     password: ""
   });
 
+  // useEffect(() => {
+  //   const storedUsers =
+  //     JSON.parse(localStorage.getItem("users")) || [];
+  //   setUsers(storedUsers);
+  // }, []);
+
   useEffect(() => {
-    const storedUsers =
-      JSON.parse(localStorage.getItem("users")) || [];
-    setUsers(storedUsers);
-  }, []);
+
+  const fetchUsers = async () => {
+
+    try {
+
+      const res = await axios.get(
+        "http://localhost:5000/api/users",
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+          }
+        }
+      );
+
+           // console.log(res.data); // ✅ yahi correct jagah hai
+
+
+      setUsers(res.data);
+
+    } catch (error) {
+      console.log(error);
+    
+    //console.log(res.data);
+    }
+
+  };
+
+  fetchUsers();
+
+}, []);
 
   // SEARCH FILTER
+  // const filteredUsers = users.filter((user) =>
+  //   user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //   user.email.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
+
   const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.email.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  (user.name && user.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+  (user.email && user.email.toLowerCase().includes(searchTerm.toLowerCase()))
+);
 
   // DELETE USER
-  const handleDelete = (index) => {
-    const updatedUsers = users.filter((_, i) => i !== index);
+  // const handleDelete = (index) => {
+  //   const updatedUsers = users.filter((_, i) => i !== index);
 
-    setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-  };
+  //   setUsers(updatedUsers);
+  //   localStorage.setItem("users", JSON.stringify(updatedUsers));
+  // };
+
+  const handleDelete = async (id) => {
+
+  try {
+
+    await axios.delete(
+      `http://localhost:5000/api/users/${id}`,
+      {
+        headers:{
+          Authorization:`Bearer ${localStorage.getItem("token")}`
+        }
+      }
+    );
+
+    setUsers(users.filter(user => user._id !== id));
+
+  } catch (error) {
+    console.log(error);
+  }
+
+};
 
   // START EDIT
   const handleEdit = (index) => {
@@ -99,7 +159,8 @@ export default function UserList() {
 
             {filteredUsers.map((user, index) => (
 
-              <tr key={index}>
+             // <tr key={index}>
+             <tr key={user._id}>
 
                 <td>{index + 1}</td>
 
@@ -158,7 +219,8 @@ export default function UserList() {
 
                       <button
                         className="ul-delete-btn"
-                        onClick={() => handleDelete(index)}
+                       // onClick={() => handleDelete(index)}
+                       onClick={() => handleDelete(user._id)}
                       >
                         Delete
                       </button>

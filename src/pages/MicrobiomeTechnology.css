@@ -1,0 +1,1045 @@
+/* PAGE BACKGROUND */
+
+.microbiome-page{
+  min-height:100vh;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+
+/* DARK OVERLAY */
+
+/*.microbiome-overlay{
+  background:rgba(0,0,0,0.65);
+  min-height:100vh;
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:60px;
+}*/
+
+/* =========================================
+   MANUX MICROBIOME HERO SECTION
+   Unique prefix: mx-microHero
+========================================= */
+
+.mx-microHero-wrap{
+  position:relative;
+  width:100%;
+  min-height:90vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:80px 20px;
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+}
+
+/* SOFT OVERLAY */
+
+.mx-microHero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    135deg,
+    rgba(20,25,40,0.55),
+    rgba(20,25,40,0.35)
+  );
+
+  backdrop-filter:blur(2px);
+}
+
+/* GLASS CARD */
+
+.mx-microHero-card{
+
+  position:relative;
+  z-index:2;
+
+  max-width:820px;
+
+  padding:60px 50px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.15);
+
+  border:1px solid rgba(255,255,255,0.4);
+
+  backdrop-filter:blur(12px);
+
+  text-align:center;
+
+  animation: mxMicroFade 1.2s ease forwards;
+
+}
+
+/* LABEL */
+
+.mx-microHero-label{
+
+  display:inline-block;
+
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-bottom:20px;
+
+  color:#B23A3F;
+
+  border-bottom:2px solid #B23A3F;
+
+  padding-bottom:6px;
+}
+
+/* TITLE */
+
+.mx-microHero-title{
+
+  font-size:48px;
+  color:white;
+
+  margin-bottom:20px;
+  line-height:1.2;
+
+}
+
+/* TEXT */
+
+.mx-microHero-text{
+
+  font-size:18px;
+  line-height:1.8;
+
+  color:#f0f3f8;
+
+}
+
+/* ANIMATION */
+
+@keyframes mxMicroFade{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-microHero-title{
+  font-size:38px;
+}
+
+.mx-microHero-card{
+  padding:50px 35px;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-microHero-wrap{
+  min-height:75vh;
+}
+
+.mx-microHero-title{
+  font-size:28px;
+}
+
+.mx-microHero-text{
+  font-size:16px;
+}
+
+.mx-microHero-card{
+  padding:40px 25px;
+}
+
+}
+
+
+
+/* ======================================
+   MANUX MICROBIOME SCIENCE SECTION
+   Unique prefix: mx-microScience
+====================================== */
+
+.mx-microScience-section{
+  width:100%;
+  padding:60px 20px;
+  background:#ffffff;
+
+  border: 2px solid white;
+
+}
+
+/* CONTAINER */
+
+.mx-microScience-container{
+  max-width:1200px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+
+  align-items:center;
+}
+
+/* TAG */
+
+.mx-microScience-tag{
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  color:#B23A3F;
+
+  border-bottom:2px solid #B23A3F;
+  padding-bottom:6px;
+
+  display:inline-block;
+  margin-bottom:18px;
+}
+
+/* TITLE */
+
+.mx-microScience-title{
+  font-size:36px;
+  color:#1F2A44;
+  margin-bottom:18px;
+}
+
+/* TEXT */
+
+.mx-microScience-text{
+  font-size:17px;
+  line-height:1.8;
+  color:#1F2A44;
+  max-width:520px;
+}
+
+/* VISUAL AREA */
+
+.mx-microScience-visual{
+  position:relative;
+  width:260px;
+  height:260px;
+  margin:auto;
+}
+
+/* MICROBIOME DOT */
+
+.mx-microScience-dot{
+  position:absolute;
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+  background:#B23A3F;
+
+  animation: mxMicroFloat 4s infinite ease-in-out;
+}
+
+/* DOT POSITIONS */
+
+.mx-microScience-dot:nth-child(1){
+  top:20%;
+  left:30%;
+}
+
+.mx-microScience-dot.delay1{
+  top:60%;
+  left:40%;
+  animation-delay:1s;
+}
+
+.mx-microScience-dot.delay2{
+  top:30%;
+  left:70%;
+  animation-delay:2s;
+}
+
+.mx-microScience-dot.delay3{
+  top:70%;
+  left:70%;
+  animation-delay:3s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes mxMicroFloat{
+
+  0%{
+    transform:translateY(0);
+    opacity:0.7;
+  }
+
+  50%{
+    transform:translateY(-15px);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(0);
+    opacity:0.7;
+  }
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-microScience-container{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+
+.mx-microScience-text{
+  margin:auto;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-microScience-title{
+  font-size:28px;
+}
+
+.mx-microScience-text{
+  font-size:16px;
+}
+
+.mx-microScience-visual{
+  width:200px;
+  height:200px;
+}
+
+}
+/* =====================================
+   MANUX MICROBIOME ECOSYSTEM SECTION
+   Unique prefix: mx-microEco
+===================================== */
+
+.mx-microEco-section{
+  width:100%;
+  padding:60px 20px;
+  background:transparent;
+  border: 2px solid white;
+
+  
+
+
+  
+}
+
+/* CONTAINER */
+
+.mx-microEco-container{
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+/* TITLE */
+
+.mx-microEco-title{
+  font-size:36px;
+  color:#1F2A44;
+  margin-bottom:18px;
+}
+
+/* TEXT */
+
+.mx-microEco-text{
+  max-width:720px;
+  margin:auto;
+  font-size:17px;
+  line-height:1.8;
+  color:#1F2A44;
+  margin-bottom:70px;
+}
+
+/* NETWORK AREA */
+
+.mx-microEco-network{
+  position:relative;
+  width:420px;
+  height:420px;
+  margin:auto;
+}
+
+/* CENTER NODE */
+
+.mx-microEco-core{
+
+  position:absolute;
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  width:110px;
+  height:110px;
+
+  background:#B23A3F;
+  color:white;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:14px;
+  text-align:center;
+
+  box-shadow:0 0 25px rgba(178,58,63,0.4);
+
+}
+
+/* MICRO NODES */
+
+.mx-microEco-node{
+
+  position:absolute;
+
+  padding:8px 14px;
+
+  background:white;
+  border-radius:20px;
+
+  font-size:13px;
+  color:#1F2A44;
+
+  border:1px solid rgba(0,0,0,0.06);
+
+  animation: mxMicroOrbit 6s infinite linear;
+
+}
+
+/* NODE POSITIONS */
+
+.node1{ top:10%; left:45%; }
+.node2{ top:45%; left:5%; }
+.node3{ top:80%; left:40%; }
+.node4{ top:45%; right:5%; }
+.node5{ top:20%; right:20%; }
+
+/* ORBIT FLOAT */
+
+@keyframes mxMicroOrbit{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-microEco-network{
+  width:340px;
+  height:340px;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-microEco-title{
+  font-size:28px;
+}
+
+.mx-microEco-text{
+  font-size:16px;
+}
+
+.mx-microEco-network{
+  width:280px;
+  height:280px;
+}
+
+.mx-microEco-core{
+  width:90px;
+  height:90px;
+  font-size:12px;
+}
+
+}
+
+/* LAYOUT WRAPPER */
+
+.mx-microEco-wrapper{
+  max-width:1200px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:80px;
+}
+
+/* LEFT SIDE */
+
+.mx-microEco-left{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+/* RIGHT SIDE */
+
+.mx-microEco-right{
+  flex:1;
+}
+
+/* TITLE */
+
+.mx-microEco-title{
+  font-size:36px;
+  color:#1F2A44;
+  margin-bottom:20px;
+}
+
+/* TEXT */
+
+.mx-microEco-text{
+  font-size:17px;
+  line-height:1.8;
+  color:#1F2A44;
+}
+ 
+@media (max-width:900px){
+
+.mx-microEco-wrapper{
+  flex-direction:column;
+  text-align:center;
+  gap:50px;
+}
+
+.mx-microEco-network{
+  margin-top:20px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   MANUX MICROBIOME BENEFITS SECTION
+   Unique prefix: mx-microBenefits
+===================================== */
+
+.mx-microBenefits-section{
+  width:100%;
+  padding:60px 20px;
+  background:white;
+  border: 2px solid white;
+
+}
+
+/* CONTAINER */
+
+.mx-microBenefits-container{
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+/* TITLE */
+
+.mx-microBenefits-title{
+  font-size:36px;
+  color:#1F2A44;
+  margin-bottom:20px;
+}
+
+/* TEXT */
+
+.mx-microBenefits-text{
+  max-width:720px;
+  margin:auto;
+  font-size:17px;
+  line-height:1.8;
+  color:#1F2A44;
+  margin-bottom:60px;
+}
+
+/* GRID */
+
+.mx-microBenefits-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+/* CARD */
+
+.mx-microBenefits-card{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(6px);
+
+  padding:35px 25px;
+  border-radius:18px;
+
+  border:2px solid rgba(0,0,0,0.05);
+
+  transition:all 0.35s ease;
+}
+
+/* HOVER */
+
+.mx-microBenefits-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+
+.mx-microBenefits-icon{
+  font-size:28px;
+  display:block;
+  margin-bottom:12px;
+}
+
+/* CARD TITLE */
+
+.mx-microBenefits-card h3{
+  font-size:20px;
+  color:#1F2A44;
+  margin-bottom:8px;
+}
+
+/* CARD TEXT */
+
+.mx-microBenefits-card p{
+  font-size:14px;
+  color:#1F2A44;
+  line-height:1.6;
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-microBenefits-grid{
+  grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-microBenefits-title{
+  font-size:28px;
+}
+
+.mx-microBenefits-text{
+  font-size:16px;
+}
+
+.mx-microBenefits-grid{
+  grid-template-columns:1fr;
+}
+
+}
+
+
+
+
+/* =====================================
+   MANUX MICROBIOME SAFETY SECTION
+   Unique prefix: mx-microSafety
+===================================== */
+
+.mx-microSafety-section{
+  width:100%;
+  padding:90px 20px;
+  background:transparent;
+  border: 2px solid white;
+}
+
+/* WRAPPER */
+
+.mx-microSafety-wrapper{
+  max-width:1000px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+}
+
+/* CARD */
+
+.mx-microSafety-card{
+
+  position:relative;
+
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(8px);
+
+  padding:60px 50px;
+
+  border-radius:22px;
+
+  border:1px solid rgba(0,0,0,0.05);
+
+  text-align:center;
+
+  transition:all 0.35s ease;
+}
+
+/* HOVER */
+
+.mx-microSafety-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* RED ACCENT LINE */
+
+.mx-microSafety-line{
+
+  width:60px;
+  height:4px;
+
+  background:#B23A3F;
+
+  display:block;
+  margin:0 auto 22px auto;
+
+  border-radius:2px;
+
+}
+
+/* TITLE */
+
+.mx-microSafety-title{
+  font-size:34px;
+  color:#1F2A44;
+  margin-bottom:20px;
+}
+
+/* TEXT */
+
+.mx-microSafety-text{
+  font-size:17px;
+  line-height:1.9;
+  color:#1F2A44;
+  max-width:650px;
+  margin:auto;
+}
+
+/* FLOATING EFFECT */
+
+.mx-microSafety-card::before,
+.mx-microSafety-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:120px;
+  height:120px;
+
+  border-radius:50%;
+
+  background:rgba(178,58,63,0.08);
+
+  animation: mxSafetyFloat 6s infinite ease-in-out;
+
+}
+
+/* TOP FLOAT */
+
+.mx-microSafety-card::before{
+  top:-40px;
+  left:-40px;
+}
+
+/* BOTTOM FLOAT */
+
+.mx-microSafety-card::after{
+  bottom:-40px;
+  right:-40px;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes mxSafetyFloat{
+
+  0%{ transform:translateY(0px); }
+
+  50%{ transform:translateY(-15px); }
+
+  100%{ transform:translateY(0px); }
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-microSafety-card{
+  padding:50px 35px;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-microSafety-title{
+  font-size:26px;
+}
+
+.mx-microSafety-text{
+  font-size:16px;
+}
+
+.mx-microSafety-card{
+  padding:40px 25px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION STYLE */
+
+.micro-section{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  color:white;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:40px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.2);
+  transition:0.3s;
+}
+
+.micro-section:hover{
+  transform:translateY(-6px);
+}
+
+/* TITLES */
+
+.micro-section h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.micro-section h2{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+/* TEXT */
+
+.micro-section p{
+  font-size:18px;
+  line-height:1.7;
+  color:#eaeaea;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.micro-section{
+  padding:25px;
+}
+
+.micro-section h1{
+  font-size:32px;
+}
+
+.micro-section h2{
+  font-size:24px;
+}
+
+}

@@ -140,7 +140,7 @@ useEffect(() => {
         <div className="hero-content">
 
           <span className="hero-tag">
-            AYURVEDA • PLASMA NANU SCIENCE • CELL CULTURE
+            AYURVEDA • PLASMA NANO SCIENCE • CELL CULTURE
           </span>
 
           <h1>

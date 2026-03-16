@@ -1,0 +1,1208 @@
+/* FULL PAGE BACKGROUND */
+
+.exosome-page{
+  min-height:100vh;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+/* DARK OVERLAY */
+
+/*.exosome-overlay{
+  background:rgba(0,0,0,0.65);
+  min-height:100vh;
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:60px;
+}*/
+
+
+
+/* =====================================
+   MANUX EXOSOME HERO SECTION
+   Unique prefix: mx-exoHero
+===================================== */
+
+.mx-exoHero-section{
+
+  position:relative;
+  width:100%;
+  min-height:50vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:100px 20px;
+
+  /*background-image:url("/assets/exosome-bg.png");*/
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+
+}
+
+/* SOFT OVERLAY */
+
+/*.mx-exoHero-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    rgba(15,20,40,0.45),
+    rgba(15,20,40,0.35)
+  );
+
+}*/
+
+/* CONTAINER */
+.mx-exoHero-container {
+
+  position:relative;
+  max-width:1000px;
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+
+}
+
+/* GLASS CARD */
+
+.mx-exoHero-card{
+
+  padding:60px 70px;
+
+  text-align:center;
+
+  border-radius:26px;
+
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.35);
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.25);
+
+}
+
+/* ACCENT */
+
+.mx-exoHero-accent{
+
+  display:block;
+  width:80px;
+  height:4px;
+
+  background:#B23A3F;
+
+  margin:0 auto 22px auto;
+
+  border-radius:2px;
+
+}
+
+/* TITLE */
+
+.mx-exoHero-title{
+
+  font-size:48px;
+  color:white;
+
+  margin-bottom:18px;
+
+}
+
+/* TEXT */
+
+.mx-exoHero-text{
+
+  font-size:18px;
+  line-height:1.8;
+
+  color:white;
+
+  max-width:620px;
+  margin:auto;
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-exoHero-title{
+  font-size:36px;
+}
+
+.mx-exoHero-card{
+  padding:50px 40px;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-exoHero-section{
+  min-height:70vh;
+}
+
+.mx-exoHero-title{
+  font-size:28px;
+}
+
+.mx-exoHero-text{
+  font-size:16px;
+}
+
+.mx-exoHero-card{
+  padding:40px 25px;
+}
+
+}
+
+
+
+/* =====================================
+   MANUX EXOSOME SCIENCE SECTION
+   Unique prefix: mx-exoScience
+===================================== */
+
+.mx-exoScience-section{
+
+  width:100%;
+  padding:60px 20px;
+
+  background:transparent;
+
+}
+
+/* CONTAINER */
+
+.mx-exoScience-container{
+
+  max-width:1100px;
+  margin:auto;
+
+}
+
+/* CARD */
+
+.mx-exoScience-card{
+
+  display:flex;
+  align-items:center;
+  gap:40px;
+
+  padding:50px 60px;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.35);
+
+}
+
+/* ICON */
+
+.mx-exoScience-icon{
+
+  font-size:42px;
+
+  width:90px;
+  height:90px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.35);
+
+}
+
+/* TEXT AREA */
+
+.mx-exoScience-content{
+  flex:1;
+}
+
+/* TITLE */
+
+.mx-exoScience-title{
+
+  font-size:32px;
+  color:#1F2A44;
+
+  margin-bottom:12px;
+
+}
+
+/* TEXT */
+
+.mx-exoScience-text{
+
+  font-size:17px;
+  line-height:1.8;
+
+  color:#1F2A44;
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-exoScience-card{
+  padding:40px;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:700px){
+
+.mx-exoScience-card{
+
+  flex-direction:column;
+  text-align:center;
+
+  gap:25px;
+
+}
+
+.mx-exoScience-title{
+  font-size:26px;
+}
+
+.mx-exoScience-text{
+  font-size:16px;
+}
+
+}
+
+
+/* =====================================
+   MANUX EXOSOME BIO SECTION
+   Unique prefix: mx-exoBio2
+===================================== */
+
+.mx-exoBio2-section{
+
+  width:100%;
+  padding:80px 20px;
+
+  background:linear-gradient(
+    180deg,
+    #f0f7fc,
+    #e5f1fa
+  );
+
+}
+
+/* CONTAINER */
+
+.mx-exoBio2-container{
+
+  max-width:1100px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:70px;
+
+}
+
+/* VISUAL SIDE */
+
+.mx-exoBio2-visual{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+/* BIO CIRCLE */
+
+.mx-exoBio2-circle{
+
+  width:160px;
+  height:160px;
+
+  border-radius:50%;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:50px;
+
+  position:relative;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+}
+
+/* PULSE ANIMATION */
+
+.mx-exoBio2-pulse{
+
+  position:absolute;
+
+  width:160px;
+  height:160px;
+
+  border-radius:50%;
+
+  border:2px solid #5fa8d3;
+
+  animation:exoPulse 3s infinite;
+
+}
+
+@keyframes exoPulse{
+
+  0%{
+    transform:scale(1);
+    opacity:0.8;
+  }
+
+  100%{
+    transform:scale(1.7);
+    opacity:0;
+  }
+
+}
+
+/* TEXT SIDE */
+
+.mx-exoBio2-content{
+  flex:1;
+}
+
+/* TITLE */
+
+.mx-exoBio2-title{
+
+  font-size:34px;
+  color:#1F2A44;
+
+  margin-bottom:18px;
+
+}
+
+/* TEXT */
+
+.mx-exoBio2-text{
+
+  font-size:17px;
+  line-height:1.8;
+
+  color:#1F2A44;
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:800px){
+
+.mx-exoBio2-container{
+
+  flex-direction:column;
+  text-align:center;
+
+}
+
+.mx-exoBio2-title{
+  font-size:28px;
+}
+
+.mx-exoBio2-text{
+  font-size:16px;
+}
+
+}
+/* 
+/* =====================================
+   MANUX EXOSOME BIOLOGICAL SECTION
+   Unique prefix: mx-exoBio
+===================================== */
+
+/*.mx-exoBio-section{
+
+  position:relative;
+
+  width:100%;
+  padding:60px 20px;
+
+  background:linear-gradient(
+      135deg,
+      #f3f8fc,
+      #e6f1fa
+  );
+
+  overflow:hidden;
+
+}
+
+/* CONTAINER */
+
+/*.mx-exoBio-container{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+/* CARD */
+
+/*.mx-exoBio-card{
+
+  background:white;
+
+  padding:60px 70px;
+
+  border-radius:24px;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+
+  transition:transform .4s ease;
+
+}
+
+.mx-exoBio-card:hover{
+  transform:translateY(-6px);
+}
+
+/* TITLE */
+
+/*.mx-exoBio-title{
+
+  font-size:34px;
+
+  color:#1F2A44;
+
+  margin-bottom:18px;
+
+}
+
+/* TEXT */
+
+/*.mx-exoBio-text{
+
+  font-size:17px;
+
+  line-height:1.8;
+
+  color:#1F2A44;
+
+}
+
+/* FLOATING BIO DOTS */
+
+/*.mx-exoBio-dot{
+
+  position:absolute;
+
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background:#4da3d9;
+
+  opacity:0.5;
+
+  animation:exoFloat 6s infinite ease-in-out;
+
+}
+
+.dot1{ top:20%; left:10%; }
+.dot2{ bottom:25%; right:15%; animation-delay:2s; }
+.dot3{ top:40%; right:25%; animation-delay:3s; }
+
+@keyframes exoFloat{
+
+  0%{ transform:translateY(0); }
+
+  50%{ transform:translateY(-15px); }
+
+  100%{ transform:translateY(0); }
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+/*@media (max-width:900px){
+
+.mx-exoBio-card{
+  padding:50px;
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+/*@media (max-width:600px){
+
+.mx-exoBio-title{
+  font-size:28px;
+}
+
+.mx-exoBio-text{
+  font-size:16px;
+}
+
+.mx-exoBio-card{
+  padding:40px 30px;
+}
+
+} */
+
+
+
+/* =====================================
+   MANUX EXOSOME TECHNOLOGY SECTION
+   Unique prefix: mx-exoTech
+===================================== */
+
+.mx-exoTech-section{
+
+  width:100%;
+  padding:70px 20px;
+
+  background:transparent;
+
+}
+
+/* CONTAINER */
+
+.mx-exoTech-container{
+
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+
+}
+
+/* TITLE */
+
+.mx-exoTech-title{
+
+  font-size:34px;
+  color:#1F2A44;
+  margin-bottom:16px;
+
+}
+
+/* TEXT */
+
+.mx-exoTech-text{
+
+  max-width:700px;
+  margin:auto;
+  font-size:17px;
+  line-height:1.8;
+  color:#1F2A44;
+  margin-bottom:60px;
+
+}
+
+/* GRID */
+
+.mx-exoTech-grid{
+
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:25px;
+
+}
+
+/* CARD */
+
+.mx-exoTech-card{
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:30px 20px;
+
+  font-size:26px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+
+  transition:all .35s ease;
+
+}
+
+.mx-exoTech-card span{
+
+  font-size:14px;
+  color:#1F2A44;
+
+}
+
+/* HOVER */
+
+.mx-exoTech-card:hover{
+
+  transform:translateY(-6px);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-exoTech-grid{
+  grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-exoTech-grid{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.mx-exoTech-title{
+  font-size:28px;
+}
+
+}
+
+
+/* =====================================
+   MANUX EXOSOME APPLICATIONS SECTION
+   Unique prefix: mx-exoApps
+===================================== */
+
+.mx-exoApps-section{
+
+  width:100%;
+  padding:70px 20px;
+
+  background:linear-gradient(
+    180deg,
+    #f4f9fd,
+    #e8f2fb
+  );
+
+}
+
+/* CONTAINER */
+
+.mx-exoApps-container{
+
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+
+}
+
+/* TITLE */
+
+.mx-exoApps-title{
+
+  font-size:34px;
+  color:#1F2A44;
+  margin-bottom:16px;
+
+}
+
+/* TEXT */
+
+.mx-exoApps-text{
+
+  max-width:700px;
+  margin:auto;
+
+  font-size:17px;
+  line-height:1.8;
+
+  color:#1F2A44;
+
+  margin-bottom:60px;
+
+}
+
+/* GRID */
+
+.mx-exoApps-grid{
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+
+}
+
+/* CARD */
+
+.mx-exoApps-card{
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:35px 20px;
+
+  font-size:28px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  gap:10px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+
+  transition:all .35s ease;
+
+}
+
+.mx-exoApps-card span{
+
+  font-size:15px;
+  color:#1F2A44;
+
+}
+
+/* HOVER */
+
+.mx-exoApps-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media (max-width:900px){
+
+.mx-exoApps-grid{
+  grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-exoApps-title{
+  font-size:28px;
+}
+
+.mx-exoApps-text{
+  font-size:16px;
+}
+
+.mx-exoApps-grid{
+  grid-template-columns:1fr;
+}
+
+}
+
+/* =====================================
+   MANUX EXOSOME SAFETY SECTION
+   Unique prefix: mx-exoSafety
+===================================== */
+
+.mx-exoSafety-section{
+
+  width:100%;
+  padding:80px 20px;
+
+  background:transparent;
+
+}
+
+/* CONTAINER */
+
+.mx-exoSafety-container{
+
+  max-width:1100px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:60px;
+
+}
+
+/* BADGE SIDE */
+
+.mx-exoSafety-badge{
+
+  flex:0 0 180px;
+
+  display:flex;
+  justify-content:center;
+
+}
+
+.mx-exoSafety-circle{
+
+  width:120px;
+  height:120px;
+
+  border-radius:50%;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:45px;
+
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+
+  animation:safetyFloat 5s ease-in-out infinite;
+
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes safetyFloat{
+
+  0%{ transform:translateY(0); }
+
+  50%{ transform:translateY(-10px); }
+
+  100%{ transform:translateY(0); }
+
+}
+
+/* CONTENT */
+
+.mx-exoSafety-content{
+  flex:1;
+}
+
+/* TITLE */
+
+.mx-exoSafety-title{
+
+  font-size:34px;
+  color:#1F2A44;
+
+  margin-bottom:18px;
+
+}
+
+/* TEXT */
+
+.mx-exoSafety-text{
+
+  font-size:17px;
+  line-height:1.8;
+
+  color:#1F2A44;
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:800px){
+
+.mx-exoSafety-container{
+
+  flex-direction:column;
+  text-align:center;
+
+}
+
+.mx-exoSafety-title{
+  font-size:28px;
+}
+
+.mx-exoSafety-text{
+  font-size:16px;
+}
+
+}
+
+
+
+/* =====================================
+   MANUX EXOSOME FUTURE SECTION
+   Unique prefix: mx-exoFuture
+===================================== */
+
+.mx-exoFuture-section{
+
+  width:100%;
+  padding:70px 20px;
+
+  background:linear-gradient(
+    180deg,
+    #eaf4fb,
+    #dfeef9
+  );
+
+}
+
+/* CONTAINER */
+
+.mx-exoFuture-container{
+
+  max-width:900px;
+  margin:auto;
+
+}
+
+/* CARD */
+
+.mx-exoFuture-card{
+
+  background:white;
+
+  padding:70px 60px;
+
+  border-radius:26px;
+
+  text-align:center;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* GLOW EFFECT */
+
+.mx-exoFuture-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:300px;
+  height:300px;
+
+  background:radial-gradient(
+    circle,
+    rgba(120,170,220,0.25),
+    transparent
+  );
+
+  top:-120px;
+  left:-120px;
+
+  animation:futureGlow 6s infinite alternate;
+
+}
+
+/* TITLE */
+
+.mx-exoFuture-title{
+
+  font-size:36px;
+
+  color:#1F2A44;
+
+  margin-bottom:18px;
+
+}
+
+/* TEXT */
+
+.mx-exoFuture-text{
+
+  font-size:17px;
+
+  line-height:1.8;
+
+  color:#1F2A44;
+
+}
+
+/* GLOW ANIMATION */
+
+@keyframes futureGlow{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.4);
+  }
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width:600px){
+
+.mx-exoFuture-title{
+  font-size:28px;
+}
+
+.mx-exoFuture-text{
+  font-size:16px;
+}
+
+.mx-exoFuture-card{
+  padding:45px 30px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION CARD */
+
+/*.exo-section{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  color:white;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:40px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.2);
+  transition:0.3s;
+}
+
+.exo-section:hover{
+  transform:translateY(-6px);
+}
+
+/* TITLES */
+
+/*.exo-section h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.exo-section h2{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+/* TEXT */
+
+/*.exo-section p{
+  font-size:18px;
+  line-height:1.7;
+  color:#eaeaea;
+}
+
+/* MOBILE */
+
+/*@media (max-width:768px){
+
+.exo-section{
+  padding:25px;
+}
+
+.exo-section h1{
+  font-size:32px;
+}
+
+.exo-section h2{
+  font-size:24px;
+}
+
+}*/

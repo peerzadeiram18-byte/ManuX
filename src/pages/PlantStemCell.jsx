@@ -141,7 +141,7 @@ export default function PlantStemCell() {
       </section>
 
       {/* 5️⃣ Sustainability Luxury Block */}
-      <section className="sustain-section">
+      {/* <section className="sustain-section">
   <motion.div
     className="sustain-container"
     initial={{ opacity: 0, y: 60 }}
@@ -163,6 +163,38 @@ export default function PlantStemCell() {
     <div className="sustain-image">
       <img src={sustainabilityImg} alt="Sustainable Lab" />
     </div>
+  </motion.div>
+</section> */}
+
+
+<section className="mx-sustain-section">
+  <motion.div
+    className="mx-sustain-container"
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+
+    <div className="mx-sustain-image">
+      <img src={sustainabilityImg} alt="Sustainable Lab" />
+    </div>
+
+    <div className="mx-sustain-text">
+      <h2>Sustainable Scientific Excellence</h2>
+
+      <p>
+        A standout characteristic of plant stem cell technology 
+        is its sustainability. Instead of wasting an entire plant 
+        and the resources it requires to thrive, this process allows 
+        researchers to obtain only what they need.
+
+        It also offers a clean and consistent supply of these extracts, 
+        as they are not limited to harvest or seasons, making it a 
+        technology that allows us to make the most of nature while 
+        also protecting it.
+      </p>
+    </div>
+
   </motion.div>
 </section>
 

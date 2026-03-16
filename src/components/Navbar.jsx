@@ -42,10 +42,16 @@ const { user, role, logout } = useAuth();
   { name: "Men Care", path: "/menscare" },
   { name: "Pregnancy Care", path: "/pregnancycare" },
   { name: "Ayurvedic Science", path: "/Ayurveda" },
+  { name: "Ethical Ingredient Sourcing", path: "/ethical-ingredient-sourcing" },
+  { name: "sustainability responsibility", path: "/sustainability-responsibility" },
   { name: "Research & Insights", path: "/research" },
   { name: "Nanotechnology", path: "/technology/nanotechnology" },
   { name: "Plasma Technology", path: "/technology/plasma-technology" },
   { name: "Plant Stem Cell Technology", path: "/technology/plant-stem-cell" },
+  { name: "Enzymatic Technology", path: "/technology/EnzymaticTechnology" },
+  { name: "Microbiome Technology", path: "/technology/MicrobiomeTechnology" },
+  { name: "emollihydra technology", path: "/technology/emollihydra-technology" },
+  { name: "exosome technology", path: "/technology/exosome-technology" },
   { name: "About Us", path: "/about" },
   { name: "Contact", path: "/contact" }
 ];
@@ -233,6 +239,41 @@ const filteredResults = searchData.filter((item) =>
   </Link>
 
 
+    <Link
+    to="/technology/Enzymatic-Technology"
+    onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}
+  >
+     Enzymatic Technology
+  </Link>
+
+  <Link
+ to="/technology/microbiome-technology"
+ onClick={() => {
+   setMobileMenu(false);
+ }}
+>
+ Microbiome Technology
+</Link>
+
+                <Link
+                    to="/technology/emollihydra-technology"
+                   onClick={() => {
+                 setMobileMenu(false);
+                      }}
+                        >
+                      EmolliHydra™ Technology
+                    </Link>
+
+
+                    <Link to="/technology/exosome-technology" onClick={() => {setMobileMenu(false); }}>
+                            Exosome Technology
+                    </Link>
+
+
+
             </div>
           </div>
 
@@ -242,11 +283,17 @@ const filteredResults = searchData.filter((item) =>
          {/*} <NavLink to="/ingredients" onClick={() => setMobileMenu(false)}>
             Ingredients
           </NavLink>*/}
-          <NavLink
-            to="/Ayurveda"
-            onClick={() => setMobileMenu(false)}
-          >
+          <NavLink to="/Ayurveda"onClick={() => setMobileMenu(false)} >
             Ayurvedic Science
+          </NavLink>
+          <NavLink to="/ethical-ingredient-sourcing" onClick={() => setMobileMenu(false)}>
+            Ethical Ingredient Sourcing
+          </NavLink>
+           <NavLink to="/sustainability-responsibility" onClick={() => setMobileMenu(false)}>
+           Sustainability & Responsibility
+          </NavLink>
+          <NavLink to="/quality-safety-compliance" onClick={() => setMobileMenu(false)}>
+            Quality, Safety & Compliance
           </NavLink>
           <NavLink to="/OurTeam" onClick={() => setMobileMenu(false)}>
             Our Team
@@ -262,12 +309,9 @@ const filteredResults = searchData.filter((item) =>
               {/* ADMIN DASHBOARD */}
 
           {role === "admin" && (
-                  <NavLink
-                      to="/admin/dashboard"
-                 onClick={() => setMobileMenu(false)}
-                  >
+                  <NavLink to="/admin/dashboard" onClick={() => setMobileMenu(false)} >
                        Admin Dashboard
-                </NavLink>
+                  </NavLink>
                     )}
 
           {/*} <div className="dropdown">

@@ -36,9 +36,7 @@ export default function ResearchInsightsPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9 }}
       className="research-title"
-    >
-      <span>Research</span>
-      & Insights
+    >Research & Insights
     </motion.h1>
 
     <motion.p

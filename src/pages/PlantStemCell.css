@@ -604,29 +604,29 @@ font-family: 'Avenir Next', sans-serif;
 
 
 
-/* SECTION BACKGROUND */
-.sustain-section {
+/* SECTION BACKGROUND
+.sustain-section1 {
  /* background: linear-gradient(
     180deg,
     #ffffff,
     #E5E6E8
   ); */
-  padding: 90px 8%;
+/*  padding: 90px 8%;
   color:#1F2A44;
 
 
   border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
-  box-shadow:
+ /* box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 
 
-    background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
-    backdrop-filter: blur(4px); /* Blurry glass effect */
-}
+   /* background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+    /*backdrop-filter: blur(4px); /* Blurry glass effect */
+/*}
 
 /* FLEX LAYOUT */
-.sustain-container {
+/*.sustain-container1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -636,18 +636,18 @@ font-family: 'Avenir Next', sans-serif;
 }
 
 /* TEXT */
-.sustain-text {
+/*.sustain-tex1t {
   flex: 1;
 }
 
-.sustain-text h2 {
+.sustain-text1 h2 {
   font-size: 42px;
   margin-bottom: 20px;
   font-weight: 400;
 
 }
 
-.sustain-text p {
+.sustain-text1 p {
   font-size: 18px;
   line-height: 1.8;
   opacity: 0.9;
@@ -658,12 +658,12 @@ font-family: 'Avenir Next', sans-serif;
 
 
 /* IMAGE */
-.sustain-image {
+/*.sustain-image1 {
   flex: 1;
   text-align: center;
 }
 
-.sustain-image img {
+.sustain-image1 img {
   width: 100%;
   max-width: 480px;
   border-radius: 25px;
@@ -671,21 +671,96 @@ font-family: 'Avenir Next', sans-serif;
   transition: 0.4s;
 }
 
-.sustain-image img:hover {
+.sustain-image1 img:hover {
   transform: scale(1.05);
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .sustain-container {
+/*@media (max-width: 900px) {
+  .sustain-container1 {
     flex-direction: column;
     text-align: center;
   }
 
-  .sustain-text h2 {
+  .sustain-text1 h2 {
     font-size: 32px;
   }
+} */
+
+
+
+
+/* ================= SUSTAINABILITY SECTION ================= */
+
+.mx-sustain-section {
+  padding: 90px 8%;
+  background: linear-gradient(180deg,#ffffff,#f1f3f7);
 }
+
+/* layout */
+
+.mx-sustain-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* IMAGE */
+
+.mx-sustain-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+.mx-sustain-image img:hover {
+  transform: scale(1.04);
+}
+
+/* TEXT */
+
+.mx-sustain-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #1F2A44;
+}
+
+.mx-sustain-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .mx-sustain-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mx-sustain-image img {
+    height: 320px;
+  }
+
+  .mx-sustain-text h2 {
+    font-size: 32px;
+  }
+
+}
+
+
 
 /* =====================================
    AYU HIGHLIGHT STRIP – PREMIUM

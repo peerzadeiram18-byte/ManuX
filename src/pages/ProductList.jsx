@@ -64,13 +64,19 @@ const filteredProducts = products.filter((product) => {
 
           <tbody>
             {currentProducts.map((product, index) => (
-              <tr key={product.id}>
+              //<tr key={product.id}>
+                <tr key={product._id}>
                 <td>{indexOfFirst + index + 1}</td>
                 <td>{product.name}</td>
                 <td>{product.category}</td>
                 <td>{product.description}</td>
                 <td>
-                  <img src={product.image} alt="" className="pm-img" />              
+                 {/* <img src={product.image} alt="" className="pm-img" />   */}
+                 <img
+                   src={`http://localhost:5000/uploads/${product.image}`}
+                  // alt=""
+                   className="pm-img"
+                  />           
                   
                   </td>
                 <td>
@@ -81,7 +87,8 @@ const filteredProducts = products.filter((product) => {
                   </button>
 
                   <button className="pm-btn pm-delete"
-                    onClick={() => deleteProduct(product.id)}
+                   // onClick={() => deleteProduct(product.id)}
+                    onClick={() => deleteProduct(product._id)}
                   >
                     Delete
                   </button>
