@@ -21,6 +21,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(false); // mobile dropdown toggle
   const[openMenu,setOpenMenu]=useState(false);
   const [openTeamDropdown, setOpenTeamDropdown] = useState(false);
+  const [openResearchDropdown, setOpenResearchDropdown] = useState(false);
   //const { user, logout } = useAuth();
 
 const { user, role, logout } = useAuth();
@@ -309,9 +310,45 @@ const filteredResults = searchData.filter((item) =>
             </div>
           </div>
 
-          <NavLink to="/research" onClick={() => setMobileMenu(false)}>
-            Research 
-          </NavLink>
+        <div
+  className="dropdown"
+  onClick={(e) => e.stopPropagation()}
+>
+  <span
+    className="nav-link"
+    onClick={() => setOpenResearchDropdown(!openResearchDropdown)}
+  >
+    Research <FaChevronDown className="dropdown-icon" />
+  </span>
+
+  <div
+    className={`dropdown-menu ${
+      openResearchDropdown ? "show-dropdown" : ""
+    }`}
+  >
+
+    <Link
+      to="/research"
+      onClick={() => {
+        setMobileMenu(false);
+        setOpenResearchDropdown(false);
+      }}
+    >
+      Research
+    </Link>
+
+    <Link
+      to="/sustainability-responsibility"
+      onClick={() => {
+        setMobileMenu(false);
+        setOpenResearchDropdown(false);
+      }}
+    >
+      Sustainability
+    </Link>
+
+  </div>
+</div>
          {/*} <NavLink to="/ingredients" onClick={() => setMobileMenu(false)}>
             Ingredients
           </NavLink>*/}
@@ -321,9 +358,9 @@ const filteredResults = searchData.filter((item) =>
           <NavLink to="/ethical-ingredient-sourcing" onClick={() => setMobileMenu(false)}>
              Ingredient 
           </NavLink>
-           <NavLink to="/sustainability-responsibility" onClick={() => setMobileMenu(false)}>
+           {/* <NavLink to="/sustainability-responsibility" onClick={() => setMobileMenu(false)}>
            Sustainability 
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/quality-safety-compliance" onClick={() => setMobileMenu(false)}>
            Safety & Compliance
           </NavLink>
