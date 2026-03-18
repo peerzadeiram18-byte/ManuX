@@ -608,13 +608,62 @@ onClick={() => {
 
               {/* ADMIN DASHBOARD */}
 
-          {role === "admin" && (
+          {/* {role === "admin" && (
                   <NavLink to="/admin/dashboard" onClick={() => setMobileMenu(false)} >
                        <span>Admin Dashboard</span>
                   </NavLink>
                     )}
 
-                    </div>
+                    </div> */}
+
+
+                    {role === "admin" && (
+  <div
+    className="dropdown admin-dropdown"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <span
+      className="nav-link"
+      onClick={() => {
+        setOpenMenu(!openMenu);
+
+        // close others
+        setOpenDropdown(false);
+        setOpenResearchDropdown(false);
+        setOpenScienceDropdown(false);
+        setOpenCompanyDropdown(false);
+        setOpenProductsDropdown(false);
+      }}
+    >
+      Admin Dashboard <FaChevronDown className="dropdown-icon" />
+    </span>
+
+    <div className={`dropdown-menu ${openMenu ? "show-dropdown" : ""}`}>
+
+      <Link to="/admin/dashboard/product-form" onClick={() => {
+        setMobileMenu(false);
+        setOpenMenu(false);
+      }}>
+        Products Form
+      </Link>
+
+      <Link to="/admin/dashboard/product-list" onClick={() => {
+        setMobileMenu(false);
+        setOpenMenu(false);
+      }}>
+        Products List
+      </Link>
+
+      <Link to="/admin/dashboard/user-list" onClick={() => {
+        setMobileMenu(false);
+        setOpenMenu(false);
+      }}>
+        Users List
+      </Link>
+
+    </div>
+  </div>
+)}
 
           {/*} <div className="dropdown">
             <span
@@ -662,10 +711,9 @@ Product List  </Link>
 
           </div>          
 */}
-        </div>
-     
-      </div>
-    
+            </div>  {/* menu-links END */}
+      </div>  {/* menubar END */}
+    </div> 
             
 
   );

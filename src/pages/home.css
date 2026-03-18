@@ -790,7 +790,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .researchh-grid{
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 👈 ALWAYS 2 */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 👈 ALWAYS 2 */
   gap: 40px;
   justify-content: center;
   align-items: stretch;
@@ -802,21 +802,27 @@ font-family: 'Avenir Next', sans-serif;}
 
 .researchh-card {
   position: relative;
-  background-size: cover;
+
+  background-size: contain;   /* 🔥 FIX */
   background-position: center;
   background-repeat: no-repeat;
-  height: 280px;
-  max-width: 100%;   /* 👈 overflow fix */
+
+  height: 240px;
+  width: 100%;
+
   border-radius: 16px;
   overflow: hidden;
+
   display: flex;
   align-items: center;
-  justify-content: center; /* 👈 text center */
+  justify-content: center;
 
+  /* 👇 empty space stylish lage */
+  background-color: #ffffff;
 
-    border: 2px solid white;
+  border: 2px solid white;
   box-shadow: 0 10px 40px rgba(254, 254, 254, 0.6),
-  inset 0 0 40px rgba(94,167,135,0.08);
+              inset 0 0 40px rgba(94,167,135,0.08);
 }
 
 
@@ -1171,4 +1177,222 @@ font-family: 'Avenir Next', sans-serif;
 .ba-image-wrapper:hover .ba-img {
   transform: scale(1.05);
   transition: transform 0.6s ease;
+}
+
+
+
+
+
+
+
+
+
+/* ===== Section ===== */
+.mx-philo-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: transparent;
+  font-family: 'Avenir Next', sans-serif;
+
+}
+
+/* ===== Container ===== */
+.mx-philo-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== Header ===== */
+.mx-philo-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mx-philo-header h2 {
+  font-size: 44px;
+  font-weight: 400;
+  color: #1F2A44;
+  margin-bottom: 20px;
+  font-family: 'Avenir Next', sans-serif;
+}
+
+.mx-philo-header p {
+  font-size: 19px;
+  color: #5C6473;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+  font-family: 'Avenir Next', sans-serif;
+}
+
+/* ===== Cards Grid ===== */
+.mx-philo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ===== Card ===== */
+.mx-philo-card {
+  position: relative;
+  height: 210px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: #1F2A44;
+   background-position: center;
+  background-repeat: no-repeat;
+
+  /* 🔥 MAIN FIX */
+  background-size: contain;
+
+  /* Optional: background color behind image */
+  background-color: #ebe6f2;
+
+  transition: transform 0.4s ease;
+}
+
+.mx-philo-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== Background Images (replace path) =====
+.mx-card-1 {
+  background: url("/assets/philo1.jpg") center/cover no-repeat;
+}
+
+.mx-card-2 {
+  background: url("/assets/philo2.jpg") center/cover no-repeat;
+}
+
+.mx-card-3 {
+  background: url("/assets/philo3.jpg") center/cover no-repeat;
+} */
+
+/* ===== Overlay ===== */
+/*.mx-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 18, 31, 0.85),
+    rgba(12, 18, 31, 0.2)
+  );
+}*/
+
+/* ===== Content ===== */
+.mx-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.mx-card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1F2A44;
+}
+
+.mx-card-content p {
+  font-size: 16px;
+  color: #1F2A44;
+  line-height: 1.5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .mx-philo-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mx-philo-header h2 {
+    font-size: 26px;
+  }
+
+  .mx-philo-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mx-philo-card {
+    height: 260px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Section Wrapper ===== */
+.mxgf-section-wrapper {
+  width: 100%;
+  padding: 60px 20px;
+  background: transparent;
+
+font-family: 'Avenir Next', sans-serif;
+
+}
+
+/* ===== Container ===== */
+.mxgf-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:40px;
+  border-radius:16px;
+  border:2px solid white;
+}
+
+/* ===== Accent Line ===== */
+.mxgf-accent-line {
+  width: 70px;
+  height: 4px;
+  background-color: #B23A3F;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+}
+
+/* ===== Heading ===== */
+.mxgf-heading {
+  font-size: 44px;
+  font-weight: 400; /* 👈 as per your requirement */
+  color: #1F2A44;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  font-family: 'Avenir Next', sans-serif;
+}
+
+/* ===== Paragraph ===== */
+.mxgf-text {
+  font-size: 19px;
+  color: #5C6473;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .mxgf-heading {
+    font-size: 26px;
+  }
+
+  .mxgf-text {
+    font-size: 14px;
+  }
+
+  .mxgf-section-wrapper {
+    padding: 70px 15px;
+  }
 }

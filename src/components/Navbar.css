@@ -744,3 +744,18 @@ cursor:pointer;
   align-items:center;
   gap:25px;
 }
+
+
+/* ===== HIDE ADMIN DROPDOWN ON DESKTOP ===== */
+.admin-dropdown {
+  display: none;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+
+  .admin-dropdown {
+    display: block;
+  }
+
+}

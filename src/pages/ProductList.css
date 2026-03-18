@@ -113,8 +113,8 @@ transition:0.25s;
 }
 
 .pm-edit{
-background:#FFC107;
-color:black;
+background:#1F2A44;
+color:white;
 }
 
 .pm-delete{
@@ -125,6 +125,38 @@ color:white;
 .pm-btn:hover{
 transform:translateY(-2px);
 opacity:0.9;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETS */
+@media (max-width: 768px) {
+  .pm-btn {
+    padding: 7px 12px;
+    font-size: 13px;
+    margin-right: 6px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .pm-btn {
+    width: 100%;              /* full width buttons */
+    margin-right: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* stack buttons vertically */
+  .pm-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 /* ===== PAGINATION ===== */
@@ -278,8 +310,8 @@ color:white;
 /* 📱 RESPONSIVE */
 @media (max-width: 480px) {
   .modal {
-    width: 90%;
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
   }
 }
 /* 📱 MOBILE */

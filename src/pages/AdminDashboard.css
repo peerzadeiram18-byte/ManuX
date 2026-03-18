@@ -164,17 +164,36 @@ font-family: 'Avenir Next', sans-serif;
 .admin-content {
   flex: 1;
   /*background: #fbf9f9;*/
-  padding: 40px;
+  padding: 5px;
 }
 
 @media (max-width: 768px) {
 
   .admin-layout {
     flex-direction: column;
+  
   }
 
-  .admin-sidebar {
+  /* .admin-sidebar {
     width: 100%;
+  } */
+
+}
+
+
+@media (max-width: 768px) {
+  
+  .admin-sidebar .menu li:not(:first-child) {
+    display: none;
+  }
+
+}
+
+/* ===== HIDE SIDEBAR IN MOBILE ===== */
+@media (max-width: 768px) {
+
+  .admin-sidebar {
+    display: none;
   }
 
 }

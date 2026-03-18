@@ -32,6 +32,11 @@ import bgImage from "../assets/backgroundimage.jpg";
 import heroVideo from "../video/hero-video.mp4";
 
 
+import philo1 from "../assets/philo1.jpg";
+import philo2 from "../assets/philo2.jpg";
+import philo3 from "../assets/philo3.jpg";
+
+
 
 
 
@@ -230,6 +235,81 @@ useEffect(() => {
 
 </section>
 
+
+
+
+
+{/* ===== ManuX Philosophy Section ===== */}
+<section className="mx-philo-section">
+
+  <div className="mx-philo-container">
+
+    {/* Heading */}
+    <div className="mx-philo-header">
+      <h2>Our Scientific Philosophy</h2>
+      <p>
+        At ManuX, we believe that the future of wellness lies in intelligent delivery,
+        biological compatibility, and regenerative science. Traditional formulations
+        often fail not due to ingredient limitations, but due to inefficient absorption,
+        instability, and lack of biological harmony.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="mx-philo-cards">
+
+      <div
+  className="mx-philo-card"
+  style={{ backgroundImage: `url(${philo1})` }}
+>
+        <div className="mx-card-overlay"></div>
+        <div className="mx-card-content">
+          {/* <h3>Intelligent Delivery</h3>
+          <p>
+            Advanced delivery systems ensure nutrients reach where they are needed most,
+            improving absorption and effectiveness.
+          </p> */}
+        </div>
+      </div>
+
+<div
+  className="mx-philo-card"
+  style={{ backgroundImage: `url(${philo2})` }}
+>        <div className="mx-card-overlay"></div>
+        <div className="mx-card-content">
+          {/* <h3>Biological Compatibility</h3>
+          <p>
+            Formulations are designed to work in harmony with the body's natural systems,
+            ensuring safety and balance.
+          </p> */}
+        </div>
+      </div>
+
+      <div
+  className="mx-philo-card"
+  style={{ backgroundImage: `url(${philo3})` }}
+>
+        <div className="mx-card-overlay"></div>
+        <div className="mx-card-content">
+          {/* <h3>Regenerative Science</h3>
+          <p>
+            We focus on long-term wellness by supporting cellular repair and regeneration
+            using modern scientific techniques.
+          </p> */}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
 {/* ===== ABOUT INTRO SECTION ===== */}
 <section className="about-intro reveal-section">
   <div className="about-intro-container reveal-content">
@@ -305,11 +385,11 @@ useEffect(() => {
     style={{ backgroundImage: "url('/research/card1.jpg')" }}
   >
     <div className="cardh-overlay">
-      <h4>Science-First Formulation</h4>
+      {/* <h4>Science-First Formulation</h4>
       <p>
         Every formulation begins with biological pathways, molecular behaviour,
         and delivery efficiency — not marketing trends or surface claims.
-      </p>
+      </p> */}
     </div>
   </div>
 
@@ -318,11 +398,11 @@ useEffect(() => {
     style={{ backgroundImage: "url('/research/card2.jpg')" }}
   >
     <div className="cardh-overlay">
-      <h4>Multi-Technology Ecosystem</h4>
+      {/* <h4>Multi-Technology Ecosystem</h4>
       <p>
         Ayurvedic nanotechnology, plant stem cell science, enzymatic processing,
         microbiome intelligence, and plasma activation work in synergy.
-      </p>
+      </p> */}
     </div>
   </div>
 
@@ -331,11 +411,11 @@ useEffect(() => {
     style={{ backgroundImage: "url('/research/card3.jpg')" }}
   >
     <div className="cardh-overlay">
-      <h4>Delivery & Bioavailability</h4>
+      {/* <h4>Delivery & Bioavailability</h4>
       <p>
         We engineer systems for enhanced absorption, stability, and
         cell-level compatibility to ensure real-world performance.
-      </p>
+      </p> */}
     </div>
   </div>
 
@@ -344,11 +424,11 @@ useEffect(() => {
     style={{ backgroundImage: "url('/research/card4.jpg')" }}
   >
     <div className="cardh-overlay">
-      <h4>Safety & Biological Harmony</h4>
+      {/* <h4>Safety & Biological Harmony</h4>
       <p>
         Designed for sensitive life stages and long-term use —
         non-aggressive, biocompatible, and globally compliant.
-      </p>
+      </p> */}
     </div>
   </div>
 
@@ -395,6 +475,39 @@ useEffect(() => {
     <div>
       <Categories />   {/* footer se pehle */}
     </div>
+
+</section>
+
+
+{/* ===== Global Future Section ===== */}
+<section className="mxgf-section-wrapper">
+
+  <div className="mxgf-container">
+
+    {/* Accent Line */}
+  
+
+    {/* Content */}
+    <div className="mxgf-content">
+
+      <h2 className="mxgf-heading">
+        Designed for a global future
+      </h2>
+  {/* Accent Line */}
+    <div className="mxgf-accent-line"></div>
+      <p className="mxgf-text">
+        With ayurvedic licensing, advanced technology platforms, and a science-centric mindset,
+        ManuX NanoBioCeuticals is positioned to serve global markets, research collaborations,
+        and next-generation wellness brands.
+      </p>
+
+      <p className="mxgf-text">
+        We are not building products for today alone—we are building systems for the future.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
