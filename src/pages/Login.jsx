@@ -4,12 +4,15 @@ import { useAuth } from "../context/AuthContext";
 import { loginUser } from "../services/authService";
 import { useNavigate } from "react-router-dom";
 
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 export default function Login({ closeModal }) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -64,7 +67,9 @@ const handleSubmit = async (e) => {
 
     closeModal();
 
-  } catch (err) {
+  }
+  
+  catch (err) {
     setError("Wrong email or password");
   }
 };
@@ -119,13 +124,25 @@ const handleSubmit = async (e) => {
             required
           />
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e)=>setPassword(e.target.value)}
-            required
-          />
+        <div className="passwordField">
+
+  <input
+    type={showPassword ? "text" : "password"}
+    placeholder="Password"
+    value={password}
+    onChange={(e)=>setPassword(e.target.value)}
+    required
+  />
+
+  <span
+    className="togglePassword"
+    onClick={() => setShowPassword(!showPassword)}
+  >
+    {/* {showPassword ? "🙈" : "👁️"} */}
+     {showPassword ? <FaEyeSlash /> : <FaEye />}
+  </span>
+
+</div>
 
           {error && <p className="errorText">{error}</p>}
 

@@ -25,6 +25,24 @@ import EmolliHydraTechnology from "./pages/EmolliHydraTechnology";
 import ExosomeTechnology from "./pages/ExosomeTechnology";
 
 
+
+
+
+// Pages import
+import SkinCare from "./pages/SkinCare";
+import HairCare from "./pages/HairCare";
+import BabyCare from "./pages/BabyCare";
+import PetCare from "./pages/PetCare";
+import MensCare from "./pages/MensCare";
+import PregnancyCare from "./pages/PregnancyCare";
+import Ayurvedic from "./pages/Ayurvedic";
+import Nutraceuticals from "./pages/Nutraceuticals";
+// ✅ NEW
+import DigitalDefense from "./pages/DigitalDefense";
+import Fitness from "./pages/Fitness";
+
+
+
 import Research from "./pages/Research";
 import Ingredients from "./pages/Ingredients";
 import Ayurveda from "./pages/Ayurveda";
@@ -33,6 +51,7 @@ import SustainabilityResponsibility from "./pages/SustainabilityResponsibility";
 import QualitySafetyCompliance from "./pages/QualitySafetyCompliance";
 import OurTeam from "./pages/OurTeam";
 import About from "./pages/About";
+import Collaborations from "./pages/Collaborations";
 import Contact from "./pages/Contact";
 import AdminDashboard from "./pages/AdminDashboard";
 
@@ -87,6 +106,7 @@ function App() {
     <Route path="/quality-safety-compliance"element={<QualitySafetyCompliance />}/>
     <Route path="/OurTeam" element={<OurTeam />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path="/collaborations" element={<Collaborations />} />
      <Route path="/About" element={<About />} />
     {/*<Route path="/AdminDashboard" element={<AdminDashboard />} />*/}
 
@@ -101,6 +121,22 @@ function App() {
     <Route path="/technology/microbiome-technology"element={<MicrobiomeTechnology />}/>
     <Route path="/technology/emollihydra-technology" element={<EmolliHydraTechnology />}/>
     <Route path="/technology/exosome-technology"element={<ExosomeTechnology />}/>
+
+
+
+
+      {/* PRODUCTS ROUTES */}
+        <Route path="/skin-care" element={<SkinCare />} />
+        <Route path="/hair-care" element={<HairCare />} />
+        <Route path="/baby-care" element={<BabyCare />} />
+        <Route path="/pet-care" element={<PetCare />} />
+        <Route path="/mens-care" element={<MensCare />} />
+        <Route path="/pregnancy-care" element={<PregnancyCare />} />
+        <Route path="/ayurvedic" element={<Ayurvedic />} />
+        <Route path="/nutraceuticals" element={<Nutraceuticals />} />
+          {/* ✅ NEW ROUTES */}
+        <Route path="/digital-defense" element={<DigitalDefense />} />
+        <Route path="/fitness" element={<Fitness />} />
 
   </Route>
 

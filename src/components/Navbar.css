@@ -106,7 +106,7 @@ background:#f5f5f5;
   }
   body{
 
-    padding-top: 180px;
+    padding-top: 100px;
   }
   .search-container {
     width: 100%;          /* 👈 full width */
@@ -115,6 +115,7 @@ background:#f5f5f5;
      display: flex;          /* 👈 force show */
     padding: 0 12px;
     border-radius: 25px;
+    margin-bottom: 10px;
   }
 
   .search-container input {
@@ -234,7 +235,7 @@ padding: 10px 2%;
 .nav-link{
   cursor:pointer;
   font-weight:400;
-  font-size: 20px;
+  font-size: 18px;
   
 }
 
@@ -273,6 +274,7 @@ color:#e11d2e;
 .dropdown{
   position:relative;
   cursor:pointer;
+  font-size: 18px;
 }
 
 /* DROPDOWN MENU DEFAULT HIDDEN */
@@ -695,6 +697,7 @@ cursor:pointer;
   gap: 6px;
   cursor: pointer;
   font-size: 18px;
+  color:#1F2A44;
 }
 
 .dropdown-icon {
@@ -705,4 +708,39 @@ cursor:pointer;
 /* rotate when open */
 .show-dropdown ~ .dropdown-icon {
   transform: rotate(180deg);
+}
+
+
+.team-dropdown .dropdown-menu a{
+  font-size:18px !important;
+}
+
+.menu-links h1{
+  font-size:18px;
+  margin:0;
+  font-weight:500;
+
+}
+
+.team-dropdown .nav-link{
+  font-size:18px;
+  font-weight:500;
+  color:#1F2A44;
+}
+
+.dropdown .nav-link{
+  font-size:18px;
+}
+
+.menu-links a,
+.nav-link{
+  font-size:18px;
+  font-weight:500;
+  color:#1F2A44;
+}
+
+.menu-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
 }

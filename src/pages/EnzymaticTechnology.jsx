@@ -9,6 +9,23 @@ import irritationImg from "../assets/irritation.jpg";
 import compatibilityImg from "../assets/compatibility.jpg";
 
 
+import skinCareImg from "../assets/skin-care.jpg";
+import hairCareImg from "../assets/hair-care.jpg";
+import babyCareImg from "../assets/baby-care.jpg";
+import pregnancyCareImg from "../assets/pregnancy-care.jpg";
+import ayurvedicImg from "../assets/ayurvedic.jpg";
+import nutraceuticalsImg from "../assets/nutraceuticals.jpg";
+
+
+
+const enzymeCards = [
+  { title: " ", image: skinCareImg },
+  { title: " ", image: hairCareImg },
+  { title: " ", image: babyCareImg },
+  { title: " ", image: pregnancyCareImg },
+  { title: " ", image: ayurvedicImg },
+  { title: " ", image: nutraceuticalsImg },
+];
 export default function EnzymaticTechnology() {
   return (
     <div
@@ -147,59 +164,35 @@ export default function EnzymaticTechnology() {
 
 </section>
 
-       {/* SECTION 4 — APPLICATIONS */}
+      
+        {/* SECTION 4 — APPLICATIONS */}
+        <section className="mx-enzymeApps-section">
+          <div className="mx-enzymeApps-container">
+            <h2 className="mx-enzymeApps-title">Applications across formulations</h2>
+            <p className="mx-enzymeApps-text">
+              Enzymatic technology is applied across skin care, hair care,
+              baby care, pregnancy-safe products, ayurvedic medicines,
+              and nutraceuticals.
+            </p>
 
-<section className="mx-enzymeApps-section">
-
-  <div className="mx-enzymeApps-container">
-
-    <h2 className="mx-enzymeApps-title">
-      Applications across formulations
-    </h2>
-
-    <p className="mx-enzymeApps-text">
-      Enzymatic technology is applied across skin care, hair care,
-      baby care, pregnancy-safe products, ayurvedic medicines,
-      and nutraceuticals.
-    </p>
-
-    <div className="mx-enzymeApps-grid">
-
-      <div className="mx-enzymeApps-card">
-        <div className="mx-enzymeApps-dot"></div>
-        <h3>Skin Care</h3>
-      </div>
-
-      <div className="mx-enzymeApps-card">
-        <div className="mx-enzymeApps-dot"></div>
-        <h3>Hair Care</h3>
-      </div>
-
-      <div className="mx-enzymeApps-card">
-        <div className="mx-enzymeApps-dot"></div>
-        <h3>Baby Care</h3>
-      </div>
-
-      <div className="mx-enzymeApps-card">
-        <div className="mx-enzymeApps-dot"></div>
-        <h3>Pregnancy Care</h3>
-      </div>
-
-      <div className="mx-enzymeApps-card">
-        <div className="mx-enzymeApps-dot"></div>
-        <h3>Ayurvedic Medicine</h3>
-      </div>
-
-      <div className="mx-enzymeApps-card">
-        <div className="mx-enzymeApps-dot"></div>
-        <h3>Nutraceuticals</h3>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+            <div className="mx-enzymeApps-grid">
+              {enzymeCards.map((card, index) => (
+                <div
+                  key={index}
+                  className="mx-enzymeApps-card"
+                  style={{
+                    backgroundImage: `url(${card.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  {/* <div className="mx-enzymeApps-dot"></div> */}
+                  <h3>{card.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* SECTION 5 — QUALITY PROCESS */}
 

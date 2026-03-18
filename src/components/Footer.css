@@ -204,3 +204,41 @@ padding-bottom: 0px;
     font-size: 14px;
   }
 }
+
+
+/* .footer-title {
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+} */
+
+.footer-submenu {
+  margin-left: 12px;
+  margin-top: 6px;
+}
+
+.footer-submenu li {
+  margin: 4px 0;
+}
+
+/* .footer-submenu a {
+  color: #bbb;
+  font-size: 14px;
+} */
+
+/* .footer-submenu a:hover {
+  color: #00d4ff;
+} */
+
+.footer-title {
+  cursor: pointer;
+  color: #5C6473;
+  font-size: 14.5px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.footer-title:hover {
+  color: #B23A3F;
+  transform: translateX(6px);
+}

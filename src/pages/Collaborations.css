@@ -1,0 +1,106 @@
+/* PAGE BACKGROUND */
+.collab-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 40px;
+}
+
+/* HERO */
+.collab-hero {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collab-hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 37, 68, 0.75);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 38px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #E5E6E8;
+}
+
+/* SECTION TEXT */
+.collab-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 12px;
+  color: #0F2544;
+  line-height: 1.6;
+}
+
+/* GRID */
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 20px 40px;
+}
+
+/* CARD */
+.collab-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  border-left: 5px solid #C1121F;
+  backdrop-filter: blur(6px);
+}
+
+.collab-card:hover {
+  transform: translateY(-8px);
+}
+
+.collab-card h3 {
+  color: #0F2544;
+  margin-bottom: 10px;
+}
+
+.collab-card p {
+  color: #6E7178;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .collab-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .collab-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .collab-hero {
+    height: 220px;
+  }
+}

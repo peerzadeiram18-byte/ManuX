@@ -21,7 +21,17 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(false); // mobile dropdown toggle
   const[openMenu,setOpenMenu]=useState(false);
   const [openTeamDropdown, setOpenTeamDropdown] = useState(false);
+const [openCompanyDropdown, setOpenCompanyDropdown] = useState(false);
+const [openScienceDropdown, setOpenScienceDropdown] = useState(false);
+
   const [openResearchDropdown, setOpenResearchDropdown] = useState(false);
+
+
+  // 🔹 Add this for Products dropdown
+const [openProductsDropdown, setOpenProductsDropdown] = useState(false);
+
+
+  
   //const { user, logout } = useAuth();
 
 const { user, role, logout } = useAuth();
@@ -44,33 +54,48 @@ const { user, role, logout } = useAuth();
   { name: "Pet Care", path: "/petcare" },
   { name: "Men Care", path: "/menscare" },
   { name: "Pregnancy Care", path: "/pregnancycare" },
-  { name: "Ayurvedic Science", path: "/Ayurveda" },
+  { name: "Ayurvedic Science", path: "/ayurveda"},
   { name: "Ethical Ingredient Sourcing", path: "/ethical-ingredient-sourcing" },
-  { name: "sustainability responsibility", path: "/sustainability-responsibility" },
+  { name: "Sustainability Responsibility", path: "/sustainability-responsibility" },
   { name: "Research & Insights", path: "/research" },
   { name: "Nanotechnology", path: "/technology/nanotechnology" },
   { name: "Plasma Technology", path: "/technology/plasma-technology" },
   { name: "Plant Stem Cell Technology", path: "/technology/plant-stem-cell" },
-  { name: "Enzymatic Technology", path: "/technology/EnzymaticTechnology" },
-  { name: "Microbiome Technology", path: "/technology/MicrobiomeTechnology" },
-  { name: "emollihydra technology", path: "/technology/emollihydra-technology" },
-  { name: "exosome technology", path: "/technology/exosome-technology" },
+  { name: "Enzymatic Technology", path: "//technology/enzymatic-technology" },
+  { name: "Microbiome Technology", path: "//technology/microbiome-technology" },
+  { name: "EmolliHydra Technology", path: "/technology/emollihydra-technology" },
+  { name: "Exosome Technology", path: "/technology/exosome-technology" },
   { name: "About Us", path: "/about" },
   { name: "Contact", path: "/contact" }
 ];
 
-const filteredResults = searchData.filter((item) =>
-  item.name.toLowerCase().includes(searchTerm.toLowerCase())
-);
+const filteredResults = searchTerm
+  ? searchData
+      .filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+      .slice(0, 6)
+  : [];
 
 
 
 
 
 
-  useEffect(() => {
+// useEffect(() => {
+//   const handleClickOutside = () => {
+//     setOpenDropdown(false);
+//     setOpenResearchDropdown(false);
+//     setOpenScienceDropdown(false);
+//     setOpenCompanyDropdown(false);
+//   };
+useEffect(() => {
   const handleClickOutside = () => {
     setOpenDropdown(false);
+    setOpenResearchDropdown(false);
+    setOpenScienceDropdown(false);
+    setOpenCompanyDropdown(false);
+   setOpenProductsDropdown(false); // 🔥 ADD THIS  
   };
 
   document.addEventListener("click", handleClickOutside);
@@ -79,6 +104,8 @@ const filteredResults = searchData.filter((item) =>
     document.removeEventListener("click", handleClickOutside);
   };
 }, []);
+
+
 
   return (
     <div className="navbar">
@@ -120,6 +147,8 @@ const filteredResults = searchData.filter((item) =>
         onClick={() => {
           navigate(item.path);
           setSearchTerm("");
+          setMobileMenu(false); // 🔥 ADD THIS
+
         }}
       >
         {item.name}
@@ -164,7 +193,10 @@ const filteredResults = searchData.filter((item) =>
   <>
     <button
       className="login-btn"
-      onClick={() => setShowLogin(true)}
+    onClick={() => {
+  setShowLogin(true);
+  setMobileMenu(false); // 🔥 ADD THIS
+}}
     >
       Login
     </button>
@@ -193,10 +225,18 @@ const filteredResults = searchData.filter((item) =>
 
   <FaBell />
 
-  <FaUser
+  {/* <FaUser
     className="user-icon"
     onClick={() => navigate("/register")}
-  />
+  /> */}
+
+  <FaUser 
+  className="user-icon"
+  onClick={() => {
+    navigate("/register");
+    setMobileMenu(false); // 🔥 ADD THIS
+  }}
+/>
 
   {user ? (
     <button className="login-btn" onClick={logout}>
@@ -205,8 +245,10 @@ const filteredResults = searchData.filter((item) =>
   ) : (
     <button
       className="login-btn"
-      onClick={() => setShowLogin(true)}
-    >
+onClick={() => {
+  setShowLogin(true);
+  setMobileMenu(false); // 🔥 ADD THIS
+}}    >
       Login
     </button>
   )}
@@ -225,90 +267,178 @@ const filteredResults = searchData.filter((item) =>
 )}*/}
 
           {/* TECHNOLOGY DROPDOWN */}
-          <div className="dropdown"
-          onClick={(e) => e.stopPropagation()}
-          >
-             <NavLink to="/technology/nanotechnology"
-                 className="nav-link"
-                          onClick={() => setOpenDropdown(!openDropdown)}
-                   >
-            Technology  <FaChevronDown className="dropdown-icon" />
-</NavLink>
-
-            <div
-              className={`dropdown-menu ${
-                openDropdown ? "show-dropdown" : ""
-              }`}
-            >
-
-
-             <Link
-    to="/technology/nanotechnology" onClick={() => {
-      setMobileMenu(false);
-      setOpenMenu(false);
-    }}
-  >
-    Nanotechnology
-  </Link>
-
-  <Link
-    to="/technology/plasma-technology"
-    onClick={() => {
-      setMobileMenu(false);
-      setOpenMenu(false);
-    }}
-  >
-    Plasma Technology
-  </Link>
-
-  <Link
-    to="/technology/plant-stem-cell"
-    onClick={() => {
-      setMobileMenu(false);
-      setOpenMenu(false);
-    }}
-  >
-    Plant Stem Cell Technology
-  </Link>
-
-
-    <Link
-    to="/technology/Enzymatic-Technology"
-    onClick={() => {
-      setMobileMenu(false);
-      setOpenMenu(false);
-    }}
-  >
-     Enzymatic Technology
-  </Link>
-
-  <Link
- to="/technology/microbiome-technology"
- onClick={() => {
-   setMobileMenu(false);
- }}
+          <div
+  className="dropdown"
+  onClick={(e) => e.stopPropagation()}
 >
- Microbiome Technology
-</Link>
+  <span
+    className="nav-link"
+    onClick={() => {
+       setOpenDropdown(!openDropdown);
 
-                <Link
-                    to="/technology/emollihydra-technology"
-                   onClick={() => {
-                 setMobileMenu(false);
-                      }}
-                        >
-                      EmolliHydra™ Technology
-                    </Link>
+  // 🔥 CLOSE ALL OTHER DROPDOWNS
+      setOpenResearchDropdown(false);
+      setOpenScienceDropdown(false);
+      setOpenCompanyDropdown(false);
+      setOpenProductsDropdown(false);
+      
+    }}
+  >
+    Technology <FaChevronDown className="dropdown-icon" />
+  </span>
+
+  <div className={`dropdown-menu ${openDropdown ? "show-dropdown" : ""}`}>
+    
+    <Link to="/technology/nanotechnology"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Nanotechnology
+    </Link>
+
+    <Link to="/technology/plasma-technology"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Plasma Technology
+    </Link>
+
+    <Link to="/technology/plant-stem-cell"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Plant Stem Cell Technology
+    </Link>
+
+    <Link to="/technology/Enzymatic-Technology"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Enzymatic Technology
+    </Link>
+
+    <Link to="/technology/microbiome-technology"  onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Microbiome Technology
+    </Link>
+
+    <Link to="/technology/emollihydra-technology"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      EmolliHydra™ Technology
+    </Link>
+
+    <Link to="/technology/exosome-technology"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Exosome Technology
+    </Link>
+
+  </div>
+</div>
 
 
-                    <Link to="/technology/exosome-technology" onClick={() => {setMobileMenu(false); }}>
-                            Exosome Technology
-                    </Link>
 
 
 
-            </div>
-          </div>
+<div className="dropdown"
+     onClick={(e) => e.stopPropagation()}>
+
+  <span
+    className="nav-link"
+    onClick={() => {
+      setOpenProductsDropdown(!openProductsDropdown);
+
+      // 🔥 CLOSE OTHERS
+      setOpenDropdown(false);
+      setOpenResearchDropdown(false);
+      setOpenScienceDropdown(false);
+      setOpenCompanyDropdown(false);
+      //setOpenProductsDropdown(false);  
+    }}
+  >
+    Products <FaChevronDown className="dropdown-icon" />
+  </span>
+
+  <div className={`dropdown-menu ${openProductsDropdown ? "show-dropdown" : ""}`}>
+
+    <Link to="/skin-care" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Skin Care
+    </Link>
+
+    <Link to="/hair-care" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Hair Care
+    </Link>
+
+    <Link to="/baby-care" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Baby Care
+    </Link>
+
+    <Link to="/pet-care" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Pet Care
+    </Link>
+
+    <Link to="/mens-care" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Men's Care
+    </Link>
+
+    <Link to="/pregnancy-care" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Pregnancy Care
+    </Link>
+
+    <Link to="/ayurvedic" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Ayurvedic Medicines
+    </Link>
+
+    <Link to="/nutraceuticals" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Nutraceuticals
+    </Link>
+
+        <Link to="/digital-defense" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Digital Defense
+    </Link>
+        <Link to="/fitness" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+      Fitness
+    </Link>
+
+  </div>
+</div>
+
+
 
         <div
   className="dropdown"
@@ -316,7 +446,15 @@ const filteredResults = searchData.filter((item) =>
 >
   <span
     className="nav-link"
-    onClick={() => setOpenResearchDropdown(!openResearchDropdown)}
+onClick={() => {
+  setOpenResearchDropdown(!openResearchDropdown);
+
+  // 🔥 CLOSE OTHERS
+  setOpenDropdown(false);
+  setOpenScienceDropdown(false);
+  setOpenCompanyDropdown(false);
+  setOpenProductsDropdown(false);  
+}}
   >
     Research <FaChevronDown className="dropdown-icon" />
   </span>
@@ -347,64 +485,122 @@ const filteredResults = searchData.filter((item) =>
       Sustainability
     </Link>
 
+    <Link
+  to="/ethical-ingredient-sourcing"
+  onClick={() => {
+    setMobileMenu(false);
+    setOpenResearchDropdown(false);
+  }}
+>
+  Ingredient
+</Link>
+
   </div>
 </div>
          {/*} <NavLink to="/ingredients" onClick={() => setMobileMenu(false)}>
             Ingredients
           </NavLink>*/}
-          <NavLink to="/Ayurveda"onClick={() => setMobileMenu(false)} >
+          {/* <NavLink to="/Ayurveda"onClick={() => setMobileMenu(false)} >
             Ayurvedic Science
-          </NavLink>
-          <NavLink to="/ethical-ingredient-sourcing" onClick={() => setMobileMenu(false)}>
+          </NavLink> */}
+          {/* <NavLink to="/ethical-ingredient-sourcing" onClick={() => setMobileMenu(false)}>
              Ingredient 
-          </NavLink>
+          </NavLink> */}
            {/* <NavLink to="/sustainability-responsibility" onClick={() => setMobileMenu(false)}>
            Sustainability 
           </NavLink> */}
-          <NavLink to="/quality-safety-compliance" onClick={() => setMobileMenu(false)}>
+          {/* <NavLink to="/quality-safety-compliance" onClick={() => setMobileMenu(false)}>
            Safety & Compliance
-          </NavLink>
-         <div
-  className="dropdown team-dropdown"
+          </NavLink> */}
+
+
+
+       <div className="dropdown Sci-dropdown"
   onClick={(e) => e.stopPropagation()}
 >
-
   <span
     className="nav-link"
-    onClick={() => setOpenTeamDropdown(!openTeamDropdown)}
+    onClick={() => {
+      setOpenScienceDropdown(!openScienceDropdown);
+      setOpenCompanyDropdown(false); // 👈 close other
+      setOpenResearchDropdown(false);
+      setOpenDropdown(false);
+      setOpenProductsDropdown(false);  
+    }}
   >
-    Our Team  <FaChevronDown className="dropdown-icon" />
+    Science <FaChevronDown className="dropdown-icon" />
   </span>
 
-  <div
-    className={`dropdown-menu ${
-      openTeamDropdown ? "show-dropdown" : ""
-    }`}
-  >
-
-    <Link
-      to="/OurTeam"
-      onClick={() => {
-        setMobileMenu(false);
-        setOpenTeamDropdown(false);
-      }}
-    >
-      Team Members
+  <div className={`dropdown-menu ${openScienceDropdown ? "show-dropdown" : ""}`}>
+    
+    <Link to="/Ayurveda"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Ayurvedic Science
     </Link>
 
-    <Link
-      to="/about"
-      onClick={() => {
-        setMobileMenu(false);
-        setOpenTeamDropdown(false);
-      }}
-    >
-      About Us
+    <Link to="/quality-safety-compliance"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Safety & Compliance
     </Link>
 
   </div>
-
 </div>
+
+
+
+
+
+<div className="dropdown team-dropdown"
+  onClick={(e) => e.stopPropagation()}
+>
+  <span
+    className="nav-link"
+    onClick={() => {
+      setOpenCompanyDropdown(!openCompanyDropdown);
+      setOpenScienceDropdown(false); // 👈 close other
+      setOpenResearchDropdown(false);
+      setOpenDropdown(false);
+     setOpenProductsDropdown(false); 
+    }}
+  >
+    Company <FaChevronDown className="dropdown-icon" />
+  </span>
+
+  <div className={`dropdown-menu ${openCompanyDropdown ? "show-dropdown" : ""}`}>
+    
+ <Link to="/about"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      About Us
+    </Link>
+
+    <Link to="/OurTeam"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+      Team Members
+    </Link>
+
+
+     <Link to="/collaborations"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+    Collaborations
+    </Link>
+
+
+   
+
+  </div>
+</div>
+
+
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
           </NavLink>
@@ -414,7 +610,7 @@ const filteredResults = searchData.filter((item) =>
 
           {role === "admin" && (
                   <NavLink to="/admin/dashboard" onClick={() => setMobileMenu(false)} >
-                       Admin Dashboard
+                       <span>Admin Dashboard</span>
                   </NavLink>
                     )}
 

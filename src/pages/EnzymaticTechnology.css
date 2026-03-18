@@ -7,6 +7,7 @@
   background-position:center;
   background-repeat:no-repeat;
   position:relative;
+  font-family: 'Avenir Next', sans-serif;
 }
 
 /* DARK OVERLAY */
@@ -171,11 +172,33 @@
 
 .mx-enzymeFlow-section{
   width:100%;
-  padding:120px 20px;
+  padding:70px 20px;
   background: transparent;
     backdrop-filter: blur(8px); 
     border: 2px solid white;
+
+    animation: mx-exoSlideRight 1.2s ease forwards;
 }
+
+
+/* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideRight {
+
+  0%{
+    opacity:0;
+    transform:translateX(-120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
 
 /* CONTAINER */
 
@@ -348,8 +371,28 @@
 
 .mx-enzymeBenefit-section{
   width:100%;
-  padding:120px 20px;
+  padding:70px 20px;
   background:transparent;
+  animation: mx-exoSlideLeft 3.2s ease forwards;
+}
+
+
+/* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideLeft {
+
+  0%{
+    opacity:0;
+    transform:translateX(120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+
 }
 
 /* WRAPPER */
@@ -519,11 +562,31 @@
 
 .mx-enzymeApps-section{
   width:100%;
-  padding:120px 20px;
+  padding:70px 20px;
   background:transparent;
 
   backdrop-filter: blur(8px); 
   border: 2px solid white;
+  animation: mx-exoSlideRight 3.2s ease forwards;
+}
+
+
+/* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideRight {
+
+  0%{
+    opacity:0;
+    transform:translateX(-120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+
 }
 
 /* CONTAINER */
@@ -565,7 +628,7 @@
 
 .mx-enzymeApps-card{
   background:transparent;
-  padding:35px 20px;
+  padding:150px 20px;
   border-radius:14px;
   border:2px solid white;
   backdrop-filter: blur(20px); 

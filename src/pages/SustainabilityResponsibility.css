@@ -1,4 +1,7 @@
 /*FULL PAGE BACKGROUND*/
+body {
+font-family: 'Avenir Next', sans-serif;}
+
 
 .sustain-page{
   min-height:100%;
@@ -37,6 +40,21 @@
 
   background-size:cover;
   background-position:center;
+
+
+  /* Animation on scroll */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  transition: all 0.35s ease;
+}
+
+/* Fade-up animation keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 }
 

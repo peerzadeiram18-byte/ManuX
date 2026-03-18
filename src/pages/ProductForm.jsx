@@ -6,6 +6,25 @@ import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
+
+const categories = [
+  "skin-care",
+  "hair-care",
+  "baby-care",
+  "pet-care",
+  "mens-care",
+  "pregnancy-care",
+  "ayurvedic",
+  "nutraceuticals",
+
+
+    // ✅ NEW ADD
+  "digital-defense",
+  "fitness"
+];
+
+
+
 export default function ProductForm() {
 
 //  const { addProduct } = useContext(ProductContext);
@@ -140,7 +159,7 @@ const handleSubmit = async (e) => {
   formData.append("category", category);
   formData.append("description", description);
   formData.append("image", image);
-  formData.append("price", price);
+ // formData.append("price", price);
 
   try {
 
@@ -188,21 +207,36 @@ const handleSubmit = async (e) => {
             onChange={(e) => setName(e.target.value)}
             required
           />
-
+{/* 
           <input
             type="text"
             placeholder="Category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
-          />
+          /> */}
 
-          <input
+
+
+          <select
+  value={category}
+  onChange={(e) => setCategory(e.target.value)}
+  required
+>
+  <option value="">Select Category</option>
+  {categories.map((cat, i) => (
+    <option key={i} value={cat}>
+      {cat}
+    </option>
+  ))}
+</select>
+
+          {/* <input
   type="number"
   placeholder="Price"
   value={price}
   onChange={(e)=>setPrice(e.target.value)}
-/>
+/> */}
 
           <textarea
             placeholder="Description"

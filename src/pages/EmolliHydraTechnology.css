@@ -1,11 +1,13 @@
 /* PAGE BACKGROUND */
-
+body {
+font-family: 'Avenir Next', sans-serif;}
 .emolli-page{
   min-height:100vh;
   width:100%;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
+  font-family: 'Avenir Next', sans-serif;
 }
 
 /* OVERLAY */
@@ -27,7 +29,7 @@
 .mx-emolliHydra-section{
 
   width:100%;
-  min-height:50vh;
+  min-height:60vh;
 
   background-size:cover;
   background-position:center;
@@ -51,6 +53,24 @@
   display:flex;
   align-items:center;
   justify-content:center;
+
+  animation: mxMicroFade 1.2s ease forwards;
+
+}
+
+/* ANIMATION */
+
+@keyframes mxMicroFade{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
 
 }
 
@@ -88,6 +108,8 @@
   margin-bottom:25px;
 
   letter-spacing:0.5px;
+
+  margin-top: 100px;
 
 }
 
@@ -216,6 +238,26 @@
   background:transparent;
 
   border: 2px solid white;
+
+  animation: mx-exoSlideRight 1.2s ease forwards;
+}
+
+/* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideRight {
+
+  0%{
+    opacity:0;
+    transform:translateX(-120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+
 }
 
 /* WRAPPER */
@@ -226,9 +268,10 @@
   margin:auto;
 
   display:flex;
-  align-items:flex-start;
+  align-items:center;
 
   gap:70px;
+
 }
 
 /* LEFT SIDE */
@@ -282,7 +325,8 @@
   line-height:1.9;
 
   color:#1F2A44;
-
+  width: 700px;
+ align-items:center;
 }
 
 /* =====================
@@ -346,6 +390,24 @@
   margin:auto;
 
   text-align:center;
+
+  animation: mxMicroFade 1.2s ease forwards;
+
+}
+
+/* ANIMATION */
+
+@keyframes mxMicroFade{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
 
 }
 

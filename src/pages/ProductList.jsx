@@ -32,10 +32,26 @@ const filteredProducts = products.filter((product) => {
   const currentProducts = filteredProducts.slice(indexOfFirst, indexOfLast);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
-  const handleUpdate = () => {
-    updateProduct(editingProduct);
+const handleUpdate = async () => {
+  try {
+    const formData = new FormData();
+
+    formData.append("name", editingProduct.name);
+    formData.append("category", editingProduct.category);
+    formData.append("description", editingProduct.description);
+
+    // ✅ IMAGE FIX
+    if (editingProduct.image instanceof File) {
+      formData.append("image", editingProduct.image);
+    }
+
+    await updateProduct(editingProduct._id, formData);
+
     setEditingProduct(null);
-  };
+  } catch (err) {
+    console.log(err);
+  }
+};
 
   return (
               <div className="pm-container">
@@ -113,61 +129,90 @@ const filteredProducts = products.filter((product) => {
           </button>
         ))}
       </div>
+{/* ✨ Edit Modal */}
+{editingProduct && (
+  <div className="modal-overlay">
+    <div className="modal">
 
-      {/* ✨ Edit Modal */}
-      {editingProduct && (
-        <div className="modal-overlay">
-          <div className="modal">
+      <h3>Edit Product</h3>
 
-            <h3>Edit Product</h3>
+      <input
+        type="text"
+        placeholder="Product Name"
+        value={editingProduct.name}
+        onChange={(e) =>
+          setEditingProduct({ ...editingProduct, name: e.target.value })
+        }
+      />
 
-            <input
-              value={editingProduct.name}
-              onChange={(e) =>
-                setEditingProduct({ ...editingProduct, name: e.target.value })
-              }
-            />
 
-            <input
-              value={editingProduct.category}
-              onChange={(e) =>
-                setEditingProduct({ ...editingProduct, category: e.target.value })
-              }
-            />
+<select
+  value={editingProduct.category}
+  onChange={(e) =>
+    setEditingProduct({
+      ...editingProduct,
+      category: e.target.value
+    })
+  }
+>
+  <option value="">Select Category</option>
+  <option value="skin-care">Skin Care</option>
+  <option value="hair-care">Hair Care</option>
+  <option value="baby-care">Baby Care</option>
+  <option value="pet-care">Pet Care</option>
+  <option value="mens-care">Mens Care</option>
+  <option value="pregnancy-care">Pregnancy Care</option>
+  <option value="ayurvedic">Ayurvedic</option>
+  <option value="nutraceuticals">Nutraceuticals</option>
+</select>
+      {/* <input
+        type="text"
+        placeholder="Category"
+        value={editingProduct.category}
+        onChange={(e) =>
+          setEditingProduct({ ...editingProduct, category: e.target.value })
+        }  
+      /> */}
 
-            <textarea
-              value={editingProduct.description}
-              onChange={(e) =>
-                setEditingProduct({
-                  ...editingProduct,
-                  description: e.target.value
-                })
-              }
-            />
+      <textarea
+        placeholder="Description"
+        value={editingProduct.description}
+        onChange={(e) =>
+          setEditingProduct({
+            ...editingProduct,
+            description: e.target.value
+          })
+        }
+      />
 
-            <input
-              value={editingProduct.image}
-              onChange={(e) =>
-                setEditingProduct({ ...editingProduct, image: e.target.value })
-              }
-            />
+      <input
+         type="file"
+        placeholder="Image URL"
+        //value={editingProduct.image}
+          onChange={(e) =>
+    setEditingProduct({
+      ...editingProduct,
+      image: e.target.files[0]
+    })
+  }
+      />
 
-            <div className="modal-buttons">
-              <button className="btn update-btn" onClick={handleUpdate}>
-                Update
-              </button>
+      <div className="modal-buttons">
+        <button className="btn update-btn" onClick={handleUpdate}>
+          Update
+        </button>
 
-              <button
-                className="btn cancel-btn"
-                onClick={() => setEditingProduct(null)}
-              >
-                Cancel
-              </button>
-            </div>
+        <button
+          className="btn cancel-btn"
+          onClick={() => setEditingProduct(null)}
+        >
+          Cancel
+        </button>
+      </div>
 
-          </div>
-        </div>
-      )}
+    </div>
+  </div>
+)}
 
     </div>
   );

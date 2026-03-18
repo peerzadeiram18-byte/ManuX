@@ -6,6 +6,8 @@ background:#f4f6f9;
 min-height:100vh;
 font-family: "Segoe UI", sans-serif;
 }*/
+body {
+font-family: 'Avenir Next', sans-serif;}
 
 .ul-container{
 padding:60px 6%;

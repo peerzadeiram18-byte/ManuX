@@ -1,0 +1,130 @@
+/* PAGE */
+.fitness-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3fff6;
+}
+
+/* HERO */
+.fitness-hero {
+  position: relative;
+  height: 320px;
+  /* background: url("/fitness-bg.jpg") center/cover no-repeat; */
+ 
+ background: linear-gradient(135deg, #2e7d32, #66bb6a);
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fitness-hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 80, 40, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  max-width: 600px;
+  font-size: 16px;
+}
+
+/* CONTAINER */
+.fitness-container {
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2e7d32;
+}
+
+/* GRID */
+.fitness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.fitness-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.fitness-card:hover {
+  transform: translateY(-10px);
+}
+
+/* IMAGE FIX (NO CUT) */
+.fitness-img-box {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+.fitness-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* CONTENT */
+.fitness-content {
+  padding: 15px;
+}
+
+.fitness-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.fitness-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* NO DATA */
+.no-data {
+  text-align: center;
+  width: 100%;
+  color: #999;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 768px) {
+
+  .fitness-hero {
+    height: 250px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+}

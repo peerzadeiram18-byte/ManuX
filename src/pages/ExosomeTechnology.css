@@ -6,6 +6,7 @@
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
+  font-family: 'Avenir Next', sans-serif;
 }
 
 /* DARK OVERLAY */
@@ -413,6 +414,28 @@
   display:flex;
   align-items:center;
   gap:70px;
+
+
+
+  animation: mx-exoSlideLeft 1.2s ease forwards;
+
+}
+
+/* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideLeft {
+
+  0%{
+    opacity:0;
+    transform:translateX(120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
 
 }
 

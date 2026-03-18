@@ -29,6 +29,8 @@ import LabBanner from "../components/LabBanner";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
+import heroVideo from "../video/hero-video.mp4";
+
 
 
 
@@ -121,8 +123,19 @@ useEffect(() => {
            style={{ backgroundImage: `url(${bgImage})` }}
            >
 
-      <section className="home-hero">
+      {/* <section className="home-hero">
     
+  {/* Background Video */}
+  {/* <video
+    className="hero-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="/video/hero-video.mp4" type="video/mp4" />
+  </video> */}
+
 
 
         {/* Background Image */}
@@ -131,13 +144,13 @@ useEffect(() => {
          //  style={{ backgroundImage: `url(${images[current]})` }}
        ></div>  */}
 
-        {/* Overlay */}
-        <div className="hero-overlay"></div>
+        {/* Overlay*/}
+        {/*<div className="hero-overlay"></div>
 
          <div className="hero-box7">   {/* 👈 YE NAYA WRAPPER ADD KARNA HAI */}
 
         {/* Content */}
-        <div className="hero-content">
+        {/* <div className="hero-content">
 
           <span className="hero-tag">
             AYURVEDA • PLASMA NANO SCIENCE • CELL CULTURE
@@ -155,7 +168,7 @@ useEffect(() => {
            wellness, and therapeutic categories
           </p>
 
-           <div className="hero-buttons">
+            <div className="hero-buttons">
                  <button className="btn-primary">
                    Request Industrial Partnership
                  </button>
@@ -163,12 +176,31 @@ useEffect(() => {
                  <button className="btn-secondary">
                     Explore Technology
                  </button>
-           </div>
+           </div> 
 
 
-        </div>
-          </div>
-      </section>
+        </div> */}
+         {/*} </div> 
+      </section> */}
+
+<section className="home-hero">
+
+ <video autoPlay muted loop playsInline className="hero-video">
+  <source src={heroVideo} type="video/mp4" />
+</video>
+
+  {/* <div className="hero-overlay"></div>
+
+  <div className="hero-content">
+    <h1>Science Meets Nature</h1>
+    <p>Advanced Ayurvedic Nanotechnology</p>
+  </div> */}
+
+</section>
+
+
+
+
 
     <section className="triple-hero">
 

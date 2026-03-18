@@ -62,31 +62,63 @@ export const ProductProvider = ({ children }) => {
   };
 
   // 🔹 UPDATE PRODUCT
-  const updateProduct = async (product) => {
 
-    try {
 
-      const res = await axios.put(
-        `http://localhost:5000/api/products/${product._id}`,
-        product,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`
-          }
+  const updateProduct = async (id, formData) => {
+  try {
+    const res = await axios.put(
+      `http://localhost:5000/api/products/${id}`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${localStorage.getItem("token")}`
         }
-      );
+      }
+    );
 
-      setProducts((prev) =>
-        prev.map((p) =>
-          p._id === product._id ? res.data : p
-        )
-      );
+    for (let pair of formData.entries()) {
+  console.log(pair[0], pair[1]);
+}
 
-    } catch (err) {
-      console.log(err);
-    }
+    // ✅ state update
+    setProducts((prev) =>
+      prev.map((p) =>
+        p._id === id ? res.data : p
+      )
+    );
 
-  };
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+
+  // const updateProduct = async (product) => {
+
+  //   try {
+
+  //     const res = await axios.put(
+  //       `http://localhost:5000/api/products/${product._id}`,
+  //       product,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${localStorage.getItem("token")}`
+  //         }
+  //       }
+  //     );
+
+  //     setProducts((prev) =>
+  //       prev.map((p) =>
+  //         p._id === product._id ? res.data : p
+  //       )
+  //     );
+
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+
+  // };
 
   return (
     <ProductContext.Provider

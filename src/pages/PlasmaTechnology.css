@@ -10,6 +10,7 @@ font-family: 'Avenir Next', sans-serif;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Avenir Next', sans-serif;
 }
 
 /* ================= PLASMA HERO SECTION ================= */
@@ -69,6 +70,30 @@ font-family: 'Avenir Next', sans-serif;
   position: relative;
   z-index: 2;
   max-width: 850px;
+
+
+
+     animation: mxHeroFadeUp 1.2s ease forwards;
+}
+
+
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes mxHeroFadeUp{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
 }
 
 /* Heading */
@@ -80,7 +105,7 @@ font-family: 'Avenir Next', sans-serif;
   margin-bottom: 0px;
   text-shadow: 0 10px 30px rgba(0,0,0,0.7);
 
-  padding-top: 160px;
+  padding-top: 70px;
 }
 
 /* Subheading */
@@ -301,6 +326,27 @@ font-family: 'Avenir Next', sans-serif;
   max-width: 900px;
   text-align: center;
 font-family: 'Avenir Next', sans-serif;
+     animation: mxHeroFadeUp 1.2s ease forwards;
+}
+
+
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes mxHeroFadeUp{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
 }
 
 /* Heading */
@@ -311,6 +357,7 @@ font-family: 'Avenir Next', sans-serif;
   margin-bottom: 20px;
   
 }
+
 
 /* Decorative line */
 .line {
@@ -538,6 +585,27 @@ font-family: 'Avenir Next', sans-serif;
 
   justify-content: center;
   text-align: center;
+     animation: mxHeroFadeUp 1.2s ease forwards;
+}
+
+
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes mxHeroFadeUp{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
 }
 
 .luxury-content h2 {

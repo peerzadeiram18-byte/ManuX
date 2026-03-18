@@ -5,6 +5,7 @@ font-family: 'Avenir Next', sans-serif;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Avenir Next', sans-serif;
 
 }
 
@@ -38,15 +39,36 @@ background:/*
      box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+     animation: mxHeroFadeUp 1.2s ease forwards;
 }
 
+
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes mxHeroFadeUp{
+
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
 
 .nano-hero h1 {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 400;
   letter-spacing: 1px;
   color: #1F2A44;
-  padding-top: 250px;
+ /* padding-top: 130px;*/
 }
 
 .nano-hero p {
