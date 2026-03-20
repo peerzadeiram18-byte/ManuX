@@ -1,4 +1,6 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+
+// import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./DigitalDefense.css";
 
@@ -11,6 +13,10 @@ export default function DigitalDefense() {
   const digitalProducts = products.filter(
     (item) => item.category === "digital-defense"
   );
+
+const [selectedImage, setSelectedImage] = useState(null);
+
+
 
   return (
     <div className="digital-page">
@@ -40,10 +46,21 @@ export default function DigitalDefense() {
 
                 {/* IMAGE */}
                 <div className="digital-img-box">
-                  <img
+                
+                
+                <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() =>
+    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  }
+/>
+                
+                
+                  {/* <img
                     src={`${BASE_URL}/uploads/${item.image}`}
                     alt={item.name}
-                  />
+                  /> */}
                 </div>
 
                 {/* CONTENT */}
@@ -62,6 +79,16 @@ export default function DigitalDefense() {
 
         </div>
       </div>
+
+
+      {selectedImage && (
+  <div
+    className="digital-img-modal"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img src={selectedImage} alt="preview" />
+  </div>
+)}
 
     </div>
   );

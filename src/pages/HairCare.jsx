@@ -1,4 +1,7 @@
-import { useContext } from "react";
+
+import { useContext, useState } from "react";
+
+// import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./HairCare.css";
 
@@ -11,6 +14,10 @@ export default function HairCare() {
     (item) => item.category === "hair-care"
   );
 
+
+const [selectedImage, setSelectedImage] = useState(null);
+
+
   return (
     <div className="hair-page">
 
@@ -22,10 +29,22 @@ export default function HairCare() {
             <div key={item._id} className="hair-card">
 
               <div className="hair-img-box">
-                <img
+               
+               
+               <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() =>
+    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  }
+/>
+               
+               
+               
+                {/* <img
                   src={`${BASE_URL}/uploads/${item.image}`}
                   alt={item.name}
-                />
+                /> */}
               </div>
 
               <div className="hair-content">
@@ -39,6 +58,17 @@ export default function HairCare() {
           <p className="no-data">No Hair Care Products Found</p>
         )}
       </div>
+
+
+            {selectedImage && (
+  <div
+    className="hair-img-modal"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img src={selectedImage} alt="preview" />
+  </div>
+)}
+
 
     </div>
   );

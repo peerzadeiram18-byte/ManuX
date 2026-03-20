@@ -13,13 +13,26 @@ export default function ProductList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [editingProduct, setEditingProduct] = useState(null);
 
-  const itemsPerPage = 5;
+  const itemsPerPage = 20;
 
   // 🔎 Search Filter
 const filteredProducts = products.filter((product) => {
   const term = search.toLowerCase();
 
-  return (
+
+    // ✅ 👉 YAHI PE ADD KARO
+  // const toTitleCase = (text) => {
+  //   if (!text) return "";
+  //   return text
+  //     .toLowerCase()
+  //     .replace(/\b\w/g, (char) => char.toUpperCase());
+  // };
+
+
+
+
+
+return (
     product.name.toLowerCase().includes(term) ||
     product.category.toLowerCase().includes(term) ||
     product.description.toLowerCase().includes(term)
@@ -36,9 +49,21 @@ const handleUpdate = async () => {
   try {
     const formData = new FormData();
 
-    formData.append("name", editingProduct.name);
+    // formData.append("name", editingProduct.name);
+
+    formData.append(
+  "name",
+  editingProduct.name
+    .toLowerCase()
+    .replace(/\b\w/g, (char) => char.toUpperCase())
+);
     formData.append("category", editingProduct.category);
-    formData.append("description", editingProduct.description);
+    // formData.append("description", editingProduct.description);
+
+    formData.append(
+  "description",
+  editingProduct.description ? editingProduct.description : ""
+);
 
     // ✅ IMAGE FIX
     if (editingProduct.image instanceof File) {
@@ -50,6 +75,7 @@ const handleUpdate = async () => {
     setEditingProduct(null);
   } catch (err) {
     console.log(err);
+    console.log(editingProduct);
   }
 };
 
@@ -86,7 +112,8 @@ const handleUpdate = async () => {
               //<tr key={product.id}>
                 <tr key={product._id}>
                 <td>{indexOfFirst + index + 1}</td>
-                <td>{product.name}</td>
+                 <td>{product.name}</td> 
+                {/* <td>{toTitleCase(product.name)}</td> */}
                 <td>{product.category}</td>
                 <td>{product.description}</td>
                 <td>
@@ -176,7 +203,10 @@ const handleUpdate = async () => {
 
       <textarea
         placeholder="Description"
-        value={editingProduct.description}
+    
+  value={editingProduct.description || ""}
+     
+        // value={editingProduct.description}
         onChange={(e) =>
           setEditingProduct({
             ...editingProduct,

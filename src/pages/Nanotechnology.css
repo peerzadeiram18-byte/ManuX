@@ -74,7 +74,7 @@ background:/*
 .nano-hero p {
   max-width: 720px;
   margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   opacity: 0.95;
   color:#1F2A44 ;
 }
@@ -159,7 +159,7 @@ background: linear-gradient(
 .section-title {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 36px;
+  font-size: 37px;
   color: #1F2A44;
   
 }
@@ -261,7 +261,7 @@ background: linear-gradient(
 
 /* Ayurveda Intro Section */
 .ayurveda-section {
-  padding: 100px 8%;
+  padding: 80px 8%;
  /* background: #ffffff;*/
 
     border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
@@ -270,6 +270,9 @@ background: linear-gradient(
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
+    max-width: 100%;
+    background: transparent;
+
 }
 
 .ayurveda-wrapper {
@@ -277,6 +280,8 @@ background: linear-gradient(
   align-items: center;
   gap: 70px;
   flex-wrap: wrap;
+  /* margin-left: 300px; */
+  width: 100%;
 }
 
 .ayurveda-text {
@@ -289,20 +294,20 @@ background: linear-gradient(
   color: #B23A3F;
   padding: 6px 14px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 15px;
 }
 
 .ayurveda-text h2 {
-  font-size: 40px;
+  font-size: 41px;
   margin-bottom: 20px;
   color: #1F2A44;
   font-weight: 400;
 }
 
 .ayurveda-text p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.8;
   color: #5C6473;
   margin-bottom: 18px;
@@ -315,7 +320,7 @@ background: linear-gradient(
 }
 
 .ayurveda-text ul li {
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 10px;
   color: #B23A3F;
   font-weight: 400;
@@ -343,6 +348,137 @@ background: linear-gradient(
     font-size: 32px;
   }
 }
+
+
+
+/* FULL SECTION */
+.bio-section {
+background: linear-gradient(
+135deg,
+#c9c4de,
+#b9b3d2,
+#d8d4ea
+);  padding: 40px 10px;
+    border-radius: 30px;
+    max-width: 100%;
+    border: 3px solid white;
+
+
+     background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+    border-radius: 20px;
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+/* 🔥 overlay for readability */
+/*.bio-section::before {
+  /* content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85); /* light overlay */
+ /* z-index: 0;
+} */
+
+/* TITLE */
+.bio-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  color: #1F2A44;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.bio-desc {
+  text-align: center;
+
+  margin: 0 auto 40px;
+  color: #1F2A44;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* CARD */
+.bio-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #f5f5f5;
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin: 15px auto;
+  max-width: 630px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ICON */
+.bio-icon {
+  font-size: 28px;
+  color: #B23A3F;
+}
+
+/* TITLE TEXT */
+.bio-box h3 {
+  font-size: 16px;
+  color: #B23A3F;
+  margin-bottom: 3px;
+}
+
+/* SUB TEXT */
+.bio-box p {
+  font-size: 13px;
+  color: #444;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 768px) {
+  .bio-title {
+    font-size: 24px;
+  }
+
+  .bio-desc {
+    font-size: 13px;
+  }
+
+  .bio-box {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .bio-icon {
+    font-size: 24px;
+  }
+
+  .bio-box h3 {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* SECTION */
 .science-section {
@@ -379,14 +515,14 @@ background: linear-gradient(
 }
 
 .science-content h2 {
-  font-size: 36px;
+  font-size: 37px;
   margin-bottom: 20px;
   font-weight: 700;
   color: #1F2A44;
 }
 
 .science-content p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.7;
   color: #555;
 }
@@ -470,12 +606,12 @@ object-fit:cover;
 }
 
 .card1-overlay h3 {
-  font-size: 20px;
+  font-size: 21px;
   margin-bottom: 10px;
 }
 
 .card1-overlay p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -540,6 +676,139 @@ object-fit:cover;
 }
 
 
+
+
+
+
+/* ===============================
+   NANO CIRCLE SECTION
+=============================== */
+
+.nano-circle-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER */
+.nano-circle-container {
+  max-width: 1400px;
+  width: 100%;
+  text-align: center;
+  animation: nanoFadeUp 1s ease forwards;
+}
+
+/* HEADING */
+.nano-circle-heading {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1F2A44;
+  margin-bottom: 15px;
+}
+
+/* SUBTEXT */
+.nano-circle-subtext {
+  font-size: 22px;
+  color: #1F2A44;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* IMAGE WRAPPER */
+.nano-circle-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+
+    
+}
+
+/* IMAGE */
+.nano-circle-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: nanoZoomIn 1.2s ease;
+ 
+}
+
+/* ===============================
+   ANIMATIONS
+=============================== */
+
+@keyframes nanoFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nanoZoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 992px) {
+  .nano-circle-heading {
+    font-size: 26px;
+  }
+
+  .nano-circle-subtext {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nano-circle-section {
+    padding: 50px 15px;
+  }
+
+  .nano-circle-heading {
+    font-size: 22px;
+  }
+
+  .nano-circle-subtext {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .nano-circle-image-wrapper {
+    border-radius: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================
    NANO TECHNOLOGY SECTION
    ========================= */
@@ -568,7 +837,7 @@ background: linear-gradient(
 
 .nano-dark .section-title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   margin-bottom: 50px;
   letter-spacing: 1px;
   color: #1F2A44;
@@ -619,13 +888,13 @@ background: linear-gradient(
 
 /* TEXT */
 .nano-card2 h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 12px;
   color:#1F2A44 ;
 }
 
 .nano-card2 p {
-  font-size: 1.05rem;
+  font-size: 1.07rem;
   line-height: 1.6;
   opacity: 0.9;
   color:#5C6473 ;
@@ -682,7 +951,7 @@ background: linear-gradient(
 }
 
 .nano-cta h2 {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   font-family: 'Avenir Next', sans-serif;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
@@ -692,14 +961,14 @@ background: linear-gradient(
 .nano-cta p {
   max-width: 700px;
   margin: 0 auto 40px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   color: #5C6473;
 }
 .nano-cta .btn {
   padding: 16px 44px;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   cursor: pointer;
   color: #fff;
@@ -769,8 +1038,8 @@ background: linear-gradient(
 
 /* HEADING */
 .nano-dark h2 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 41px;
+  font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.3;
   color:#1F2A44 ;
@@ -778,12 +1047,12 @@ background: linear-gradient(
 
 /* PARAGRAPH */
 .nano-dark p {
-  font-size: 18px;
+  font-size: 22px;
   opacity: 0.85;
   max-width: 700px;
   margin: 0 auto 50px;
   line-height: 1.6;
-  color:#5C6473;
+  color:#1F2A44;
 }
 
 /* FEATURE BOXES */
@@ -996,4 +1265,377 @@ height:220px;
 .nano-card h3{
 font-size:18px;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+
+
+.mx-process-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: transparent;
+  text-align: center;
+}
+
+/* CONTAINER */
+.mx-process-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* TITLE */
+.mx-process-title {
+  font-size: 45px;
+  font-weight: 600;
+  color: #1F2A44;
+  margin-bottom: 30px;
+}
+
+/* IMAGE */
+.mx-process-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.mx-process-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+animation: mx-exoSlideRight 1.2s ease forwards;
+}
+
+
+ /* =========================
+   LEFT TO RIGHT ANIMATION
+========================= */
+
+@keyframes mx-exoSlideRight {
+
+  0%{
+    opacity:0;
+    transform:translateX(-120px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+/* TEXT */
+.mx-process-text p {
+  font-size: 16px;
+  color: #5C6473;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* =========================
+   RESULT BAR (BOTTOM)
+========================= */
+
+.mx-process-bar {
+  margin-top: 50px;
+  width: 100%;
+  background: #1F2A44;
+  padding: 18px 10px;
+  margin-bottom: -60px;
+}
+
+.mx-process-bar p {
+  color: #E6E6FA; /* lavender feel */
+  font-size: 15px;
+  text-align: center;
+}
+
+.mx-process-bar span {
+  margin: 0 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .mx-process-title {
+    font-size: 24px;
+  }
+
+  .mx-process-image img {
+    max-width: 100%;
+  }
+
+  .mx-process-text p {
+    font-size: 14px;
+  }
+
+  .mx-process-bar p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+
+
+
+
+/* SECTION */
+/* .ayurveda-section {
+  width: 100%;
+  padding: 40px 20px;
+  background: transparent;
+}
+
+/* IMAGE BOX */
+/*.ayurveda-image {
+  width: 100%;
+  height: 800px; /* desktop height */
+
+  /*background-position: center;
+  background-repeat: no-repeat;
+
+  /* 🔥 MAIN IMPORTANT */
+ /* background-size: cover; /* 👈 full image dikhega */
+
+  /*border-radius: 16px;
+}
+
+
+
+@media (max-width: 1024px) {
+  .ayurveda-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ayurveda-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ayurveda-image {
+    height: 250px;
+  }
+} */
+
+
+
+/* ===============================
+   SAFETY SECTION (UNIQUE)
+=============================== */
+
+.mx-safety-section {
+  padding: 40px 40px;
+  background: transparent;
+}
+
+/* MAIN CONTAINER */
+.mx-safety-container {
+  display: flex;
+  align-items: stretch;   /* 🔥 SAME HEIGHT MAGIC */
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden; /* image cut clean */
+}
+
+/* LEFT IMAGE */
+.mx-safety-left {
+  flex: 1;
+}
+
+.mx-safety-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 🔥 FULL COVER IMAGE */
+  display: block;
+  border-radius: 30px;
+}
+
+/* RIGHT CONTENT */
+.mx-safety-right {
+  flex: 1;
+  padding: 70px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TITLE */
+.mx-safety-title {
+  font-size: 35px;
+  color: #1F2A44;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.mx-safety-text {
+  color: #1F2A44;
+  font-size: 19px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* POINTS */
+.mx-safety-points {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.mx-point {
+  background: #f5f5f5;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #B23A3F;
+}
+
+@media (max-width: 768px) {
+  .mx-safety-container {
+    flex-direction: column;
+  }
+
+  .mx-safety-left,
+  .mx-safety-right {
+    width: 100%;
+  }
+
+  .mx-safety-left img {
+    height: 250px; /* mobile pe controlled height */
+  }
+
+  .mx-safety-right {
+    padding: 25px;
+  }
+}
+
+/* ===============================
+   TABLET VIEW (<= 992px)
+=============================== */
+@media (max-width: 992px) {
+
+  .mx-safety-section {
+    padding: 30px 20px;
+  }
+
+  .mx-safety-container {
+    gap: 20px;
+  }
+
+  .mx-safety-right {
+    padding: 40px;
+  }
+
+  .mx-safety-title {
+    font-size: 28px;
+  }
+
+  .mx-safety-text {
+    font-size: 16px;
+  }
+}
+
+
+/* ===============================
+   MOBILE VIEW (<= 768px)
+=============================== */
+@media (max-width: 768px) {
+
+  .mx-safety-container {
+    flex-direction: column;   /* 🔥 STACK */
+  }
+
+
+    .mx-safety-section {
+    padding: 20px 15px;
+     flex-direction: column;   /* 🔥 STACK */
+  }
+
+  
+  .mx-safety-left,
+  .mx-safety-right {
+    width: 100%;
+  }
+
+  .mx-safety-left img {
+    height: 250px;   /* 🔥 FIXED HEIGHT MOBILE */
+    border-radius: 20px;
+  }
+
+  .mx-safety-right {
+    padding: 25px;
+  }
+
+  .mx-safety-title {
+    font-size: 24px;
+  }
+
+  .mx-safety-text {
+    font-size: 15px;
+  }
+
+  .mx-safety-points {
+    gap: 10px;
+  }
+
+  .mx-point {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+
+/* ===============================
+   SMALL MOBILE (<= 480px)
+=============================== */
+@media (max-width: 480px) {
+
+  .mx-safety-section {
+    padding: 20px 15px;
+     flex-direction: column;   /* 🔥 STACK */
+  }
+
+  .mx-safety-left img {
+    height: 200px;
+  }
+
+  .mx-safety-title {
+    font-size: 20px;
+  }
+
+  .mx-safety-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .mx-safety-right {
+    padding: 20px;
+  }
+
+  .mx-point {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
 }

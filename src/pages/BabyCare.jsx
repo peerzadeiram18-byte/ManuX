@@ -1,4 +1,6 @@
-import { useContext } from "react";
+
+import { useContext, useState } from "react";
+// import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./BabyCare.css";
 
@@ -11,6 +13,9 @@ export default function BabyCare() {
     (item) => item.category === "baby-care"
   );
 
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="baby-page">
 
@@ -22,10 +27,20 @@ export default function BabyCare() {
             <div key={item._id} className="baby-card">
 
               <div className="baby-img-box">
-                <img
+               
+               <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() =>
+    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  }
+/>
+               
+               
+                {/* <img
                   src={`${BASE_URL}/uploads/${item.image}`}
                   alt={item.name}
-                />
+                /> */}
               </div>
 
               <div className="baby-content">
@@ -39,6 +54,16 @@ export default function BabyCare() {
           <p className="no-data">No Baby Care Products Found</p>
         )}
       </div>
+
+
+      {selectedImage && (
+  <div
+    className="baby-img-modal"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img src={selectedImage} alt="preview" />
+  </div>
+)}
 
     </div>
   );

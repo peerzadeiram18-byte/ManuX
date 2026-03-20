@@ -157,6 +157,10 @@ useEffect(() => {
   </div>
 )}
 </div>
+ 
+                  
+               
+
 
         {/* RIGHT - ICONS + LOGIN */}
         <div className="nav-right">
@@ -214,8 +218,18 @@ useEffect(() => {
 
       {/* ===== MENU BAR ===== */}
       <div className={`menubar ${mobileMenu ? "active" : ""}`}>
+
+
+
         
         <div className="menu-links">
+
+
+
+    {/* ✅ ADD HERE */}
+    <div className="mobile-top-title">
+      ManuX NanoBioCeuticals
+    </div>
 
 
           {/* MOBILE ICONS */}
@@ -401,7 +415,7 @@ onClick={() => {
       Men's Care
     </Link>
 
-    <Link to="/pregnancy-care" onClick={() => {
+    {/* <Link to="/pregnancy-care" onClick={() => {
       setMobileMenu(false);
       setOpenProductsDropdown(false);
     }}>
@@ -420,7 +434,7 @@ onClick={() => {
       setOpenProductsDropdown(false);
     }}>
       Nutraceuticals
-    </Link>
+    </Link> */}
 
         <Link to="/digital-defense" onClick={() => {
       setMobileMenu(false);

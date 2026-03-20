@@ -10,13 +10,51 @@
   margin-bottom: 30px;
   font-weight: 600;
   color: #222;
+  margin-top: 25px;
 }
 
 .hair-grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  gap: 25px; */
+
+     display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* FIXED */
+  gap: 30px; /* thoda balanced gap */
+  padding: 40px;
+
+
+    max-width: 1400px;
+  margin: 0 auto; /* center */
 }
+
+
+/* 💻 Laptop */
+@media (max-width: 1024px) {
+  .hair-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 768px) {
+  .hair-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .hair-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+}
+
+
 
 .hair-card {
   background: #fff;
@@ -33,13 +71,15 @@
 .hair-img-box {
   height: 220px;
   overflow: hidden;
+
 }
 
 .hair-img-box img {
   width: 100%;
-  height: 100%;
- /* object-fit: cover;*/
-    object-fit: contain;   /* ✅ FIX */
+  height: 250px;
+  /* object-fit: contain; */
+  background: #E5E6E8;
+  /* padding: 10px; */
 }
 
 .hair-content {
@@ -62,5 +102,55 @@
 @media (max-width: 768px) {
   .hair-title {
     font-size: 24px;
+  }
+}
+
+
+
+/* IMAGE HOVER */
+.hair-img-box img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* .hair-img-box img:hover {
+  transform: scale(1.05);
+} */
+
+/* MODAL */
+.hair-img-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* IMAGE */
+.hair-img-modal img {
+  max-width: 90%;
+   max-height: 70%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 100px;
+  border: 3px solid white;
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hair-img-modal img {
+    max-width: 100%;
+      max-height: 70%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 100px;
+  border: 3px solid white;
   }
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./UserList.css";
-
 import axios from "axios";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function UserList() {
@@ -12,95 +12,56 @@ export default function UserList() {
   const [editIndex, setEditIndex] = useState(null);
   const [editUser, setEditUser] = useState({
     name: "",
-    email: "",
-    password: ""
+    email: ""
   });
 
-  // useEffect(() => {
-  //   const storedUsers =
-  //     JSON.parse(localStorage.getItem("users")) || [];
-  //   setUsers(storedUsers);
-  // }, []);
-
   useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/api/users`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+          }
+        });
 
-  const fetchUsers = async () => {
+        setUsers(res.data);
 
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
+  // FILTER
+  const filteredUsers = users.filter((user) =>
+    (user.name && user.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+    (user.email && user.email.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
+  // DELETE
+  const handleDelete = async (id) => {
     try {
+      await axios.delete(`${BASE_URL}/api/users/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+      });
 
-     const res = await axios.get(
-  `${BASE_URL}/api/users`,
-  {
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("token")}`
-    }
-  }
-);
-
-           // console.log(res.data); // ✅ yahi correct jagah hai
-
-
-      setUsers(res.data);
+      setUsers(users.filter(user => user._id !== id));
 
     } catch (error) {
       console.log(error);
-    
-    //console.log(res.data);
     }
-
   };
 
-  fetchUsers();
-
-}, []);
-
-  // SEARCH FILTER
-  // const filteredUsers = users.filter((user) =>
-  //   user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //   user.email.toLowerCase().includes(searchTerm.toLowerCase())
-  // );
-
-  const filteredUsers = users.filter((user) =>
-  (user.name && user.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-  (user.email && user.email.toLowerCase().includes(searchTerm.toLowerCase()))
-);
-
-  // DELETE USER
-  // const handleDelete = (index) => {
-  //   const updatedUsers = users.filter((_, i) => i !== index);
-
-  //   setUsers(updatedUsers);
-  //   localStorage.setItem("users", JSON.stringify(updatedUsers));
-  // };
-
-  const handleDelete = async (id) => {
-
-  try {
-
-  await axios.delete(
-  `${BASE_URL}/api/users/${id}`,
-  {
-    headers:{
-      Authorization:`Bearer ${localStorage.getItem("token")}`
-    }
-  }
-);
-
-    setUsers(users.filter(user => user._id !== id));
-
-  } catch (error) {
-    console.log(error);
-  }
-
-};
-
-  // START EDIT
+  // EDIT
   const handleEdit = (index) => {
     setEditIndex(index);
     setEditUser(users[index]);
   };
 
-  // INPUT CHANGE
   const handleChange = (e) => {
     setEditUser({
       ...editUser,
@@ -108,136 +69,98 @@ export default function UserList() {
     });
   };
 
-  // SAVE UPDATE
   const handleUpdate = () => {
     const updatedUsers = [...users];
     updatedUsers[editIndex] = editUser;
 
     setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-
     setEditIndex(null);
   };
 
   return (
-    <div className="ul-container">
+    <div className="ulx-container">
 
-    <div className="ul-header">
+      <div className="ulx-header">
+        <h2 className="ulx-title">User Management</h2>
 
-  <h2 className="ul-title">User List</h2>
+        <div className="ulx-search-box">
+          <input
+            type="text"
+            placeholder="Search user..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+      </div>
 
-
-         {/* SEARCH BAR */}
-  <div className="ul-search-box">
-    <input
-      type="text"
-      placeholder="Search user..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
-
-
-  
-
-</div>
-
-      <div className="ul-table-wrapper">
-
-        <table className="ul-table">
+      <div className="ulx-table-wrapper">
+        <table className="ulx-table">
 
           <thead>
             <tr>
-              <th>SR No</th>
+              <th>Sr No</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Password</th>
               <th>Actions</th>
             </tr>
           </thead>
 
           <tbody>
-
             {filteredUsers.map((user, index) => (
+              <tr key={user._id}>
 
-             // <tr key={index}>
-             <tr key={user._id}>
-
-                <td>{index + 1}</td>
+                <td data-label="Sr No"> {index + 1} </td>
 
                 {editIndex === index ? (
                   <>
-                    <td>
+                    <td data-label="Name">
                       <input
-                        className="ul-input"
                         name="name"
                         value={editUser.name}
                         onChange={handleChange}
                       />
                     </td>
 
-                    <td>
+                    <td data-label="Email">
                       <input
-                        className="ul-input"
                         name="email"
                         value={editUser.email}
                         onChange={handleChange}
                       />
                     </td>
 
-                    <td>
-                      <input
-                        className="ul-input"
-                        name="password"
-                        value={editUser.password}
-                        onChange={handleChange}
-                      />
-                    </td>
-
-                    <td>
-                      <button
-                        className="ul-save-btn"
-                        onClick={handleUpdate}
-                      >
-                        Save
-                      </button>
+                    <td data-label="Actions">
+                      <button className="ulx-save" onClick={handleUpdate}>Save</button>
                     </td>
                   </>
                 ) : (
                   <>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    <td>{user.password}</td>
+                    <td data-label="Name">{user.name}</td>
+                    <td data-label="Email">{user.email}</td>
 
-                    <td className="ul-actions">
-
+                    <td data-label="Actions" className="ulx-actions">
                       <button
-                        className="ul-edit-btn"
+                        className="ulx-edit"
                         onClick={() => handleEdit(index)}
                       >
                         Edit
                       </button>
 
                       <button
-                        className="ul-delete-btn"
-                       // onClick={() => handleDelete(index)}
-                       onClick={() => handleDelete(user._id)}
+                        className="ulx-delete"
+                        onClick={() => handleDelete(user._id)}
                       >
                         Delete
                       </button>
-
                     </td>
                   </>
                 )}
 
               </tr>
-
             ))}
-
           </tbody>
 
         </table>
-
       </div>
 
     </div>

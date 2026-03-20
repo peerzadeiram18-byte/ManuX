@@ -1,4 +1,7 @@
-import { useContext } from "react";
+
+import { useContext, useState } from "react";
+
+// import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./PetCare.css";
 
@@ -11,6 +14,10 @@ export default function PetCare() {
     (item) => item.category === "pet-care"
   );
 
+
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="pet-page">
 
@@ -22,10 +29,20 @@ export default function PetCare() {
             <div key={item._id} className="pet-card">
 
               <div className="pet-img-box">
-                <img
+               
+               <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() =>
+    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  }
+/>
+               
+               
+                {/* <img
                   src={`${BASE_URL}/uploads/${item.image}`}
                   alt={item.name}
-                />
+                /> */}
               </div>
 
               <div className="pet-content">
@@ -39,6 +56,18 @@ export default function PetCare() {
           <p className="no-data">No Pet Care Products Found</p>
         )}
       </div>
+
+
+
+       {selectedImage && (
+  <div
+    className="pet-img-modal"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img src={selectedImage} alt="preview" />
+  </div>
+)}
+
 
     </div>
   );

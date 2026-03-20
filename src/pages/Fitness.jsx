@@ -1,4 +1,7 @@
-import { useContext } from "react";
+
+import { useContext, useState } from "react";
+
+// import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./Fitness.css";
 
@@ -11,6 +14,9 @@ export default function Fitness() {
   const fitnessProducts = products.filter(
     (item) => item.category === "fitness"
   );
+
+
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <div className="fitness-page">
@@ -41,10 +47,21 @@ export default function Fitness() {
 
                 {/* IMAGE */}
                 <div className="fitness-img-box">
-                  <img
+                 
+                 
+                 <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() =>
+    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  }
+/>
+                 
+                 
+                  {/* <img
                     src={`${BASE_URL}/uploads/${item.image}`}
                     alt={item.name}
-                  />
+                  /> */}
                 </div>
 
                 {/* CONTENT */}
@@ -63,7 +80,17 @@ export default function Fitness() {
 
         </div>
       </div>
+              
 
-    </div>
+        {selectedImage && (
+  <div
+    className="fitness-img-modal"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img src={selectedImage} alt="preview" />
+  </div>
+)}
+
+     </div>
   );
 }

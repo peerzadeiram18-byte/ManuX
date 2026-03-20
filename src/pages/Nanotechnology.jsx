@@ -11,6 +11,8 @@ import finishImg from "../assets/finish.jpg";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
+import processImg from "../assets/process.png";
+
 
 import nanoImg1 from "../assets/nano1.jpg";
 import nanoImg2 from "../assets/nano2.jpg";
@@ -20,6 +22,16 @@ import nanoImg4 from "../assets/nano4.jpg";
 import nutraImg from "../assets/Rnutra.jpg";
 
 
+import icon1 from "../assets/icon1.png"; // 👈 apni image
+
+import bioBg from "../assets/your-image.jpg"; // 👈 apna image name
+
+
+import { FaChartLine, FaShieldAlt, FaInfinity } from "react-icons/fa";
+
+
+// ✅ yaha change karo
+import nanoCircleImg from "../assets/nano-circles.png";
 
 
 
@@ -32,15 +44,120 @@ function Nanotechnology() {
       {/* 1️⃣ Hero Section */}
       <section className="nano-hero">
         <h1>Nanotechnology</h1>
-        <p>Experience the Synergy of Ancient Wisdom and Modern Science</p>
+        <p>Enhancing classical wisdom through molecular precision</p>
       </section>
+
+
+
+
+      
+<section className="mx-process-section">
+
+  <div className="mx-process-container">
+
+    {/* Heading */}
+    <h2 className="mx-process-title">
+      Our Molecular Innovation Process
+    </h2>
+
+    {/* Center Image */}
+    <div className="mx-process-image">
+      <img src={processImg} alt="process" />
+    </div>
+
+    {/* Text */}
+    {/* <div className="mx-process-text">
+      <p>
+        At ManuX, our molecular innovation process combines advanced
+        scientific methods with precision formulation. Each stage is
+        carefully engineered to ensure stability, absorption, and
+        predictable performance.
+      </p>
+    </div> */}
+
+  </div>
+
+  {/* Bottom Highlight Bar */}
+  <div className="mx-process-bar">
+    <p>
+      <strong>The ManuX Result:</strong> 
+      <span> ✅ Improved Consistency </span> |
+      <span> ✅ Reduced Wastage </span> |
+      <span> ✅ Predictable Outcomes </span>
+    </p>
+  </div>
+
+</section>
+
+
+
+
 
 {/* 2️⃣ Introduction Section */}
 <section className="ayurveda-section">
-  <div className="ayurveda-wrapper">
+{/* 
+    <div
+    className="ayurveda-image"
+   // style={{ backgroundImage: `url(${ayurvedaImg})` }}
+  >
+  </div> */}
+  {/* <div className="ayurveda-wrapper"> */}
 
     {/* Left Content */}
-    <div className="ayurveda-text">
+
+
+
+<div className="bio-section"
+style={{ backgroundImage: `url(${bioBg})` }}
+>
+
+  <h2 className="bio-title">BIOLOGICAL ADVANTAGES</h2>
+
+  <p className="bio-desc">
+    Nano-scale ayurvedic systems are designed to align with natural biological pathways.<br/>
+    By reducing particle size and optimizing delivery behavior, they allow actives to interact<br/>
+    more efficiently with skin, hair follicles, tissues, and metabolic systems.
+  </p>
+
+  {/* CARD 1 */}
+  <div className="bio-box">
+    <div className="bio-icon">
+      <FaChartLine />
+    </div>
+    <div>
+      <h3>ENHANCED EFFICACY</h3>
+      <p>(Maximizes results at lower concentrations.)</p>
+    </div>
+  </div>
+
+  {/* CARD 2 */}
+  <div className="bio-box">
+    <div className="bio-icon">
+      <FaShieldAlt />
+    </div>
+    <div>
+      <h3>IMPROVED TOLERABILITY</h3>
+      <p>(Gentle on tissues and systems.)</p>
+    </div>
+  </div>
+
+  {/* CARD 3 */}
+  <div className="bio-box">
+    <div className="bio-icon">
+      <FaInfinity />
+    </div>
+    <div>
+      <h3>LONG-TERM COMPATIBILITY</h3>
+      <p>(Harmonious interaction for lasting health.)</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+     {/* <div className="ayurveda-text">
       <span className="ayurveda-tag">Nano Ayurveda</span>
       <h2>Revolutionizing Ayurveda</h2>
 
@@ -61,19 +178,25 @@ function Nanotechnology() {
         <li>✔ Deep Dermal Penetration</li>
         <li>✔ Faster & Visible Results</li>
       </ul>
-    </div>
+    </div>  */}
 
     {/* Right Image */}
-    <div className="ayurveda-image">
+     {/* <div className="ayurveda-image">
       <img src={ayurvedaImg} alt="Ayurveda Research" className="hero-image" />
-    </div>
+    </div>  */}
 
-  </div>
+{/* 
+  </div> */}
 </section>
 
 
+
+
+
+
+
       {/* 3️⃣ Why Nano Grid */}
-    <section className="nano-dark1">
+    {/* <section className="nano-dark1">
   <h2 className="section-title">Why Nanotechnology?</h2>
 
   <div className="nano-grid1">
@@ -97,15 +220,47 @@ function Nanotechnology() {
       <p>Improved formulation longevity and efficacy.</p>
     </div>
   </div>
-</section>
+</section> */}
+
+
+
+
+ <section className="nano-circle-section">
+
+  <div className="nano-circle-container">
+
+    <h2 className="nano-circle-heading">
+      Our Specialized Care Categories
+    </h2>
+
+    <p className="nano-circle-subtext">
+      Advanced nano-enabled formulations designed for diverse care needs,
+      ensuring safety, performance, and targeted effectiveness.
+    </p>
+
+    <div className="nano-circle-image-wrapper">
+  <img
+     src={nanoCircleImg}   // 👈 updated name
+
+    alt="Nano Categories"
+    className="nano-circle-image"
+  />
+</div>
+  </div>
+
+</section> 
+
+
+
+
 
       {/* 4️⃣ Science Section */}
-  <section className="science-section">
+  {/* <section className="science-section">
 
   <div className="science-container">
 
     {/* LEFT CONTENT */}
-    <div className="science-content">
+   {/*} <div className="science-content">
       <h2>The Science Behind Nano Delivery</h2>
 
       <p>
@@ -116,18 +271,18 @@ function Nanotechnology() {
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="science-image">
+   {/*} <div className="science-image">
       <img src={nanoImg } alt="Nano Technology" />
     </div>
 
   </div>
 
-</section>
+</section> */}
 
 
 
       {/* 5️⃣ Skin Benefits Section */}
-      <section className="nano-light">
+      {/* <section className="nano-light">
   <h2 className="section-title">Comprehensive Skin Solutions</h2>
 
   <div className="nano-grid1">
@@ -161,7 +316,7 @@ function Nanotechnology() {
     </div>
 
   </div>
-</section>
+</section> */}
 
 
 
@@ -227,15 +382,71 @@ function Nanotechnology() {
 
 
 
+
+
+
+
+
+
+
+       <section className="mx-safety-section">
+
+  {/* <div className="mx-safety-container"> */}
+
+    {/* LEFT SIDE - IMAGE */}
+    <div className="mx-safety-left">
+      <img src={icon1} alt="safety" />
+    </div>
+
+    {/* RIGHT SIDE - CONTENT */}
+    <div className="mx-safety-right">
+
+      <h2 className="mx-safety-title">Safety and Integrity</h2>
+
+      <p className="mx-safety-text">
+        At ManuX, nanotechnology is applied responsibly. We prioritize 
+        biocompatible materials, controlled processing, and rigorous safety 
+        evaluation to ensure that nano systems remain stable, non-aggressive, 
+        and suitable for long-term use.
+      </p>
+
+      <p className="mx-safety-text">
+        Our approach respects the philosophical foundations of Ayurveda 
+        while meeting modern expectations for safety, reproducibility, 
+        and scientific validation.
+      </p>
+
+      <div className="mx-safety-points">
+        <div className="mx-point">✔ Biocompatible Materials</div>
+        <div className="mx-point">✔ Rigorous Evaluation</div>
+        <div className="mx-point">✔ Scientific Validation</div>
+      </div>
+
+    </div>
+
+  {/* </div> */}
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
       {/* 8️⃣ CTA Section */}
-      <section className="nano-cta">
+      {/* <section className="nano-cta">
         <h2>Discover the Power of Nano Ayurveda</h2>
         <p>
           Experience the difference with ManuX NanoBioCeuticals and redefine
           luxury through innovation.
         </p>
         <button className="btn">Explore Products</button>
-      </section>
+      </section> */}
 
     </div>
   );

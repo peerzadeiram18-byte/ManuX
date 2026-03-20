@@ -204,9 +204,18 @@ const handleSubmit = async (e) => {
             type="text"
             placeholder="Product Name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
+             onChange={(e) => setName(e.target.value)}
+          //   onChange={(e) => setName(e.target.value.toUpperCase())}
+          //   required
+//           onChange={(e) => {
+//   const value = e.target.value
+//     .toLowerCase()
+//     .replace(/\b\w/g, (char) => char.toUpperCase());
+//   setName(value);
+// }}
+          
           />
+
 {/* 
           <input
             type="text"

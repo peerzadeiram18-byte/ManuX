@@ -748,7 +748,7 @@ cursor:pointer;
 
 /* ===== HIDE ADMIN DROPDOWN ON DESKTOP ===== */
 .admin-dropdown {
-  display: none;
+  display: flex;
 }
 
 /* ===== MOBILE VIEW ===== */
@@ -758,4 +758,27 @@ cursor:pointer;
     display: block;
   }
 
+}
+
+
+
+
+
+
+
+
+.mobile-top-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #B23A3F;
+  padding: 20px 5px 10px;
+  letter-spacing: 1px;
+  margin-top: -100px;
+}
+
+/* Desktop hide */
+@media (min-width: 768px) {
+  .mobile-top-title {
+    display: none;
+  }
 }

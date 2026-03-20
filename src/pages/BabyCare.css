@@ -14,9 +14,21 @@
 
 /* GRID */
 .baby-grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  gap: 25px; */
+
+
+     display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* FIXED */
+  gap: 30px; /* thoda balanced gap */
+  padding: 40px;
+
+
+    max-width: 1400px;
+  margin: 0 auto; /* center */
+
+
 }
 
 /* CARD */
@@ -42,14 +54,27 @@
 }
 
 .baby-img-box img {
-  max-width: 100%;
+  /* max-width: 100%;
   max-height: 100%;
+  object-fit: contain; */
+    /* width: 100%;
+  height: 220px;
   object-fit: contain;
+  background: #E5E6E8;
+  padding: 10px; */
+
+
+   width: 100%;
+  height: 250px;
+  /* object-fit: contain; */
+  background: #E5E6E8;
+  /* padding: 10px; */
+
 }
 
 /* CONTENT */
 .baby-content {
-  padding: 15px;
+  padding: 20px;
 }
 
 .baby-content h3 {
@@ -74,9 +99,112 @@
 @media (max-width: 768px) {
   .baby-title {
     font-size: 24px;
+    margin-top: 50px;
   }
 
   .baby-img-box {
     height: 180px;
+  }
+
+  .baby-content {
+  padding: 20px;
+  margin-top: 25px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* IMAGE HOVER */
+.baby-img-box img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* .baby-img-box img:hover {
+  transform: scale(1.05);
+} */
+
+/* MODAL */
+.baby-img-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* MODAL IMAGE */
+.baby-img-modal img {
+  max-width: 90%;
+   max-height: 70%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 100px;
+  border: 3px solid white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .baby-img-modal img {
+    max-width: 100%;
+      max-height: 70%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 100px;
+  border: 3px solid white;
+  }
+}
+
+
+/* .baby-grid {
+  display: grid;
+
+  /* 🔥 Desktop default */
+  /*grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+  padding: 40px;
+
+  max-width: 1400px;
+  margin: 0 auto;
+} */
+
+
+/* 💻 Large Tablet */
+@media (max-width: 1024px) {
+  .baby-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 768px) {
+  .baby-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .baby-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 15px;
   }
 }

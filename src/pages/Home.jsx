@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
 
 /*import lab1 from "../assets/lab1.jpg";
 import lab2 from "../assets/lab2.jpg";
@@ -37,8 +38,12 @@ import philo2 from "../assets/philo2.jpg";
 import philo3 from "../assets/philo3.jpg";
 
 
+import hero2Video from "../video/hero2-video.mp4";
 
 
+
+
+// export default function PhiloSlider() {
 
 
 
@@ -121,6 +126,24 @@ useEffect(() => {
 }, []);
 
 
+  const images = [philo1, philo2, philo3]; // ✅ yaha define karo
+  const [current, setCurrent] = useState(0);
+
+  // Auto slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000); // 3 sec
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const getIndex = (index) => {
+    if (index === current) return "active";
+    if (index === (current - 1 + images.length) % images.length) return "left";
+    if (index === (current + 1) % images.length) return "right";
+    return "hidden";
+  };
 
 
   return (
@@ -190,7 +213,7 @@ useEffect(() => {
 
 <section className="home-hero">
 
- <video autoPlay muted loop playsInline className="hero-video">
+ <video autoPlay muted loop playsInline className="hero4-video">
   <source src={heroVideo} type="video/mp4" />
 </video>
 
@@ -217,14 +240,26 @@ useEffect(() => {
     </div>
 
     {/* Center Image */}
-    <div className="triple-img center">
+    {/* <div className="triple-img center">
       <img src={heroImg} alt="center"/>
 
      {/* <div className="hero-text">
         <h4>AYURVEDA’S SECRET</h4>
         <h1>B2B BEAUTY SOLUTIONS</h1>
       </div>*/}
-    </div>
+   {/*} </div> */}
+
+
+   <div className="triple-img center">
+  <video
+    className="hero2-video"
+    src={hero2Video}   // 👈 video import ya path
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
+</div>
 
     {/* Right Image */}
     <div className="triple-img">
@@ -256,49 +291,14 @@ useEffect(() => {
     </div>
 
     {/* Cards */}
-    <div className="mx-philo-cards">
-
-      <div
-  className="mx-philo-card"
-  style={{ backgroundImage: `url(${philo1})` }}
->
-        <div className="mx-card-overlay"></div>
-        <div className="mx-card-content">
-          {/* <h3>Intelligent Delivery</h3>
-          <p>
-            Advanced delivery systems ensure nutrients reach where they are needed most,
-            improving absorption and effectiveness.
-          </p> */}
-        </div>
-      </div>
-
-<div
-  className="mx-philo-card"
-  style={{ backgroundImage: `url(${philo2})` }}
->        <div className="mx-card-overlay"></div>
-        <div className="mx-card-content">
-          {/* <h3>Biological Compatibility</h3>
-          <p>
-            Formulations are designed to work in harmony with the body's natural systems,
-            ensuring safety and balance.
-          </p> */}
-        </div>
-      </div>
-
-      <div
-  className="mx-philo-card"
-  style={{ backgroundImage: `url(${philo3})` }}
->
-        <div className="mx-card-overlay"></div>
-        <div className="mx-card-content">
-          {/* <h3>Regenerative Science</h3>
-          <p>
-            We focus on long-term wellness by supporting cellular repair and regeneration
-            using modern scientific techniques.
-          </p> */}
-        </div>
-      </div>
-
+     <div className="mx-slider">
+      {images.map((img, index) => (
+        <div
+          key={index}
+          className={`mx-slide ${getIndex(index)}`}
+          style={{ backgroundImage: `url(${img})` }}
+        />
+      ))}
     </div>
 
   </div>

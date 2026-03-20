@@ -1,4 +1,8 @@
-import { useContext } from "react";
+
+import { useContext, useState } from "react";
+
+
+// import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./MensCare.css";
 
@@ -11,6 +15,10 @@ export default function MensCare() {
     (item) => item.category === "mens-care"
   );
 
+const [selectedImage, setSelectedImage] = useState(null);
+
+
+
   return (
     <div className="mens-page">
 
@@ -22,10 +30,21 @@ export default function MensCare() {
             <div key={item._id} className="mens-card">
 
               <div className="mens-img-box">
-                <img
+               
+               
+               <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() =>
+    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  }
+/>
+               
+               
+                {/* <img
                   src={`${BASE_URL}/uploads/${item.image}`}
                   alt={item.name}
-                />
+                /> */}
               </div>
 
               <div className="mens-content">
@@ -39,6 +58,17 @@ export default function MensCare() {
           <p className="no-data">No Men's Care Products Found</p>
         )}
       </div>
+
+            {selectedImage && (
+  <div
+    className="mens-img-modal"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img src={selectedImage} alt="preview" />
+  </div>
+)}
+
+
 
     </div>
   );

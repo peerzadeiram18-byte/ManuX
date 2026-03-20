@@ -1,297 +1,157 @@
-/* ===== USER LIST SECTION ===== */
-
-/*.ul-container{
-padding:60px 5%;
-background:#f4f6f9;
-min-height:100vh;
-font-family: "Segoe UI", sans-serif;
-}*/
-body {
-font-family: 'Avenir Next', sans-serif;}
-
-.ul-container{
-padding:60px 6%;
-background:#f4f6f9;
-min-height:100vh;
-font-family: "Segoe UI", sans-serif;
-max-width:1200px;
-margin:auto;
+/* Container */
+.ulx-container {
+  padding: 40px 20px;
+  background: transparent;
+  font-family: sans-serif;
 }
 
-
-/* TITLE */
-
-/*.ul-title{
-text-align:center;
-font-size:32px;
-margin-bottom:40px;
-color:#0F2544;
-font-weight:600;
-}
-*/
-
-
-
-.ul-title{
-font-size:32px;
-color:#0F2544;
-font-weight:600;
-margin:0;
-}
-/* TABLE WRAPPER */
-
-.ul-table-wrapper{
-overflow-x:auto;
-background:white;
-border-radius:14px;
-box-shadow:0 10px 35px rgba(0,0,0,0.08);
+/* Header */
+.ulx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* TABLE */
-
-.ul-table{
-width:100%;
-border-collapse:collapse;
-min-width:600px;
+.ulx-title {
+  color: #0F2544;
+  font-weight: 400;
 }
 
-/* HEADER */
-
-.ul-table thead{
-background:#0F2544;
-color:white;
+/* Search */
+.ulx-search-box input {
+  padding: 10px 14px;
+  border: 1px solid #E5E6E8;
+  border-radius: 8px;
+  outline: none;
+  color: #0A0A0A;
 }
 
-.ul-table th{
-padding:16px;
-text-align:left;
-font-size:15px;
-font-weight:500;
+/* Table Wrapper */
+.ulx-table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
 }
 
-/* BODY */
-
-.ul-table td{
-padding:14px 16px;
-border-bottom:1px solid #eee;
-font-size:14px;
-color:#333;
+/* Table */
+.ulx-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-/* ROW HOVER */
-
-.ul-table tbody tr:hover{
-background:#f9fafc;
+/* Header */
+.ulx-table thead {
+  background: #0F2544;
 }
 
-/* INPUT */
-
-.ul-input{
-width:100%;
-padding:8px 10px;
-border-radius:6px;
-border:1px solid #ddd;
-font-size:14px;
+.ulx-table th {
+  color: #E5E6E8;
+  padding: 14px;
+  text-align: left;
+  font-weight: 400;
 }
 
-/* ACTIONS */
-
-.ul-actions{
-display:flex;
-gap:10px;
+/* Body */
+.ulx-table td {
+  padding: 12px;
+  border-bottom: 1px solid #E5E6E8;
+  color: #6E7178;
 }
 
-/* BUTTONS */
-
-.ul-edit-btn{
-background:#0F2544;
-color:white;
-border:none;
-padding:7px 14px;
-border-radius:6px;
-cursor:pointer;
-font-size:13px;
+/* Hover */
+.ulx-table tr:hover {
+  background: rgba(193, 18, 31, 0.05);
 }
 
-.ul-delete-btn{
-background:#B23A3F;
-color:white;
-border:none;
-padding:7px 14px;
-border-radius:6px;
-cursor:pointer;
-font-size:13px;
+/* Inputs */
+.ulx-table input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #E5E6E8;
+  border-radius: 6px;
 }
 
-.ul-save-btn{
-background:#2e8b57;
-color:white;
-border:none;
-padding:7px 16px;
-border-radius:6px;
-cursor:pointer;
+/* Buttons */
+.ulx-edit {
+  background: #0F2544;
+  color: #E5E6E8;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* HOVER EFFECT */
-
-.ul-edit-btn:hover{
-background:#1b3d73;
+.ulx-delete {
+  background: #C1121F;
+  color: #E5E6E8;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.ul-delete-btn:hover{
-background:#8f2a2e;
+.ulx-save {
+  background: #0F2544;
+  color: #E5E6E8;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.ul-save-btn:hover{
-background:#256f45;
-}
+/* =========================
+   📱 MOBILE RESPONSIVE
+========================= */
 
-/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
 
-@media (max-width:768px){
+  .ulx-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-.ul-title{
-font-size:26px;
-padding-top: 30px;
-}
+  .ulx-table thead {
+    display: none;
+  }
 
-.ul-table th,
-.ul-table td{
-padding:12px;
-font-size:13px;
-}
+  .ulx-table,
+  .ulx-table tbody,
+  .ulx-table tr,
+  .ulx-table td {
+    display: block;
+    width: 100%;
+  }
 
-.ul-actions{
-flex-direction:column;
-}
+  .ulx-table tr {
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    padding: 12px;
+    border-radius: 10px;
+  }
 
-}
+  .ulx-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
 
-@media (max-width:480px){
+  .ulx-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    color: #0F2544;
+    font-weight: 500;
+    text-align: left;
+  }
 
-.ul-container{
-padding:40px 15px;
-}
-
-.ul-title{
-font-size:22px;
-}
-
-}
-
-
-
-/* ===== USER SEARCH BOX ===== */
-
-/*.ul-search-box{
-width:100%;
-display:flex;
-justify-content:flex-end;
-margin-bottom:30px;
-}*/
-
-.ul-search-box{
-display:flex;
-justify-content:flex-end;
-}
-
-
-/* SEARCH INPUT */
-
-.ul-search-box input{
-width:280px;
-padding:12px 18px;
-border-radius:30px;
-border:1px solid #dcdfe6;
-font-size:14px;
-outline:none;
-background:#fff;
-color:#333;
-
-transition:all 0.3s ease;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.06);
-}
-
-/* PLACEHOLDER */
-
-.ul-search-box input::placeholder{
-color:#999;
-font-size:14px;
-}
-
-/* FOCUS EFFECT */
-
-.ul-search-box input:focus{
-border-color:#0F2544;
-box-shadow:0 0 0 3px rgba(15,37,68,0.08);
-transform:scale(1.02);
-}
-
-/* HOVER */
-
-.ul-search-box input:hover{
-border-color:#b9c0cc;
-}
-
-
-/* TABLET */
-
-@media (max-width:768px){
-
-.ul-search-box{
-justify-content:center;
-}
-
-.ul-search-box input{
-width:80%;
-}
-
-}
-
-/* MOBILE */
-
-@media (max-width:480px){
-
-.ul-search-box input{
-width:100%;
-font-size:13px;
-padding:10px 15px;
-}
-
-}
-
-
-
-/* HEADER LAYOUT */
-
-.ul-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:35px;
-flex-wrap:wrap;
-gap:20px;
-}
-
-
-/*User List                         Search Box
-------------------------------------------------
-| SR | Name | Email | Password | Actions |*/
-
-@media (max-width:768px){
-
-.ul-header{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.ul-search-box{
-width:100%;
-}
-
-.ul-search-box input{
-width:100%;
-}
-
+  .ulx-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
 }
