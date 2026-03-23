@@ -77,10 +77,10 @@ export default function MicrobiomeTechnology() {
      style={{ backgroundImage: `url(${microBg})` }}
     >
 
-      <span className="mx-microScience-dot"></span>
+      {/* <span className="mx-microScience-dot"></span>
       <span className="mx-microScience-dot delay1"></span>
       <span className="mx-microScience-dot delay2"></span>
-      <span className="mx-microScience-dot delay3"></span>
+      <span className="mx-microScience-dot delay3"></span> */}
 
     </div>
 

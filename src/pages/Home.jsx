@@ -47,8 +47,10 @@ import hero2Video from "../video/hero2-video.mp4";
 
 
 
-
 function Home() {
+
+
+const slides = [philo1, philo2, philo3];
 
  {/*} const images = [lab1, lab2, lab3];
 
@@ -61,6 +63,9 @@ function Home() {
 
     return () => clearInterval(interval);
   }, []);*/}
+
+
+  
 
   useEffect(() => {
   const sections = document.querySelectorAll(".reveal-section");
@@ -144,6 +149,36 @@ useEffect(() => {
     if (index === (current + 1) % images.length) return "right";
     return "hidden";
   };
+
+
+  
+  const [activeImage, setActiveImage] = useState(null);
+  
+  
+ // ✅ STATE (sabse pehle)
+const [activeIndex, setActiveIndex] = useState(0);
+const [isPaused, setIsPaused] = useState(false);
+
+// ✅ AUTO SCROLL
+useEffect(() => {
+  if (isPaused) return;
+
+  const interval = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % slides.length);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [isPaused]);
+
+// ✅ CLICK FUNCTION
+const handleClick = (index) => {
+  setActiveIndex(index);
+  setIsPaused(true);
+
+  setTimeout(() => {
+    setIsPaused(false);
+  }, 4000);
+};
 
 
   return (
@@ -291,14 +326,28 @@ useEffect(() => {
     </div>
 
     {/* Cards */}
-     <div className="mx-slider">
-      {images.map((img, index) => (
-        <div
-          key={index}
-          className={`mx-slide ${getIndex(index)}`}
-          style={{ backgroundImage: `url(${img})` }}
-        />
-      ))}
+      <div className="mx-slider">
+
+      {slides.map((img, index) => {
+
+        let position = "hidden";
+
+        if (index === activeIndex) position = "active";
+        else if (index === (activeIndex - 1 + slides.length) % slides.length)
+          position = "left";
+        else if (index === (activeIndex + 1) % slides.length)
+          position = "right";
+
+        return (
+          <div
+            key={index}
+            className={`mx-slide ${position}`}
+            style={{ backgroundImage: `url(${img})` }}
+            onClick={() => handleClick(index)}
+          ></div>
+        );
+      })}
+
     </div>
 
   </div>
@@ -379,11 +428,11 @@ useEffect(() => {
     </div>
 
     <div className="researchh-grid">
-
-  <div
-    className="researchh-card"
-    style={{ backgroundImage: "url('/research/card1.jpg')" }}
-  >
+<div
+  className="researchh-card"
+  style={{ backgroundImage: "url('/research/card1.jpg')" }}
+  onClick={() => setActiveImage("/research/card1.jpg")}
+>
     <div className="cardh-overlay">
       {/* <h4>Science-First Formulation</h4>
       <p>
@@ -393,10 +442,12 @@ useEffect(() => {
     </div>
   </div>
 
-  <div
-    className="researchh-card"
-    style={{ backgroundImage: "url('/research/card2.jpg')" }}
-  >
+
+<div
+  className="researchh-card"
+  style={{ backgroundImage: "url('/research/card2.jpg')" }}
+  onClick={() => setActiveImage("/research/card2.jpg")}
+>
     <div className="cardh-overlay">
       {/* <h4>Multi-Technology Ecosystem</h4>
       <p>
@@ -405,11 +456,11 @@ useEffect(() => {
       </p> */}
     </div>
   </div>
-
-  <div
-    className="researchh-card"
-    style={{ backgroundImage: "url('/research/card3.jpg')" }}
-  >
+<div
+  className="researchh-card"
+  style={{ backgroundImage: "url('/research/card3.jpg')" }}
+  onClick={() => setActiveImage("/research/card3.jpg")}
+>
     <div className="cardh-overlay">
       {/* <h4>Delivery & Bioavailability</h4>
       <p>
@@ -419,10 +470,12 @@ useEffect(() => {
     </div>
   </div>
 
-  <div
-    className="researchh-card"
-    style={{ backgroundImage: "url('/research/card4.jpg')" }}
-  >
+
+<div
+  className="researchh-card"
+  style={{ backgroundImage: "url('/research/card4.jpg')" }}
+  onClick={() => setActiveImage("/research/card4.jpg")}
+>
     <div className="cardh-overlay">
       {/* <h4>Safety & Biological Harmony</h4>
       <p>
@@ -431,6 +484,13 @@ useEffect(() => {
       </p> */}
     </div>
   </div>
+
+
+  {activeImage && (
+  <div className="researchh-modal" onClick={() => setActiveImage(null)}>
+    <img src={activeImage} alt="preview" />
+  </div>
+)}
 
 </div>
 

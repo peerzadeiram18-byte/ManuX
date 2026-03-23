@@ -1,23 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import "./Categories.css";
-import CategoryCard from "./CategoryCard";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
-const categories = [
-  { img: "/cat/1.jpg", title: "GIFT CARD" },
-  { img: "/cat/2.jpg", title: "GIFTING" },
-  { img: "/cat/3.jpg", title: "FACE" },
-  { img: "/cat/4.jpg", title: "BODY" },
-  { img: "/cat/5.jpg", title: "MAKEUP" },
-  { img: "/cat/6.jpg", title: "HAIR" },
-  { img: "/cat/7.jpg", title: "MEN" },
-  { img: "/cat/8.jpg", title: "WELLNESS" },
-  { img: "/cat/9.jpg", title: "SKINCARE" },
-  { img: "/cat/10.jpg", title: "NEW ARRIVAL" },
-  { img: "/cat/11.jpg", title: "OFFERS" },
-];
+import { ProductContext } from "../../context/ProductContext";
+import CategoryCard from "./CategoryCard";
 
 export default function Categories() {
+
+  const { products } = useContext(ProductContext);
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
@@ -29,11 +18,9 @@ export default function Categories() {
   };
 
   return (
-
-    
     <section className="categories">
 
-            {/* ✅ HEADING ADD HERE */}
+      {/* HEADING */}
       <div className="cat-heading">
         <h2>Explore Our Collections</h2>
         <p>Discover products crafted for your beauty ritual</p>
@@ -41,16 +28,21 @@ export default function Categories() {
 
       <div className="cat-wrapper">
 
+        {/* LEFT BUTTON */}
         <button className="cat-btn left" onClick={scrollLeft}>
           <FaChevronLeft />
         </button>
 
+        {/* SLIDER */}
         <div className="cat-container" ref={sliderRef}>
-          {categories.map((cat, index) => (
-            <CategoryCard key={index} cat={cat} />
+
+          {products.map((product) => (
+            <CategoryCard key={product._id} product={product} />
           ))}
+
         </div>
 
+        {/* RIGHT BUTTON */}
         <button className="cat-btn right" onClick={scrollRight}>
           <FaChevronRight />
         </button>

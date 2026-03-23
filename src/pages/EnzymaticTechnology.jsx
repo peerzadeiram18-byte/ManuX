@@ -1,4 +1,6 @@
-import React from "react";
+// import React from "react";
+
+import React, { useState } from "react";
 import "./EnzymaticTechnology.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import enzymeHeroImg from "../assets/enzymatic-hero-bg.jpg";
@@ -17,6 +19,10 @@ import ayurvedicImg from "../assets/ayurvedic.jpg";
 import nutraceuticalsImg from "../assets/nutraceuticals.jpg";
 
 
+import enzymeImg from "../assets/img12.png"; // 👈 apni image
+
+
+
 
 const enzymeCards = [
   { title: " ", image: skinCareImg },
@@ -27,6 +33,10 @@ const enzymeCards = [
   { title: " ", image: nutraceuticalsImg },
 ];
 export default function EnzymaticTechnology() {
+
+  const [openImg, setOpenImg] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className="enzyme-page"
@@ -96,18 +106,21 @@ export default function EnzymaticTechnology() {
 
     {/* Animated scientific visual */}
 
-    <div className="mx-enzymeFlow-visual"
-      style={{ backgroundImage: `url(${enzymeBg})` }}
+ <>
+      {/* VISUAL IMAGE */}
+      <div
+        className="mxenzymeX-visual"
+        style={{ backgroundImage: `url(${enzymeBg})` }}
+        onClick={() => setIsOpen(true)}
+      ></div>
 
-    >
-
-      {/* <div className="mx-enzymeFlow-circle"></div>
-      <div className="mx-enzymeFlow-circle delay1"></div>
-      <div className="mx-enzymeFlow-circle delay2"></div>
-
-      <div className="mx-enzymeFlow-core"></div> */}
-
-    </div>
+      {/* MODAL */}
+      {isOpen && (
+        <div className="mxenzymeX-modal" onClick={() => setIsOpen(false)}>
+          <img src={enzymeBg} alt="Enzyme Visual" />
+        </div>
+      )}
+    </>
 
   </div>
 
@@ -175,7 +188,7 @@ export default function EnzymaticTechnology() {
               and nutraceuticals.
             </p>
 
-            <div className="mx-enzymeApps-grid">
+            {/* <div className="mx-enzymeApps-grid">
               {enzymeCards.map((card, index) => (
                 <div
                   key={index}
@@ -187,10 +200,35 @@ export default function EnzymaticTechnology() {
                   }}
                 >
                   {/* <div className="mx-enzymeApps-dot"></div> */}
-                  <h3>{card.title}</h3>
+                  {/* <h3>{card.title}</h3>
                 </div>
               ))}
-            </div>
+            </div> */}
+
+
+               <div className="mxenzymeX-wrapper">
+
+      {/* SINGLE IMAGE */}
+      <div 
+        className="mxenzymeX-image"
+        style={{ backgroundImage: `url(${enzymeImg})` }}
+        onClick={() => setOpenImg(true)}
+      ></div>
+
+      {/* MODAL */}
+      {openImg && (
+        <div 
+          className="mxenzymeX-modal"
+          onClick={() => setOpenImg(false)}
+        >
+          <img src={enzymeImg} alt="preview" />
+        </div>
+      )}
+
+    </div>
+
+
+
           </div>
         </section>
 

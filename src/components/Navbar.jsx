@@ -547,12 +547,12 @@ onClick={() => {
 
   <div className={`dropdown-menu ${openScienceDropdown ? "show-dropdown" : ""}`}>
     
-    <Link to="/Ayurveda"   onClick={() => {
+    {/* <Link to="/Ayurveda"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
     setOpenDropdown(false);
   }}>
       Ayurvedic Science
-    </Link>
+    </Link> */}
 
     <Link to="/quality-safety-compliance"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
@@ -591,6 +591,13 @@ onClick={() => {
     setOpenDropdown(false);
   }}>
       About Us
+    </Link>
+
+       <Link to="/why-manux"   onClick={() => {
+    setMobileMenu(false);   // 🔥 ADD THIS
+    setOpenDropdown(false);
+  }}>
+   Why ManuX
     </Link>
 
     <Link to="/OurTeam"   onClick={() => {

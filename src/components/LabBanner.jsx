@@ -25,7 +25,7 @@ const LabBanner = () => {
 
         {/* Button */}
         <div className="labRight">
-          <button className="labBtn">Explore Treatments</button>
+          <button className="labBtn">Explore Products</button>
         </div>
 
       </div>

@@ -21,7 +21,8 @@ font-family: 'Avenir Next', sans-serif;
 
 .ayu-hero1 {
   position: relative;
-  min-height: 60vh;
+  min-height: 80vh;
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1124,5 +1125,616 @@ font-family: 'Avenir Next', sans-serif;
   .ayu-cta-btn{
     padding:12px 34px;
     font-size:0.9rem;
+  }
+}
+
+
+
+
+
+
+/* ===============================
+   MX NANO SLIDER (UNIQUE)
+=============================== */
+
+
+
+/* TOP CONTENT */
+.mx-nano-top-content {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: #1F2A44;
+  font-size: 45px;
+}
+
+/* HEADING */
+.mx-nano-top-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 45px;
+}
+
+/* PARAGRAPH */
+.mx-nano-top-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5C6473;
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mx-nano-top-content h2 {
+    font-size: 22px;
+  }
+
+  .mx-nano-top-content p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+.mx-nano-slider-section {
+  width: 100%;
+  padding: 40px 20px;
+    background-color: rgba(230, 230, 245, 0.8); /* Light lavender with transparency */
+
+  min-height: 520px; /* 🔥 ADD */
+}
+
+/* WRAPPER */
+.mx-nano-slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+
+  height: 500px; /* 🔥 ADD THIS */
+
+
+  
+}
+
+/* SLIDES */
+.mx-nano-slide {
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: all 0.8s ease-in-out;
+  
+}
+
+/* ACTIVE SLIDE */
+.mx-nano-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+   
+}
+
+/* IMAGE */
+.mx-nano-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 🔥 image cut nahi hogi */
+  border-radius: 20px;
+  background: transparent;
+
+}
+
+/* OVERLAY */
+.mx-nano-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 3;
+  
+}
+
+/* HEADING */
+.mx-nano-overlay h2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  animation: mxNanoFadeDown 0.8s ease;
+}
+
+/* ANIMATION */
+@keyframes mxNanoFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .mx-nano-slide {
+    height: 300px;
+  
+  }
+
+  .mx-nano-overlay h2 {
+    font-size: 18px;
+    padding: 8px 14px;
+    
+  }
+  .mx-nano-slider-section {
+margin-bottom: -200px;
+
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .mx-nano-slide {
+    height: 220px;
+    
+  }
+
+  .mx-nano-overlay h2 {
+    font-size: 14px;
+  }
+
+  .mx-nano-slider-section {
+margin-bottom: -200px;
+
+  }
+
+}
+
+
+
+
+
+
+
+
+/*section1*/
+
+/* ===============================
+   SCIENTIFIC SECTION (UNIQUE)
+=============================== */
+
+.mxsci-section {
+  padding: 60px 20px;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* MAIN FLEX */
+.mxsci-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: stretch; /* SAME HEIGHT */
+  gap: 40px;
+}
+
+/* LEFT */
+.mxsci-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mxsciSlideIn 1s ease forwards;
+}
+
+.mxsci-left h2 {
+  color: #1F2A44;
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+
+.mxsci-left p {
+  color: #5C6473;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* RIGHT */
+.mxsci-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: mxsciSlideIn 3s ease forwards;
+}
+
+/* IMAGE FIX (NO CUT) */
+.mxsci-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* IMPORTANT: no crop */
+  max-height: 400px;
+  border-radius: 30px;
+}
+
+/* ===============================
+   ANIMATION (LEFT → RIGHT)
+=============================== */
+
+@keyframes mxsciSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .mxsci-container {
+    flex-direction: column;
+  }
+
+  .mxsci-right img {
+    max-height: 300px;
+  }
+}
+
+
+
+
+
+
+
+
+/*section2*/
+
+/* ===============================
+   BIOLOGICAL SECTION (NEW DESIGN)
+=============================== */
+
+.mxbio-section {
+  padding: 70px 20px;
+  background-color: rgba(230, 230, 245, 0.8);
+}
+
+/* CONTAINER */
+.mxbio-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* 🔥 TOP → BOTTOM */
+  gap: 30px;
+}
+
+/* ===============================
+   TOP TEXT
+=============================== */
+
+.mxbio-top {
+  text-align: center;
+  animation: mxbioFadeUp 1s ease forwards;
+}
+
+.mxbio-top h2 {
+  color: #1F2A44;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.mxbio-top p {
+  color: #5C6473;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* ===============================
+   BOTTOM IMAGE
+=============================== */
+
+.mxbio-bottom {
+  display: flex;
+  justify-content: center;
+  animation: mxbioFadeUp 1.2s ease forwards;
+}
+
+.mxbio-bottom img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain; /* NO CUT */
+  border-radius: 25px;
+}
+
+/* ===============================
+   ANIMATION (BOTTOM → TOP)
+=============================== */
+
+@keyframes mxbioFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* 🔥 niche se upar */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+
+  .mxbio-top h2 {
+    font-size: 26px;
+  }
+
+  .mxbio-top p {
+    font-size: 15px;
+  }
+
+  .mxbio-bottom img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+   ADVANCED DELIVERY SECTION (UNIQUE)
+=============================== */
+
+.mxadv-section {
+  padding: 60px 20px;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* MAIN FLEX */
+.mxadv-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: stretch; /* SAME HEIGHT */
+  gap: 40px;
+}
+
+/* LEFT TEXT */
+.mxadv-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mxadvSlideIn 4s ease forwards;
+}
+
+.mxadv-left h2 {
+  color: #1F2A44;
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+
+.mxadv-left p {
+  color: #5C6473;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 20px;
+
+}
+
+/* RIGHT IMAGE */
+.mxadv-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: mxadvSlideIn 5s ease forwards;
+}
+
+/* IMAGE FIX */
+.mxadv-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* NO CUT */
+  max-height: 400px;
+  border-radius: 20px;
+}
+
+/* ===============================
+   ANIMATION (LEFT → RIGHT)
+=============================== */
+
+@keyframes mxadvSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .mxadv-container {
+    flex-direction: column;
+  }
+
+  .mxadv-right img {
+    max-height: 300px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+   ETHICAL SECTION (LEFT IMAGE)
+=============================== */
+
+.mxeth-section {
+  padding: 40px 10px;
+  background: transparent;
+}
+
+/* MAIN CONTAINER */
+.mxeth-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: stretch; /* SAME HEIGHT */
+  gap: 80px;
+}
+
+/* ===============================
+   LEFT IMAGE
+=============================== */
+
+.mxeth-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: mxethSlideLeft 1s ease forwards;
+}
+
+.mxeth-left img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain; /* 🔥 NO CUT */
+  border-radius: 25px;
+}
+
+/* ===============================
+   RIGHT TEXT
+=============================== */
+
+.mxeth-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mxethSlideRight 1s ease forwards;
+}
+
+.mxeth-right h2 {
+  font-size: 45px;
+  font-weight: 400;
+  color: #1F2A44;
+  margin-bottom: 10px;
+}
+
+.mxeth-line {
+  width: 80px;
+  height: 4px;
+  background: #B23A3F;
+  margin-bottom: 20px;
+}
+
+.mxeth-right p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   ANIMATIONS
+=============================== */
+
+@keyframes mxethSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mxethSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+
+  .mxeth-container {
+    flex-direction: column; /* 🔥 mobile stack */
+  }
+
+  .mxeth-left img {
+    max-height: 300px;
+  }
+
+  .mxeth-right h2 {
+    font-size: 26px;
+  }
+
+  .mxeth-right p {
+    font-size: 15px;
   }
 }

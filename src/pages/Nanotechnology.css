@@ -687,7 +687,13 @@ object-fit:cover;
 .nano-circle-section {
   width: 100%;
   padding: 60px 20px;
-  background: transparent;
+  /* background: transparent; */
+  background: linear-gradient(
+135deg,
+#c9c4de,
+#b9b3d2,
+#d8d4ea
+);
   display: flex;
   justify-content: center;
 }
@@ -1285,7 +1291,13 @@ font-size:18px;
 .mx-process-section {
   width: 100%;
   padding: 60px 20px;
-  background: transparent;
+  /* background: transparent; */
+  background: linear-gradient(
+135deg,
+#c9c4de,
+#b9b3d2,
+#d8d4ea
+);
   text-align: center;
 }
 

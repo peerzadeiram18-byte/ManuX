@@ -355,8 +355,10 @@ font-weight: bold;
 }
 
 .mx-microScience-visual{
-  width:200px;
-  height:200px;
+  width:300px;
+  height:150px;
+
+    background-size: contain;
 }
 
 }
@@ -546,8 +548,11 @@ font-weight: bold;
 }
 
 .mx-microEco-network{
-  width:280px;
-  height:280px;
+  width:300px;
+  height:160px;
+  
+  margin-left: 20px;
+   background-size: contain;
 }
 
 .mx-microEco-core{

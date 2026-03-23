@@ -71,6 +71,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
+import WhyManuX from "./pages/WhyManuX";
+
+
 
 function App() {
 
@@ -107,7 +110,10 @@ function App() {
     <Route path="/OurTeam" element={<OurTeam />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/collaborations" element={<Collaborations />} />
-     <Route path="/About" element={<About />} />
+    <Route path="/About" element={<About />} />
+
+    <Route path="/why-manux" element={<WhyManuX />} />
+     
     {/*<Route path="/AdminDashboard" element={<AdminDashboard />} />*/}
 
     {/*<Route path="/register" element={<Register />} />*/}

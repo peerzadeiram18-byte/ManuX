@@ -1,0 +1,84 @@
+/* PAGE BACKGROUND */
+.why-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+}
+
+/* HERO */
+.why-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-hero h1 {
+  font-size: 36px;
+  color: #1F2A44;
+  font-weight: 400;
+}
+
+.why-hero p {
+  color: #B23A3F;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* SECTION BOX */
+.why-section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.why-section:hover {
+  transform: translateY(-5px);
+}
+
+/* HEADINGS */
+.why-section h2 {
+  color: #1F2A44;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+/* PARAGRAPH */
+.why-section p {
+  color: #5C6473;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  .why-hero h1 {
+    font-size: 26px;
+  }
+
+  .why-section {
+    padding: 20px;
+  }
+
+  .why-section p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-hero h1 {
+    font-size: 22px;
+  }
+
+  .why-hero p {
+    font-size: 14px;
+  }
+}

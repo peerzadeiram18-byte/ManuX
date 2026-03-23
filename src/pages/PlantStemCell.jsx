@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { motion, percent } from "framer-motion";
 import "./PlantStemCell.css";
 import heroImage from "../assets/stem-hero.jpg";
@@ -13,8 +13,73 @@ import maskImg from "../assets/mask.jpg";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
+import React, { useState, useEffect } from "react";
+
+
+
+
+
+
+// 👉 images import (assets se)
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
+import img3 from "../assets/img3.png";
+import img4 from "../assets/img4.png";
+import img5 from "../assets/img5.png";
+
+const slidesData = [
+  {
+    image: img1,
+    title: "Scientific Foundation",
+  },
+  {
+    image: img2,
+    title: "Plant Stem Cell Technology",
+  },
+  {
+    image: img3,
+    title: "Advanced Delivery Integration",
+  },
+  {
+    image: img4,
+    title: "Ecological Responsibility",
+  },
+  {
+    image: img5,
+    title: "Scientific Principle: States of Matter",
+  },
+];
+
+// const [current, setCurrent] = useState(0);
+
+// useEffect(() => {
+//   const interval = setInterval(() => {
+//     setCurrent((prev) =>
+//       prev === slidesData.length - 1 ? 0 : prev + 1
+//     );
+//   }, 4000);
+
+//   return () => clearInterval(interval);
+// }, []);
+
+
 
 export default function PlantStemCell() {
+
+
+  const [current, setCurrent] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrent((prev) =>
+      prev === slidesData.length - 1 ? 0 : prev + 1
+    );
+  }, 4000);
+
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <div className="plant-container"
         style={{ backgroundImage: `url(${bgImage})` }}
@@ -35,7 +100,9 @@ export default function PlantStemCell() {
     </h1>
 
     <p className="ayu-hero1-subtitle">
-      Where Botanical Intelligence Meets Regenerative Biotechnology
+     
+Harnessing botanical cellular intelligence for regeneration
+
     </p>
 
     {/*<button className="ayu-hero1-btn">
@@ -45,8 +112,176 @@ export default function PlantStemCell() {
 </section>
 
 
+
+
+  {/* <section className="mx-nano-slider-section">
+
+
+  {/* 🔥 TOP HEADING */}
+ {/*} <div className="mx-nano-top-content">
+    <h2>
+      Harnessing botanical cellular intelligence for regeneration
+    </h2>
+
+    <p>
+      Plant stem cell technology at ManuX NanoBioCeuticals focuses on utilizing the regenerative 
+      and adaptive intelligence of undifferentiated plant cells. {/*These cells possess the unique 
+      ability to renew, repair, and protect plant tissues, making them valuable for advanced 
+      cosmetic and wellness applications. Unlike conventional plant extracts derived from mature 
+      tissues, plant stem cell systems concentrate cellular signals associated with vitality, 
+      resilience, and longevity.*/}
+   {/*} </p> 
+  </div>
+
+
+
+      <div className="mx-nano-slider-wrapper">
+
+
+
+
+        {slidesData.map((slide, index) => (
+          <div
+            key={index}
+            className={`mx-nano-slide ${
+              index === current ? "active" : ""
+            }`}
+          >
+            <img src={slide.image} alt={slide.title} />
+
+            {/* Overlay Heading */}
+            {/* <div className="mx-nano-overlay">
+              <h2>{slide.title}</h2>
+            </div> */}
+         {/*} </div>
+        ))}
+        
+
+      </div>
+    </section> */}
+
+
+
+{/*scetion 1*/}
+
+
+    <section className="mxsci-section">
+  
+  <div className="mxsci-container">
+
+    {/* LEFT TEXT */}
+    <div className="mxsci-left">
+      <h2>Scientific foundation</h2>
+
+      <p>
+        Plant stem cells are cultivated under controlled conditions to preserve
+        their bioactive signaling molecules. These include antioxidants,
+        peptides, phytohormones, and protective metabolites that support
+        cellular defense mechanisms.
+      </p>
+
+      <p>
+        At ManuX, we focus on stability, purity, and compatibility, ensuring
+        that stem cell actives remain effective and safe within finished
+        formulations.
+      </p>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="mxsci-right">
+      <img src={img1} alt="Scientific foundation" />
+    </div>
+
+  </div>
+
+</section>
+
+
+
+{/*scetion 2*/}
+
+
+
+<section className="mxbio-section">
+
+  <div className="mxbio-container">
+
+    {/* TOP TEXT */}
+    <div className="mxbio-top">
+      <h2>Biological Integration</h2>
+      <p>
+        Advanced biological systems are designed to enhance compatibility,
+        absorption, and long-term effectiveness through precise formulation
+        strategies.
+      </p>
+    </div>
+
+    {/* BOTTOM IMAGE */}
+    <div className="mxbio-bottom">
+  <img src={img2} alt="bio" />
+</div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+{/*scetion 3*/}
+
+<section className="mxadv-section">
+
+  <div className="mxadv-container">
+
+    {/* LEFT TEXT */}
+    <div className="mxadv-left">
+      <h2>Advanced delivery integration</h2>
+
+      <p>
+        To maximize performance, plant stem cell actives are integrated with
+        compatible delivery systems such as nano carriers and hydration
+        architectures. This ensures optimal interaction with target tissues
+        without compromising cellular integrity.
+      </p>
+
+      <p>
+        The result is sustained biological support rather than short-lived
+        cosmetic effects.
+      </p>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="mxadv-right">
+      <img src={img3} alt="Advanced delivery integration" />
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 {/* 2️⃣ Scientific Introduction */}
-<section className="ayu-intro">
+{/* <section className="ayu-intro">
   <motion.div
     className="ayu-intro-box"
     initial={{ opacity: 0, y: 50 }}
@@ -70,10 +305,10 @@ export default function PlantStemCell() {
       and visible rejuvenation.
     </p>
   </motion.div>
-</section>
+</section> */}
 
      {/* 3️⃣ Split Biotech Section */}
-<section className="ayu-split">
+{/* <section className="ayu-split">
 
   <motion.div 
     className="ayu-split-text"
@@ -105,7 +340,42 @@ export default function PlantStemCell() {
     <img src={labImage} alt="Biotech Lab" />
   </motion.div>
 
+</section> */}
+
+
+
+<section className="mx-sustain-section">
+  <motion.div
+    className="mx-sustain-container"
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+
+    <div className="mx-sustain-image">
+      <img src={sustainabilityImg} alt="Sustainable Lab" />
+    </div>
+
+    <div className="mx-sustain-text">
+      <h2>Sustainable Scientific Excellence</h2>
+
+      <p>
+        A standout characteristic of plant stem cell technology 
+        is its sustainability. Instead of wasting an entire plant 
+        and the resources it requires to thrive, this process allows 
+        researchers to obtain only what they need.
+
+        It also offers a clean and consistent supply of these extracts, 
+        as they are not limited to harvest or seasons, making it a 
+        technology that allows us to make the most of nature while 
+        also protecting it.
+      </p>
+    </div>
+
+  </motion.div>
 </section>
+
+
 
       {/* 4️⃣ Glassmorphism Benefit Cards */}
       <section className="glass-section">
@@ -167,39 +437,10 @@ export default function PlantStemCell() {
 </section> */}
 
 
-<section className="mx-sustain-section">
-  <motion.div
-    className="mx-sustain-container"
-    initial={{ opacity: 0, y: 60 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-  >
 
-    <div className="mx-sustain-image">
-      <img src={sustainabilityImg} alt="Sustainable Lab" />
-    </div>
-
-    <div className="mx-sustain-text">
-      <h2>Sustainable Scientific Excellence</h2>
-
-      <p>
-        A standout characteristic of plant stem cell technology 
-        is its sustainability. Instead of wasting an entire plant 
-        and the resources it requires to thrive, this process allows 
-        researchers to obtain only what they need.
-
-        It also offers a clean and consistent supply of these extracts, 
-        as they are not limited to harvest or seasons, making it a 
-        technology that allows us to make the most of nature while 
-        also protecting it.
-      </p>
-    </div>
-
-  </motion.div>
-</section>
 
 {/* 7️⃣ Premium Highlight Strip */}
-<section className="ayu-highlight">
+{/* <section className="ayu-highlight">
   <h2 className="ayu-highlight-title">
     Luxury Meets Biotechnology
   </h2>
@@ -207,7 +448,7 @@ export default function PlantStemCell() {
     ManuX NanoBioCeuticals pioneers regenerative plant science for
     next-generation cosmetic innovation.
   </p>
-</section>
+</section> */}
 
 
     {/* 6️⃣ Applications */}
@@ -249,10 +490,59 @@ export default function PlantStemCell() {
 
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section className="mxeth-section">
+
+  <div className="mxeth-container">
+
+    {/* LEFT IMAGE */}
+    <div className="mxeth-left">
+      <img src={img4} alt="ethical" />
+    </div>
+
+    {/* RIGHT TEXT */}
+    <div className="mxeth-right">
+
+      <h2>Ethical and sustainable cultivation</h2>
+
+      {/* LINE */}
+      <div className="mxeth-line"></div>
+
+      <p>
+        ManuX adopts ethical plant stem cell sourcing through controlled
+        cultivation techniques that avoid overharvesting of natural plant
+        populations. This approach ensures biodiversity preservation while
+        maintaining consistent quality.
+      </p>
+
+      <p>
+        Our commitment to sustainability aligns advanced science with
+        ecological responsibility.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
      
 
       {/* 8️⃣ CTA */}
-    <section className="ayu-cta">
+    {/* <section className="ayu-cta">
   <h2 className="ayu-cta-title">
     Elevate Your Formulations with Advanced Bio-Innovation
   </h2>
@@ -260,7 +550,7 @@ export default function PlantStemCell() {
   <button className="ayu-cta-btn">
     Explore Solutions
   </button>
-</section>
+</section> */}
 
     </div>
   );

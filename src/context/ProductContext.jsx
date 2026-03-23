@@ -45,7 +45,7 @@ export const ProductProvider = ({ children }) => {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`,
+        `${BASE_URL}/api/products/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -67,7 +67,7 @@ export const ProductProvider = ({ children }) => {
   const updateProduct = async (id, formData) => {
   try {
     const res = await axios.put(
-      `http://localhost:5000/api/products/${id}`,
+      `${BASE_URL}/api/products/${id}`,
       formData,
       {
         headers: {
