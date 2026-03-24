@@ -9,6 +9,8 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 export default function BabyCare() {
   const { products } = useContext(ProductContext);
 
+
+
   const babyProducts = products.filter(
     (item) => item.category === "baby-care"
   );

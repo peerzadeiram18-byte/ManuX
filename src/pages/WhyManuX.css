@@ -4,11 +4,260 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
 }
 
-/* HERO */
+
+
+
+/* =========================
+   WHY HERO BACKGROUND
+========================= */
+
 .why-hero {
+  /* position: relative; */
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+   padding: 0px; 
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  width: 100%;
+}
+
+/* OVERLAY */
+/* .why-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+/* CONTENT */
+.why-hero-content {
+  position: relative;
+  z-index: 1;
+  color: #1F2A44;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.why-hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  animation: slideDown 1s ease forwards;
+}
+
+.why-hero-content p {
+  font-size: 25px;
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 1.5s ease forwards;
+color:  #5C6473;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .why-hero {
+    height: 50vh;
+  }
+
+  .why-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .why-hero-content p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   MANUX WHY SECTION
+========================= */
+
+.mx-why-sec {
+  display: flex;
+  align-items: stretch; /* 🔥 SAME HEIGHT */
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+/* TEXT */
+.mx-why-text {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 50px;
+
+  animation: mxFadeUp 1s ease forwards;
+}
+
+.mx-why-text h2 {
+  font-size: 32px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx-why-text p {
+  font-size: 16px;
+  color: #5C6473;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+.mx-why-img {
+  flex: 1;
+  min-width: 250px;
+  animation: mxFadeZoom 1.2s ease forwards;
+}
+
+.mx-why-img img {
+  width: 100%;
+  height: 90%; /* 🔥 SAME HEIGHT */
+  object-fit: contain;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.mx-why-img img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.mx-img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.mx-img-modal img {
+  max-width: 90%;
+  max-height: 60%;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes mxFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mxFadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx-why-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx-why-sec {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx-why-img img {
+    height: 300px; /* fix height mobile */
+  }
+
+  .mx-why-text h2 {
+    font-size: 24px;
+  }
+
+  .mx-why-text p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO */
+/* .why-hero {
   text-align: center;
   margin-bottom: 50px;
 }
@@ -23,7 +272,7 @@
   color: #B23A3F;
   font-size: 16px;
   margin-top: 10px;
-}
+} */
 
 /* SECTION BOX */
 .why-section {

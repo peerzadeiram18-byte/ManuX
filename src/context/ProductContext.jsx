@@ -11,24 +11,47 @@ export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
 
   // 🔹 GET PRODUCTS
+
+
+
   const fetchProducts = async () => {
-    try {
+  try {
+    console.log("BASE_URL:", BASE_URL);
 
-      const res = await axios.get(
-    `${BASE_URL}/api/products`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`
-          }
-        }
-      );
+    const res = await axios.get(`${BASE_URL}/api/products`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`
+      }
+    });
 
-      setProducts(res.data);
+    console.log("API RESPONSE:", res.data); // 👈 IMPORTANT
 
-    } catch (err) {
-      console.log(err);
-    }
-  };
+    setProducts(res.data);
+
+  } catch (err) {
+    console.log("ERROR:", err.response?.data || err.message);
+  }
+};
+
+
+  // const fetchProducts = async () => {
+  //   try {
+
+  //     const res = await axios.get(
+  //   `${BASE_URL}/api/products`,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${localStorage.getItem("token")}`
+  //         }
+  //       }
+  //     );
+
+  //     setProducts(res.data);
+
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   useEffect(() => {
     fetchProducts();

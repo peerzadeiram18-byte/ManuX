@@ -117,11 +117,11 @@ const handleUpdate = async () => {
                 <td>{product.category}</td>
                 <td>{product.description}</td>
                 <td>
-                 {/* <img src={product.image} alt="" className="pm-img" />   */}
-                <img
+                 <img src={product.image} alt="" className="pm-img" />   
+                {/* <img
                     src={`${BASE_URL}/uploads/${product.image}`}
                  className="pm-img"
-                  />        
+                  />         */}
                   
                   </td>
                 <td>

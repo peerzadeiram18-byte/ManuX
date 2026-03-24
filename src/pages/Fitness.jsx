@@ -10,6 +10,8 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 export default function Fitness() {
   const { products } = useContext(ProductContext);
 
+  
+
   // ✅ category filter (IMPORTANT)
   const fitnessProducts = products.filter(
     (item) => item.category === "fitness"

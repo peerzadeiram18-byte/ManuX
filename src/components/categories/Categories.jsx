@@ -7,6 +7,8 @@ import CategoryCard from "./CategoryCard";
 export default function Categories() {
 
   const { products } = useContext(ProductContext);
+
+
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {

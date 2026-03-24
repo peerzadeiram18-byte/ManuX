@@ -9,9 +9,10 @@ import "./MensCare.css";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function MensCare() {
-  const { products } = useContext(ProductContext);
 
-  const mensProducts = products.filter(
+  const { products } = useContext(ProductContext); // ✅ ADD THIS
+
+    const mensProducts = products.filter(
     (item) => item.category === "mens-care"
   );
 

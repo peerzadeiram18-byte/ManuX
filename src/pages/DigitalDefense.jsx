@@ -9,6 +9,8 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 export default function DigitalDefense() {
   const { products } = useContext(ProductContext);
 
+
+
   // ✅ category filter (IMPORTANT)
   const digitalProducts = products.filter(
     (item) => item.category === "digital-defense"

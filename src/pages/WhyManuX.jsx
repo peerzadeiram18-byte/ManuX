@@ -1,8 +1,19 @@
-import React from "react";
+// import React from "react";
 import "./WhyManuX.css";
 import bgImage from "../assets/backgroundimage.jpg";
 
+import heroImg from "../assets/your1-image.jpg";
+import { useState } from "react";
+import sciImg from "../assets/your2-image.jpg";
+
+
 const WhyManuX = () => {
+
+ const [mxImgPreview, setMxImgPreview] = useState(null);
+
+
+
+
   return (
     <div
       className="why-page"
@@ -10,13 +21,22 @@ const WhyManuX = () => {
     >
       
       {/* HERO */}
-      <section className="why-hero">
-        <h1>Why ManuX NanoBioCeuticals</h1>
-        <p>Where ayurveda, science, and responsibility converge</p>
-      </section>
+
+<section
+  className="why-hero"
+  style={{ backgroundImage: `url(${heroImg})` }}
+>
+  <div className="why-hero-content">
+    <h1>Why ManuX NanoBioCeuticals</h1>
+    <p>Where ayurveda, science, and responsibility converge</p>
+  </div>
+</section>
 
       {/* SECTION 1 */}
-      <section className="why-section">
+    <section className="mx-why-sec">
+
+      {/* LEFT TEXT */}
+      <div className="mx-why-text">
         <h2>Scientific innovation platform</h2>
         <p>
           ManuX NanoBioCeuticals is not positioned as a conventional cosmetic,
@@ -24,7 +44,28 @@ const WhyManuX = () => {
           platform designed to translate ancient biological intelligence into
           modern, high-performance solutions with global relevance.
         </p>
-      </section>
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="mx-why-img">
+        <img
+          src={sciImg}
+          alt="Scientific"
+          onClick={() => setMxImgPreview(sciImg)}
+        />
+      </div>
+
+      {/* IMAGE MODAL */}
+      {mxImgPreview && (
+        <div
+          className="mx-img-modal"
+          onClick={() => setMxImgPreview(null)}
+        >
+          <img src={mxImgPreview} alt="preview" />
+        </div>
+      )}
+
+    </section>
 
       {/* SECTION 2 */}
       <section className="why-section">
