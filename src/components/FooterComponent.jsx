@@ -167,6 +167,7 @@ useEffect(() => {
     {openCompany && (
       <ul className="footer-submenu">
         <li><Link to="/about" onClick={handleScrollTop}>About</Link></li>
+        <li><Link to="/why-manux" onClick={handleScrollTop}>Why ManuX</Link></li>
         <li><Link to="/OurTeam" onClick={handleScrollTop}>Team</Link></li>
         <li><Link to="/collaborations" onClick={handleScrollTop}>Collaborations</Link></li>
       </ul>
@@ -196,9 +197,26 @@ useEffect(() => {
           
           <div className="socials">
             <ul>
-            <li>Instagram</li>
-            <li>Facebook</li>
-            <li>Twitter</li>
+            <li>  
+                  <a 
+                      href="https://www.instagram.com/theaojas" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                  >
+                        Instagram
+                  </a>
+            </li>
+            <li>
+                                <a 
+                      href="https://www.facebook.com/theaojasretail" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                  >
+              
+              Facebook
+              </a>
+              </li>
+            {/* <li>Twitter</li> */}
               </ul>
           </div>
         

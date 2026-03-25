@@ -4,103 +4,904 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-bottom: 40px;
+ 
 }
 
-/* HERO */
-.collab-hero {
+
+
+/* =========================
+   COLLAB HERO SECTION
+========================= */
+
+.mx-collab-hero {
   position: relative;
-  height: 300px;
+  height: 50vh;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.collab-hero .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 37, 68, 0.75);
-}
-
-.hero-content {
-  position: relative;
   text-align: center;
-  color: #fff;
-  padding: 20px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
 }
 
-.hero-content h1 {
-  font-size: 38px;
+/* OVERLAY */
+/* .mx-collab-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+/* CONTENT */
+.mx-collab-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+
+  animation: mxCollabFadeUp 1.2s ease forwards;
 }
 
-.hero-content p {
-  font-size: 16px;
-  color: #E5E6E8;
-}
-
-/* SECTION TEXT */
-.collab-section {
-  max-width: 900px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 25px;
-  border-radius: 12px;
+.mx-collab-content h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+  font-weight: 400;
   color: #0F2544;
-  line-height: 1.6;
+
+  animation: mxCollabSlideDown 1s ease forwards;
 }
 
-/* GRID */
-.collab-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 20px 40px;
+.mx-collab-content p {
+  font-size: 20px;
+  color: #0F2544;
+
+  animation: mxCollabFadeIn 1.5s ease forwards;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes mxCollabFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mxCollabSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mxCollabFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx-collab-hero {
+    height: 60vh;
+  }
+
+  .mx-collab-content h1 {
+    font-size: 32px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx-collab-hero {
+    height: 50vh;
+    padding: 0 15px;
+  }
+
+  .mx-collab-content h1 {
+    font-size: 24px;
+  }
+
+  .mx-collab-content p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   COLLAB SECTION 1
+========================= */
+
+.mx-collab-sec1 {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+
+  animation: mxCollabFadeUp 1s ease forwards;
 }
 
 /* CARD */
-.collab-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  padding: 20px;
-  transition: 0.3s;
-  border-left: 5px solid #C1121F;
-  backdrop-filter: blur(6px);
-}
+.mx-collab-card {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
 
-.collab-card:hover {
-  transform: translateY(-8px);
-}
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
 
-.collab-card h3 {
+  border: 2px solid rgba(255,255,255,0.5);
+
+  line-height: 1.7;
   color: #0F2544;
+
+  transition: all 0.4s ease;
+}
+
+/* SPACING */
+.mx-collab-card p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* HOVER EFFECT 🔥 */
+.mx-collab-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  border: 1px solid #ffffff;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mxCollabFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx-collab-card {
+    padding: 30px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx-collab-sec1 {
+    padding: 60px 15px;
+  }
+
+  .mx-collab-card {
+    padding: 25px;
+  }
+
+  .mx-collab-card p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* =========================
+   MANUX SECTION 7
+========================= */
+
+.mx7-sec {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 20px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+
+    animation: mx7FadeUp 1.2s ease forwards;
+
+}
+
+/* OVERLAY */
+/* .mx7-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+} */
+
+/* CONTENT */
+.mx7-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  color: white;
+
+  animation: mx7FadeUp 1.2s ease forwards;
+}
+
+.mx7-content h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 400;
+
+  animation: mx7SlideDown 1s ease forwards;
+}
+
+.mx7-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+
+  animation: mx7FadeIn 1.5s ease forwards;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes mx7FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mx7SlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mx7FadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx7-sec {
+    height: 60vh;
+  }
+
+  .mx7-content h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx7-sec {
+    height: auto;
+    padding: 60px 15px;
+  }
+
+  .mx7-content h2 {
+    font-size: 24px;
+  }
+
+  .mx7-content p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* =========================
+   MANUX SECTION 8
+========================= */
+
+.mx8-sec {
+  display: flex;
+  align-items: stretch; /* 🔥 SAME HEIGHT */
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 40px;
+  flex-wrap: wrap;
+}
+
+/* TEXT */
+.mx8-text {
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 50px;
+  animation: mx8FadeUp 1s ease forwards;
+}
+
+.mx8-text h3 {
+  font-size: 45px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx8-text p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.6;
   margin-bottom: 10px;
 }
 
-.collab-card p {
-  color: #6E7178;
+/* IMAGE */
+.mx8-img {
+  flex: 1;
+  min-width: 280px;
+
+  animation: mx8Zoom 1.2s ease forwards;
+}
+
+.mx8-img img {
+  width: 100%;
+  height: 90%; /* 🔥 SAME HEIGHT */
+  object-fit: cover;
+  border-radius: 20px;
+
+  transition: transform 0.4s ease;
+}
+
+.mx8-img img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx8FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mx8Zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx8-text h3 {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx8-sec {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx8-img img {
+    height: 300px;
+  }
+
+  .mx8-text h3 {
+    font-size: 22px;
+  }
+
+  .mx8-text p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* =========================
+   MANUX SECTION 9
+========================= */
+
+.mx9-sec {
+  padding: 60px 20px;
+  text-align: center;
+
+
+   background: linear-gradient(
+    135deg,
+    #0f3a4d,
+    #1b4f6b,
+    #0a2e3f
+  );
+
+  animation: mx9FadeUp 1s ease forwards;
+}
+
+/* TOP */
+.mx9-top {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.mx9-top h2 {
+  font-size: 45px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx9-top p {
+  font-size: 20px;
+  color: #e3e1e1;
+  line-height: 1.7;
+}
+
+/* CARD GRID */
+.mx9-card-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.mx9-card {
+  padding: 25px;
+  border-radius: 16px;
+
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  transition: all 0.4s ease;
+}
+
+/* HOVER 🔥 */
+.mx9-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.mx9-card h3 {
+  font-size: 18px;
+  color: #1F2A44;
+  margin-bottom: 10px;
+}
+
+.mx9-card p {
   font-size: 14px;
+  color: #5C6473;
+  line-height: 1.5;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx9FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx9-card-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mx9-top h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx9-card-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .mx9-top h2 {
+    font-size: 24px;
+  }
+
+  .mx9-top p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   MANUX SECTION 10
+========================= */
+
+.mx10-sec {
+  display: flex;
+  align-items: stretch; /* 🔥 SAME HEIGHT */
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 40px;
+  flex-wrap: wrap;
+
+  background: transparent;
+}
+
+/* IMAGE */
+.mx10-img {
+  flex: 1;
+  min-width: 280px;
+
+  animation: mx10Zoom 1.2s ease forwards;
+}
+
+.mx10-img img {
+  width: 100%;
+  height: 100%; /* 🔥 SAME HEIGHT */
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: transform 0.4s ease;
+}
+
+.mx10-img img:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.mx10-text {
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mx10SlideRight 1s ease forwards;
+}
+
+.mx10-text h3 {
+  font-size: 45px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx10-text p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.mx10-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.mx10-modal img {
+  max-width: 90%;
+  max-height: 60%;
+  border-radius: 12px;
+  margin-top: 100px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx10Zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mx10SlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx10-text h3 {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx10-sec {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx10-img img {
+    height: 300px;
+  }
+
+  .mx10-text h3 {
+    font-size: 22px;
+  }
+
+  .mx10-text p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   MANUX SECTION 11
+========================= */
+
+.mx11-sec {
+  padding: 60px 40px;
+
+  background: linear-gradient(135deg, #0f3a4d, #0a2e3f); /* 🔥 premium bg */
+
+  color: white;
+
+  animation: mx11FadeUp 1s ease forwards;
+}
+
+/* CONTAINER */
+.mx11-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* LEFT */
+.mx11-left {
+  flex: 1;
+  min-width: 280px;
+
+  margin-left: 50px;
+}
+
+.mx11-left h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.mx11-left p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #d1d9e6;
+}
+
+/* RIGHT CARDS */
+.mx11-right {
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.mx11-card {
+  padding: 20px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: all 0.4s ease;
+}
+
+/* HOVER 🔥 */
+.mx11-card:hover {
+  transform: translateX(10px) scale(1.02);
+  background: rgba(255,255,255,0.15);
+}
+
+/* TEXT */
+.mx11-card h3 {
+  font-size: 21px;
   margin-bottom: 8px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .collab-grid {
-    grid-template-columns: repeat(2, 1fr);
+.mx11-card p {
+  font-size: 16px;
+  color: #cbd3e0;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx11FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx11-left h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
-  .collab-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
+  .mx11-sec {
+    padding: 60px 20px;
+    text-align: center;
   }
 
-  .hero-content h1 {
-    font-size: 26px;
+  .mx11-container {
+    flex-direction: column;
   }
 
-  .collab-hero {
-    height: 220px;
+  .mx11-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .mx11-left h2 {
+    font-size: 24px;
+  }
+
+  .mx11-left p {
+    font-size: 14px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

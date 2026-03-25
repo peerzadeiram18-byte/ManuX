@@ -97,16 +97,21 @@ color:  #5C6473;
 
 
 /* =========================
-   MANUX WHY SECTION
+   MANUX WHY SECTION 1
 ========================= */
 
 .mx-why-sec {
   display: flex;
   align-items: stretch; /* 🔥 SAME HEIGHT */
   justify-content: center;
-  gap: 40px;
-  padding: 60px 40px;
+  gap: 60px;
+  padding: 40px 40px;
   flex-wrap: wrap;
+
+
+  backdrop-filter: blur(60px);            /* glass effect */
+
+  border: 1.9px solid white; /* white border */
 }
 
 /* TEXT */
@@ -123,14 +128,14 @@ color:  #5C6473;
 }
 
 .mx-why-text h2 {
-  font-size: 32px;
+  font-size: 45px;
   color: #1F2A44;
   margin-bottom: 15px;
   font-weight: 400;
 }
 
 .mx-why-text p {
-  font-size: 16px;
+  font-size: 20px;
   color: #5C6473;
   line-height: 1.6;
 }
@@ -144,8 +149,8 @@ color:  #5C6473;
 
 .mx-why-img img {
   width: 100%;
-  height: 90%; /* 🔥 SAME HEIGHT */
-  object-fit: contain;
+  height: 100%; /* 🔥 SAME HEIGHT */
+  object-fit: cover;
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -234,6 +239,697 @@ color:  #5C6473;
     font-size: 14px;
   }
 }
+
+
+/* =========================
+   MANUX SECTION 2
+========================= */
+
+.mx2-why-sec {
+  display: flex;
+  align-items: stretch; /* 🔥 SAME HEIGHT */
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 40px;
+  flex-wrap: wrap;
+
+  border: 1.9px solid white; /* white border */
+}
+
+/* IMAGE */
+.mx2-why-img {
+  flex: 1;
+  min-width: 280px;
+  animation: mx2ZoomIn 1.2s ease forwards;
+}
+
+.mx2-why-img img {
+  width: 100%;
+  height: 100%; /* 🔥 SAME HEIGHT */
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.mx2-why-img img:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.mx2-why-text {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mx2SlideRight 1s ease forwards;
+}
+
+.mx2-why-text h2 {
+  font-size: 45px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx2-why-text p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.6;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.mx2-img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.mx2-img-modal img {
+  max-width: 90%;
+  max-height: 60%;
+  border-radius: 12px;
+  margin-top: 100px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes mx2ZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mx2SlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx2-why-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx2-why-sec {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx2-why-img img {
+    height: 300px;
+  }
+
+  .mx2-why-text h2 {
+    font-size: 24px;
+  }
+
+  .mx2-why-text p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+/* =========================
+   MANUX SECTION 3
+========================= */
+
+.mx3-why-sec {
+  display: flex;
+  align-items: stretch; /* 🔥 SAME HEIGHT */
+  justify-content: center;
+  gap: 60px;
+  padding:40px 40px;
+  flex-wrap: wrap;
+/* 
+  backdrop-filter: blur(60px);           /* glass effect */
+
+  /* border: 1.9px solid white;          /* white border */
+
+}
+
+/* TEXT */
+.mx3-why-text {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mx3FadeUp 1s ease forwards;
+  margin-left: 50px;
+}
+
+.mx3-why-text h2 {
+  font-size: 45px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx3-why-text p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+.mx3-why-img {
+  flex: 1;
+  min-width: 280px;
+  animation: mx3ZoomIn 1.2s ease forwards;
+}
+
+.mx3-why-img img {
+  width: 100%;
+  height: 100%; /* 🔥 SAME HEIGHT */
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.mx3-why-img img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.mx3-img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.mx3-img-modal img {
+  max-width: 90%;
+  max-height: 70%;
+  border-radius: 12px;
+
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes mx3FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mx3ZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx3-why-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx3-why-sec {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx3-why-img img {
+    height: 300px;
+  }
+
+  .mx3-why-text h2 {
+    font-size: 24px;
+  }
+
+  .mx3-why-text p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+/* =========================
+   MANUX SECTION 4 LAYOUT
+========================= */
+
+.mx4-layout-sec {
+  display: flex;
+  align-items: stretch; /* 🔥 SAME HEIGHT */
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 40px;
+  flex-wrap: wrap;
+
+  border: 1.9px solid white; /* white border */
+
+
+  backdrop-filter: blur(60px);            /* glass effect */
+
+  border: 1.9px solid white; /* white border */  
+
+}
+
+/* IMAGE */
+.mx4-layout-img {
+  flex: 1;
+  min-width: 280px;
+  animation: mx4Zoom 1.2s ease forwards;
+}
+
+.mx4-layout-img img {
+  width: 100%;
+  height: 100%; /* 🔥 SAME HEIGHT */
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.mx4-layout-img img:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.mx4-layout-text {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: mx4SlideRight 1s ease forwards;
+}
+
+.mx4-layout-text h2 {
+  font-size: 45px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx4-layout-text p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.6;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.mx4-layout-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.mx4-layout-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx4Zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mx4SlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx4-layout-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx4-layout-sec {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx4-layout-img img {
+    height: 300px;
+  }
+
+  .mx4-layout-text h2 {
+    font-size: 24px;
+  }
+
+  .mx4-layout-text p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+/* =========================
+   MANUX SECTION 5 (ETHICS)
+========================= */
+
+.mx5-sec {
+  padding: 60px 20px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(60px); /* 🔥 GLASS EFFECT */
+
+  animation: mx5FadeUp 1s ease forwards;
+
+  border: 1.9px solid white; /* white border */
+
+}
+
+/* TOP TEXT */
+.mx5-top {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.mx5-top h2 {
+  font-size: 45px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx5-top p {
+  font-size: 20px;
+  color: #5C6473;
+  line-height: 1.7;
+}
+
+/* CARDS GRID */
+.mx5-card-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.mx5-card {
+  padding: 25px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT 🔥 */
+.mx5-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.mx5-card h3 {
+  font-size: 20px;
+  color: #1F2A44;
+  margin-bottom: 10px;
+}
+
+.mx5-card p {
+  font-size: 16px;
+  color: #5C6473;
+  line-height: 1.5;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx5FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx5-card-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mx5-top h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx5-card-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .mx5-top h2 {
+    font-size: 24px;
+  }
+
+  .mx5-top p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+/* =========================
+   MANUX SECTION 6
+========================= */
+
+.mx6-sec {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+
+  animation: mx6FadeUp 1s ease forwards;
+}
+
+/* CARD */
+.mx6-card {
+  max-width: 800px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px); /* 🔥 GLASS */
+
+  border: 1px solid rgba(255,255,255,0.6); /* 🔥 WHITE BORDER */
+
+  text-align: center;
+
+  transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT 🔥 */
+.mx6-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+
+  border: 1px solid #ffffff; /* brighter on hover */
+}
+
+/* TEXT */
+.mx6-card h2 {
+  font-size: 32px;
+  color: #1F2A44;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.mx6-card p {
+  font-size: 16px;
+  color: #5C6473;
+  line-height: 1.7;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes mx6FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .mx6-card {
+    padding: 30px;
+  }
+
+  .mx6-card h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .mx6-sec {
+    padding: 60px 15px;
+  }
+
+  .mx6-card {
+    padding: 25px;
+  }
+
+  .mx6-card h2 {
+    font-size: 24px;
+  }
+
+  .mx6-card p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -149,6 +149,24 @@ padding-bottom: 0px;
   width: 100%;
 }
 
+
+
+
+.socials a {
+  text-decoration: none;
+  color: #5C6473;
+  /* transition: 0.3s; */
+}
+
+.socials a:hover {
+  color: #B23A3F; /* Instagram color 😍 */
+}
+
+
+
+
+
+
 /* ===== BOTTOM BAR ===== */
 
 .footer-bottom {
@@ -242,3 +260,7 @@ padding-bottom: 0px;
   color: #B23A3F;
   transform: translateX(6px);
 }
+
+
+
+
