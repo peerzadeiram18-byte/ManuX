@@ -60,7 +60,7 @@ const handleUpdate = async () => {
     .replace(/\b\w/g, (char) => char.toUpperCase())
 );
     formData.append("category", editingProduct.category);
-    // formData.append("description", editingProduct.description);
+     formData.append("description", editingProduct.description);
 
 //     formData.append(
 //   "description",
@@ -68,9 +68,9 @@ const handleUpdate = async () => {
 // );
 
 
-if (editingProduct.description !== undefined) {
-  formData.append("description", editingProduct.description);
-}
+// if (editingProduct.description !== undefined) {
+//   formData.append("description", editingProduct.description);
+// }
 
     // ✅ IMAGE FIX
     if (editingProduct.image instanceof File) {
@@ -80,7 +80,7 @@ if (editingProduct.description !== undefined) {
     await updateProduct(editingProduct._id, formData);
      
     // ✅ ADD THIS
-await fetchProducts();
+// await fetchProducts();
 
 
 
@@ -129,11 +129,11 @@ await fetchProducts();
                 <td>{product.category}</td>
                 <td>{product.description}</td>
                 <td>
-                 {/* <img src={product.image} alt="" className="pm-img" />    */}
-                 <img
+                 <img src={product.image} alt="" className="pm-img" />   
+                 {/* <img
                     src={`${BASE_URL}/uploads/${product.image}`}
                  className="pm-img"
-                  />         
+                  />          */}
                   
                   </td>
                 <td>
