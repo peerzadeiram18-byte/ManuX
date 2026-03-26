@@ -130,10 +130,20 @@ const handleUpdate = async () => {
                 <td>{product.description}</td>
                 <td>
                  {/* <img src={product.image} alt="" className="pm-img" />    */}
-                 <img
+                 {/* <img
                     src={`${BASE_URL}/uploads/${product.image}`}
                  className="pm-img"
-                  />          
+                  />           */}
+
+                  <img
+  src={
+    typeof product.image === "string"
+      ? `${BASE_URL}/uploads/${product.image}`
+      : URL.createObjectURL(product.image)
+  }
+  alt=""
+  className="pm-img"
+/>
                   
                   </td>
                 <td>
