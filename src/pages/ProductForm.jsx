@@ -2,6 +2,9 @@ import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./ProductForm.css";
 
+import { toast } from "react-toastify";
+
+
 import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -177,7 +180,9 @@ const handleSubmit = async (e) => {
     addProduct(res.data);
     fetchProducts();
 
-    alert("Product Added!");
+    // alert("Product Added!");
+
+    toast.success("Product Added Successfully!");
 
     setName("");
     setCategory("");

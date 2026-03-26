@@ -194,3 +194,44 @@
     padding: 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* TOAST MAIN BOX */
+.Toastify__toast {
+  border-radius: 12px;
+  font-family: inherit;
+  padding: 12px;
+
+  margin-top: 160px;
+}
+
+/* SUCCESS TOAST */
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #1F2A44, #B23A3F) !important;
+  color: #fff !important;
+}
+
+/* TEXT */
+.Toastify__toast-body {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* PROGRESS BAR */
+.Toastify__progress-bar {
+  background: #B23A3F !important;
+}
+
+/* CLOSE BUTTON */
+.Toastify__close-button {
+  color: #fff;
+}

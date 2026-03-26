@@ -116,7 +116,7 @@
 /* IMAGE */
 .product-card img {
   width: 100%;
-  height: 250px;
+  height: 420px;
   /* object-fit: contain; */
   background: #E5E6E8;
   /* padding: 10px; */
@@ -142,7 +142,7 @@
 /* DESCRIPTION */
 .desc {
   font-size: 14px;
-  color: #6E7178;
+  color: #0F2544;
   height: 40px;
   overflow: hidden;
 }

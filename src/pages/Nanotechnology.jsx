@@ -389,42 +389,42 @@ style={{ backgroundImage: `url(${bioBg})` }}
 
 
 
-       <section className="mx-safety-section">
+       <section className="mx-safety-section1">
 
-  {/* <div className="mx-safety-container"> */}
+   <div className="mx-safety-container1"> 
 
     {/* LEFT SIDE - IMAGE */}
-    <div className="mx-safety-left">
+    <div className="mx-safety-left1">
       <img src={icon1} alt="safety" />
     </div>
 
     {/* RIGHT SIDE - CONTENT */}
-    <div className="mx-safety-right">
+    <div className="mx-safety-right1">
 
-      <h2 className="mx-safety-title">Safety and Integrity</h2>
+      <h2 className="mx-safety-title1">Safety and Integrity</h2>
 
-      <p className="mx-safety-text">
+      <p className="mx-safety-text1">
         At ManuX, nanotechnology is applied responsibly. We prioritize 
         biocompatible materials, controlled processing, and rigorous safety 
         evaluation to ensure that nano systems remain stable, non-aggressive, 
         and suitable for long-term use.
       </p>
 
-      <p className="mx-safety-text">
+      <p className="mx-safety-text1">
         Our approach respects the philosophical foundations of Ayurveda 
         while meeting modern expectations for safety, reproducibility, 
         and scientific validation.
       </p>
 
-      <div className="mx-safety-points">
-        <div className="mx-point">✔ Biocompatible Materials</div>
-        <div className="mx-point">✔ Rigorous Evaluation</div>
-        <div className="mx-point">✔ Scientific Validation</div>
+      <div className="mx-safety-points1">
+        <div className="mx-point1">✔ Biocompatible Materials</div>
+        <div className="mx-point1">✔ Rigorous Evaluation</div>
+        <div className="mx-point1">✔ Scientific Validation</div>
       </div>
 
     </div>
 
-  {/* </div> */}
+     </div> 
 
 </section>
 

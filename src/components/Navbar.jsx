@@ -167,8 +167,8 @@ useEffect(() => {
           <FaRegStar />
           <FaBell />
           <FaUser 
-           className="user-icon"
-           onClick={() => navigate("/register")}
+          //  className="user-icon"
+          //  onClick={() => navigate("/register")}
           />
 
           {/*{user ? (
@@ -245,11 +245,11 @@ useEffect(() => {
   /> */}
 
   <FaUser 
-  className="user-icon"
-  onClick={() => {
-    navigate("/register");
-    setMobileMenu(false); // 🔥 ADD THIS
-  }}
+  // className="user-icon"
+  // onClick={() => {
+  //   navigate("/register");
+  //   setMobileMenu(false); // 🔥 ADD THIS
+  // }}
 />
 
   {user ? (

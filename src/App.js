@@ -99,7 +99,7 @@ function App() {
   <Route path="/login" element={<Login />} />
 
   {/* Protected Group */}
-  <Route element={<ProtectedRoute />}>
+  {/* <Route element={<ProtectedRoute />}> */}
 
     <Route path="/research" element={<Research />} />
     <Route path="/ingredients" element={<Ingredients />} />
@@ -144,7 +144,7 @@ function App() {
         <Route path="/digital-defense" element={<DigitalDefense />} />
         <Route path="/fitness" element={<Fitness />} />
 
-  </Route>
+  {/* </Route> */}
 
  {/* Admin Login (Public) */}
 <Route path="/admin-login" element={<Login />} />
