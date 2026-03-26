@@ -16,7 +16,7 @@
 /* TITLE */
 .cc-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 45px;
   margin-bottom: 40px;
   color: #1F2A44;
   font-weight: 600;
@@ -45,9 +45,9 @@
 }
 
 /* HOVER */
-.cc-card:hover {
+/* .cc-card:hover {
   transform: translateY(-10px) scale(1.02);
-}
+} */
 
 /* IMAGE BOX */
 .cc-img-box {
@@ -66,6 +66,8 @@
   background: #E5E6E8;
   /* padding: 10px; */
   transition: 0.5s ease;
+
+    object-fit: cover; /* 🔥 BEST */
 }
 
 /* IMAGE HOVER ZOOM */
@@ -75,7 +77,7 @@
 
 /* CONTENT */
 .cc-content {
-  padding: 15px;
+  padding: 20px;
 }
 
 .cc-content h3 {

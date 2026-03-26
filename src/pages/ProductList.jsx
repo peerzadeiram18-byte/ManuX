@@ -80,7 +80,7 @@ const handleUpdate = async () => {
     await updateProduct(editingProduct._id, formData);
      
     // ✅ ADD THIS
-// await fetchProducts();
+  await fetchProducts();
 
 
 

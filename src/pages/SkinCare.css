@@ -221,14 +221,24 @@
 
 /* IMAGE INSIDE MODAL */
 .img-modal img {
-  max-width: 90%;
-  max-height: 70%;
+  max-width:30%;
+  max-height: 60%;
   border-radius: 10px;
   object-fit: cover;
   margin-top: 75px;
   border: 3px solid white;
 
 
+}
+
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #1F2A44;
+}
+
+.modal-content p {
+  color: #555;
 }
 
 /* MOBILE */

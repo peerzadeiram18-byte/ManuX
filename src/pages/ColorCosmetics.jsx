@@ -2,6 +2,10 @@ import React, { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./ColorCosmetics.css";
 
+
+import bgImage from "../assets/backgroundimage.jpg";
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function ColorCosmetics() {
@@ -15,14 +19,17 @@ export default function ColorCosmetics() {
   );
 
   return (
-    <div className="cc-page">
+    <div className="cc-page"
+         style={{ backgroundImage: `url(${bgImage})` }}
+    
+    >
 
       <h1 className="cc-title">Color Cosmetics</h1>
 
       <div className="cc-grid">
         {filtered.map((item) => (
           <div className="cc-card" key={item._id}>
-
+  <div className="cc-img-box">
             <img
               src={`${BASE_URL}/uploads/${item.image}`}
               alt={item.name}
@@ -31,10 +38,12 @@ export default function ColorCosmetics() {
               }
               onError={(e) => (e.target.src = "/no-image.png")}
             />
+ </div>
 
+   <div className="cc-content">
             <h3>{item.name}</h3>
             <p>{item.description}</p>
-
+</div>
           </div>
         ))}
       </div>
