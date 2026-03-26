@@ -175,9 +175,9 @@ export default function QualitySafetyCompliance() {
 </section>
 
         {/* Section 4 */}
-       <section className="mx-safety-section">
+       <section className="mx1-safety-section">
 
-  <div className="mx-safety-container">
+  <div className="mx1-safety-container">
 
     <h2>Safety-first formulation philosophy</h2>
 

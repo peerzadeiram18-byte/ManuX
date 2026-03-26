@@ -395,7 +395,7 @@
    SAFETY FORMULATION SECTION
 ================================ */
 
-.mx-safety-section{
+.mx1-safety-section{
 
   width:100%;
   padding:70px 20px;
@@ -409,7 +409,7 @@
 
 /* content card */
 
-.mx-safety-container{
+.mx1-safety-container{
 
   max-width:850px;
   width:100%;
@@ -429,7 +429,7 @@
 
 /* heading */
 
-.mx-safety-container h2{
+.mx1-safety-container h2{
 
   font-size:38px;
   margin-bottom:20px;
@@ -438,7 +438,7 @@
 
 /* paragraph */
 
-.mx-safety-container p{
+.mx1-safety-container p{
 
   font-size:18px;
   line-height:1.8;
@@ -451,15 +451,15 @@
 
 @media (max-width:768px){
 
-  .mx-safety-container{
+  .mx1-safety-container{
     padding:35px 25px;
   }
 
-  .mx-safety-container h2{
+  .mx1-safety-container h2{
     font-size:28px;
   }
 
-  .mx-safety-container p{
+  .mx1-safety-container p{
     font-size:16px;
   }
 

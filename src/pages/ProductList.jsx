@@ -7,7 +7,9 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function ProductList() {
 
-  const { products, deleteProduct, updateProduct } = useContext(ProductContext);
+  // const { products, deleteProduct, updateProduct } = useContext(ProductContext);
+
+  const { products, deleteProduct, updateProduct, fetchProducts } = useContext(ProductContext);
 
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,6 +73,11 @@ const handleUpdate = async () => {
     }
 
     await updateProduct(editingProduct._id, formData);
+     
+    // ✅ ADD THIS
+await fetchProducts();
+
+
 
     setEditingProduct(null);
   } catch (err) {

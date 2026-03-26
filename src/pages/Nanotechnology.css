@@ -735,8 +735,10 @@ object-fit:cover;
 /* IMAGE */
 .nano-circle-image {
   width: 100%;
+  max-width: 720px; /* medium size */
   height: auto;
-  display: block;
+  object-fit: contain;
+  border-radius: 20px;
   animation: nanoZoomIn 1.2s ease;
  
 }

@@ -215,6 +215,12 @@ color:  #5C6473;
   .mx-why-text h2 {
     font-size: 28px;
   }
+
+    .mx-why-img img {
+    height: 300px; /* fix height mobile */
+     min-width: 250px;   
+
+  }
 }
 
 /* =========================
@@ -228,7 +234,9 @@ color:  #5C6473;
   }
 
   .mx-why-img img {
-    height: 300px; /* fix height mobile */
+    height: 230px; /* fix height mobile */
+     min-width: 250px;   
+
   }
 
   .mx-why-text h2 {
@@ -368,7 +376,9 @@ color:  #5C6473;
   }
 
   .mx2-why-img img {
-    height: 300px;
+        height: 230px; /* fix height mobile */
+     min-width: 250px;   
+
   }
 
   .mx2-why-text h2 {
@@ -516,7 +526,9 @@ color:  #5C6473;
   }
 
   .mx3-why-img img {
-    height: 300px;
+      height: 230px; /* fix height mobile */
+     min-width: 250px;   
+
   }
 
   .mx3-why-text h2 {
@@ -665,7 +677,9 @@ color:  #5C6473;
   }
 
   .mx4-layout-img img {
-    height: 300px;
+      height: 230px; /* fix height mobile */
+     min-width: 250px;   
+
   }
 
   .mx4-layout-text h2 {

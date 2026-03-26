@@ -1496,12 +1496,12 @@ font-family: 'Avenir Next', sans-serif;
 
 .mxsafe-section {
   width: 100%;
-  min-height: 850px;
+  min-height: 500px;
   padding: 40px 20px;
 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; /* 🔥 FULL IMAGE VISIBLE */
+  background-size: contain; /* 🔥 FULL IMAGE VISIBLE */
 
   display: flex;
   align-items: center;
@@ -1572,7 +1572,8 @@ font-family: 'Avenir Next', sans-serif;
 
   margin-top: 0;
   margin-bottom: 0;
-   margin: -250px 0;
+   /* margin: -70px 0; */
+  
 
   
   }
