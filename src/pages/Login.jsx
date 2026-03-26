@@ -41,35 +41,66 @@ export default function Login({ closeModal }) {
 
 
 
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setError("");
+
+//   try {
+
+//     const data = await loginUser(email, password);
+
+//     // token + user context me save
+//     login(data);
+
+
+//     // ⭐ TOKEN SAVE
+//     localStorage.setItem("token", data.token);
+//     localStorage.setItem("user", JSON.stringify(data.user));
+//     localStorage.setItem("role", data.user.role);
+    
+
+//     if (data.user.role === "admin") {
+//       navigate("/admin/dashboard");
+//     } else {
+//       navigate("/");
+//     }
+
+//     closeModal();
+
+//   }
+  
+//   catch (err) {
+//     setError("Wrong email or password");
+//   }
+// };
+
+
+
 const handleSubmit = async (e) => {
   e.preventDefault();
   setError("");
 
   try {
-
     const data = await loginUser(email, password);
 
-    // token + user context me save
+    // ❌ NON-ADMIN BLOCK
+    if (data.user.role !== "admin") {
+      setError("Access Denied! Only Admin can login ❌");
+      return;
+    }
+
+    // ✅ ADMIN LOGIN
     login(data);
 
-
-    // ⭐ TOKEN SAVE
     localStorage.setItem("token", data.token);
     localStorage.setItem("user", JSON.stringify(data.user));
     localStorage.setItem("role", data.user.role);
-    
 
-    if (data.user.role === "admin") {
-      navigate("/admin/dashboard");
-    } else {
-      navigate("/");
-    }
+    navigate("/admin/dashboard");
 
     closeModal();
 
-  }
-  
-  catch (err) {
+  } catch (err) {
     setError("Wrong email or password");
   }
 };

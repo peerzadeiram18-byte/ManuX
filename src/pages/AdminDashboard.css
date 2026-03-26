@@ -197,3 +197,24 @@ font-family: 'Avenir Next', sans-serif;
   }
 
 }
+
+
+
+
+
+.bell-icon {
+  position: relative;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 50%;
+}

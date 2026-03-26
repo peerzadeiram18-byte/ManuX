@@ -166,10 +166,10 @@ useEffect(() => {
         <div className="nav-right">
           <FaRegStar />
           <FaBell />
-          <FaUser 
+          {/* <FaUser 
           //  className="user-icon"
           //  onClick={() => navigate("/register")}
-          />
+          /> */}
 
           {/*{user ? (
             <>

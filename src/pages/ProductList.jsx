@@ -62,10 +62,15 @@ const handleUpdate = async () => {
     formData.append("category", editingProduct.category);
     // formData.append("description", editingProduct.description);
 
-    formData.append(
-  "description",
-  editingProduct.description ? editingProduct.description : ""
-);
+//     formData.append(
+//   "description",
+//   editingProduct.description ? editingProduct.description : ""
+// );
+
+
+if (editingProduct.description !== undefined) {
+  formData.append("description", editingProduct.description);
+}
 
     // ✅ IMAGE FIX
     if (editingProduct.image instanceof File) {
@@ -124,11 +129,11 @@ await fetchProducts();
                 <td>{product.category}</td>
                 <td>{product.description}</td>
                 <td>
-                 <img src={product.image} alt="" className="pm-img" />   
-                {/* <img
+                 {/* <img src={product.image} alt="" className="pm-img" />    */}
+                 <img
                     src={`${BASE_URL}/uploads/${product.image}`}
                  className="pm-img"
-                  />         */}
+                  />         
                   
                   </td>
                 <td>

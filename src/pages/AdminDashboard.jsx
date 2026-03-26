@@ -8,7 +8,36 @@ import UserList from "./UserList";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
+import ContactList from "./ContactList";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+
+
+
+
+
+
 export default function AdminDashboard() {
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+const [count, setCount] = useState(0);
+
+useEffect(() => {
+  fetchCount();
+}, []);
+
+const fetchCount = async () => {
+  try {
+    const res = await axios.get(`${BASE_URL}/api/contact`);
+    setCount(res.data.length);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+
   return (
 
     
@@ -18,6 +47,14 @@ export default function AdminDashboard() {
       
       {/* SIDEBAR */}
       <div className="admin-sidebar">
+
+
+ <div className="bell-icon">
+  🔔
+  {count > 0 && <span className="badge">{count}</span>}
+</div>
+
+
         <h2 className="logo">ManuX Admin</h2>
 
         <ul className="menu">
@@ -52,6 +89,20 @@ export default function AdminDashboard() {
           </Link>
         </li>
 
+
+
+        <li>
+  <Link
+    to="/admin/dashboard/contact-list"
+    style={{ color: "white", textDecoration: "none" }}
+  >
+    Contact List
+  </Link>
+</li>
+
+
+
+
         </ul>
       </div>
 
@@ -67,6 +118,7 @@ export default function AdminDashboard() {
   <Route path="product-form" element={<ProductForm />} />
   <Route path="product-list" element={<ProductList />} />
    <Route path="user-list" element={<UserList />} />
+   <Route path="contact-list" element={<ContactList />} />
 </Routes>
 
       </div>

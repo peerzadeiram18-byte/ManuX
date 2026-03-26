@@ -10,7 +10,66 @@ import contactBg from "../assets/contact-bg.jpg";
 import bgImage from "../assets/backgroundimage.jpg";
 
 
+
+
+import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+export default function Contact() {
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  message: ""
+});
+
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+
+
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    await axios.post(`${BASE_URL}/api/contact`, formData);
+
+    toast.success("Message Sent Successfully!");
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+
+  } catch (err) {
+    console.log(err);
+    toast.error("Error sending message");
+  }
+};
+
+
+
+
+
+
+
 const Contact = () => {
+
+
+
+
+
+
   return (
     <div className="cx-contact-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -80,27 +139,52 @@ const Contact = () => {
     <div className="cx-form-container">
       <h2>Contact Us</h2>
 
-      <form className="cx-contact-form">
+      <form className="cx-contact-form"
+      onSubmit={handleSubmit}
+      >
 
         <div className="cx-form-group">
           <label>Name</label>
-          <input type="text" placeholder="Enter your name" />
+          <input
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  placeholder="Enter your name"
+/>
         </div>
 
         <div className="cx-form-group">
           <label>Email *</label>
-          <input type="email" placeholder="Enter your email" required />
+         <input
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  placeholder="Enter your email"
+  required
+/>
         </div>
 
         <div className="cx-form-group">
           <label>Phone Number</label>
-          <input type="tel" placeholder="Enter phone number" />
+          <input
+  type="tel"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  placeholder="Enter phone number"
+/>
         </div>
 
         <div className="cx-form-group">
           <label>Comment</label>
-          <textarea rows="4" placeholder="Write your message"></textarea>
-        </div>
+<textarea
+  name="message"
+  value={formData.message}
+  onChange={handleChange}
+  placeholder="Write your message"
+/>        </div>
 
         <button type="submit" className="cx-submit-btn">
           Send
@@ -145,5 +229,4 @@ const Contact = () => {
     </div>
   );
 };
-
-export default Contact;
+}
