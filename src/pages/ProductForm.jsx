@@ -16,14 +16,17 @@ const categories = [
   "baby-care",
   "pet-care",
   "mens-care",
-  "pregnancy-care",
-  "ayurvedic",
-  "nutraceuticals",
+  // "pregnancy-care",
+  // "ayurvedic",
+  // "nutraceuticals",
 
 
     // ✅ NEW ADD
   "digital-defense",
-  "fitness"
+  "fitness",
+
+    // ✅ NEW CATEGORY
+  "color-cosmetics"
 ];
 
 

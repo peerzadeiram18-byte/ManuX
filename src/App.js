@@ -40,6 +40,7 @@ import Nutraceuticals from "./pages/Nutraceuticals";
 // ✅ NEW
 import DigitalDefense from "./pages/DigitalDefense";
 import Fitness from "./pages/Fitness";
+import ColorCosmetics from "./pages/ColorCosmetics";
 
 
 
@@ -143,7 +144,7 @@ function App() {
           {/* ✅ NEW ROUTES */}
         <Route path="/digital-defense" element={<DigitalDefense />} />
         <Route path="/fitness" element={<Fitness />} />
-
+        <Route path="/color-cosmetics" element={<ColorCosmetics />} />
   {/* </Route> */}
 
  {/* Admin Login (Public) */}

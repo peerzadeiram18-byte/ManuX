@@ -449,6 +449,14 @@ onClick={() => {
       Fitness
     </Link>
 
+
+       <Link to="/color-cosmetics" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+   Color Cosmetics
+    </Link>
+
   </div>
 </div>
 

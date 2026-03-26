@@ -104,9 +104,10 @@ useEffect(() => {
         <li><Link to="/baby-care" onClick={handleScrollTop}>Baby Care</Link></li>
         <li><Link to="/pet-care" onClick={handleScrollTop}>Pet Care</Link></li>
         <li><Link to="/mens-care" onClick={handleScrollTop}>Men’s Care</Link></li>
-        <li><Link to="/pregnancy-care" onClick={handleScrollTop}>Pregnancy Care</Link></li>
+        {/* <li><Link to="/pregnancy-care" onClick={handleScrollTop}>Pregnancy Care</Link></li> */}
         <li><Link to="/digital-defense" onClick={handleScrollTop}>Digital Defense</Link></li>
         <li><Link to="/fitness" onClick={handleScrollTop}>Fitness</Link></li>
+        <li><Link to="/color-cosmetics" onClick={handleScrollTop}>Color Cosmetics</Link></li>
       </ul>
     )}
   </li>

@@ -1181,27 +1181,72 @@ color: #1F2A44; /* text visible */
    FULL IMAGE SECTION
 =============================== */
 
+/* SECTION FULL WIDTH */
 .mxfull-section {
-  padding: 60px 10px;
-  background: transparent;
+  width: 100%;
+  height: 55vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  cursor: pointer;
+
+  margin: 0;
+  padding: 0;
 
 
- border: 1.5px solid rgba(255, 255, 255, 0.6); /* white border */
- background: rgba(255, 255, 255, 0.08);  /* light transparent */
- backdrop-filter: blur(8px);
+     /* animation */
+  animation: mxFadeIn 1.2s ease;
 }
+
+
+/* REMOVE SIDE GAP (VERY IMPORTANT) */
+
+
 
 /* CONTAINER */
 .mxfull-container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
   
+}
+
+
+
+/* OVERLAY */
+.mxfull-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+
+  z-index: 2;
+
+  /* text animation */
+  animation: mxSlideUp 1s ease;
+}
+
+
+/* CLICK LAYER */
+.mxfull-click {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
 }
 
 /* IMAGE BOX */
 .mxfull-image {
   width: 100%;
-  height: 530px;
+  height: 730px;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -1220,7 +1265,7 @@ color: #1F2A44; /* text visible */
 /* ===============================
    MODAL
 =============================== */
-
+/* MODAL */
 .mxfull-modal {
   position: fixed;
   top: 0;
@@ -1228,32 +1273,105 @@ color: #1F2A44; /* text visible */
   width: 100%;
   height: 100%;
 
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   z-index: 999;
 }
 
+/* MODAL IMAGE */
 .mxfull-modal img {
   max-width: 90%;
-  max-height: 60%;
-  border-radius: 15px;
-  margin-top: 100px;
+  max-height: 90%;
+  border-radius: 12px;
+}
+/* =========================
+   ANIMATIONS
+========================= */
+
+/* fade */
+@keyframes mxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* ===============================
-   RESPONSIVE
-=============================== */
+/* slide up */
+@keyframes mxSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-@media (max-width: 768px) {
+/* zoom */
+@keyframes mxZoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 
-  .mxfull-image {
-    height: 250px;
+/* HOVER EFFECT */
+.mxfull-section:hover {
+  transform: scale(1.02);
+  transition: 0.4s ease;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .mxfull-section {
+    height: 40vh;
   }
 
+  .mxfull-overlay {
+    font-size: 22px;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mxfull-section {
+    height: 30vh;
+  }
+
+  .mxfull-overlay {
+    font-size: 18px;
+  }
+
+  .mxfull-modal img {
+    max-width: 95%;
+    max-height: 80%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .mxfull-section {
+    height: 20vh;
+  }
+
+  .mxfull-overlay {
+    font-size: 16px;
+  }
 }
 
 
@@ -1603,7 +1721,7 @@ color: #1F2A44; /* text visible */
 
 /* CONTAINER */
 .mxfutureX-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   text-align: center;
 
@@ -1641,7 +1759,7 @@ color: #1F2A44; /* text visible */
 
 .mxfutureX-image img {
   width: 100%;
-  max-width: 720px; /* medium size */
+  max-width: 1250px; /* medium size */
   height: auto;
   object-fit: contain;
   border-radius: 20px;

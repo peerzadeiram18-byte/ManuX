@@ -143,31 +143,33 @@ export default function ResearchInsightsPage() {
 
 
 
+<section
+  className="mxfull-section"
+  style={{ backgroundImage: `url(${fullImg})` }}
+>
 
-  <section className="mxfull-section">
+  {/* OVERLAY CONTENT (optional) */}
+  {/* <div className="mxfull-overlay">
+    <h2>Click to View</h2>
+  </div> */}
 
-      <div className="mxfull-container">
+  {/* CLICK LAYER */}
+  <div
+    className="mxfull-click"
+    onClick={() => setOpenImg(true)}
+  ></div>
 
-        {/* IMAGE */}
-        <div 
-          className="mxfull-image"
-          style={{ backgroundImage: `url(${fullImg})` }}
-          onClick={() => setOpenImg(true)}
-        ></div>
+  {/* MODAL */}
+  {openImg && (
+    <div
+      className="mxfull-modal"
+      onClick={() => setOpenImg(false)}
+    >
+      <img src={fullImg} alt="preview" />
+    </div>
+  )}
 
-      </div>
-
-      {/* MODAL */}
-      {openImg && (
-        <div 
-          className="mxfull-modal"
-          onClick={() => setOpenImg(false)}
-        >
-          <img src={fullImg} alt="preview" />
-        </div>
-      )}
-
-    </section>
+</section>
 
 
 
