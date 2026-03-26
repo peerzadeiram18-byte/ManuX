@@ -629,10 +629,10 @@ onClick={() => {
   </div>
 </div>
 
-
+{/* 
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
-          </NavLink>
+          </NavLink> */}
               
 
               {/* ADMIN DASHBOARD */}
