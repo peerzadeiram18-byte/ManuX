@@ -4,6 +4,10 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./BabyCare.css";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function BabyCare() {
@@ -19,7 +23,9 @@ export default function BabyCare() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="baby-page">
+    <div className="baby-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       <h1 className="baby-title">Baby Care Products</h1>
 

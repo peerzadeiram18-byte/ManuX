@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./HairCare.css";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function HairCare() {
@@ -19,7 +21,9 @@ const [selectedImage, setSelectedImage] = useState(null);
 
 
   return (
-    <div className="hair-page">
+    <div className="hair-page"
+    style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       <h1 className="hair-title">Hair Care Products</h1>
 

@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./PetCare.css";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function PetCare() {
@@ -19,7 +21,10 @@ export default function PetCare() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="pet-page">
+    <div className="pet-page"
+    
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       <h1 className="pet-title">Pet Care Products 🐾</h1>
 

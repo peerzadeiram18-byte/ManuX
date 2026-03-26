@@ -2,6 +2,14 @@
   padding: 40px 20px;
   background: #f5f7fb;
   min-height: 100vh;
+
+  
+      /* min-height:100%;
+  width:100%; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hair-title {
@@ -69,14 +77,14 @@
 }
 
 .hair-img-box {
-  height: 220px;
+  height: 420px;
   overflow: hidden;
 
 }
 
 .hair-img-box img {
   width: 100%;
-  height: 250px;
+  height: 450px;
   /* object-fit: contain; */
   background: #E5E6E8;
   /* padding: 10px; */

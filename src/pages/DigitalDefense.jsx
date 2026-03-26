@@ -4,6 +4,8 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./DigitalDefense.css";
 
+import bgImage from "../assets/backgroundimage.jpg";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function DigitalDefense() {
@@ -21,7 +23,9 @@ const [selectedImage, setSelectedImage] = useState(null);
 
 
   return (
-    <div className="digital-page">
+    <div className="digital-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       {/* HERO SECTION */}
       {/* <div className="digital-hero">

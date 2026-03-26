@@ -2,6 +2,12 @@
   padding: 40px 20px;
   background: #f4f6f8;
   min-height: 100vh;
+
+
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .mens-title {
@@ -44,7 +50,7 @@
 
 /* IMAGE FIX */
 .mens-img-box {
-  height: 220px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +71,7 @@
 
 
    width: 100%;
-  height: 250px;
+  height: 450px;
   /* object-fit: contain; */
   background: #E5E6E8;
   /* padding: 10px; */

@@ -5,6 +5,9 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./Fitness.css";
 
+
+import bgImage from "../assets/backgroundimage.jpg";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function Fitness() {
@@ -21,7 +24,9 @@ export default function Fitness() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="fitness-page">
+    <div className="fitness-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       {/* HERO */}
       {/* <div className="fitness-hero">

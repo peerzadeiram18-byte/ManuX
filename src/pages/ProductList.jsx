@@ -47,72 +47,44 @@ return (
   const currentProducts = filteredProducts.slice(indexOfFirst, indexOfLast);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
-// const handleUpdate = async () => {
-//   try {
-//     const formData = new FormData();
-
-//     // formData.append("name", editingProduct.name);
-
-//     formData.append(
-//   "name",
-//   editingProduct.name
-//     .toLowerCase()
-//     .replace(/\b\w/g, (char) => char.toUpperCase())
-// );
-//     formData.append("category", editingProduct.category);
-//     // formData.append("description", editingProduct.description);
-
-//     formData.append(
-//   "description",
-//   editingProduct.description ? editingProduct.description : ""
-// );
-
-//     // ✅ IMAGE FIX
-//     if (editingProduct.image instanceof File) {
-//       formData.append("image", editingProduct.image);
-//     }
-
-//     await updateProduct(editingProduct._id, formData);
-     
-
-
 const handleUpdate = async () => {
   try {
     const formData = new FormData();
 
+    // formData.append("name", editingProduct.name);
+
     formData.append(
-      "name",
-      editingProduct.name
-        .toLowerCase()
-        .replace(/\b\w/g, (char) => char.toUpperCase())
-    );
-
+  "name",
+  editingProduct.name
+    .toLowerCase()
+    .replace(/\b\w/g, (char) => char.toUpperCase())
+);
     formData.append("category", editingProduct.category);
-    formData.append("description", editingProduct.description || "");
+    // formData.append("description", editingProduct.description);
 
+    formData.append(
+  "description",
+  editingProduct.description ? editingProduct.description : ""
+);
+
+    // ✅ IMAGE FIX
     if (editingProduct.image instanceof File) {
       formData.append("image", editingProduct.image);
     }
 
     await updateProduct(editingProduct._id, formData);
+     
+    // ✅ ADD THIS
+await fetchProducts();
+
+
 
     setEditingProduct(null);
-
   } catch (err) {
     console.log(err);
+    console.log(editingProduct);
   }
 };
-    // ✅ ADD THIS
-// await fetchProducts();
-
-
-
-//     setEditingProduct(null);
-//   } catch (err) {
-//     console.log(err);
-//     console.log(editingProduct);
-//   }
-// };
 
   return (
               <div className="pm-container">

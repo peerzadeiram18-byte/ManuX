@@ -6,6 +6,9 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./MensCare.css";
 
+
+import bgImage from "../assets/backgroundimage.jpg";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function MensCare() {
@@ -21,7 +24,9 @@ const [selectedImage, setSelectedImage] = useState(null);
 
 
   return (
-    <div className="mens-page">
+    <div className="mens-page"
+     style={{ backgroundImage: `url(${bgImage})` }}
+    >
 
       <h1 className="mens-title">Men's Care Products</h1>
 

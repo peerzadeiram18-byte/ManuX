@@ -3,6 +3,11 @@
   width: 100%;
   min-height: 100vh;
   background: #f3fff6;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
 }
 
 /* HERO */
@@ -131,7 +136,7 @@
 /* IMAGE FIX (NO CUT) */
 .fitness-img-box {
   width: 100%;
-  height: 220px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,7 +155,7 @@
   padding: 10px; */
 
    width: 100%;
-  height: 250px;
+  height: 450px;
   /* object-fit: contain; */
   background: #E5E6E8;
   /* padding: 10px; */
