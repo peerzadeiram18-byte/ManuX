@@ -40,14 +40,14 @@ export default function SkinCare() {
 <img 
   src={
     item.image
-      ? `${process.env.REACT_APP_BASE_URL}${item.image}`
+      ? `${process.env.REACT_APP_BASE_URL}/uploads/${item.image}`
       : "/no-image.png"
   }
   alt={item.name}
   onClick={() =>
     setSelectedImage(
       item.image
-        ? `${process.env.REACT_APP_BASE_URL}${item.image}`
+        ? `${process.env.REACT_APP_BASE_URL}/uploads/${item.image}`
         : "/no-image.png"
     )
   }
