@@ -72,7 +72,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-susHero-title{
 
-  font-size:46px;
+  font-size:50px;
 
   color:#1F2A44;
 
@@ -84,7 +84,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-susHero-text{
 
-  font-size:18px;
+  font-size:21px;
 
   line-height:1.9;
 
@@ -151,7 +151,7 @@ font-family: 'Avenir Next', sans-serif;}
 .mx-sustain-wrapper{
 
   width:100%;
-  max-width:1200px;
+  max-width:1500px;
 
   display:flex;
   gap:40px;
@@ -202,7 +202,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-sustain-card h2{
 
-  font-size:28px;
+  font-size:35px;
 
   margin-bottom:18px;
 
@@ -214,7 +214,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-sustain-card p{
 
-  font-size:16px;
+  font-size:18px;
 
   line-height:1.8;
 
@@ -249,12 +249,12 @@ font-family: 'Avenir Next', sans-serif;}
 /* Container */
 
 .mx-eco-container{
-  max-width:1200px;
+  max-width:1300px;
   width:100%;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:60px;
+  gap:20px;
 }
 
 /* TEXT SIDE */
@@ -264,14 +264,14 @@ font-family: 'Avenir Next', sans-serif;}
 }
 
 .mx-eco-text h2{
-  font-size:36px;
+  font-size:40px;
   margin-bottom:20px;
   color:#1F2A44;
   font-weight:600;
 }
 
 .mx-eco-text p{
-  font-size:17px;
+  font-size:20px;
   line-height:1.7;
   color:#1F2A44;
   max-width:520px;
@@ -289,7 +289,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-eco-image img{
   width:100%;
-  max-width:420px;   /* image text ke barabar rahe */
+  max-width:520px;   /* image text ke barabar rahe */
   height:auto;
   border-radius:12px;
   object-fit:cover;
@@ -363,7 +363,7 @@ font-family: 'Avenir Next', sans-serif;}
 }
 
 .mx-product-container{
-  max-width:1200px;
+  max-width:1400px;
   width:100%;
   display:flex;
   align-items:center;
@@ -381,7 +381,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-product-image img{
   width:100%;
-  max-width:420px;
+  max-width:520px;
   height:auto;
   border-radius:12px;
   object-fit:cover;
@@ -396,13 +396,13 @@ font-family: 'Avenir Next', sans-serif;}
 }
 
 .mx-product-card h2{
-  font-size:34px;
+  font-size:40px;
   margin-bottom:20px;
   color:#1F2A44;
 }
 
 .mx-product-card p{
-  font-size:17px;
+  font-size:20px;
   line-height:1.7;
   color:#1F2A44;
   max-width:520px;
@@ -462,13 +462,13 @@ font-family: 'Avenir Next', sans-serif;}
 }
 
 .mx-ethical-container h2 {
-  font-size: 38px;
+  font-size: 44px;
   margin-bottom: 20px;
   font-weight: 400;
 }
 
 .mx-ethical-container p {
-  font-size: 17px;
+  font-size: 22px;
   line-height: 1.7;
   opacity: 0.9;
 }

@@ -122,7 +122,7 @@ color:  #5C6473;
   flex-direction: column;
   justify-content: center;
 
-  margin-left: 50px;
+  /* margin-left: 50px; */
 
   animation: mxFadeUp 1s ease forwards;
 }
@@ -231,6 +231,7 @@ color:  #5C6473;
   .mx-why-sec {
     flex-direction: column;
     text-align: center;
+    
   }
 
   .mx-why-img img {
@@ -422,7 +423,7 @@ color:  #5C6473;
   justify-content: center;
 
   animation: mx3FadeUp 1s ease forwards;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 .mx3-why-text h2 {

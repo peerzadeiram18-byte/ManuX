@@ -92,12 +92,12 @@ const fetchCount = async () => {
 
 
         <li>
-  <Link
+  {/* <Link
     to="/admin/dashboard/contact-list"
     style={{ color: "white", textDecoration: "none" }}
   >
     Contact List
-  </Link>
+  </Link> */}
 </li>
 
 
@@ -118,7 +118,7 @@ const fetchCount = async () => {
   <Route path="product-form" element={<ProductForm />} />
   <Route path="product-list" element={<ProductList />} />
    <Route path="user-list" element={<UserList />} />
-   <Route path="contact-list" element={<ContactList />} />
+   {/* <Route path="contact-list" element={<ContactList />} /> */}
 </Routes>
 
       </div>

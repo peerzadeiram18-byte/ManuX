@@ -123,7 +123,7 @@
 
 .mx-ethHero-text{
 
-  font-size:18px;
+  font-size:20px;
   line-height:1.9;
 
   opacity:0.95;
@@ -221,7 +221,7 @@
 
 .mx-ethTrace2-title{
 
-  font-size:34px;
+  font-size:40px;
   color:#1F2A44;
 
   margin-bottom:18px;
@@ -232,7 +232,7 @@
 
 .mx-ethTrace2-text{
 
-  font-size:17px;
+  font-size:20px;
   line-height:1.8;
 
   color:#1F2A44;
@@ -339,7 +339,7 @@
 
 .mx-ethSustainVid-container{
 
-  max-width:1200px;
+  max-width:1400px;
   margin:auto;
 
   display:flex;
@@ -376,7 +376,7 @@
 
 .mx-ethSustainVid-title{
 
-  font-size:34px;
+  font-size:40px;
   color:#1F2A44;
 
   margin-bottom:18px;
@@ -385,7 +385,7 @@
 
 .mx-ethSustainVid-text{
 
-  font-size:17px;
+  font-size:20px;
   line-height:1.8;
 
   color:#1F2A44;
@@ -443,7 +443,7 @@
 
 .mx-ethKnowImg-container{
 
-  max-width:1200px;
+  max-width:1400px;
   margin:auto;
 
   display:flex;
@@ -462,7 +462,7 @@
 
 .mx-ethKnowImg-title{
 
-  font-size:34px;
+  font-size:40px;
   color:#1F2A44;
 
   margin-bottom:18px;
@@ -471,7 +471,7 @@
 
 .mx-ethKnowImg-text{
 
-  font-size:17px;
+  font-size:20px;
   line-height:1.9;
 
   color:#2a3348;
@@ -668,7 +668,7 @@
 
 .mx-ethQuality-title{
 
-  font-size:34px;
+  font-size:40px;
 
   color:#1F2A44;
 
@@ -678,7 +678,7 @@
 
 .mx-ethQuality-text{
 
-  font-size:17px;
+  font-size:20px;
 
   line-height:1.9;
 
@@ -728,7 +728,7 @@
 
 .mx-ethEnv-container{
 
-  max-width:800px;
+  max-width:1000px;
   margin:auto;
 
   position:relative;
@@ -763,7 +763,7 @@
 
 .mx-ethEnv-title{
 
-  font-size:36px;
+  font-size:40px;
   color:#1f2a44;
 
   margin-bottom:18px;
@@ -774,13 +774,13 @@
 
 .mx-ethEnv-text{
 
-  font-size:17px;
+  font-size:20px;
 
   line-height:1.9;
 
   color:#2a3348;
 
-  max-width:650px;
+  max-width:700px;
 
   margin:auto;
 
