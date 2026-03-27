@@ -19,8 +19,9 @@ export default function MensCare() {
     (item) => item.category === "mens-care"
   );
 
-const [selectedImage, setSelectedImage] = useState(null);
+// const [selectedImage, setSelectedImage] = useState(null);
 
+   const [selectedProduct, setSelectedProduct] = useState(null);
 
 
   return (
@@ -41,9 +42,9 @@ const [selectedImage, setSelectedImage] = useState(null);
                <img
   src={`${BASE_URL}/uploads/${item.image}`}
   alt={item.name}
-  onClick={() =>
-    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
-  }
+ onClick={() =>
+  setSelectedProduct(item)
+} 
 />
                
                
@@ -65,12 +66,22 @@ const [selectedImage, setSelectedImage] = useState(null);
         )}
       </div>
 
-            {selectedImage && (
+          {selectedProduct && (
   <div
     className="mens-img-modal"
-    onClick={() => setSelectedImage(null)}
+    onClick={() => setSelectedProduct(null)}
   >
-    <img src={selectedImage} alt="preview" />
+    <div className="mens-modal-box" onClick={(e) => e.stopPropagation()}>
+
+      <img
+        src={`${BASE_URL}/uploads/${selectedProduct.image}`}
+        alt={selectedProduct.name}
+      />
+
+      <h2>{selectedProduct.name}</h2>
+      <p>{selectedProduct.description}</p>
+
+    </div>
   </div>
 )}
 

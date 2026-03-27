@@ -21,7 +21,10 @@ export default function Fitness() {
   );
 
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  // const [selectedImage, setSelectedImage] = useState(null);
+     const [selectedProduct, setSelectedProduct] = useState(null);
+
+
 
   return (
     <div className="fitness-page"
@@ -59,9 +62,11 @@ export default function Fitness() {
                  <img
   src={`${BASE_URL}/uploads/${item.image}`}
   alt={item.name}
-  onClick={() =>
-    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
-  }
+  // onClick={() =>
+  //   setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  // }
+      onClick={() => setSelectedProduct(item)}
+
 />
                  
                  
@@ -87,16 +92,37 @@ export default function Fitness() {
 
         </div>
       </div>
-              
 
-        {selectedImage && (
+
+
+         {selectedProduct && (
+  <div
+    className="fitness-img-modal"
+    onClick={() => setSelectedProduct(null)}
+  >
+    <div
+      className="fitness-modal-box"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img
+        src={`${BASE_URL}/uploads/${selectedProduct.image}`}
+        alt={selectedProduct.name}
+      />
+
+      <h2>{selectedProduct.name}</h2>
+      <p>{selectedProduct.description}</p>
+    </div>
+  </div>
+)}     
+
+        {/* {selectedImage && (
   <div
     className="fitness-img-modal"
     onClick={() => setSelectedImage(null)}
   >
     <img src={selectedImage} alt="preview" />
   </div>
-)}
+)} */}
 
      </div>
   );

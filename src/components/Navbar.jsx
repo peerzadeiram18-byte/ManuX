@@ -244,13 +244,13 @@ useEffect(() => {
     onClick={() => navigate("/register")}
   /> */}
 
-  <FaUser 
+  {/* <FaUser 
   // className="user-icon"
   // onClick={() => {
   //   navigate("/register");
   //   setMobileMenu(false); // 🔥 ADD THIS
   // }}
-/>
+/> */}
 
   {user ? (
     <button className="login-btn" onClick={logout}>
@@ -259,10 +259,15 @@ useEffect(() => {
   ) : (
     <button
       className="login-btn"
-onClick={() => {
-  setShowLogin(true);
-  setMobileMenu(false); // 🔥 ADD THIS
-}}    >
+      onClick={() => {
+  navigate("/login");   // 🔥 page open hoga
+  setMobileMenu(false);
+}}
+// onClick={() => {
+//   setShowLogin(true);
+//   setMobileMenu(false); // 🔥 ADD THIS
+// }}    
+>
       Login
     </button>
   )}
@@ -277,7 +282,7 @@ onClick={() => {
   <div
     className="overlay2"
     onClick={() => setMobileMenu(false)}
-  ></div>
+  ></div
 )}*/}
 
           {/* TECHNOLOGY DROPDOWN */}
@@ -629,10 +634,10 @@ onClick={() => {
   </div>
 </div>
 
-{/* 
+
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
-          </NavLink> */}
+          </NavLink> 
               
 
               {/* ADMIN DASHBOARD */}

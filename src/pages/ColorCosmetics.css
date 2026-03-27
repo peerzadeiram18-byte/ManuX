@@ -91,27 +91,109 @@
   color: #5C6473;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* MODAL */
+/* BACKDROP */
 .cc-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
-  animation: fadeIn 0.3s ease;
+  /* padding: 15px; */
 }
 
-.cc-modal img {
-  max-width: 90%;
-  max-height: 60%;
-  border-radius: 10px;
-  margin-top: 60px;
+/* BOX */
+.cc-modal-box {
+  background: #fff;
+  /* border-radius: 12px; */
+  max-width: 270px;
+  width: 100%;
+  /* padding: 15px; */
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+
+
+  margin-top: 100px;
 }
+
+/* IMAGE */
+.cc-modal-box img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  /* border-radius: 8px; */
+}
+
+/* TEXT */
+.cc-modal-box h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.cc-modal-box p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+  padding-bottom: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 768px) {
+  .cc-modal-box {
+    max-width: 80%;
+    /* margin-top: 100px; */
+  }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 480px) {
+   .cc-modal-box {
+    /* padding: 10px; */
+
+    margin-top: 100px;
+  } 
+
+  .cc-modal-box img {
+    max-height: 400px;
+  }
+
+  .cc-modal-box h2 {
+    font-size: 18px;
+  }
+
+  .cc-modal-box p {
+    font-size: 14px;
+  }
+}
+
+
+
+
 
 /* =========================
    ANIMATIONS
@@ -163,9 +245,12 @@
 
   .cc-title {
     font-size: 26px;
+    /* margin-top: 20px; */
+
+
   }
 
   .cc-img-box {
-    height: 200px;
+    height: 430px;
   }
 }

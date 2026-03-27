@@ -215,39 +215,117 @@
   transform: scale(1.05);
 } */
 
+
+
+
+
+
+
+
+
+
 /* MODAL */
+/* MODAL BACKGROUND */
 .digital-img-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 10, 10, 0.9);
+  inset: 0;
+  background: rgba(0,0,0,0.8);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 9999;
-  padding: 20px;
+  align-items: center;
+  z-index: 999;
+  /* padding: 15px; */
+}
+
+/* MODAL BOX */
+
+.digital-modal-box {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 250px;
+  width: 90%;
+  /* padding: 15px; */
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+
+  margin-top: 100px;
 }
 
 /* IMAGE */
-.digital-img-modal img {
-  max-width: 90%;
-  max-height: 70%;
-  border-radius: 10px;
+.digital-modal-box img {
+  width: 100%;
+  max-height: 450px;
   object-fit: cover;
-  margin-top: 100px;
-  border: 3px solid white;
+  /* border-radius: 8px; */
 }
 
+/* TEXT */
+.digital-modal-box h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.digital-modal-box p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .digital-modal-box {
+    max-width: 40%;
+  }
+
+  .digital-modal-box h2 {
+    font-size: 16px;
+  }
+
+  .digital-modal-box p {
+    font-size: 13px;
+  }
+}
+
+/* 📱 SMALL MOBILE */
+@media (max-width: 480px) {
+  /* .digital-modal-box {
+       padding: 10px;
+  } */
+
+  .digital-modal-box img {
+    max-height: 200px;
+  }
+
+  .digital-modal-box h2 {
+    font-size: 14px;
+  }
+
+  .digital-modal-box p {
+    font-size: 12px;
+  }
+}
 /* MOBILE */
 @media (max-width: 768px) {
   .digital-img-modal img {
     max-width: 100%;
-     max-height: 70%;
-  border-radius: 10px;
+     max-height: 60%;
+  /* border-radius: 10px; */
   object-fit: cover;
-  margin-top: 100px;
-  border: 3px solid white;
+  /* margin-top: 100px;
+  border: 3px solid white; */
   }
 }

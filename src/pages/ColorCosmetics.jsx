@@ -11,8 +11,8 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 export default function ColorCosmetics() {
   const { products } = useContext(ProductContext);
 
-  const [selectedImage, setSelectedImage] = useState(null);
-
+  // const [selectedImage, setSelectedImage] = useState(null);
+     const [selectedProduct, setSelectedProduct] = useState(null);
   // sirf color cosmetics products
   const filtered = products.filter(
     (p) => p.category === "color-cosmetics"
@@ -33,9 +33,10 @@ export default function ColorCosmetics() {
             <img
               src={`${BASE_URL}/uploads/${item.image}`}
               alt={item.name}
-              onClick={() =>
-                setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
-              }
+              // onClick={() =>
+              //   setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+            onClick={() => setSelectedProduct(item)} 
+            
               onError={(e) => (e.target.src = "/no-image.png")}
             />
  </div>
@@ -49,14 +50,35 @@ export default function ColorCosmetics() {
       </div>
 
       {/* IMAGE MODAL */}
-      {selectedImage && (
+      {/* {selectedImage && (
         <div
           className="cc-modal"
           onClick={() => setSelectedImage(null)}
         >
           <img src={selectedImage} alt="preview" />
         </div>
-      )}
+      )} */}
+
+{selectedProduct && (
+  <div
+    className="cc-modal"
+    onClick={() => setSelectedProduct(null)}
+  >
+    <div
+      className="cc-modal-box"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img
+        src={`${BASE_URL}/uploads/${selectedProduct.image}`}
+        alt={selectedProduct.name}
+      />
+
+      <h2>{selectedProduct.name}</h2>
+      <p>{selectedProduct.description}</p>
+    </div>
+  </div>
+)}
+
 
     </div>
   );

@@ -20,7 +20,10 @@ export default function BabyCare() {
   );
 
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  // const [selectedImage, setSelectedImage] = useState(null);
+     const [selectedProduct, setSelectedProduct] = useState(null);
+
+
 
   return (
     <div className="baby-page"
@@ -36,13 +39,21 @@ export default function BabyCare() {
 
               <div className="baby-img-box">
                
+
                <img
+  src={`${BASE_URL}/uploads/${item.image}`}
+  alt={item.name}
+  onClick={() => setSelectedProduct(item)}
+/>
+
+
+               {/* <img
   src={`${BASE_URL}/uploads/${item.image}`}
   alt={item.name}
   onClick={() =>
     setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
   }
-/>
+/> */}
                
                
                 {/* <img
@@ -64,14 +75,26 @@ export default function BabyCare() {
       </div>
 
 
-      {selectedImage && (
+{selectedProduct && (
   <div
     className="baby-img-modal"
-    onClick={() => setSelectedImage(null)}
+    onClick={() => setSelectedProduct(null)}
   >
-    <img src={selectedImage} alt="preview" />
+    <div
+      className="baby-modal-content"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img
+        src={`${BASE_URL}/uploads/${selectedProduct.image}`}
+        alt={selectedProduct.name}
+      />
+
+      <h2>{selectedProduct.name}</h2>
+      <p>{selectedProduct.description}</p>
+    </div>
   </div>
 )}
+
 
     </div>
   );

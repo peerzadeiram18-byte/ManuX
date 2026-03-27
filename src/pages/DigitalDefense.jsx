@@ -18,8 +18,8 @@ export default function DigitalDefense() {
     (item) => item.category === "digital-defense"
   );
 
-const [selectedImage, setSelectedImage] = useState(null);
-
+// const [selectedImage, setSelectedImage] = useState(null);
+const [selectedProduct, setSelectedProduct] = useState(null);
 
 
   return (
@@ -57,9 +57,11 @@ const [selectedImage, setSelectedImage] = useState(null);
                 <img
   src={`${BASE_URL}/uploads/${item.image}`}
   alt={item.name}
-  onClick={() =>
-    setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
-  }
+  // onClick={() =>
+  //   setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
+  // }
+
+onClick={() => setSelectedProduct(item)}
 />
                 
                 
@@ -87,14 +89,36 @@ const [selectedImage, setSelectedImage] = useState(null);
       </div>
 
 
-      {selectedImage && (
+{selectedProduct && (
   <div
     className="digital-img-modal"
-    onClick={() => setSelectedImage(null)}
+    onClick={() => setSelectedProduct(null)}
+  >
+    <div
+      className="digital-modal-box"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img
+        src={`${BASE_URL}/uploads/${selectedProduct.image}`}
+        alt={selectedProduct.name}
+      />
+
+      <h2>{selectedProduct.name}</h2>
+      <p>{selectedProduct.description}</p>
+    </div>
+  </div>
+)}
+
+      {/* {selectedImage && (
+  <div
+    className="digital-img-modal"
+    // onClick={() => setSelectedImage(null)}
+
+    onClick={() => setSelectedProduct(item)}
   >
     <img src={selectedImage} alt="preview" />
   </div>
-)}
+)} */}
 
     </div>
   );
