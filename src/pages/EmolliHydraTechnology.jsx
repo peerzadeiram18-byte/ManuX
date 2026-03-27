@@ -3,8 +3,16 @@ import "./EmolliHydraTechnology.css";
 import bgImage from "../assets/backgroundimage.jpg";
 
 import heroBg from "../assets/research-hero7.jpg";
+import conceptImg from "../assets/concept.png"; // 👈 apni image path
+
 
 export default function EmolliHydraTechnology() {
+
+
+
+
+
+
   return (
     <div
       className="emolli-page"
@@ -43,7 +51,45 @@ export default function EmolliHydraTechnology() {
 
        {/* SECTION 2 — SCIENTIFIC CONCEPT */}
 
+
+
+
+
+{/* SECTION 2 — SCIENTIFIC CONCEPT */}
+
 <section className="mx-emolliConcept-section">
+
+  <div className="mx-emolliConcept-wrapper">
+
+    {/* LEFT CONTENT */}
+    <div className="mx-emolliConcept-left">
+      <span className="mx-emolliConcept-bar"></span>
+
+      <h2 className="mx-emolliConcept-title">
+        Scientific Concept
+      </h2>
+
+      <p className="mx-emolliConcept-text">
+        Skin hydration is a dynamic process involving water distribution,
+        lipid organization, and barrier signaling. EmolliHydra™ integrates
+        compatible humectants, biomimetic emollients, and barrier-supportive
+        components into a cohesive system that responds to environmental
+        and physiological conditions.
+      </p>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="mx-emolliConcept-right">
+      <img src={conceptImg} alt="Scientific concept" />
+    </div>
+
+  </div>
+
+</section>
+
+
+
+{/* <section className="mx-emolliConcept-section">
 
   <div className="mx-emolliConcept-wrapper">
 
@@ -68,7 +114,7 @@ export default function EmolliHydraTechnology() {
 
   </div>
 
-</section>
+</section> */}
 
        {/* SECTION 3 */}
 

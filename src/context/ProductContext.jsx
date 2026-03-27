@@ -1,12 +1,22 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
+
+// import { NotificationContext } from "./NotificationContext";
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
 export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
+
+
+  // const { addNotification } = useContext(NotificationContext);
+
+
+
+
 
   const [products, setProducts] = useState([]);
 
@@ -60,7 +70,16 @@ export const ProductProvider = ({ children }) => {
   // 🔹 ADD PRODUCT
   const addProduct = (product) => {
     setProducts((prev) => [...prev, product]);
-  };
+
+    
+    // 🔥 ADD THIS
+  // addNotification({
+  //   title: product.name,
+  //   category: product.category,
+  //   description: product.description,
+  //   time: new Date()
+  // });
+};
 
   // 🔹 DELETE PRODUCT (API + state update)
   const deleteProduct = async (id) => {

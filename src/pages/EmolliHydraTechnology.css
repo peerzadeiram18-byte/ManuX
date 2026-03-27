@@ -239,6 +239,10 @@ font-family: 'Avenir Next', sans-serif;}
 
   border: 2px solid white;
 
+
+  overflow: hidden;
+
+
   animation: mx-exoSlideRight 1.2s ease forwards;
 }
 
@@ -269,6 +273,7 @@ font-family: 'Avenir Next', sans-serif;}
 
   display:flex;
   align-items:center;
+  justify-content: space-between;  
 
   gap:70px;
 
@@ -278,31 +283,44 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-emolliConcept-left{
 
-  display:flex;
+   flex: 1;
+  animation: fadeLeft 1s ease forwards;
+
+  /* display:flex;
   align-items:center;
   gap:18px;
 
   flex:1;
 
-  padding-top: 20px;
+  padding-top: 20px; */
 }
 
 /* RED BAR */
 
 .mx-emolliConcept-bar{
 
-  width:6px;
+  /* width:6px;
   height:60px;
 
   background:#B23A3F;
 
-  border-radius:4px;
+  border-radius:4px; */
+
+    display: block;
+  width: 50px;
+  height: 4px;
+  background: #B23A3F;
+  margin-bottom: 15px;
 
 }
 
 /* TITLE */
 
 .mx-emolliConcept-title{
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;  
+
 
   font-size:34px;
   color:#1F2A44;
@@ -313,9 +331,27 @@ font-family: 'Avenir Next', sans-serif;}
 
 .mx-emolliConcept-right{
 
-  flex:2;
-
+  /* flex:2; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeRight 1s ease forwards;
 }
+
+
+
+
+
+.mx-emolliConcept-right img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 300px;
+}
+
+
+
 
 /* TEXT */
 
@@ -325,28 +361,96 @@ font-family: 'Avenir Next', sans-serif;}
   line-height:1.9;
 
   color:#1F2A44;
-  width: 700px;
- align-items:center;
+  /* width: 700px;
+ align-items:center; */
 }
 
-/* =====================
+
+
+
+
+
+/* 🔥 ANIMATIONS */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 TABLET */
+@media (max-width: 992px) {
+  .mx-emolliConcept-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx-emolliConcept-left {
+    order: 1;
+  }
+
+  .mx-emolliConcept-right {
+    order: 2;
+  }
+
+  .mx-emolliConcept-title {
+    font-size: 28px;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 576px) {
+  .mx-emolliConcept-section {
+    padding: 50px 20px;
+  }
+
+  .mx-emolliConcept-title {
+    font-size: 24px;
+  }
+
+  .mx-emolliConcept-text {
+    font-size: 14px;
+  }
+
+  .mx-emolliConcept-right img {
+    max-width: 100%;
+     height: 210px;
+  }
+}
+
+/* /* =====================
    TABLET
 ===================== */
 
-@media (max-width:900px){
+/* @media (max-width:900px){
 
 .mx-emolliConcept-wrapper{
   flex-direction:column;
   gap:30px;
 }
 
-}
+} */
 
 /* =====================
    MOBILE
 ===================== */
 
-@media (max-width:600px){
+/* @media (max-width:600px){
 
 .mx-emolliConcept-title{
   font-size:26px;
@@ -359,8 +463,7 @@ font-family: 'Avenir Next', sans-serif;}
 .mx-emolliConcept-bar{
   height:45px;
 }
-
-}
+*/
 
 /* =====================================
    MANUX EMOLLIHYDRA DIFFERENCE SECTION

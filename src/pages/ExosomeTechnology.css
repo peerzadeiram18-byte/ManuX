@@ -228,19 +228,45 @@
 
 .mx-exoScience-container{
 
-  max-width:1100px;
-  margin:auto;
+   max-width:1400px;
+ /* margin:auto;
   background: transparent;
 
     display:flex;
   align-items:center;
-  margin-right: 100px;
+  margin-right: 100px; */
+  display: flex;
+  align-items: center;
+  gap:60px;
 
+
+}
+
+
+
+
+/* LEFT IMAGE */
+.mx-exoScience-image {
+  flex: 1;
+  animation: slideLeft 1s ease;
+}
+
+
+.mx-exoScience-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mx-exoScience-image img:hover {
+  transform: scale(1.05);
 }
 
 /* CARD */
 
-.mx-exoScience-card{
+/* .mx-exoScience-card{ */
 
   /* display:flex;
   align-items:right;
@@ -255,7 +281,7 @@
 
   border:1px solid rgba(255,255,255,0.35); */
 
-   display:flex;
+   /* display:flex;
   align-items:center;
   justify-content:space-between;
 
@@ -270,11 +296,11 @@
 
    animation: mx-exoSlideRight 1.2s ease forwards;
 
-}
+} */
 
 /* ICON */
 
-.mx-exoScience-icon{
+/* .mx-exoScience-icon{ */
 
   /* font-size:80px;
 
@@ -290,7 +316,7 @@
   /*background:rgba(255,255,255,0.35);*/
 
 
-  font-size:70px;
+  /* font-size:70px;
 
   width:90px;
   height:90px;
@@ -300,12 +326,13 @@
   justify-content:center;
 
 
-}
+} */
 
-/* TEXT AREA */
+/* RIGHT TEXT */
 
 .mx-exoScience-content{
   flex:1;
+  animation: slideRight 1s ease; 
 }
 
 /* TITLE */
@@ -330,44 +357,105 @@
 
 }
 
-/* =====================
-   TABLET
-===================== */
 
-@media (max-width:900px){
-
-.mx-exoScience-card{
-  padding:40px;
+/* 🔥 ANIMATION */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* =====================
-   MOBILE
-===================== */
+/* 📱 TABLET */
+@media (max-width: 992px) {
+  .mx-exoScience-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-@media (max-width:700px){
-
-.mx-exoScience-card{
-
-  flex-direction:column;
-  text-align:center;
-
-  gap:25px;
-
+  .mx-exoScience-title {
+    font-size: 28px;
+  }
 }
 
-.mx-exoScience-title{
-  font-size:26px;
+/* 📱 MOBILE */
+@media (max-width: 576px) {
+  .mx-exoScience-section {
+    padding: 50px 20px;
+  }
+
+  .mx-exoScience-title {
+    font-size: 24px;
+  }
+
+  .mx-exoScience-text {
+    font-size: 14px;
+  }
 }
 
-.mx-exoScience-text{
-  font-size:16px;
+/* 🔥 IMAGE MODAL */
+.imageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
+.imageModal img {
+  max-width: 50%;
+  max-height:50%;
+  border-radius: 10px;
 }
 
 
+
+/* 📱 TABLET */
+@media (max-width: 992px) {
+  .imageModal img {
+    max-width: 95%;
+    max-height: 85%;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 576px) {
+  .imageModal {
+    padding: 10px;
+  }
+
+  .imageModal img {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 8px;
+  }
+
+  .imageModal::after {
+    font-size: 24px;
+    top: 15px;
+    right: 15px;
+  }
+}
 
 /* =========================
    LEFT TO RIGHT ANIMATION
@@ -394,13 +482,14 @@
 .mx-exoBio2-section{
 
   width:100%;
-  padding:80px 20px;
+  padding:60px 20px;
 
   background:linear-gradient(
     180deg,
     #f0f7fc,
     #e5f1fa
   );
+  overflow: hidden;  
 
 }
 
@@ -414,6 +503,8 @@
   display:flex;
   align-items:center;
   gap:70px;
+
+  justify-content: space-between;
 
 
 
@@ -441,15 +532,15 @@
 
 /* VISUAL SIDE */
 
-.mx-exoBio2-visual{
+/* .mx-exoBio2-visual{
   flex:1;
   display:flex;
   justify-content:center;
-}
+} */
 
 /* BIO CIRCLE */
 
-.mx-exoBio2-circle{
+/* .mx-exoBio2-circle{
 
   width:160px;
   height:160px;
@@ -468,10 +559,10 @@
 
   box-shadow:0 15px 40px rgba(0,0,0,0.08);
 
-}
+} */
 
 /* PULSE ANIMATION */
-
+/* 
 .mx-exoBio2-pulse{
 
   position:absolute;
@@ -485,7 +576,7 @@
 
   animation:exoPulse 3s infinite;
 
-}
+} */
 
 @keyframes exoPulse{
 
@@ -505,6 +596,7 @@
 
 .mx-exoBio2-content{
   flex:1;
+  animation: fadeLeft 1s ease;  
 }
 
 /* TITLE */
@@ -529,26 +621,126 @@
 
 }
 
-/* =====================
-   MOBILE
-===================== */
 
-@media (max-width:800px){
 
-.mx-exoBio2-container{
 
-  flex-direction:column;
-  text-align:center;
+
+/* IMAGE */
+.mx-exoBio2-imageWrapper {
+  flex: 1;
+  min-width: 400px;
+  text-align: center;
+  animation: fadeRight 1s ease;
+}
+
+.mx-exoBio2-imageWrapper img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mx-exoBio2-imageWrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* 🔥 IMAGE MODAL (RESPONSIVE FIXED) */
+.imageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.imageModal img {
+  max-width: 40%;
+  max-height: 70vh;
+  border-radius: 12px;
+  animation: zoomIn 0.3s ease;
+}
+
+
+/* 🔥 ANIMATION */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+/* 📱 TABLET */
+@media (max-width: 992px) {
+  .mx-exoBio2-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mx-exoBio2-title {
+    font-size: 28px;
+  }
+
+
+    .imageModal img {
+  max-width: 100%;
+  max-height: 70vh;
+
+}
+}
+
+/* 📱 MOBILE */
+@media (max-width: 576px) {
+  .mx-exoBio2-section {
+    padding: 50px 20px;
+  }
+
+  .mx-exoBio2-title {
+    font-size: 24px;
+  }
+
+  .mx-exoBio2-text {
+    font-size: 14px;
+  }
+
+  .mx-exoBio2-image img {
+    max-width: 100%;
+  }
+
+  .imageModal img {
+  max-width: 100%;
+  max-height: 70vh;
 
 }
 
-.mx-exoBio2-title{
-  font-size:28px;
-}
-
-.mx-exoBio2-text{
-  font-size:16px;
-}
+    .mx-exoBio2-imageWrapper img {
+    max-width: 100%;
+  }
 
 }
 /* 

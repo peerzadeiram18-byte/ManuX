@@ -1,11 +1,24 @@
-import React from "react";
+// import React from "react";
 import "./ExosomeTechnology.css";
 import bgImage from "../assets/backgroundimage.jpg";
 
 import exosomeBg from "../assets/exosome-bg.png";
 //import heroBg from "../assets/wave-bg.png";
 
+import React, { useState } from "react";
+import scienceImg from "../assets/science.jpg"; // 👈 apni image
+
+
+
+import bioImg from "../assets/bio.jpg"; // 👈 apni image
+
+
 export default function ExosomeTechnology() {
+
+  const [showImage, setShowImage] = useState(false);
+  const [openImage, setOpenImage] = useState(false);
+
+
   return (
     <div
       className="exosome-page"
@@ -51,9 +64,65 @@ export default function ExosomeTechnology() {
   </div>
 
 </section>
-     {/* SECTION 2 — SCIENTIFIC FOUNDATION */}
+  
+
+
+
+
+
+
+
+{/* SECTION 2 — SCIENTIFIC FOUNDATION */}
 
 <section className="mx-exoScience-section">
+
+  <div className="mx-exoScience-container">
+
+    {/* LEFT IMAGE */}
+    <div className="mx-exoScience-image">
+      <img 
+        src={scienceImg} 
+        alt="Scientific foundation"
+        onClick={() => setShowImage(true)}
+      />
+    </div>
+
+    {/* RIGHT TEXT */}
+    <div className="mx-exoScience-content">
+
+      <h2 className="mx-exoScience-title">
+        Scientific Foundation
+      </h2>
+
+      <p className="mx-exoScience-text">
+        Exosomes originate from intracellular multivesicular bodies and
+        are released into the extracellular environment. Their nanoscale
+        size allows efficient interaction with target cells.
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* 🔥 IMAGE MODAL */}
+  {showImage && (
+    <div className="imageModal" onClick={() => setShowImage(false)}>
+      <img src={scienceImg} alt="Full View" />
+    </div>
+  )}
+
+</section>
+
+
+
+
+
+
+
+
+
+
+{/* <section className="mx-exoScience-section">
 
   <div className="mx-exoScience-container">
 
@@ -81,13 +150,61 @@ export default function ExosomeTechnology() {
 
   </div>
 
+</section> */}
+
+
+
+
+
+
+{/* SECTION 3 — BIOLOGICAL SIGNIFICANCE */}
+
+<section className="mx-exoBio2-section">
+
+  <div className="mx-exoBio2-container">
+
+    {/* LEFT TEXT */}
+    <div className="mx-exoBio2-content">
+
+      <h2 className="mx-exoBio2-title">
+        Biological Significance
+      </h2>
+
+      <p className="mx-exoBio2-text">
+        Exosomes play a critical role in tissue regeneration, immune
+        modulation, and cellular signaling, supporting skin renewal and
+        biological balance at the cellular level.
+      </p>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="mx-exoBio2-imageWrapper">
+      <img 
+        src={bioImg} 
+        alt="Biological significance"
+           onClick={() => setOpenImage(true)}
+      />
+    </div>
+
+  </div>
+
+  {/* 🔥 IMAGE MODAL */}
+   {openImage &&  (
+    <div className="imageModal" onClick={() => setOpenImage(false)}>
+      <img 
+        src={bioImg} 
+        alt="Full View"
+        // onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  )}
+
 </section>
-
-
 
       {/* SECTION 3 — BIOLOGICAL SIGNIFICANCE */}
 
-{/* SECTION 3 — BIOLOGICAL SIGNIFICANCE */}
+{/* SECTION 3 — BIOLOGICAL SIGNIFICANCE
 
 <section className="mx-exoBio2-section">
 
@@ -104,7 +221,7 @@ export default function ExosomeTechnology() {
     </div> */}
 
     {/* Right Content */}
-    <div className="mx-exoBio2-content">
+    {/*<div className="mx-exoBio2-content">
 
       <h2 className="mx-exoBio2-title">
         Biological significance
@@ -129,7 +246,7 @@ export default function ExosomeTechnology() {
 
   </div>
 
-</section>
+</section> */}
 
        {/* SECTION 4 — TECHNOLOGY INTEGRATION */}
 

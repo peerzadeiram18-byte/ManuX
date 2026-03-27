@@ -49,10 +49,10 @@ const fetchCount = async () => {
       <div className="admin-sidebar">
 
 
- <div className="bell-icon">
+ {/* <div className="bell-icon">
   🔔
   {count > 0 && <span className="badge">{count}</span>}
-</div>
+</div> */}
 
 
         <h2 className="logo">ManuX Admin</h2>

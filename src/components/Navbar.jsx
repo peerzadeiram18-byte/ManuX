@@ -259,14 +259,14 @@ useEffect(() => {
   ) : (
     <button
       className="login-btn"
-      onClick={() => {
-  navigate("/login");   // 🔥 page open hoga
-  setMobileMenu(false);
-}}
-// onClick={() => {
-//   setShowLogin(true);
-//   setMobileMenu(false); // 🔥 ADD THIS
-// }}    
+//       onClick={() => {
+//   navigate("/login");   // 🔥 page open hoga
+//   setMobileMenu(false);
+// }}
+onClick={() => {
+  setShowLogin(true);
+  setMobileMenu(false); // 🔥 ADD THIS
+}}    
 >
       Login
     </button>
@@ -282,7 +282,7 @@ useEffect(() => {
   <div
     className="overlay2"
     onClick={() => setMobileMenu(false)}
-  ></div
+  ></div>
 )}*/}
 
           {/* TECHNOLOGY DROPDOWN */}
@@ -634,10 +634,10 @@ onClick={() => {
   </div>
 </div>
 
-
+{/* 
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
-          </NavLink> 
+          </NavLink> */}
               
 
               {/* ADMIN DASHBOARD */}
