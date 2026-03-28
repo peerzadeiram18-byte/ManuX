@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { useState } from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { AuthProvider } from "./context/AuthContext";
@@ -23,10 +25,6 @@ import EnzymaticTechnology from "./pages/EnzymaticTechnology";
 import MicrobiomeTechnology from "./pages/MicrobiomeTechnology";
 import EmolliHydraTechnology from "./pages/EmolliHydraTechnology";
 import ExosomeTechnology from "./pages/ExosomeTechnology";
-
-
-
-
 
 // Pages import
 import SkinCare from "./pages/SkinCare";
@@ -74,23 +72,32 @@ import "react-toastify/dist/ReactToastify.css";
 
 import WhyManuX from "./pages/WhyManuX";
 
+import { useContext } from "react";
+import { NotificationProvider } from "./context/NotificationContext";
+
 
 
 function App() {
 
-  
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
       <>
 
 <HelmetProvider>
     <BrowserRouter>
       <AuthProvider>
+
+     <NotificationProvider>   {/* 🔥 ADD THIS */}
+
         <ProductProvider>
 
        
   <ScrollToTop />   {/* 👈 ADD THIS HERE */}
 
         <Navbar />
+
+        {showLogin && <Login closeModal={() => setShowLogin(false)} />}
 
     <Routes>
 
@@ -160,6 +167,19 @@ function App() {
   }
 />
 
+
+
+
+      {/* ✅ WHATSAPP BUTTON (YAHI ADD KARNA HAI)
+      // <a
+      //   href="https://wa.me/919949896254?text=Hello%20I%20want%20to%20connect"
+      //   className="whatsapp-float"
+      //   target="_blank"
+      //   rel="noopener noreferrer"
+      // >
+      //   💬
+      // </a> */}
+
 </Routes>
 
    
@@ -171,6 +191,8 @@ function App() {
 
         
         </ProductProvider>
+         
+          </NotificationProvider>   {/* 🔥 ADD THIS */}
 
       </AuthProvider>
     </BrowserRouter>

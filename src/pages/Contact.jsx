@@ -42,6 +42,16 @@ const handleSubmit = async (e) => {
   try {
     await axios.post(`${BASE_URL}/api/contact`, formData);
 
+
+//        await axios.post(
+//   `${BASE_URL}/api/contact`,
+//   formData,
+//   {
+//     headers: {
+//       Authorization: `Bearer ${localStorage.getItem("token")}`
+//     }
+//   }
+// );
     toast.success("Message Sent Successfully!");
 
     setFormData({
@@ -62,8 +72,7 @@ const handleSubmit = async (e) => {
 
 
 
-
-const Contact = () => {
+// const Contact = () => {
 
 
 
@@ -228,5 +237,5 @@ const Contact = () => {
 
     </div>
   );
-};
+// };
 }

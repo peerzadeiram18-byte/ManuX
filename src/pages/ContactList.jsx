@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./ContactList.css";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 
 export default function ContactList() {
 
@@ -21,19 +22,32 @@ export default function ContactList() {
   };
 
   return (
-    <div>
-      <h2>Contact Messages</h2>
+    <div className="cl-container">
+      <h2 className="cl-title">Contact Messages</h2>
 
-      {contacts.map((item) => (
-        <div key={item._id} style={{marginBottom:"20px"}}>
-          <h4>{item.name}</h4>
-          <p>{item.email}</p>
-          <p>{item.phone}</p>
-          <p>{item.message}</p>
-          <hr />
-        </div>
-      ))}
+      <div className="cl-grid">
+        {contacts.map((item) => (
+          <div key={item._id} className="cl-card">
+            
+            <div className="cl-header">
+              <h3>{item.name}</h3>
+              <span className="cl-date">
+                {new Date(item.createdAt).toLocaleDateString()}
+              </span>
+            </div>
 
+            <div className="cl-info">
+              <p><strong>Email:</strong> {item.email}</p>
+              <p><strong>Phone:</strong> {item.phone}</p>
+            </div>
+
+            <div className="cl-message">
+              {item.message}
+            </div>
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

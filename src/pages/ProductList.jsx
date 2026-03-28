@@ -210,9 +210,15 @@ const handleUpdate = async () => {
   <option value="baby-care">Baby Care</option>
   <option value="pet-care">Pet Care</option>
   <option value="mens-care">Mens Care</option>
-  <option value="pregnancy-care">Pregnancy Care</option>
+  <option value="digital-defense">Digital Defense</option>
+  <option value="fitness">  Fitness</option>
+  <option value="color-cosmetics">color-cosmetics</option>
+
+
+
+  {/* <option value="pregnancy-care">Pregnancy Care</option>
   <option value="ayurvedic">Ayurvedic</option>
-  <option value="nutraceuticals">Nutraceuticals</option>
+  <option value="nutraceuticals">Nutraceuticals</option> */}
 </select>
       {/* <input
         type="text"

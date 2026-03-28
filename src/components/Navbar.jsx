@@ -7,7 +7,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 
 import "./Navbar.css";
-import { FaSearch, FaRegStar, FaBell, FaUser } from "react-icons/fa";
+import { FaSearch, FaRegStar, FaBell, FaWhatsapp } from "react-icons/fa";
 import logo from "./logo.png";
 import { NavLink, Link } from "react-router-dom";
 
@@ -15,7 +15,22 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 
+
+import { useContext } from "react";
+import { NotificationContext } from "../context/NotificationContext";
+
+
+
 const Navbar = () => {
+
+const { notifications } = useContext(NotificationContext);
+
+  // const { notifications, markAllRead } = useContext(NotificationContext);
+  // const unreadCount = notifications.filter(n => !n.read).length;
+
+
+
+
   const [openSearch, setOpenSearch] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false); // mobile dropdown toggle
@@ -48,12 +63,12 @@ const { user, role, logout } = useAuth();
 
 
   const searchData = [
-  { name: "Skin Care", path: "/skincare" },
-  { name: "Hair Care", path: "/haircare" },
-  { name: "Baby Care", path: "/babycare" },
-  { name: "Pet Care", path: "/petcare" },
-  { name: "Men Care", path: "/menscare" },
-  { name: "Pregnancy Care", path: "/pregnancycare" },
+  { name: "Skin Care", path: "/skin-care" },
+  { name: "Hair Care", path: "/hair-care" },
+  { name: "Baby Care", path: "/baby-care" },
+  { name: "Pet Care", path: "/pet-care" },
+  { name: "Men Care", path: "/mens-care" },
+  { name: "Pregnancy Care", path: "/pregnancy-care" },
   { name: "Ayurvedic Science", path: "/ayurveda"},
   { name: "Ethical Ingredient Sourcing", path: "/ethical-ingredient-sourcing" },
   { name: "Sustainability Responsibility", path: "/sustainability-responsibility" },
@@ -89,17 +104,39 @@ const filteredResults = searchTerm
 //     setOpenScienceDropdown(false);
 //     setOpenCompanyDropdown(false);
 //   };
-useEffect(() => {
-  const handleClickOutside = () => {
+
+
+
+const handleClickOutside = (e) => {
+  if (!e.target.closest(".dropdown")) {
     setOpenDropdown(false);
     setOpenResearchDropdown(false);
     setOpenScienceDropdown(false);
     setOpenCompanyDropdown(false);
-   setOpenProductsDropdown(false); // 🔥 ADD THIS  
-  };
+    setOpenProductsDropdown(false);
+  }
+};
 
+
+// useEffect(() => {
+//   const handleClickOutside = () => {
+//     setOpenDropdown(false);
+//     setOpenResearchDropdown(false);
+//     setOpenScienceDropdown(false);
+//     setOpenCompanyDropdown(false);
+//    setOpenProductsDropdown(false); // 🔥 ADD THIS  
+//   };
+
+//   document.addEventListener("click", handleClickOutside);
+
+  // return () => {
+//     document.removeEventListener("click", handleClickOutside);
+//   };
+// }, []);
+
+
+useEffect(() => {
   document.addEventListener("click", handleClickOutside);
-
   return () => {
     document.removeEventListener("click", handleClickOutside);
   };
@@ -108,6 +145,8 @@ useEffect(() => {
 
 
   return (
+
+    <>
     <div className="navbar">
       <div className="nav-row">
         {/* HAMBURGER MOBILE */}
@@ -164,8 +203,50 @@ useEffect(() => {
 
         {/* RIGHT - ICONS + LOGIN */}
         <div className="nav-right">
-          <FaRegStar />
-          <FaBell />
+          <FaWhatsapp
+  className="whatsapp-icon"
+  onClick={() => {
+    window.open("https://wa.me/917841836335", "_blank");
+  }}
+/>
+          {/* <FaBell /> */}
+
+
+          <div className="bell-container">
+  <FaBell />
+
+  {notifications.length > 0 && (
+    <span className="notification-badge">
+      {notifications.length}
+    </span>
+  )}
+</div>
+
+          {/* <div className="bell-container" onClick={markAllRead}>
+  <FaBell />
+
+  {unreadCount > 0 && (
+    <span className="bell-badge">{unreadCount}</span>
+  )} */}
+
+  <div className="notification-dropdown">
+    {notifications.length === 0 ? (
+      <p>No Notifications</p>
+    ) : (
+      notifications.map((n) => (
+        <div key={n.id} className="notification-item">
+          <h4>{n.name}</h4>
+          <p>{n.category}</p>
+          <small>{n.description}</small>
+        </div>
+      ))
+    )}
+  {/* </div> */}
+</div>
+
+
+
+
           {/* <FaUser 
           //  className="user-icon"
           //  onClick={() => navigate("/register")}
@@ -187,6 +268,11 @@ useEffect(() => {
           )}
 */}
 
+ {/* 👇 THIS SHOULD BE OUTSIDE
+    {showLogin && (
+      <Login closeModal={() => setShowLogin(false)} />
+    )} */}
+
 {user ? (
   <>
     <button className="login-btn" onClick={logout}>
@@ -197,10 +283,16 @@ useEffect(() => {
   <>
     <button
       className="login-btn"
-    onClick={() => {
+onClick={() => {
+  setMobileMenu(false);
   setShowLogin(true);
-  setMobileMenu(false); // 🔥 ADD THIS
 }}
+
+
+//     onClick={() => {
+//   setShowLogin(true);
+//   setMobileMenu(false); // 🔥 ADD THIS
+// }}
     >
       Login
     </button>
@@ -235,7 +327,12 @@ useEffect(() => {
           {/* MOBILE ICONS */}
 <div className="mobile-icons">
 
-  <FaRegStar />
+            <FaWhatsapp
+  className="whatsapp-icon"
+  onClick={() => {
+    window.open("https://wa.me/917841836335", "_blank");
+  }}
+/>
 
   <FaBell />
 
@@ -634,10 +731,10 @@ onClick={() => {
   </div>
 </div>
 
-{/* 
+
           <NavLink to="/contact" onClick={() => setMobileMenu(false)}>
             Contact
-          </NavLink> */}
+          </NavLink>
               
 
               {/* ADMIN DASHBOARD */}
@@ -748,6 +845,11 @@ Product List  </Link>
             </div>  {/* menu-links END */}
       </div>  {/* menubar END */}
     </div> 
+
+      {showLogin && (
+      <Login closeModal={() => setShowLogin(false)} />
+    )}
+  </>
             
 
   );

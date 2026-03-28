@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 99999;
   padding: 10px 5%;
    /* border-radius: 0 0 20px 20px;*/
 
@@ -781,4 +781,89 @@ cursor:pointer;
   .mobile-top-title {
     display: none;
   }
+}
+
+
+
+
+
+
+
+
+
+
+/*whatsapp*/
+
+.whatsapp-icon {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: -5px;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.2);
+  color: #1ebe5d;
+}
+
+
+
+
+
+
+
+
+
+/* BELL*/
+
+
+
+
+.bell-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.bell-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+/* dropdown */
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+}
+
+.bell-container:hover .notification-dropdown {
+  display: block;
+}
+
+.notification-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.notification-item p {
+  font-size: 12px;
+  color: gray;
 }

@@ -17,7 +17,7 @@
   font-size: 32px;
   margin-bottom: 30px;
   font-weight: 600;
-  color: #222;
+  color: #1F2A44;
   margin-top: 25px;
 }
 
@@ -97,11 +97,12 @@
 .hair-content h3 {
   font-size: 18px;
   margin-bottom: 8px;
+  color: #1F2A44;
 }
 
 .hair-content p {
   font-size: 14px;
-  color: #666;
+  color: #1F2A44;
   height: 40px;
   overflow: hidden;
 }

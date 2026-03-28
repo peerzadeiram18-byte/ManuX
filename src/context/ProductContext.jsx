@@ -1,6 +1,8 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
+import { useContext } from "react";
+import { NotificationContext } from "./NotificationContext";
 
 // import { NotificationContext } from "./NotificationContext";
 
@@ -15,7 +17,7 @@ export const ProductProvider = ({ children }) => {
   // const { addNotification } = useContext(NotificationContext);
 
 
-
+const { addNotification } = useContext(NotificationContext);
 
 
   const [products, setProducts] = useState([]);
@@ -79,6 +81,7 @@ export const ProductProvider = ({ children }) => {
   //   description: product.description,
   //   time: new Date()
   // });
+  addNotification(product); // 🔥 THIS LINE IMPORTANT
 };
 
   // 🔹 DELETE PRODUCT (API + state update)

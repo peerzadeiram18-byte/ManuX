@@ -9,27 +9,16 @@ export const NotificationProvider = ({ children }) => {
   const addNotification = (product) => {
     const newNotification = {
       id: Date.now(),
-      name: product.name,
+      title: product.name,
       category: product.category,
-      description: product.description,
-      read: false
+      description: product.description
     };
 
     setNotifications((prev) => [newNotification, ...prev]);
   };
 
-  const markAllRead = () => {
-    setNotifications((prev) =>
-      prev.map((n) => ({ ...n, read: true }))
-    );
-  };
-
   return (
-    <NotificationContext.Provider value={{
-      notifications,
-      addNotification,
-      markAllRead
-    }}>
+    <NotificationContext.Provider value={{ notifications, addNotification }}>
       {children}
     </NotificationContext.Provider>
   );

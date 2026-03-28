@@ -1,5 +1,5 @@
 import { Link, Routes, Route, Navigate } from "react-router-dom";
-
+import { useContext } from "react";
 //import { Link, Routes, Route } from "react-router-dom";
 import ProductForm from "./ProductForm";
 import ProductList from "./ProductList";
@@ -13,6 +13,7 @@ import ContactList from "./ContactList";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import { ProductContext } from "../context/ProductContext";
 
 
 
@@ -20,6 +21,14 @@ import axios from "axios";
 
 
 export default function AdminDashboard() {
+
+
+const { products } = useContext(ProductContext);
+  // const { addNotification } = useContext(NotificationContext);
+
+
+     // jab product add ho
+      //  addNotification(products);
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const [count, setCount] = useState(0);
@@ -80,24 +89,24 @@ const fetchCount = async () => {
             </Link>
           </li>
 
-          <li>
+         {/* <li>
            <Link
                 to="/admin/dashboard/user-list"
                 style={{ color: "white", textDecoration: "none" }}
              >
                   Users List
           </Link>
-        </li>
+        </li> */}
 
 
 
         <li>
-  {/* <Link
+  <Link
     to="/admin/dashboard/contact-list"
     style={{ color: "white", textDecoration: "none" }}
   >
     Contact List
-  </Link> */}
+  </Link> 
 </li>
 
 
@@ -117,8 +126,8 @@ const fetchCount = async () => {
 {/*  <Route path="/" element={<h1>Dashboard</h1>} />*/}
   <Route path="product-form" element={<ProductForm />} />
   <Route path="product-list" element={<ProductList />} />
-   <Route path="user-list" element={<UserList />} />
-   {/* <Route path="contact-list" element={<ContactList />} /> */}
+   {/* <Route path="user-list" element={<UserList />} /> */}
+   <Route path="contact-list" element={<ContactList />} />
 </Routes>
 
       </div>
