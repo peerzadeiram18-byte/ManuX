@@ -40,18 +40,18 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    await axios.post(`${BASE_URL}/api/contact`, formData);
+    // await axios.post(`${BASE_URL}/api/contact`, formData);
 
 
-//        await axios.post(
-//   `${BASE_URL}/api/contact`,
-//   formData,
-//   {
-//     headers: {
-//       Authorization: `Bearer ${localStorage.getItem("token")}`
-//     }
-//   }
-// );
+       await axios.post(
+  `${BASE_URL}/api/contact`,
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`
+    }
+  }
+);
     toast.success("Message Sent Successfully!");
 
     setFormData({

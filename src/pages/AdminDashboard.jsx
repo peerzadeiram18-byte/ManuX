@@ -89,14 +89,14 @@ const fetchCount = async () => {
             </Link>
           </li>
 
-         {/* <li>
+         <li>
            <Link
-                to="/admin/dashboard/user-list"
+                to="/admin/dashboard/contact-list"
                 style={{ color: "white", textDecoration: "none" }}
              >
-                  Users List
+                  Contact List
           </Link>
-        </li> */}
+        </li> 
 
 
 
