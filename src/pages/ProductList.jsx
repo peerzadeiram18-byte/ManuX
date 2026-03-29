@@ -135,7 +135,7 @@ const handleUpdate = async () => {
                  className="pm-img"
                   />           */}
 
-                  <img
+                  {/* <img
   src={
     typeof product.image === "string"
       ? `${BASE_URL}/uploads/${product.image}`
@@ -143,15 +143,15 @@ const handleUpdate = async () => {
   }
   alt=""
   className="pm-img"
-/> 
+/>  */}
 
 
 
-{/* <img
+<img
   src={`${BASE_URL}/uploads/${product.image}`}
   alt=""
   className="pm-img"
-/> */}
+/>
                   
                   </td>
                 <td>
