@@ -12,14 +12,32 @@ export default function ContactList() {
     fetchContacts();
   }, []);
 
+
+
   const fetchContacts = async () => {
-    try {
-      const res = await axios.get(`${BASE_URL}/api/contact`);
-      setContacts(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  try {
+    const token = localStorage.getItem("token");
+
+    const res = await axios.get(`${BASE_URL}/api/contact`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    setContacts(res.data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+  // const fetchContacts = async () => {
+  //   try {
+  //     const res = await axios.get(`${BASE_URL}/api/contact`);
+  //     setContacts(res.data);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   return (
     <div className="cl-container">
