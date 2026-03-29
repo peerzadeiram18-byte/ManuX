@@ -6,7 +6,14 @@ export const NotificationProvider = ({ children }) => {
 
   const [notifications, setNotifications] = useState([]);
 
-  const addNotification = (product) => {
+  // const addNotification = (product) => {
+
+    const addNotification = async (product) => {
+  await axios.post(`${BASE_URL}/api/notifications`, product);
+
+  const res = await axios.get(`${BASE_URL}/api/notifications`);
+  setNotifications(res.data);
+// };
     const newNotification = {
       id: Date.now(),
       name: product.name,
@@ -23,6 +30,10 @@ export const NotificationProvider = ({ children }) => {
       prev.map((n) => ({ ...n, read: true }))
     );
   };
+
+
+
+  
 
   return (
     <NotificationContext.Provider value={{
