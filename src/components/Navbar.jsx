@@ -785,11 +785,11 @@ onClick={() => {
         Products List
       </Link>
 
-      <Link to="/admin/dashboard/user-list" onClick={() => {
+      <Link to="/admin/dashboard/Contact-list" onClick={() => {
         setMobileMenu(false);
         setOpenMenu(false);
       }}>
-        Users List
+        Contact List
       </Link>
 
     </div>
