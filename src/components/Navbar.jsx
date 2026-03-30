@@ -14,10 +14,12 @@ import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-
+import { useRef } from "react";
 
 import { useContext } from "react";
 import { NotificationContext } from "../context/NotificationContext";
+
+
 
 
 
@@ -105,18 +107,37 @@ const filteredResults = searchTerm
 //     setOpenCompanyDropdown(false);
 //   };
 
+const menuRef = useRef();
 
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setMobileMenu(false);
+      setOpenDropdown(false);
+      setOpenResearchDropdown(false);
+      setOpenScienceDropdown(false);
+      setOpenCompanyDropdown(false);
+      setOpenProductsDropdown(false);
+      setOpenMenu(false);
+    }
+  };
 
-const handleClickOutside = (e) => {
-  if (!e.target.closest(".dropdown")) {
-    setOpenDropdown(false);
-    setOpenResearchDropdown(false);
-    setOpenScienceDropdown(false);
-    setOpenCompanyDropdown(false);
-    setOpenProductsDropdown(false);
-    setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
-  }
-};
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+// const handleClickOutside = (e) => {
+//   if (!e.target.closest(".dropdown")) {
+//     setOpenDropdown(false);
+//     setOpenResearchDropdown(false);
+//     setOpenScienceDropdown(false);
+//     setOpenCompanyDropdown(false);
+//     setOpenProductsDropdown(false);
+//     setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
+//   }
+// };
 
 
 // useEffect(() => {
@@ -136,12 +157,12 @@ const handleClickOutside = (e) => {
 // }, []);
 
 
-useEffect(() => {
-  document.addEventListener("click", handleClickOutside);
-  return () => {
-    document.removeEventListener("click", handleClickOutside);
-  };
-}, []);
+// useEffect(() => {
+//   document.addEventListener("click", handleClickOutside);
+//   return () => {
+//     document.removeEventListener("click", handleClickOutside);
+//   };
+// }, []);
 
 
 
@@ -207,7 +228,7 @@ useEffect(() => {
           <FaWhatsapp
   className="whatsapp-icon"
   onClick={() => {
-    window.open("https://wa.me/9199498 96254", "_blank");
+    window.open("https://wa.me/919949896254", "_blank");
   }}
 />
           {/* <FaBell /> */}
@@ -310,9 +331,12 @@ onClick={() => {
       </div>
 
       {/* ===== MENU BAR ===== */}
-      <div className={`menubar ${mobileMenu ? "active" : ""}`}>
+      {/* <div className={`menubar ${mobileMenu ? "active" : ""}`}> */}
 
-
+<div
+  className={`menubar ${mobileMenu ? "active" : ""}`}
+  ref={menuRef}
+>
 
         
         <div className="menu-links">
@@ -331,7 +355,7 @@ onClick={() => {
             <FaWhatsapp
   className="whatsapp-icon"
   onClick={() => {
-    window.open("https://wa.me/9199498 96254", "_blank");
+    window.open("https://wa.me/919949896254", "_blank");
   }}
 />
 
@@ -672,7 +696,7 @@ onClick={() => {
 
     <Link to="/quality-safety-compliance"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
-    setOpenDropdown(false);
+        setOpenScienceDropdown(false); // ✅ THIS IS THE MAIN FIX
   }}>
       Safety & Compliance
     </Link>
@@ -705,21 +729,21 @@ onClick={() => {
     
  <Link to="/about"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
-    setOpenDropdown(false);
+    setOpenCompanyDropdown(false); // ✅ THIS IS MAIN FIX
   }}>
       About Us
     </Link>
 
        <Link to="/why-manux"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
-    setOpenDropdown(false);
+   setOpenCompanyDropdown(false); // ✅ THIS IS MAIN FIX
   }}>
    Why ManuX
     </Link>
 
     <Link to="/OurTeam"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
-    setOpenDropdown(false);
+    setOpenCompanyDropdown(false); // ✅ THIS IS MAIN FIX
   }}>
       Team Members
     </Link>
@@ -727,7 +751,7 @@ onClick={() => {
 
      <Link to="/collaborations"   onClick={() => {
     setMobileMenu(false);   // 🔥 ADD THIS
-    setOpenDropdown(false);
+    setOpenCompanyDropdown(false); // ✅ THIS IS MAIN FIX
   }}>
     Collaborations
     </Link>

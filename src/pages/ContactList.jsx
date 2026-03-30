@@ -15,23 +15,27 @@ export default function ContactList() {
   //   fetchContacts();
   // }, []);
 
-  useEffect(() => {
-  fetchContacts();
-}, [fetchContacts]);
+//   useEffect(() => {
+//   fetchContacts();
+// }, [fetchContacts]);
 
  const token = localStorage.getItem("token");
 
-const fetchContacts = useCallback(async () => {
-  try {
-    const res = await axios.get(`${BASE_URL}/api/contact`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    setContacts(res.data);
-  } catch (err) {
-    console.log(err);
-  }
+useEffect(() => {
+  const fetchContacts = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/contact`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setContacts(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  fetchContacts();
 }, [token]);
 
 // const fetchContacts = useCallback(async () => {
@@ -94,9 +98,9 @@ const filteredContacts = contacts.filter((item) => {
   const searchText = search.toLowerCase();
 
   return (
-    item.name?.toLowerCase().includes(searchText) ||
-    item.email?.toLowerCase().includes(searchText) ||
-    item.phone?.toLowerCase().includes(searchText) ||
+    item.name?.includes(searchText) ||
+    item.email?.includes(searchText) ||
+    item.phone?.includes(searchText) ||
     new Date(item.createdAt)
       .toLocaleDateString()
       .includes(search)
