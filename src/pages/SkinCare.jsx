@@ -19,10 +19,11 @@ export default function SkinCare() {
     >
       <h1>Skin Care ✨</h1>
 
+      {/* PRODUCT GRID */}
       <div className="product-grid">
         {filteredProducts.map((item) => (
           <div className="product-card" key={item._id}>
-
+            
             <img
               src={
                 item.image
@@ -30,26 +31,26 @@ export default function SkinCare() {
                   : "/no-image.png"
               }
               alt={item.name}
-              onClick={() => setSelectedProduct(item)} // ✅ FIX
+              onClick={() => setSelectedProduct(item)}
             />
 
             <div className="product-info">
               <h3>{item.name}</h3>
-              {/* <p className="desc">{item.description}</p> */}
 
-                <p className="desc">
+              <p className="desc">
                 {item.description?.length > 80
                   ? item.description.substring(0, 80) + "..."
                   : item.description}
+              </p>
 
-              </p>{item.description?.length > 80 && (
-  <button
-    className="read-more-btn"
-    onClick={() => setSelectedProduct(item)}
-  >
-    Read More
-  </button>
-)}
+              {item.description?.length > 80 && (
+                <button
+                  className="read-more-btn"
+                  onClick={() => setSelectedProduct(item)}
+                >
+                  Read More
+                </button>
+              )}
             </div>
 
           </div>
@@ -63,30 +64,32 @@ export default function SkinCare() {
           onClick={() => setSelectedProduct(null)}
         >
           <div
-            className="modal-content"
+            className="split-modal"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={
-                selectedProduct.image
-                  ? `${process.env.REACT_APP_BASE_URL}/uploads/${selectedProduct.image}`
-                  : "/no-image.png"
-              }
-              alt={selectedProduct.name}
-            />
+            
+            {/* LEFT IMAGE */}
+            <div className="modal-left">
+              <img
+                src={
+                  selectedProduct.image
+                    ? `${process.env.REACT_APP_BASE_URL}/uploads/${selectedProduct.image}`
+                    : "/no-image.png"
+                }
+                alt={selectedProduct.name}
+              />
+            </div>
 
-            <h2>{selectedProduct.name}</h2>
-             <p>{selectedProduct.description}</p>
-       
+            {/* RIGHT CONTENT */}
+            <div className="modal-right">
+              <h2>{selectedProduct.name}</h2>
+              <p>{selectedProduct.description}</p>
+            </div>
 
-{/* <button onClick={() => setSelectedProduct(item)}>
-  Read More
-</button> */}
-           
-            {/* <p>{selectedProduct.description}</p> */}
           </div>
         </div>
       )}
+
     </div>
   );
 }
