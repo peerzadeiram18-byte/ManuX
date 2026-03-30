@@ -41,9 +41,9 @@
   border-bottom: 1px solid #ddd;
 }
 
-.cl-table tr:hover {
+/* .cl-table tr:hover {
   background: #f5f5f5;
-}
+} */
 
 .cl-message {
   max-width: 250px;

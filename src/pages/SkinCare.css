@@ -77,8 +77,8 @@
 
 .page-content p {
   font-size: 16px;
-  color: #E5E6E8;
-  max-width: 600px;
+  /* color: #E5E6E8; */
+  max-width: 400px;
   margin: auto;
 }
 
@@ -144,8 +144,18 @@
   font-size: 14px;
   color: #0F2544;
   height: 40px;
+    /* max-width: 200px; */
+  /* overflow: hidden; */
+
+   display: -webkit-box;
+  -webkit-line-clamp: 3;   /* kitni lines chahiye (2 ya 3) */
+   line-clamp: 4;           /* Standard property */
+
+  -webkit-box-orient: vertical;
   overflow: hidden;
+  /* text-overflow: ellipsis */
 }
+
 
 /* PRICE */
 .price {
@@ -241,7 +251,11 @@
 
   /* 🔥 IMPORTANT FIX */
   max-height: 68vh;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+
+   overflow-x: hidden; /*❌ remove horizontal scroll */
+
+  
  
 }
 
@@ -252,6 +266,7 @@
   object-fit: cover; /* 🔥 full image visible */
   border-radius: 10px;
   margin-bottom: 15px;
+  
 }
 
 /* TEXT */
@@ -264,7 +279,10 @@
 .modal-content p {
   font-size: 14px;
   color: #0F2544;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 
@@ -324,7 +342,19 @@
 
 
 
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #0F2544;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 5px;
+}
 
+.read-more-btn:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -387,7 +417,7 @@
 
 .desc {
   font-size: 14px;
-  color: #666;
+  color: #0F2544;
   height: 40px;
   overflow: hidden;
 }

@@ -76,8 +76,8 @@ const { user, role, logout } = useAuth();
   { name: "Nanotechnology", path: "/technology/nanotechnology" },
   { name: "Plasma Technology", path: "/technology/plasma-technology" },
   { name: "Plant Stem Cell Technology", path: "/technology/plant-stem-cell" },
-  { name: "Enzymatic Technology", path: "//technology/enzymatic-technology" },
-  { name: "Microbiome Technology", path: "//technology/microbiome-technology" },
+  { name: "Enzymatic Technology", path: "/technology/enzymatic-technology" },
+  { name: "Microbiome Technology", path: "/technology/microbiome-technology" },
   { name: "EmolliHydra Technology", path: "/technology/emollihydra-technology" },
   { name: "Exosome Technology", path: "/technology/exosome-technology" },
   { name: "About Us", path: "/about" },
@@ -114,6 +114,7 @@ const handleClickOutside = (e) => {
     setOpenScienceDropdown(false);
     setOpenCompanyDropdown(false);
     setOpenProductsDropdown(false);
+    setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
   }
 };
 
@@ -206,7 +207,7 @@ useEffect(() => {
           <FaWhatsapp
   className="whatsapp-icon"
   onClick={() => {
-    window.open("https://wa.me/917841836335", "_blank");
+    window.open("https://wa.me/9199498 96254", "_blank");
   }}
 />
           {/* <FaBell /> */}
@@ -330,7 +331,7 @@ onClick={() => {
             <FaWhatsapp
   className="whatsapp-icon"
   onClick={() => {
-    window.open("https://wa.me/917841836335", "_blank");
+    window.open("https://wa.me/9199498 96254", "_blank");
   }}
 />
 
@@ -397,6 +398,8 @@ onClick={() => {
       setOpenScienceDropdown(false);
       setOpenCompanyDropdown(false);
       setOpenProductsDropdown(false);
+      setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
+   
       
     }}
   >
@@ -474,7 +477,8 @@ onClick={() => {
       setOpenResearchDropdown(false);
       setOpenScienceDropdown(false);
       setOpenCompanyDropdown(false);
-      //setOpenProductsDropdown(false);  
+      //setOpenProductsDropdown(false); 
+      setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)   
     }}
   >
     Products <FaChevronDown className="dropdown-icon" />
@@ -578,6 +582,7 @@ onClick={() => {
   setOpenScienceDropdown(false);
   setOpenCompanyDropdown(false);
   setOpenProductsDropdown(false);  
+  setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
 }}
   >
     Research <FaChevronDown className="dropdown-icon" />
@@ -650,6 +655,7 @@ onClick={() => {
       setOpenResearchDropdown(false);
       setOpenDropdown(false);
       setOpenProductsDropdown(false);  
+      setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
     }}
   >
     Science <FaChevronDown className="dropdown-icon" />
@@ -689,6 +695,7 @@ onClick={() => {
       setOpenResearchDropdown(false);
       setOpenDropdown(false);
      setOpenProductsDropdown(false); 
+     setOpenMenu(false); // 🔥 IMPORTANT (Admin dropdown close)  
     }}
   >
     Company <FaChevronDown className="dropdown-icon" />
@@ -749,52 +756,98 @@ onClick={() => {
 
 
                     {role === "admin" && (
-  <div
-    className="dropdown admin-dropdown"
-    onClick={(e) => e.stopPropagation()}
+//   <div
+//     className="dropdown admin-dropdown"
+//     onClick={(e) => e.stopPropagation()}
+//   >
+//     <span
+//       className="nav-link"
+//       onClick={() => {
+//         setOpenMenu(!openMenu);
+
+//         // close others
+//         setOpenDropdown(false);
+//         setOpenResearchDropdown(false);
+//         setOpenScienceDropdown(false);
+//         setOpenCompanyDropdown(false);
+//         setOpenProductsDropdown(false);
+//       }}
+//     >
+//       Admin Dashboard <FaChevronDown className="dropdown-icon" />
+//     </span>
+
+//     <div className={`dropdown-menu ${openMenu ? "show-dropdown" : ""}`}>
+
+//       <Link to="/admin/dashboard/product-form" onClick={() => {
+//         setMobileMenu(false);
+//         setOpenMenu(false);
+//       }}>
+//         Products Form
+//       </Link>
+
+//       <Link to="/admin/dashboard/product-list" onClick={() => {
+//         setMobileMenu(false);
+//         setOpenMenu(false);
+//       }}>
+//         Products List
+//       </Link>
+
+//       <Link to="/admin/dashboard/Contact-list" onClick={() => {
+//         setMobileMenu(false);
+//         setOpenMenu(false);
+//       }}>
+//         Contact List
+//       </Link>
+
+//     </div>
+//   </div>
+// )}
+
+<div className="dropdown admin-dropdown">
+
+{/* <div ref={dropdownRef} className="dropdown admin-dropdown"> */}
+  
+  <span
+    className="nav-link"
+    onClick={() => {
+      setOpenMenu(!openMenu);
+
+      setOpenDropdown(false);
+      setOpenResearchDropdown(false);
+      setOpenScienceDropdown(false);
+      setOpenCompanyDropdown(false);
+      setOpenProductsDropdown(false);
+    }}
   >
-    <span
-      className="nav-link"
-      onClick={() => {
-        setOpenMenu(!openMenu);
+    Admin Dashboard <FaChevronDown />
+  </span>
 
-        // close others
-        setOpenDropdown(false);
-        setOpenResearchDropdown(false);
-        setOpenScienceDropdown(false);
-        setOpenCompanyDropdown(false);
-        setOpenProductsDropdown(false);
-      }}
-    >
-      Admin Dashboard <FaChevronDown className="dropdown-icon" />
-    </span>
+  <div className={`dropdown-menu ${openMenu ? "show-dropdown" : ""}`}>
 
-    <div className={`dropdown-menu ${openMenu ? "show-dropdown" : ""}`}>
+    <Link to="/admin/dashboard/product-form" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}>
+      Products Form
+    </Link>
 
-      <Link to="/admin/dashboard/product-form" onClick={() => {
-        setMobileMenu(false);
-        setOpenMenu(false);
-      }}>
-        Products Form
-      </Link>
+    <Link to="/admin/dashboard/product-list" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}>
+      Products List
+    </Link>
 
-      <Link to="/admin/dashboard/product-list" onClick={() => {
-        setMobileMenu(false);
-        setOpenMenu(false);
-      }}>
-        Products List
-      </Link>
+    <Link to="/admin/dashboard/Contact-list" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}>
+      Contact List
+    </Link>
 
-      <Link to="/admin/dashboard/Contact-list" onClick={() => {
-        setMobileMenu(false);
-        setOpenMenu(false);
-      }}>
-        Contact List
-      </Link>
-
-    </div>
   </div>
-)}
+</div>
+  )}
 
           {/*} <div className="dropdown">
             <span

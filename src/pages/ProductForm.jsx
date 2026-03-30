@@ -198,6 +198,23 @@ const handleSubmit = async (e) => {
 };
 
 
+// const onSubmit = async () => {
+//   try {
+//     await axios.post("/api/products", formData);
+
+//   } catch (err) {
+
+//     // 🔥 YE ADD KARO
+//     if (err.response?.status === 401) {
+//       toast.error("Session expired, please login again");
+
+//       localStorage.removeItem("token"); // optional
+//       window.location.href = "/login";  // optional
+//     }
+
+//     console.log(err);
+//   }
+// };
 
   return (
     <div className="admin-page">

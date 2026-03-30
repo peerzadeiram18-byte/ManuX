@@ -29,19 +29,41 @@ export default function ContactList() {
   };
 
   // 🔴 DELETE
-  const deleteContact = async (id) => {
-    try {
-      await axios.delete(`${BASE_URL}/api/contact/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
 
-      fetchContacts(); // refresh list
-    } catch (err) {
-      console.log(err);
-    }
-  };
+const deleteContact = async (id) => {
+  const confirmDelete = window.confirm("Are you sure you want to delete?");
+  if (!confirmDelete) return;
+
+  try {
+    const token = localStorage.getItem("token");
+
+    await axios.delete(`${BASE_URL}/api/contact/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    // ✅ UI update without reload
+    setContacts((prev) => prev.filter((item) => item._id !== id));
+
+    console.log("Deleted successfully");
+  } catch (err) {
+    console.log("DELETE ERROR:", err.response?.data || err.message);
+  }
+};
+  // const deleteContact = async (id) => {
+  //   try {
+  //     await axios.delete(`${BASE_URL}/api/contact/${id}`, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     });
+
+  //     fetchContacts(); // refresh list
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   // 🔍 Search filter
   // const filteredContacts = contacts.filter((item) =>
@@ -113,12 +135,23 @@ const filteredContacts = contacts.filter((item) => {
                 </td>
 
                 <td>
+
+
                   <button
+  className="delete-btn"
+  onClick={() => deleteContact(item._id)}
+>
+  Delete
+</button>
+                  {/* <button
                     className="delete-btn"
-                    onClick={() => deleteContact(item._id)}
+                onClick={() => {
+  console.log("DELETE CLICKED", item._id);
+  deleteContact(item._id);
+}}
                   >
                     Delete
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             ))}

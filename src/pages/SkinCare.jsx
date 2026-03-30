@@ -35,7 +35,21 @@ export default function SkinCare() {
 
             <div className="product-info">
               <h3>{item.name}</h3>
-              <p className="desc">{item.description}</p>
+              {/* <p className="desc">{item.description}</p> */}
+
+                <p className="desc">
+                {item.description?.length > 80
+                  ? item.description.substring(0, 80) + "..."
+                  : item.description}
+
+              </p>{item.description?.length > 80 && (
+  <button
+    className="read-more-btn"
+    onClick={() => setSelectedProduct(item)}
+  >
+    Read More
+  </button>
+)}
             </div>
 
           </div>
@@ -62,7 +76,14 @@ export default function SkinCare() {
             />
 
             <h2>{selectedProduct.name}</h2>
-            <p>{selectedProduct.description}</p>
+             <p>{selectedProduct.description}</p>
+       
+
+{/* <button onClick={() => setSelectedProduct(item)}>
+  Read More
+</button> */}
+           
+            {/* <p>{selectedProduct.description}</p> */}
           </div>
         </div>
       )}
