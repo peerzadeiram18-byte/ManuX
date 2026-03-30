@@ -1,6 +1,8 @@
-import { useEffect, useState, useCallback } from "react";import axios from "axios";
+// import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import axios from "axios";
 import "./ContactList.css";
-// import { useCallback, useEffect } from "react";
+
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 
@@ -17,21 +19,7 @@ export default function ContactList() {
   fetchContacts();
 }, [fetchContacts]);
 
-  const token = localStorage.getItem("token");
-
-  // const fetchContacts = async () => {
-  //   try {
-  //     const res = await axios.get(`${BASE_URL}/api/contact`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
-  //     setContacts(res.data);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
+ const token = localStorage.getItem("token");
 
 const fetchContacts = useCallback(async () => {
   try {
@@ -45,6 +33,19 @@ const fetchContacts = useCallback(async () => {
     console.log(err);
   }
 }, [token]);
+
+// const fetchContacts = useCallback(async () => {
+//   try {
+//     const res = await axios.get(`${BASE_URL}/api/contact`, {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+//     setContacts(res.data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }, [token]);
 
   // 🔴 DELETE
 
@@ -139,7 +140,8 @@ const filteredContacts = contacts.filter((item) => {
                 <td>{item.phone}</td>
 
                 <td>
-                  {item.message.slice(0, 20)}...
+                  {/* {item.message.slice(0, 20)}... */}
+                  {item.message ? item.message.slice(0, 20) : "No message"}...
                   <button
                     className="view-btn"
                     onClick={() => setSelectedMsg(item.message)}

@@ -35,9 +35,9 @@ const filteredProducts = products.filter((product) => {
 
 
 return (
-    product.name.toLowerCase().includes(term) ||
-    product.category.toLowerCase().includes(term) ||
-    product.description.toLowerCase().includes(term)
+    product.name.includes(term) ||
+    product.category.includes(term) ||
+    product.description.includes(term)
   );
 });
 

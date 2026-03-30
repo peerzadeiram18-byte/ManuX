@@ -265,14 +265,14 @@ const handleClick = (index) => {
 
 
 
-    <section className="triple-hero">
+    {/* <section className="triple-hero">
 
-  <div className="triple-container">
+  <div className="triple-container"> */}
 
     {/* Left Image */}
-    <div className="triple-img">
+    {/* <div className="triple-img">
       <img src={imgLeft} alt="left"/>
-    </div>
+    </div> */}
 
     {/* Center Image */}
     {/* <div className="triple-img center">
@@ -285,7 +285,7 @@ const handleClick = (index) => {
    {/*} </div> */}
 
 
-   <div className="triple-img center">
+   {/* <div className="triple-img center">
   <video
     className="hero2-video"
     src={hero2Video}   // 👈 video import ya path
@@ -294,16 +294,16 @@ const handleClick = (index) => {
     loop
     playsInline
   />
-</div>
+</div> */}
 
     {/* Right Image */}
-    <div className="triple-img">
+    {/* <div className="triple-img">
       <img src={imgRight} alt="right"/>
     </div>
 
   </div>
 
-</section>
+</section> */}
 
 
 
