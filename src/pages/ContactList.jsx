@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState, useCallback } from "react";import axios from "axios";
 import "./ContactList.css";
+// import { useCallback, useEffect } from "react";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 
@@ -9,24 +9,42 @@ export default function ContactList() {
   const [search, setSearch] = useState("");
   const [selectedMsg, setSelectedMsg] = useState(null);
 
+  // useEffect(() => {
+  //   fetchContacts();
+  // }, []);
+
   useEffect(() => {
-    fetchContacts();
-  }, []);
+  fetchContacts();
+}, [fetchContacts]);
 
   const token = localStorage.getItem("token");
 
-  const fetchContacts = async () => {
-    try {
-      const res = await axios.get(`${BASE_URL}/api/contact`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      setContacts(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const fetchContacts = async () => {
+  //   try {
+  //     const res = await axios.get(`${BASE_URL}/api/contact`, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     });
+  //     setContacts(res.data);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+
+const fetchContacts = useCallback(async () => {
+  try {
+    const res = await axios.get(`${BASE_URL}/api/contact`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    setContacts(res.data);
+  } catch (err) {
+    console.log(err);
+  }
+}, [token]);
 
   // 🔴 DELETE
 
@@ -131,7 +149,8 @@ const filteredContacts = contacts.filter((item) => {
                 </td>
 
                 <td>
-                  {new Date(item.createdAt).toLocaleDateString()}
+                  {/* {new Date(item.createdAt).toLocaleDateString()} */}
+                  {item.createdAt ? new Date(item.createdAt).toLocaleDateString() : ""}
                 </td>
 
                 <td>
