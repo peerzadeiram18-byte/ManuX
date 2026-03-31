@@ -40,7 +40,7 @@ import DigitalDefense from "./pages/DigitalDefense";
 import Fitness from "./pages/Fitness";
 import ColorCosmetics from "./pages/ColorCosmetics";
 
-
+import ProductDetails from "./pages/ProductDetails";
 
 import Research from "./pages/Research";
 import Ingredients from "./pages/Ingredients";
@@ -137,6 +137,8 @@ function App() {
     <Route path="/technology/exosome-technology"element={<ExosomeTechnology />}/>
 
 
+       {/* 👇 ADD THIS TOP ya ANYWHERE INSIDE ROUTES */}
+  <Route path="/product/:id" element={<ProductDetails />} />
 
 
       {/* PRODUCTS ROUTES */}
@@ -154,8 +156,9 @@ function App() {
         <Route path="/color-cosmetics" element={<ColorCosmetics />} />
   {/* </Route> */}
 
+
  {/* Admin Login (Public) */}
-<Route path="/admin-login" element={<Login />} />
+<Route  path="/admin-login" element={<Login />} />
 
 {/* Admin Dashboard (Protected) */}
 <Route

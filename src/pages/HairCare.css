@@ -126,8 +126,152 @@
   transform: scale(1.05);
 } */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+.hair-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+/* =========================
+   MAIN BOX
+========================= */
+.hair-modal-box {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  height: 450px;   /* ✅ FIX HEIGHT */
+
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT IMAGE
+========================= */
+.hair-modal-left {
+  width: 50%;
+  height: 100%;
+}
+
+.hair-modal-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ IMPORTANT */
+}
+
+/* =========================
+   RIGHT TEXT
+========================= */
+.hair-modal-right {
+  width: 50%;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hair-modal-right h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hair-modal-right p {
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-y: auto;   /* ✅ scroll if long */
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .hair-modal-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hair-modal-left {
+    width: 100%;
+    height: 250px;
+  }
+
+  .hair-modal-right {
+    width: 100%;
+  }
+}
+
+
+
+.view-btn {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #1F2A44;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.view-btn:hover {
+  background: #0f172a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MODAL */
-.hair-modal-overlay{
+/* .hair-modal-overlay{
   position: fixed;
   top: 0;
   left: 0;
@@ -138,56 +282,56 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  /* padding: 20px; */
-}
+  /* padding: 20px; *//*
+} */
 
-.hair-modal-content {
+/* .hair-modal-content {
   background: white;
   /* padding: 20px; */
-  border-radius: 12px;
+ /* border-radius: 12px;
   width: 90%;
   max-width: 550px;
   text-align: center;
   position: relative;
 
   margin-top: 150px;
-}
+} */
 
 
 /* 🔥 NEW */
- .hair-modal-content {
+ /* .hair-modal-content {
   max-width: 20%;
   max-height: 80%;
-} 
+}  */
 
 
 /* IMAGE */
-.hair-modal-content img{
+/* .hair-modal-content img{
   max-width: 100%;
    max-height: 20%;
   border-radius: 10px;
   object-fit: cover;
   /* margin-top: 100px; */
   /* border: 3px solid white; */
+/*
+} */
 
-}
 
 
-
-.hair-modal-content h2 {
+/* .hair-modal-content h2 {
   font-size: 22px;
   margin-bottom: 10px;
   color: #222;
-}
+} */
 
-.hair-modal-content p {
+/* .hair-modal-content p {
   font-size: 14px;
   color: #222;
   margin-bottom: 20PX;
-}
+} */
 
 /* CLOSE BUTTON */
-.hair-close-btn {
+/* .hair-close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -197,12 +341,12 @@
   padding: 6px 10px;
   cursor: pointer;
   border-radius: 5px;
-}
+} */
 
 /* ======================
    📱 RESPONSIVE
 ====================== */
-
+/* 
 @media (max-width: 1024px) {
   .hair-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -218,11 +362,11 @@
 @media (max-width: 600px) {
   .hair-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 
- .hair-modal-content {
+ /* .hair-modal-content {
     /* width: 100%; */
-    height: 62%;
+   /* height: 62%;
 
       width: 50%;
   max-width: 650px;
@@ -230,7 +374,7 @@
   margin-top: 100px;
     
     /* padding: 15px; */
-  }
+  /*}
 
   .hair-title {
     font-size: 24px;
@@ -250,19 +394,19 @@
     margin-bottom: 20px;
   }
 
-}
+} */
 
 
 
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .hair-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 
- .hair-modal-content {
+ /* .hair-modal-content {
     /* width: 100%; */
-    height: 62%;
+   /* height: 62%;
 
       width: 50%;
   max-width: 650px;
@@ -270,7 +414,7 @@
   margin-top: 100px;
     
     /* padding: 15px; */
-  }
+ /* }
 
   .hair-title {
     font-size: 24px;
@@ -290,4 +434,4 @@
     margin-bottom: 20px;
   }
 
-}
+} */

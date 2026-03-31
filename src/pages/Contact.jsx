@@ -111,8 +111,29 @@ const handleSubmit = async (e) => {
 
     {/* LEFT SIDE – OFFICE INFO */}
     <div className="cx-info-card1">
+
+
+      <div className="info-block">
+  <FaBuilding className="info-icon" />
+  <div>
+    <h3>Corporate Office</h3>
+
+    <a
+      href="https://maps.app.goo.gl/acvXCy9pDsfyu9Mw5"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="address-link"
+    >
+      ManuX NanoBioCeuticals <br />
+      16/1/24, 1st & 2nd Floor, Part No. 65, 66, 70 <br />
+      Road No. 7, TSIIC, IALA, Mallapur IDA <br />
+      Nacharam, Hyderabad – Telangana, India
+    </a>
+
+  </div>
+</div>
   
-  <div className="info-block">
+  {/* <div className="info-block">
     <FaBuilding className="info-icon" />
     <div>
       <h3>Corporate Office</h3>
@@ -123,7 +144,7 @@ const handleSubmit = async (e) => {
         Nacharam, Hyderabad – Telangana, India
       </p>
     </div>
-  </div>
+  </div> */}
 
   <div className="info-block">
     <FaEnvelope className="info-icon" />

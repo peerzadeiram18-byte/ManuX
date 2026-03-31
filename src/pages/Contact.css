@@ -821,3 +821,23 @@ font-family: 'Avenir Next', sans-serif;
     gap: 30px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+.address-link {
+  color: #1F2A44;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.address-link:hover {
+  text-decoration: underline;
+  color: #ff6b81;
+}

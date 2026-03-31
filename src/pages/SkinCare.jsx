@@ -1,16 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./SkinCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function SkinCare() {
   const { products } = useContext(ProductContext);
+  const navigate = useNavigate(); // ✅ correct
 
   const filteredProducts = products.filter(
     (item) => item.category === "skin-care"
   );
-
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
     <div
@@ -19,19 +19,14 @@ export default function SkinCare() {
     >
       <h1>Skin Care ✨</h1>
 
-      {/* PRODUCT GRID */}
       <div className="product-grid">
         {filteredProducts.map((item) => (
           <div className="product-card" key={item._id}>
             
             <img
-              src={
-                item.image
-                  ? `${process.env.REACT_APP_BASE_URL}/uploads/${item.image}`
-                  : "/no-image.png"
-              }
+              src={`${process.env.REACT_APP_BASE_URL}/uploads/${item.image}`}
               alt={item.name}
-              onClick={() => setSelectedProduct(item)}
+              onClick={() => navigate(`/product/${item._id}`)}
             />
 
             <div className="product-info">
@@ -44,52 +39,24 @@ export default function SkinCare() {
               </p>
 
               {item.description?.length > 80 && (
-                <button
-                  className="read-more-btn"
-                  onClick={() => setSelectedProduct(item)}
-                >
-                  Read More
-                </button>
+                 <button
+                    className="view-btn"
+                    onClick={() => navigate(`/product/${item._id}`)}
+                  >
+                    View More
+                  </button>
               )}
             </div>
 
           </div>
         ))}
       </div>
-
-      {/* MODAL */}
-      {selectedProduct && (
-        <div
-          className="img-modal"
-          onClick={() => setSelectedProduct(null)}
-        >
-          <div
-            className="split-modal"
-            onClick={(e) => e.stopPropagation()}
-          >
-            
-            {/* LEFT IMAGE */}
-            <div className="modal-left">
-              <img
-                src={
-                  selectedProduct.image
-                    ? `${process.env.REACT_APP_BASE_URL}/uploads/${selectedProduct.image}`
-                    : "/no-image.png"
-                }
-                alt={selectedProduct.name}
-              />
-            </div>
-
-            {/* RIGHT CONTENT */}
-            <div className="modal-right">
-              <h2>{selectedProduct.name}</h2>
-              <p>{selectedProduct.description}</p>
-            </div>
-
-          </div>
-        </div>
-      )}
-
     </div>
   );
 }
+
+
+
+
+
+

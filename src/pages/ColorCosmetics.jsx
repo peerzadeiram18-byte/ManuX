@@ -1,85 +1,65 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./ColorCosmetics.css";
-
-
 import bgImage from "../assets/backgroundimage.jpg";
-
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function ColorCosmetics() {
   const { products } = useContext(ProductContext);
+  const navigate = useNavigate(); // ✅ IMPORTANT
 
-  // const [selectedImage, setSelectedImage] = useState(null);
-     const [selectedProduct, setSelectedProduct] = useState(null);
-  // sirf color cosmetics products
   const filtered = products.filter(
     (p) => p.category === "color-cosmetics"
   );
 
   return (
-    <div className="cc-page"
-         style={{ backgroundImage: `url(${bgImage})` }}
-    
+    <div
+      className="cc-page"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
-
       <h1 className="cc-title">Color Cosmetics</h1>
 
       <div className="cc-grid">
         {filtered.map((item) => (
           <div className="cc-card" key={item._id}>
-  <div className="cc-img-box">
-            <img
-              src={`${BASE_URL}/uploads/${item.image}`}
-              alt={item.name}
-              // onClick={() =>
-              //   setSelectedImage(`${BASE_URL}/uploads/${item.image}`)
-            onClick={() => setSelectedProduct(item)} 
-            
-              onError={(e) => (e.target.src = "/no-image.png")}
-            />
- </div>
 
-   <div className="cc-content">
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-</div>
+            {/* IMAGE */}
+            <div className="cc-img-box">
+              <img
+                src={`${BASE_URL}/uploads/${item.image}`}
+                alt={item.name}
+                onClick={() => navigate(`/product/${item._id}`)} // ✅ FIX
+                onError={(e) => (e.target.src = "/no-image.png")}
+              />
+            </div>
+
+            {/* CONTENT */}
+            <div className="cc-content">
+              <h3>{item.name}</h3>
+
+              <p>
+                {item.description?.length > 80
+                  ? item.description.substring(0, 80) + "..."
+                  : item.description}
+              </p>
+
+              {/* BUTTON */}
+              {/* BUTTON (only when description long) */}
+{item.description?.length > 80 && (
+  <button
+    className="view-btn"
+    onClick={() => navigate(`/product/${item._id}`)}
+  >
+    View More
+  </button>
+)}
+            </div>
+
           </div>
         ))}
       </div>
-
-      {/* IMAGE MODAL */}
-      {/* {selectedImage && (
-        <div
-          className="cc-modal"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img src={selectedImage} alt="preview" />
-        </div>
-      )} */}
-
-{selectedProduct && (
-  <div
-    className="cc-modal"
-    onClick={() => setSelectedProduct(null)}
-  >
-    <div
-      className="cc-modal-box"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <img
-        src={`${BASE_URL}/uploads/${selectedProduct.image}`}
-        alt={selectedProduct.name}
-      />
-
-      <h2>{selectedProduct.name}</h2>
-      <p>{selectedProduct.description}</p>
-    </div>
-  </div>
-)}
-
-
     </div>
   );
 }

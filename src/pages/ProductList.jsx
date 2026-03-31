@@ -7,6 +7,8 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function ProductList() {
 
+  const [expanded, setExpanded] = useState({});
+
   // const { products, deleteProduct, updateProduct } = useContext(ProductContext);
 
   const { products, deleteProduct, updateProduct, fetchProducts } = useContext(ProductContext);
@@ -127,7 +129,27 @@ const handleUpdate = async () => {
                  <td>{product.name}</td> 
                 {/* <td>{toTitleCase(product.name)}</td> */}
                 <td>{product.category}</td>
-                <td>{product.description}</td>
+                {/* <td>{product.description}</td> */}
+
+                <td>
+  <p className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
+    {product.description}
+  </p>
+
+  {product.description?.length > 80 && (
+    <button
+      className="view-btn"
+      onClick={() =>
+        setExpanded((prev) => ({
+          ...prev,
+          [product._id]: !prev[product._id],
+        }))
+      }
+    >
+      {expanded[product._id] ? "View Less" : "View More"}
+    </button>
+  )}
+</td>
                 <td>
                  {/* <img src={product.image} alt="" className="pm-img" />    */}
                  {/* <img

@@ -32,6 +32,12 @@ const { notifications } = useContext(NotificationContext);
 
 
 
+const [openNotifications, setOpenNotifications] = useState(false);
+
+
+
+
+
 
   const [openSearch, setOpenSearch] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -119,6 +125,9 @@ useEffect(() => {
       setOpenCompanyDropdown(false);
       setOpenProductsDropdown(false);
       setOpenMenu(false);
+
+       setOpenNotifications(false);
+      
     }
   };
 
@@ -233,37 +242,36 @@ useEffect(() => {
 />
           {/* <FaBell /> */}
 
+<div className="bell-container">
 
-          <div className="bell-container">
-  <FaBell />
+  <FaBell 
+    onClick={() => {
+      console.log("bell clicked"); // ✅ DEBUG
+      setOpenNotifications(!openNotifications);
+    }}   />
 
   {notifications.length > 0 && (
     <span className="notification-badge">
       {notifications.length}
     </span>
   )}
-</div>
 
-          {/* <div className="bell-container" onClick={markAllRead}>
-  <FaBell />
+  {openNotifications && (
+    <div className="notification-dropdown">
+      {notifications.length === 0 ? (
+        <p>No Notifications</p>
+      ) : (
+        notifications.map((n, index) => (
+          <div key={index} className="notification-item">
+            <h4>{n.name}</h4>
+            <p>{n.category}</p>
+            <small>{n.description}</small>
+          </div>
+        ))
+      )}
+    </div>
+  )}
 
-  {unreadCount > 0 && (
-    <span className="bell-badge">{unreadCount}</span>
-  )} */}
-
-  <div className="notification-dropdown">
-    {notifications.length === 0 ? (
-      <p>No Notifications</p>
-    ) : (
-      notifications.map((n) => (
-        <div key={n.id} className="notification-item">
-          <h4>{n.name}</h4>
-          <p>{n.category}</p>
-          <small>{n.description}</small>
-        </div>
-      ))
-    )}
-  {/* </div> */}
 </div>
 
 
