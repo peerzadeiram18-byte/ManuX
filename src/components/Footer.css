@@ -262,5 +262,14 @@ padding-bottom: 0px;
 }
 
 
+.address-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.address-link:hover {
+  color: #B23A3F;
+  text-decoration: underline;
+}
 
 

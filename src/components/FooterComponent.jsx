@@ -184,14 +184,42 @@ useEffect(() => {
 
 
 
-        <div className="footer-col">
+         <div className="footer-col">
+  <h3>Contact</h3>
+  <ul>
+    <li>
+      <a
+        href="https://maps.app.goo.gl/acvXCy9pDsfyu9Mw5"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="address-link"
+      >
+        Hyderabad, India
+      </a>
+    </li>
+
+    <li>
+      <a href="tel:+919876543210">
+        +91 98765 43210
+      </a>
+    </li>
+
+    <li>
+      <a href="mailto:info@manuxnbc.com">
+        info@manuxnbc.com
+      </a>
+    </li>
+  </ul>
+</div>
+
+        {/* <div className="footer-col">
           <h3>Contact</h3>
           <ul>
             <li>Hyderabad, India</li>
             <li>+91 98765 43210</li>
             <li>info@manuxnbc.com</li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="footer-col">
           <h3>Follow Us</h3>
