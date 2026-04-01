@@ -252,9 +252,17 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="footer-bottom">
-        © {new Date().getFullYear()}   ManuX Nanobioceuticals. All rights reserved
-      </div>
+     <div className="footer-bottom">
+  © {new Date().getFullYear()}{" "}
+  <a
+    href="https://kloudinnovisionz.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-link"
+  >
+    Kloud Innovisionz 
+  </a>. All rights reserved
+</div>
     </footer>
   );
 }
