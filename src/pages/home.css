@@ -19,7 +19,7 @@ font-family: 'Avenir Next', sans-serif;}
 
 .home-hero {
   position: relative;
-  height: 77vh;
+  height:80vh;
   width: 100%;
   overflow: hidden;
    /*background:
@@ -1473,6 +1473,10 @@ font-family: 'Avenir Next', sans-serif;
     margin-top: -80px;
   }
 
+
+  .mx-philo-header{
+    margin-top: -60px;
+  }
 .mx-philo-section{
   margin-bottom:0px;
 }
@@ -1512,11 +1516,22 @@ font-family: 'Avenir Next', sans-serif;
   .mx-philo-cards {
     grid-template-columns: repeat(2, 1fr);
   }
+  .mx-philo-header{
+
+    margin-top: -250px;
+  }
 }
 
 @media (max-width: 600px) {
   .mx-philo-header h2 {
     font-size: 26px;
+  }
+
+  
+  
+  .mx-philo-header{
+
+    margin-top: -50px;
   }
 
   .mx-philo-cards {

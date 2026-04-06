@@ -1,8 +1,13 @@
 import React from "react";
 import "./LabBanner.css";
 import { BarChart3 } from "lucide-react"; // icon
-
+import { useNavigate } from "react-router-dom";
 const LabBanner = () => {
+
+
+  const navigate = useNavigate();
+
+
   return (
     <section className="labBanner">
       <div className="labOverlay">
@@ -24,9 +29,23 @@ const LabBanner = () => {
         </div>
 
         {/* Button */}
-        <div className="labRight">
+
+
+
+<div className="labRight">
+  <button 
+    className="labBtn"
+    onClick={() => navigate("/skin-care")}
+  >
+    Explore Products
+  </button>
+</div>
+        {/* <div className="labRight">
+       
           <button className="labBtn">Explore Products</button>
-        </div>
+          
+
+        </div> */}
 
       </div>
     </section>

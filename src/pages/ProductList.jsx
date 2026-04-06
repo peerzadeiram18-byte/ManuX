@@ -131,7 +131,44 @@ const handleUpdate = async () => {
                 <td>{product.category}</td>
                 {/* <td>{product.description}</td> */}
 
-                <td>
+
+
+<td>
+  <span className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
+    {product.description}
+  </span>
+
+  {!expanded[product._id] && product.description?.length > 60 && (
+    <span
+      className="view-btn-inline"
+      onClick={() =>
+        setExpanded((prev) => ({
+          ...prev,
+          [product._id]: true,
+        }))
+      }
+    >
+      ... View More
+    </span>
+  )}
+
+  {expanded[product._id] && (
+    <span
+      className="view-btn-inline"
+      onClick={() =>
+        setExpanded((prev) => ({
+          ...prev,
+          [product._id]: false,
+        }))
+      }
+    >
+      View Less
+    </span>
+  )}
+</td>
+
+
+                {/* <td>
   <p className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
     {product.description}
   </p>
@@ -149,7 +186,7 @@ const handleUpdate = async () => {
       {expanded[product._id] ? "View Less" : "View More"}
     </button>
   )}
-</td>
+</td> */}
                 <td>
                  {/* <img src={product.image} alt="" className="pm-img" />    */}
                  {/* <img

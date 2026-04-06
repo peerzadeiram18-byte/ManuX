@@ -19,6 +19,9 @@ import bgImage from "../assets/backgroundimage.jpg";
 
 import SEO from "../components/SEO";
 
+import { Helmet } from "react-helmet-async";
+
+
 
 import b2bBg from "../assets/b2b-background.jpg";
 
@@ -43,6 +46,13 @@ const About = () => {
         <div className="about-page1"
          style={{ backgroundImage: `url(${bgImage})` }}
         >
+
+
+<Helmet>
+  <title>About ManuX NanoBioCeuticals</title>
+  <meta name="description" content="..." />
+</Helmet>
+
 
       {/* HERO SECTION */}
      <section 
