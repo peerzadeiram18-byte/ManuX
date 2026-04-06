@@ -348,22 +348,27 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
-  margin-top: 70px;
 }
 
 /* BOX */
 .modal-box {
   background: white;
-  width: 80%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 350px;
   display: flex;
-  border-radius: 12px;
+  flex-direction: column;   /* 🔥 MAIN CHANGE */
+  border-radius: 16px;
   overflow: hidden;
+  text-align: center;
+  animation: popup 0.3s ease;
+
+  margin-top: 150px;
 }
 
 /* LEFT */
 .modal-left {
-  flex: 1;
+  width: 100%;
+  height: 450px;
 }
 
 .modal-left img {
@@ -372,18 +377,20 @@
   object-fit: cover;
 }
 
-/* RIGHT */
 .modal-right {
-  flex: 1;
-  padding: 20px;
+  padding: 15px;
+  background: #fff;
 }
 
 .modal-right h2 {
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 8px;
+    color: #1F2A44;
 }
 
 .modal-right p {
-  margin-bottom: 20px;
+  font-size: 13px;
+  color: #1F2A44;
 }
 
 .modal-right button {
@@ -394,15 +401,36 @@
   cursor: pointer;
 }
 
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 /* 📱 MOBILE */
 @media (max-width: 768px) {
   .modal-box {
-    flex-direction: column;
-    width: 90%;
+    width: 85%;
+    max-width: 350px;
   }
 
-  .modal-left img {
-    height: 380px;
+  .modal-left {
+    height: 420px;
+  }
+  
+  .modal-right h2 {
+    font-size: 16px;
+  }
+
+  .modal-right p {
+    font-size: 12px;
   }
 }
 
@@ -410,12 +438,65 @@
 /* ========================= */
 /* 📱 TABLET RESPONSIVE */
 /* ========================= */
+@media  (max-width: 1024px) {
+  
+  .modal-box {
+    width: 60%;              /* tablet pe balanced width */
+    max-width: 300px;
+    border-radius: 14px;
+  }
+
+  .modal-left {
+    height: 260px;           /* image height control */
+  }
+
+  .modal-left img {
+    object-fit: cover;
+  }
+
+  .modal-right {
+    padding: 18px;
+  }
+
+  .modal-right h2 {
+    font-size: 20px;
+  }
+
+  .modal-right p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* ========================= */
+/* 📱 TABLET RESPONSIVE */
+/* ========================= */
 @media (max-width: 992px) {
   .modal-box {
-    width: 90%;
-    max-width: 550px;
-    /* margin-top: 0px; */
+    width: 85%;
+    max-width: 300px;
+
+      margin-top: 200px;
+  
   }
+
+   .modal-left {
+    height: 350px;
+  }
+.modal-right {
+  padding: 7px;
+  background: #fff;
+}
+
+
+  .modal-right h2 {
+    font-size: 16px;
+  }
+
+  .modal-right p {
+    font-size: 12px;
+  }
+
 }
 
 /* ========================= */
@@ -459,24 +540,15 @@
 /* ========================= */
 @media (max-width: 480px) {
   .modal-box {
-    width: 90%;
-    border-radius: 8px;
+    width: 85%;
+    margin-top: 130px;
   }
 
-  /* .modal-left {
-    height: 180px;
-  } */
-
-  .modal-right h2 {
-    font-size: 15px;
-  }
-
-  .modal-right p {
-    font-size: 12px;
+  .modal-left {
+    height: 350px;
   }
 
   .modal-right {
-  flex: 1;
-  padding: 10px;
-}
+    padding: 10px;
+  }
 }
