@@ -1,5 +1,9 @@
 import React from "react";
 import "./home.css";
+
+import { Helmet } from "react-helmet";
+
+
  import { useState, useEffect } from "react";
 //import React, { useState, useEffect } from "react";
 
@@ -182,6 +186,39 @@ const handleClick = (index) => {
 
 
   return (
+
+     <>
+
+      {/* ✅ SEO START */}
+
+      <Helmet>
+        <title>ManuX NanoBioCeuticals | Ayurvedic Nanotechnology Solutions</title>
+
+        <meta
+          name="description"
+          content="ManuX NanoBioCeuticals is a research-driven platform specializing in advanced ayurvedic nanotechnology, molecular science, and next-generation wellness solutions."
+        />
+
+        <meta
+          name="keywords"
+          content="Ayurveda, Nanotechnology, Biotech, Wellness, ManuX, Research, Molecular Science"
+        />
+
+        <meta name="author" content="ManuX NanoBioCeuticals" />
+
+        {/* Open Graph (for social sharing) */}
+        <meta property="og:title" content="ManuX NanoBioCeuticals" />
+        <meta
+          property="og:description"
+          content="Engineering science-led Ayurvedic solutions with nanotechnology."
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
+
            <div className="home-page"
            style={{ backgroundImage: `url(${bgImage})` }}
            >
@@ -190,7 +227,7 @@ const handleClick = (index) => {
     
   {/* Background Video */}
   {/* <video
-    className="hero-video"
+    className="hero-video"a
     autoPlay
     muted
     loop
@@ -574,6 +611,7 @@ const handleClick = (index) => {
 
 
     </div>
+      </>
   );
 }
 

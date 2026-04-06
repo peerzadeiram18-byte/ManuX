@@ -4,6 +4,10 @@ import "./Fitness.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function Fitness() {
@@ -15,6 +19,29 @@ export default function Fitness() {
   );
 
   return (
+
+
+     <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Fitness Products | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Explore advanced fitness and wellness products powered by Ayurvedic science and nanotechnology. Discover performance-driven solutions by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Fitness products, Ayurvedic fitness, wellness products, herbal fitness, ManuX"
+        />
+
+        <link rel="canonical" href="https://yourdomain.com/fitness" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
     <div
       className="fitness-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -32,7 +59,9 @@ export default function Fitness() {
                 <div className="fitness-img-box">
                   <img
                     src={`${BASE_URL}/uploads/${item.image}`}
-                    alt={item.name}
+                    // alt={item.name}
+                    alt={`${item.name} - Ayurvedic Fitness Product`} // ✅ SEO FIX
+            
                     onClick={() => navigate(`/product/${item._id}`)} // ✅ FIX
                   />
                 </div>
@@ -70,5 +99,6 @@ export default function Fitness() {
         </div>
       </div>
     </div>
+     </>
   );
 }

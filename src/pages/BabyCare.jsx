@@ -4,6 +4,11 @@ import "./BabyCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function BabyCare() {
@@ -15,6 +20,28 @@ export default function BabyCare() {
   );
 
   return (
+
+     <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Baby Care Products | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Explore safe and advanced Ayurvedic baby care products powered by nanotechnology. Gentle, science-backed solutions by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Baby care, Ayurvedic baby products, herbal baby care, safe baby skincare, ManuX"
+        />
+
+        <link rel="canonical" href="https://yourdomain.com/baby-care" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
     <div
       className="baby-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -29,7 +56,9 @@ export default function BabyCare() {
             <div className="baby-img-box">
               <img
                 src={`${BASE_URL}/uploads/${item.image}`}
-                alt={item.name}
+                // alt={item.name}
+                alt={`${item.name} - Ayurvedic Baby Care Product`} // ✅ SEO FIX
+
                 onClick={() => navigate(`/product/${item._id}`)} // 🔥 NAVIGATE
               />
             </div>
@@ -58,5 +87,6 @@ export default function BabyCare() {
         ))}
       </div>
     </div>
+     </>
   );
 }

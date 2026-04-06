@@ -1,12 +1,13 @@
-# https://www.robotstxt.org/robotstxt.html
-{/*User-agent: *
-*Disallow:
-Allow: /*/}
-
-
 User-agent: *
+
+# Allow all public pages
 Allow: /
 
+# Block admin panel
 Disallow: /admin/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# (optional future APIs block)
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://manuxnbc.com/sitemap.xml

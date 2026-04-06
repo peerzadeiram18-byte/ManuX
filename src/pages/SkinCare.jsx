@@ -1,4 +1,8 @@
 import { useContext } from "react";
+
+import { Helmet } from "react-helmet";
+
+
 import { ProductContext } from "../context/ProductContext";
 import "./SkinCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
@@ -13,6 +17,26 @@ export default function SkinCare() {
   );
 
   return (
+
+    <>
+  <Helmet>
+    <title>Skin Care Products | ManuX NanoBioCeuticals</title>
+
+    <meta
+      name="description"
+      content="Explore advanced Ayurvedic skin care products powered by nanotechnology. Discover science-led skincare solutions by ManuX NanoBioCeuticals."
+    />
+
+    <meta
+      name="keywords"
+      content="Skin care, Ayurvedic skincare, Nano skincare, ManuX products, herbal skincare"
+    />
+
+    <link rel="canonical" href="https://manuxnbc.com/skin-care" />
+  </Helmet>
+
+
+
     <div
       className="page-content"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -25,7 +49,8 @@ export default function SkinCare() {
             
             <img
               src={`${process.env.REACT_APP_BASE_URL}/uploads/${item.image}`}
-              alt={item.name}
+              // alt={item.name}
+                alt={`${item.name} - Ayurvedic Skin Care Product`}
               onClick={() => navigate(`/product/${item._id}`)}
             />
 
@@ -52,6 +77,8 @@ export default function SkinCare() {
         ))}
       </div>
     </div>
+    </>
+
   );
 }
 

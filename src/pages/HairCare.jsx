@@ -4,6 +4,9 @@ import "./HairCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function HairCare() {
@@ -15,6 +18,30 @@ export default function HairCare() {
   );
 
   return (
+
+
+     <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Hair Care Products | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Discover advanced Ayurvedic hair care products powered by nanotechnology. Explore science-driven solutions for healthy hair by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Hair care, Ayurvedic hair products, herbal hair care, nano hair care, ManuX"
+        />
+
+        <link rel="canonical" href="https://yourdomain.com/hair-care" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
+
     <div
       className="hair-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -33,7 +60,10 @@ export default function HairCare() {
                     ? `${BASE_URL}/uploads/${item.image}`
                     : "/no-image.png"
                 }
-                alt={item.name}
+
+               alt={`${item.name} - Ayurvedic Hair Care Product`} // ✅ SEO FIX
+
+                // alt={item.name}
                 onClick={() => navigate(`/product/${item._id}`)} // ✅ NAVIGATE
               />
             </div>
@@ -62,5 +92,8 @@ export default function HairCare() {
         ))}
       </div>
     </div>
+
+     </>
+
   );
 }

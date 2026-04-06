@@ -3,6 +3,11 @@ import { ProductContext } from "../context/ProductContext";
 import "./DigitalDefense.css";
 import bgImage from "../assets/backgroundimage.jpg";
 
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function DigitalDefense() {
@@ -15,6 +20,29 @@ export default function DigitalDefense() {
   );
 
   return (
+
+     <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Digital Defense Products | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Explore innovative digital defense and wellness products powered by advanced science and technology. Discover next-generation protection solutions by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Digital defense, wellness technology, protection products, ManuX, advanced solutions"
+        />
+
+        <link rel="canonical" href="https://yourdomain.com/digital-defense" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
+
     <div
       className="digital-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -31,7 +59,9 @@ export default function DigitalDefense() {
                 <div className="digital-img-box">
                   <img
                     src={`${BASE_URL}/uploads/${item.image}`}
-                    alt={item.name}
+                    // alt={item.name}
+
+                      alt={`${item.name} - Digital Defense Product`} // ✅ SEO FIX
                     onClick={() => setSelectedProduct(item)} // ✅ OPEN MODAL
                   />
                 </div>
@@ -97,6 +127,9 @@ export default function DigitalDefense() {
         </div>
       )}
     </div>
+
+     </>
+     
   );
 }
 

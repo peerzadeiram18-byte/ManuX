@@ -4,6 +4,11 @@ import "./MensCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 
+
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function MensCare() {
@@ -15,6 +20,28 @@ export default function MensCare() {
   );
 
   return (
+
+     <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Men’s Care Products | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Explore advanced Ayurvedic men’s care products designed with nanotechnology. Discover science-driven grooming and wellness solutions by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Men care, Ayurvedic grooming, herbal men's products, men's skincare, ManuX"
+        />
+
+        <link rel="canonical" href="https://yourdomain.com/mens-care" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
     <div
       className="mens-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -30,7 +57,8 @@ export default function MensCare() {
               <div className="mens-img-box">
                 <img
                   src={`${BASE_URL}/uploads/${item.image}`}
-                  alt={item.name}
+                  // alt={item.name}
+                    alt={`${item.name} - Ayurvedic Men's Care Product`} // ✅ SEO FIX
                   onClick={() => navigate(`/product/${item._id}`)} // 🔥 NAVIGATE
                 />
               </div>
@@ -62,5 +90,8 @@ export default function MensCare() {
         )}
       </div>
     </div>
+
+     </>
+
   );
 }

@@ -4,6 +4,9 @@ import "./ColorCosmetics.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function ColorCosmetics() {
@@ -15,6 +18,29 @@ export default function ColorCosmetics() {
   );
 
   return (
+
+
+    <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Color Cosmetics | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Explore advanced Ayurvedic color cosmetics powered by nanotechnology. Discover high-performance beauty solutions by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Color cosmetics, Ayurvedic makeup, herbal cosmetics, beauty products, ManuX"
+        />
+
+        <link rel="canonical" href="https://manuxnbc.com/color-cosmetics" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
+
     <div
       className="cc-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -29,7 +55,8 @@ export default function ColorCosmetics() {
             <div className="cc-img-box">
               <img
                 src={`${BASE_URL}/uploads/${item.image}`}
-                alt={item.name}
+                // alt={item.name}
+                alt={`${item.name} - Ayurvedic Color Cosmetic`} // ✅ SEO FIX
                 onClick={() => navigate(`/product/${item._id}`)} // ✅ FIX
                 onError={(e) => (e.target.src = "/no-image.png")}
               />
@@ -61,5 +88,7 @@ export default function ColorCosmetics() {
         ))}
       </div>
     </div>
+
+     </>
   );
 }

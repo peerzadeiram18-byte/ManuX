@@ -9,7 +9,7 @@ import contactBg from "../assets/contact-bg.jpg";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
-
+import { Helmet } from "react-helmet";
 
 
 import { useState } from "react";
@@ -80,6 +80,29 @@ const handleSubmit = async (e) => {
 
 
   return (
+
+
+    <>
+  <Helmet>
+    <title>Contact ManuX NanoBioCeuticals | Get in Touch</title>
+
+    <meta
+      name="description"
+      content="Contact ManuX NanoBioCeuticals for partnerships, research collaboration, and Ayurvedic nanotechnology solutions. Reach out to our team today."
+    />
+
+    <meta
+      name="keywords"
+      content="Contact ManuX, Ayurvedic company contact, biotech company India, research collaboration, ManuX contact"
+    />
+
+    <link rel="canonical" href="https://yourdomain.com/contact" />
+  </Helmet>
+
+
+
+
+
     <div className="cx-contact-page"
       style={{ backgroundImage: `url(${bgImage})` }}
 
@@ -123,6 +146,9 @@ const handleSubmit = async (e) => {
       target="_blank"
       rel="noopener noreferrer"
       className="address-link"
+
+      aria-label="View ManuX NanoBioCeuticals location on Google Maps"
+
     >
       ManuX NanoBioCeuticals <br />
       16/1/24, 1st & 2nd Floor, Part No. 65, 66, 70 <br />
@@ -257,6 +283,8 @@ const handleSubmit = async (e) => {
 </section>
 
     </div>
+
+    </>
   );
 // };
 }

@@ -4,6 +4,9 @@ import "./PetCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet"; // ✅ ADD THIS
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function PetCare() {
@@ -15,6 +18,27 @@ export default function PetCare() {
   );
 
   return (
+
+      <>
+      {/* ✅ SEO START */}
+      <Helmet>
+        <title>Pet Care Products | ManuX NanoBioCeuticals</title>
+
+        <meta
+          name="description"
+          content="Explore advanced Ayurvedic pet care products designed for safety and wellness. Science-driven pet solutions by ManuX NanoBioCeuticals."
+        />
+
+        <meta
+          name="keywords"
+          content="Pet care, Ayurvedic pet products, herbal pet care, pet wellness, ManuX"
+        />
+
+        <link rel="canonical" href="https://yourdomain.com/pet-care" />
+      </Helmet>
+      {/* ✅ SEO END */}
+
+
     <div
       className="pet-page"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -30,7 +54,9 @@ export default function PetCare() {
               <div className="pet-img-box">
                 <img
                   src={`${BASE_URL}/uploads/${item.image}`}
-                  alt={item.name}
+                  // alt={item.name}
+                  alt={`${item.name} - Ayurvedic Pet Care Product`} // ✅ SEO FIX
+             
                   onClick={() => navigate(`/product/${item._id}`)} // 🔥 NAVIGATE
                 />
               </div>
@@ -62,5 +88,7 @@ export default function PetCare() {
         )}
       </div>
     </div>
+
+     </>
   );
 }
