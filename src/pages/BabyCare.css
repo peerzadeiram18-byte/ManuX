@@ -96,12 +96,23 @@
   margin-bottom: 8px;
 }
 
+
+
 .baby-content p {
+  font-size: 14px;
+  color: #1F2A44;
+  white-space: pre-line;
+}
+/* .baby-content p {
   font-size: 14px;
   color: #1F2A44;
   height: 40px;
   overflow: hidden;
-}
+
+
+  white-space: pre-line;
+
+} */
 
 /* EMPTY STATE */
 .no-data {

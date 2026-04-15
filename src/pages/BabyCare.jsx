@@ -36,7 +36,7 @@ export default function BabyCare() {
           content="Baby care, Ayurvedic baby products, herbal baby care, safe baby skincare, ManuX"
         />
 
-        <link rel="canonical" href="https://yourdomain.com/baby-care" />
+        <link rel="canonical" href="https://manuxnbc.com/baby-care" />
       </Helmet>
       {/* ✅ SEO END */}
 

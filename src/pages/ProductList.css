@@ -369,12 +369,22 @@ color:white;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+
+
+    white-space: pre-line;     /* 🔥 ENTER support */
+  word-break: break-word;    /* 🔥 long word break */
 }
 
 /* .pm-desc.expanded {
   -webkit-line-clamp : unset;
   overflow: visible;
 } */
+
+/* ✅ EXPANDED STATE */
+.pm-desc.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
 
 .view-btn {
   border: none;
@@ -388,8 +398,32 @@ color:white;
 
 
 
+/* 
+.view-btn-inline {
+  color: #ff6b81;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.view-btn-inline:hover {
+  text-decoration: underline;
+}
 
 
+.view-btn {
+  background: #ff6b81;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.view-btn:hover {
+  background: #ff4d6d;
+} */
 
 
 

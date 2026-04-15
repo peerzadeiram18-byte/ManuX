@@ -133,7 +133,29 @@ const handleUpdate = async () => {
 
 
 
+
 <td>
+  <p className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
+    {product.description}
+  </p>
+
+  {product.description?.length > 60 && (
+    <button
+      className="view-btn"
+      onClick={() =>
+        setExpanded((prev) => ({
+          ...prev,
+          [product._id]: !prev[product._id], // 🔥 toggle
+        }))
+      }
+    >
+      {expanded[product._id] ? "View Less" : "View More"}
+    </button>
+  )}
+</td>
+
+
+{/* <td>
   <span className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
     {product.description}
   </span>
@@ -153,19 +175,31 @@ const handleUpdate = async () => {
   )}
 
   {expanded[product._id] && (
-    <span
-      className="view-btn-inline"
-      onClick={() =>
-        setExpanded((prev) => ({
-          ...prev,
-          [product._id]: false,
-        }))
-      }
-    >
-      View Less
-    </span>
+
+    <button
+  className="view-btn"
+  onClick={() =>
+    setExpanded((prev) => ({
+      ...prev,
+      [product._id]: true,
+    }))
+  }
+>
+  View More
+</button>
+    // <span
+    //   className="view-btn-inline"
+    //   onClick={() =>
+    //     setExpanded((prev) => ({
+    //       ...prev,
+    //       [product._id]: false,
+    //     }))
+    //   }
+    // >
+    //   View Less
+    // </span>
   )}
-</td>
+</td> */}
 
 
                 {/* <td>
