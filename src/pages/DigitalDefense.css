@@ -552,3 +552,41 @@
     padding: 10px;
   }
 }
+
+
+
+
+
+
+
+
+.desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* 🔥 only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  white-space: pre-line;   /* 🔥 enter support */
+  word-break: break-word;
+}
+
+/* 🔥 EXPANDED */
+.desc.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+/* BUTTON */
+.view-btn {
+  background: #ff6b81;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.view-btn:hover {
+  background: #ff4d6d;
+}
