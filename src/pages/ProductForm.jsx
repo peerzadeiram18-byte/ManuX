@@ -17,9 +17,9 @@ const categories = [
   "pet-care",
   "mens-care",
   "pregnancy-care",
-  "teenager care",
+  "teenager-care",
   "nutraceuticals",
-  "Loengevity",
+ "longevity",
 
     // ✅ NEW ADD
   "digital-defense",

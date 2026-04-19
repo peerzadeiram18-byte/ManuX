@@ -44,19 +44,19 @@ export default function TeenagerCare() {
         <div className="teen-grid">
           {teenProducts.length > 0 ? (
             teenProducts.map((item) => (
-              <div key={item._id} className="teen-card">
+             <div key={item._id} className="teen-card">
 
-                {/* IMAGE */}
-                <div className="teen-img-box">
-                  <img
-                    src={`${BASE_URL}/uploads/${item.image}`}
-                    alt={`${item.name} - Teenager Care Product`}
-                    onClick={() => navigate(`/product/${item._id}`)}
-                  />
-                </div>
+  {/* IMAGE */}
+  <div className="teen-img-box">
+    <img
+      src={`${BASE_URL}/uploads/${item.image}`}
+      alt={`${item.name} - Teenager Care Product`}
+      onClick={() => navigate(`/product/${item._id}`)}
+    />
+  </div>
 
-                {/* CONTENT */}
-                <div className="teen-content">
+  {/* CONTENT */}
+  <div className="teen-content">
                   <h3>{item.name}</h3>
 
                   <p>
@@ -74,10 +74,10 @@ export default function TeenagerCare() {
                     >
                       View More
                     </button>
-                  )}
-                </div>
+    )}
+  </div>
 
-              </div>
+</div>
             ))
           ) : (
             <p className="no-data">No Teenager Products Found</p>
