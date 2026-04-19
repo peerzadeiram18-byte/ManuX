@@ -36,7 +36,7 @@ export default function MensCare() {
           content="Men care, Ayurvedic grooming, herbal men's products, men's skincare, ManuX"
         />
 
-        <link rel="canonical" href="https://yourdomain.com/mens-care" />
+        <link rel="canonical" href="https://manuxnbc.com/mens-care" />
       </Helmet>
       {/* ✅ SEO END */}
 

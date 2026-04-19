@@ -440,15 +440,21 @@ color:#e11d2e;
   transform: translateY(10px);
   transition: 0.3s;
   flex-direction: column;
+
+  overflow: visible;
+    max-height: 470px;   /* ya 350px */
+  overflow-y: auto;
+
+  
 }
  
-/*.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  background: white;
-  
-}*/
+  /* background: white;
+   */
+}
 
   /*.dropdown:hover {
 color:#B23A3F;

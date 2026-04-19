@@ -35,7 +35,7 @@ export default function HairCare() {
           content="Hair care, Ayurvedic hair products, herbal hair care, nano hair care, ManuX"
         />
 
-        <link rel="canonical" href="https://yourdomain.com/hair-care" />
+        <link rel="canonical" href="https://manuxnbc.com/hair-care" />
       </Helmet>
       {/* ✅ SEO END */}
 

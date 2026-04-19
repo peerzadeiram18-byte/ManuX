@@ -1,62 +1,62 @@
 import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
-import "./PregnancyCare.css";
+import "./TeenagerCare.css";
 import bgImage from "../assets/backgroundimage.jpg";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export default function PregnancyCare() {
+export default function TeenagerCare() {
   const { products } = useContext(ProductContext);
   const navigate = useNavigate();
 
   // ✅ FILTER CATEGORY
-  const pregnancyProducts = products.filter(
-    (item) => item.category === "pregnancy-care"
+  const teenProducts = products.filter(
+    (item) => item.category === "teenager-care"
   );
 
   return (
     <>
       {/* ✅ SEO */}
       <Helmet>
-        <title>Pregnancy Care Products | ManuX NanoBioCeuticals</title>
+        <title>Teenager Care Products | ManuX NanoBioCeuticals</title>
 
         <meta
           name="description"
-          content="Explore safe and natural pregnancy care products designed for mothers and babies. Ayurvedic and science-backed solutions."
+          content="Explore safe and effective teenager care products for health, skin, and wellness. Natural and science-based solutions."
         />
 
         <meta
           name="keywords"
-          content="Pregnancy care, maternity products, herbal pregnancy, safe mother care"
+          content="Teenager care, youth health, herbal skincare, teen wellness products"
         />
 
-        <link rel="canonical" href="https://manuxnbc.com/pregnancy-care" />
+        <link rel="canonical" href="https://manuxnbc.com/teenager-care" />
       </Helmet>
 
       <div
-        className="preg-page"
+        className="teen-page"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <h1 className="preg-title">Pregnancy Care 🤰</h1>
+        <h1 className="teen-title">Teenager Care 🧑‍🎓</h1>
 
-        <div className="preg-grid">
-          {pregnancyProducts.length > 0 ? (
-            pregnancyProducts.map((item) => (
-              <div key={item._id} className="preg-card">
+        <div className="teen-grid">
+          {teenProducts.length > 0 ? (
+            teenProducts.map((item) => (
+              <div key={item._id} className="teen-card">
 
                 {/* IMAGE */}
-                <div className="preg-img-box">
+                <div className="teen-img-box">
                   <img
                     src={`${BASE_URL}/uploads/${item.image}`}
-                    alt={`${item.name} - Pregnancy Care Product`}
+                    alt={`${item.name} - Teenager Care Product`}
                     onClick={() => navigate(`/product/${item._id}`)}
                   />
                 </div>
 
                 {/* CONTENT */}
-                <div className="preg-content">
+                <div className="teen-content">
                   <h3>{item.name}</h3>
 
                   <p>
@@ -80,7 +80,7 @@ export default function PregnancyCare() {
               </div>
             ))
           ) : (
-            <p className="no-data">No Pregnancy Products Found</p>
+            <p className="no-data">No Teenager Products Found</p>
           )}
         </div>
       </div>

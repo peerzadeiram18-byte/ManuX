@@ -553,18 +553,25 @@ onClick={() => {
       Men's Care
     </Link>
 
-    {/* <Link to="/pregnancy-care" onClick={() => {
+   <Link to="/pregnancy-care" onClick={() => {
       setMobileMenu(false);
       setOpenProductsDropdown(false);
     }}>
       Pregnancy Care
     </Link>
 
-    <Link to="/ayurvedic" onClick={() => {
+    <Link to="/teenager-care" onClick={() => {
       setMobileMenu(false);
       setOpenProductsDropdown(false);
     }}>
-      Ayurvedic Medicines
+     Teenager Care
+    </Link>
+
+     <Link to="/longevity" onClick={() => {
+      setMobileMenu(false);
+      setOpenProductsDropdown(false);
+    }}>
+     Longevity
     </Link>
 
     <Link to="/nutraceuticals" onClick={() => {
@@ -572,7 +579,7 @@ onClick={() => {
       setOpenProductsDropdown(false);
     }}>
       Nutraceuticals
-    </Link> */}
+    </Link> 
 
         <Link to="/digital-defense" onClick={() => {
       setMobileMenu(false);

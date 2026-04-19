@@ -317,9 +317,11 @@ const handleUpdate = async () => {
 
 
 
-  {/* <option value="pregnancy-care">Pregnancy Care</option>
-  <option value="ayurvedic">Ayurvedic</option>
-  <option value="nutraceuticals">Nutraceuticals</option> */}
+  <option value="pregnancy-care">Pregnancy Care</option>
+  <option value="teenager-care">Teenager care</option>
+  <option value="nutraceuticals">Nutraceuticals</option> 
+  <option value="Loengevity">Loengevity</option> 
+
 </select>
       {/* <input
         type="text"

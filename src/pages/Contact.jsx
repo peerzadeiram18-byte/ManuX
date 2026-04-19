@@ -96,7 +96,7 @@ const handleSubmit = async (e) => {
       content="Contact ManuX, Ayurvedic company contact, biotech company India, research collaboration, ManuX contact"
     />
 
-    <link rel="canonical" href="https://yourdomain.com/contact" />
+    <link rel="canonical" href="https://manuxnbc.com/contact" />
   </Helmet>
 
 

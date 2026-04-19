@@ -36,7 +36,7 @@ export default function Fitness() {
           content="Fitness products, Ayurvedic fitness, wellness products, herbal fitness, ManuX"
         />
 
-        <link rel="canonical" href="https://yourdomain.com/fitness" />
+        <link rel="canonical" href="https://manuxnbc.com/fitness" />
       </Helmet>
       {/* ✅ SEO END */}
 

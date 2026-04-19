@@ -33,7 +33,9 @@ import BabyCare from "./pages/BabyCare";
 import PetCare from "./pages/PetCare";
 import MensCare from "./pages/MensCare";
 import PregnancyCare from "./pages/PregnancyCare";
-import Ayurvedic from "./pages/Ayurvedic";
+import TeenagerCare from "./pages/TeenagerCare";
+import Longevity from "./pages/Longevity";
+
 import Nutraceuticals from "./pages/Nutraceuticals";
 // ✅ NEW
 import DigitalDefense from "./pages/DigitalDefense";
@@ -148,8 +150,9 @@ function App() {
         <Route path="/pet-care" element={<PetCare />} />
         <Route path="/mens-care" element={<MensCare />} />
         <Route path="/pregnancy-care" element={<PregnancyCare />} />
-        <Route path="/ayurvedic" element={<Ayurvedic />} />
+        <Route path="/teenager-care" element={<TeenagerCare />} />  
         <Route path="/nutraceuticals" element={<Nutraceuticals />} />
+        <Route path="/longevity" element={<Longevity />} />
           {/* ✅ NEW ROUTES */}
         <Route path="/digital-defense" element={<DigitalDefense />} />
         <Route path="/fitness" element={<Fitness />} />

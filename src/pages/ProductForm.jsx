@@ -16,10 +16,10 @@ const categories = [
   "baby-care",
   "pet-care",
   "mens-care",
-  // "pregnancy-care",
-  // "ayurvedic",
-  // "nutraceuticals",
-
+  "pregnancy-care",
+  "teenager care",
+  "nutraceuticals",
+  "Loengevity",
 
     // ✅ NEW ADD
   "digital-defense",

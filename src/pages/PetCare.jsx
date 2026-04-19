@@ -34,7 +34,7 @@ export default function PetCare() {
           content="Pet care, Ayurvedic pet products, herbal pet care, pet wellness, ManuX"
         />
 
-        <link rel="canonical" href="https://yourdomain.com/pet-care" />
+        <link rel="canonical" href="https://manuxnbc.com/pet-care" />
       </Helmet>
       {/* ✅ SEO END */}
 
