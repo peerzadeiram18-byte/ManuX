@@ -5,6 +5,8 @@ import ProductForm from "./ProductForm";
 import ProductList from "./ProductList";
 import "./AdminDashboard.css";
 import UserList from "./UserList";
+import CategoryPage from "./CategoryPage";
+import CategoryList from "./CategoryList";
 
 import bgImage from "../assets/backgroundimage.jpg";
 
@@ -110,6 +112,18 @@ const fetchCount = async () => {
 </li>
 
 
+<li>
+  <Link to="/admin/dashboard/categories" style={{ color: "white", textDecoration: "none" }}>
+    Categories
+  </Link>
+</li>
+<li>
+  <Link to="/admin/dashboard/category-list" style={{ color: "white", textDecoration: "none" }}>
+    Category List
+  </Link>
+</li>
+
+
 
 
         </ul>
@@ -128,6 +142,19 @@ const fetchCount = async () => {
   <Route path="product-list" element={<ProductList />} />
    {/* <Route path="user-list" element={<UserList />} /> */}
    <Route path="contact-list" element={<ContactList />} />
+   <Route path="category-list" element={<CategoryList />} />
+   {/* <Route path="categories" element={<CategoryPage />} />
+<Route path="categories" element={<CategoryList />} /> */}
+
+<Route
+  path="categories"
+  element={
+    <>
+      <CategoryPage />
+    </>
+  }
+/>
+
 </Routes>
 
       </div>

@@ -1,277 +1,113 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./ProductForm.css";
-
 import { toast } from "react-toastify";
-
-
 import axios from "axios";
+
+
+
+import { useParams } from "react-router-dom";
+
+
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
-
-
-
-const categories = [
-  "skin-care",
-  "hair-care",
-  "baby-care",
-  "pet-care",
-  "mens-care",
-  "pregnancy-care",
-  "teenager-care",
-  "nutraceuticals",
- "longevity",
-
-    // ✅ NEW ADD
-  "digital-defense",
-  "fitness",
-
-    // ✅ NEW CATEGORY
-  "color-cosmetics"
-];
-
-
 
 export default function ProductForm() {
 
-//  const { addProduct } = useContext(ProductContext);
+  const { addProduct, fetchProducts } = useContext(ProductContext);
 
-const { addProduct, fetchProducts } = useContext(ProductContext);
-
-
+  const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
-  //const [image, setImage] = useState("");
   const [image, setImage] = useState(null);
-  const [price, setPrice] = useState("");
 
- {/* const handleSubmit = (e) => {
+  // ✅ FETCH CATEGORIES
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const fetchCategories = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/categories`);
+      setCategories(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // ✅ SUBMIT
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newProduct = {
-      id: Date.now(),
-      name,
-      category,
-      description,
-      image
-    };
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("category", category);
+    formData.append("description", description);
+    formData.append("image", image);
 
-    addProduct(newProduct);
-
-    alert("Product Added!");
-
-    setName("");
-    setCategory("");
-    setDescription("");
-    setImage("");
-  };*/}
-
-//   const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   const newProduct = {
-//     name,
-//     category,
-//     description,
-//     image
-//   };
-
-//   try {
-//     const res = await axios.post(
-//       "http://localhost:5000/api/products",
-//       newProduct,
-//       {
-//         headers: {
-//           Authorization: `Bearer ${localStorage.getItem("token")}`,
-//           "Content-Type": "application/json"
-//         }
-//       }
-//     );
-
-//     addProduct(res.data);
-
-//     alert("Product Added!");
-
-//     setName("");
-//     setCategory("");
-//     setDescription("");
-//     setImage("");
-
-//   } catch (err) {
-//     console.error(err);
-//     alert("Error adding product");
-//   }
-// };
-
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   const formData = new FormData();
-//   formData.append("name", name);
-//   formData.append("category", category);
-//   formData.append("description", description);
-//   formData.append("image", image);
-
-
-//   try {
-
-//     // const res = await axios.post(
-//     //   "http://localhost:5000/api/products",
-//     //   formData,
-//     //   {
-//     //     headers: {
-//     //       Authorization: `Bearer ${localStorage.getItem("token")}`
-//     //     }
-//     //   }
-//     // );
-
-
-
-
-//     const res = await axios.post(
-//   "http://localhost:5000/api/products",
-//   formData,
-//   {
-//     headers: {
-//       Authorization: `Bearer ${localStorage.getItem("token")}`,
-//       "Content-Type": "multipart/form-data"
-//     }
-//   }
-// );
-//     addProduct(res.data);
-
-//     alert("Product Added!");
-
-//     setName("");
-//     setCategory("");
-//     setDescription("");
-//     setImage(null);
-
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-
-
-
-//const [image, setImage] = useState(null);
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData();
-  formData.append("name", name);
-  formData.append("category", category);
-  formData.append("description", description);
-  formData.append("image", image);
- // formData.append("price", price);
-
-  try {
-
-    const res = await axios.post(
-  `${BASE_URL}/api/products`,
-  formData,
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-          "Content-Type": "multipart/form-data"
+    try {
+      const res = await axios.post(
+        `${BASE_URL}/api/products`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "multipart/form-data"
+          }
         }
-      }
-    );
-// ⭐ important
-    addProduct(res.data);
-    fetchProducts();
+      );
 
-    // alert("Product Added!");
+      addProduct(res.data);
+      fetchProducts();
 
-    toast.success("Product Added Successfully!");
+      toast.success("Product Added Successfully!");
 
-    setName("");
-    setCategory("");
-    setDescription("");
-    setImage(null);
+      setName("");
+      setCategory("");
+      setDescription("");
+      setImage(null);
 
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-
-// const onSubmit = async () => {
-//   try {
-//     await axios.post("/api/products", formData);
-
-//   } catch (err) {
-
-//     // 🔥 YE ADD KARO
-//     if (err.response?.status === 401) {
-//       toast.error("Session expired, please login again");
-
-//       localStorage.removeItem("token"); // optional
-//       window.location.href = "/login";  // optional
-//     }
-
-//     console.log(err);
-//   }
-// };
+    } catch (err) {
+      console.log(err);
+      toast.error("Error adding product");
+    }
+  };
 
   return (
     <div className="admin-page">
-
       <div className="admin-card">
-
         <h2>Add Product</h2>
 
         <form className="admin-form" onSubmit={handleSubmit}>
 
+          {/* NAME */}
           <input
             type="text"
             placeholder="Product Name"
             value={name}
-             onChange={(e) => setName(e.target.value)}
-          //   onChange={(e) => setName(e.target.value.toUpperCase())}
-          //   required
-//           onChange={(e) => {
-//   const value = e.target.value
-//     .toLowerCase()
-//     .replace(/\b\w/g, (char) => char.toUpperCase());
-//   setName(value);
-// }}
-          
+            onChange={(e) => setName(e.target.value)}
+            required
           />
 
-{/* 
-          <input
-            type="text"
-            placeholder="Category"
+          {/* CATEGORY */}
+          <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
-          /> */}
+          >
+            <option value="">Select Category</option>
 
+            {categories.map((cat) => (
+              <option key={cat._id} value={cat.name}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
 
-
-          <select
-  value={category}
-  onChange={(e) => setCategory(e.target.value)}
-  required
->
-  <option value="">Select Category</option>
-  {categories.map((cat, i) => (
-    <option key={i} value={cat}>
-      {cat}
-    </option>
-  ))}
-</select>
-
-          {/* <input
-  type="number"
-  placeholder="Price"
-  value={price}
-  onChange={(e)=>setPrice(e.target.value)}
-/> */}
-
+          {/* DESCRIPTION */}
           <textarea
             placeholder="Description"
             value={description}
@@ -279,29 +115,17 @@ const handleSubmit = async (e) => {
             required
           />
 
-
+          {/* IMAGE */}
           <input
-            //type="text"
-            //placeholder="Image path (ex: /assets/product1.jpg)"
-             type="file"
-
-           // value={image}
-            //onChange={(e) => setImage(e.target.value)}
-             onChange={(e)=>setImage(e.target.files[0])}
-            // required
+            type="file"
+            onChange={(e) => setImage(e.target.files[0])}
+            required
           />
 
-
-          
-
-          <button type="submit" >Add Product</button>
-
-          
+          <button type="submit">Add Product</button>
 
         </form>
-
       </div>
-
     </div>
   );
 }

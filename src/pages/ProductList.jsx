@@ -1,115 +1,119 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "./ProductList.css";
-
+import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function ProductList() {
 
+  const { products, deleteProduct, updateProduct, fetchProducts } =
+    useContext(ProductContext);
+
   const [expanded, setExpanded] = useState({});
-
-  // const { products, deleteProduct, updateProduct } = useContext(ProductContext);
-
-  const { products, deleteProduct, updateProduct, fetchProducts } = useContext(ProductContext);
-
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [editingProduct, setEditingProduct] = useState(null);
 
+  // ✅ CATEGORY STATES
+  const [category, setCategory] = useState("");
+  const [categories, setCategories] = useState([]);
+
   const itemsPerPage = 20;
 
-  // 🔎 Search Filter
-const filteredProducts = products.filter((product) => {
-  const term = search.toLowerCase();
+  // ✅ FETCH CATEGORIES
+  useEffect(() => {
+    fetchCategories();
+  }, []);
 
+  const fetchCategories = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/categories`);
+      setCategories(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-    // ✅ 👉 YAHI PE ADD KARO
-  // const toTitleCase = (text) => {
-  //   if (!text) return "";
-  //   return text
-  //     .toLowerCase()
-  //     .replace(/\b\w/g, (char) => char.toUpperCase());
-  // };
+  // 🔎 SEARCH + CATEGORY FILTER
+  const filteredProducts = products.filter((product) => {
+    const term = search.toLowerCase();
 
+    const matchSearch =
+      product.name.toLowerCase().includes(term) ||
+      product.category.toLowerCase().includes(term) ||
+      product.description?.toLowerCase().includes(term);
 
+    const matchCategory = category
+      ? product.category === category
+      : true;
 
+    return matchSearch && matchCategory;
+  });
 
-
-return (
-    product.name.includes(term) ||
-    product.category.includes(term) ||
-    product.description.includes(term)
-  );
-});
-
-  // 📄 Pagination Logic
+  // 📄 PAGINATION
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
   const currentProducts = filteredProducts.slice(indexOfFirst, indexOfLast);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
-const handleUpdate = async () => {
-  try {
-    const formData = new FormData();
+  // ✅ UPDATE PRODUCT
+  const handleUpdate = async () => {
+    try {
+      const formData = new FormData();
 
-    // formData.append("name", editingProduct.name);
+      formData.append("name", editingProduct.name);
+      formData.append("category", editingProduct.category);
+      formData.append("description", editingProduct.description);
 
-    formData.append(
-  "name",
-  editingProduct.name
-    .toLowerCase()
-    .replace(/\b\w/g, (char) => char.toUpperCase())
-);
-    formData.append("category", editingProduct.category);
-     formData.append("description", editingProduct.description);
+      if (editingProduct.image instanceof File) {
+        formData.append("image", editingProduct.image);
+      }
 
-//     formData.append(
-//   "description",
-//   editingProduct.description ? editingProduct.description : ""
-// );
+      await updateProduct(editingProduct._id, formData);
+      await fetchProducts();
 
-
-// if (editingProduct.description !== undefined) {
-//   formData.append("description", editingProduct.description);
-// }
-
-    // ✅ IMAGE FIX
-    if (editingProduct.image instanceof File) {
-      formData.append("image", editingProduct.image);
+      setEditingProduct(null);
+    } catch (err) {
+      console.log(err);
     }
-
-    await updateProduct(editingProduct._id, formData);
-     
-    // ✅ ADD THIS
-  await fetchProducts();
-
-
-
-    setEditingProduct(null);
-  } catch (err) {
-    console.log(err);
-    console.log(editingProduct);
-  }
-};
+  };
 
   return (
-              <div className="pm-container">
+    <div className="pm-container">
 
-                  <h2 className="pm-title">Product Management {/*(CRUD)*/}</h2>
+      <h2 className="pm-title">Product Management</h2>
 
-                 <div className="pm-search-bar">
-                <input
-                type="text"
-                 placeholder="Search product..."
-                 value={search}
-                  onChange={(e)=>setSearch(e.target.value)}
-                className="pm-search-input"
-                 />
-                  </div>
+      {/* 🔍 SEARCH */}
+      <div className="pm-search-bar">
+        <input
+          type="text"
+          placeholder="Search product..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="pm-search-input"
+        />
+      </div>
 
-              <div className="pm-table-card">
-              <table className="pm-table">
+      {/* ✅ CATEGORY FILTER */}
+      {/* <div style={{ marginBottom: "15px" }}>
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="">All Categories</option>
+
+          {categories.map((cat) => (
+            <option key={cat._id} value={cat.name}>
+              {cat.name}
+            </option>
+          ))}
+        </select>
+      </div> */}
+
+      {/* TABLE */}
+      <div className="pm-table-card">
+        <table className="pm-table">
           <thead>
             <tr>
               <th>Sr No</th>
@@ -123,139 +127,52 @@ const handleUpdate = async () => {
 
           <tbody>
             {currentProducts.map((product, index) => (
-              //<tr key={product.id}>
-                <tr key={product._id}>
+              <tr key={product._id}>
                 <td>{indexOfFirst + index + 1}</td>
-                 <td>{product.name}</td> 
-                {/* <td>{toTitleCase(product.name)}</td> */}
+                <td>{product.name}</td>
                 <td>{product.category}</td>
-                {/* <td>{product.description}</td> */}
 
-
-
-
-<td>
-  <p className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
-    {product.description}
-  </p>
-
-  {product.description?.length > 60 && (
-    <button
-      className="view-btn"
-      onClick={() =>
-        setExpanded((prev) => ({
-          ...prev,
-          [product._id]: !prev[product._id], // 🔥 toggle
-        }))
-      }
-    >
-      {expanded[product._id] ? "View Less" : "View More"}
-    </button>
-  )}
-</td>
-
-
-{/* <td>
-  <span className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
-    {product.description}
-  </span>
-
-  {!expanded[product._id] && product.description?.length > 60 && (
-    <span
-      className="view-btn-inline"
-      onClick={() =>
-        setExpanded((prev) => ({
-          ...prev,
-          [product._id]: true,
-        }))
-      }
-    >
-      ... View More
-    </span>
-  )}
-
-  {expanded[product._id] && (
-
-    <button
-  className="view-btn"
-  onClick={() =>
-    setExpanded((prev) => ({
-      ...prev,
-      [product._id]: true,
-    }))
-  }
->
-  View More
-</button>
-    // <span
-    //   className="view-btn-inline"
-    //   onClick={() =>
-    //     setExpanded((prev) => ({
-    //       ...prev,
-    //       [product._id]: false,
-    //     }))
-    //   }
-    // >
-    //   View Less
-    // </span>
-  )}
-</td> */}
-
-
-                {/* <td>
-  <p className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
-    {product.description}
-  </p>
-
-  {product.description?.length > 80 && (
-    <button
-      className="view-btn"
-      onClick={() =>
-        setExpanded((prev) => ({
-          ...prev,
-          [product._id]: !prev[product._id],
-        }))
-      }
-    >
-      {expanded[product._id] ? "View Less" : "View More"}
-    </button>
-  )}
-</td> */}
+                {/* DESCRIPTION */}
                 <td>
-                 {/* <img src={product.image} alt="" className="pm-img" />    */}
-                 {/* <img
+                  <p className={`pm-desc ${expanded[product._id] ? "expanded" : ""}`}>
+                    {product.description}
+                  </p>
+
+                  {product.description?.length > 60 && (
+                    <button
+                      className="pm-view-btn"
+                      onClick={() =>
+                        setExpanded((prev) => ({
+                          ...prev,
+                          [product._id]: !prev[product._id],
+                        }))
+                      }
+                    >
+                      {expanded[product._id] ? "View Less" : "View More"}
+                    </button>
+                  )}
+                </td>
+
+                {/* IMAGE */}
+                <td>
+                  <img
                     src={`${BASE_URL}/uploads/${product.image}`}
-                 className="pm-img"
-                  />           */}
+                    alt=""
+                    className="pm-img"
+                  />
+                </td>
 
-                  {/* <img
-  src={
-    typeof product.image === "string"
-      ? `${BASE_URL}/uploads/${product.image}`
-      : URL.createObjectURL(product.image)
-  }
-  alt=""
-  className="pm-img"
-/>  */}
-
-
-
-<img
-  src={`${BASE_URL}/uploads/${product.image}`}
-  alt=""
-  className="pm-img"
-/>
-                  
-                  </td>
+                {/* ACTION */}
                 <td>
-                  <button className="pm-btn pm-edit"
+                  <button
+                    className="pm-btn pm-edit"
                     onClick={() => setEditingProduct(product)}
                   >
                     Edit
                   </button>
 
-                  <button className="pm-btn pm-delete"
-                   // onClick={() => deleteProduct(product.id)}
+                  <button
+                    className="pm-btn pm-delete"
                     onClick={() => deleteProduct(product._id)}
                   >
                     Delete
@@ -267,114 +184,89 @@ const handleUpdate = async () => {
         </table>
       </div>
 
-      {/* Pagination */}
+      {/* PAGINATION */}
       <div className="pm-pagination">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
-            className={`pm-page-btn active ${currentPage === i + 1 ? "active" : ""}`}
+            className={`pm-page-btn ${currentPage === i + 1 ? "active" : ""}`}
             onClick={() => setCurrentPage(i + 1)}
           >
             {i + 1}
           </button>
         ))}
       </div>
-{/* ✨ Edit Modal */}
-{editingProduct && (
-  <div className="modal-overlay">
-    <div className="modal">
 
-      <h3>Edit Product</h3>
+      {/* ✨ EDIT MODAL */}
+      {editingProduct && (
+        <div className="pm-modal-overlay">
+          <div className="pm-modal">
 
-      <input
-        type="text"
-        placeholder="Product Name"
-        value={editingProduct.name}
-        onChange={(e) =>
-          setEditingProduct({ ...editingProduct, name: e.target.value })
-        }
-      />
+            <h3>Edit Product</h3>
 
+            <input
+              type="text"
+              value={editingProduct.name}
+              onChange={(e) =>
+                setEditingProduct({ ...editingProduct, name: e.target.value })
+              }
+            />
 
-<select
-  value={editingProduct.category}
-  onChange={(e) =>
-    setEditingProduct({
-      ...editingProduct,
-      category: e.target.value
-    })
-  }
->
-  <option value="">Select Category</option>
-  <option value="skin-care">Skin Care</option>
-  <option value="hair-care">Hair Care</option>
-  <option value="baby-care">Baby Care</option>
-  <option value="pet-care">Pet Care</option>
-  <option value="mens-care">Mens Care</option>
-  <option value="digital-defense">Digital Defense</option>
-  <option value="fitness">  Fitness</option>
-  <option value="color-cosmetics">color-cosmetics</option>
+            {/* ✅ FIXED CATEGORY SELECT */}
+            <select
+              value={editingProduct.category}
+              onChange={(e) =>
+                setEditingProduct({
+                  ...editingProduct,
+                  category: e.target.value,
+                })
+              }
+            >
+              <option value="">Select Category</option>
 
+              {categories.map((cat) => (
+                <option key={cat._id} value={cat.name}>
+                  {cat.name}
+                </option>
+              ))}
+            </select>
 
+            <textarea
+              value={editingProduct.description || ""}
+              onChange={(e) =>
+                setEditingProduct({
+                  ...editingProduct,
+                  description: e.target.value,
+                })
+              }
+            />
 
-  <option value="pregnancy-care">Pregnancy Care</option>
-  <option value="teenager-care">Teenager care</option>
-  <option value="nutraceuticals">Nutraceuticals</option> 
-  <option value="Loengevity">Loengevity</option> 
+            <input
+              type="file"
+              onChange={(e) =>
+                setEditingProduct({
+                  ...editingProduct,
+                  image: e.target.files[0],
+                })
+              }
+            />
 
-</select>
-      {/* <input
-        type="text"
-        placeholder="Category"
-        value={editingProduct.category}
-        onChange={(e) =>
-          setEditingProduct({ ...editingProduct, category: e.target.value })
-        }  
-      /> */}
+            <div className="modal-buttons">
+              <button className="btn update-btn" onClick={handleUpdate}>
+                Update
+              </button>
 
-      <textarea
-        placeholder="Description"
-    
-  value={editingProduct.description || ""}
-     
-        // value={editingProduct.description}
-        onChange={(e) =>
-          setEditingProduct({
-            ...editingProduct,
-            description: e.target.value
-          })
-        }
-      />
+              <button
+                className="btn cancel-btn"
+                onClick={() => setEditingProduct(null)}
+              >
+                Cancel
+              </button>
+            </div>
 
-      <input
-         type="file"
-        placeholder="Image URL"
-        //value={editingProduct.image}
-          onChange={(e) =>
-    setEditingProduct({
-      ...editingProduct,
-      image: e.target.files[0]
-    })
-  }
-      />
-
-      <div className="modal-buttons">
-        <button className="btn update-btn" onClick={handleUpdate}>
-          Update
-        </button>
-
-        <button
-          className="btn cancel-btn"
-          onClick={() => setEditingProduct(null)}
-        >
-          Cancel
-        </button>
-      </div>
-
-    </div>
-  </div>
-)}
-
+          </div>
+        </div>
+      )}
     </div>
   );
 }

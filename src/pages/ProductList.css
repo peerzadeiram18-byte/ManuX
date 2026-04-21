@@ -194,7 +194,7 @@ color:white;
 
 
 /* OVERLAY */
-.modal-overlay {
+.pm-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -212,7 +212,7 @@ color:white;
 }
 
 /* MODAL CARD */
-.modal {
+.pm-modal{
   width: 400px;
   padding: 25px;
 
@@ -232,15 +232,15 @@ color:white;
 }
 
 /* TITLE */
-.modal h3 {
+.pm-modal h3 {
   text-align: center;
   margin-bottom: 10px;
   color: #fff;
 }
 
 /* INPUTS */
-.modal input,
-.modal textarea {
+.pm-modal input,
+.pm-modal textarea {
   padding: 12px;
   border-radius: 8px;
   border: none;
@@ -252,19 +252,19 @@ color:white;
   font-size: 14px;
 }
 
-.modal input::placeholder,
-.modal textarea::placeholder {
+.pm-modal input::placeholder,
+.pm-modal textarea::placeholder {
   color: #eee;
 }
 
 /* TEXTAREA */
-.modal textarea {
+.pm-modal textarea {
   min-height: 80px;
   resize: none;
 }
 
 /* BUTTONS */
-.modal-buttons {
+.pm-modal-buttons {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -318,24 +318,24 @@ color:white;
 
 /* 📱 RESPONSIVE */
 @media (max-width: 480px) {
-  .modal {
+  .pm-modal {
     width: 100%;
     padding: 10px;
   }
 }
 /* 📱 MOBILE */
 @media (max-width: 480px) {
-  .modal {
+  .pm-modal {
     width: 100%;
     padding: 20px;
   }
 
-  .modal-buttons {
+  .pm-modal-buttons {
     flex-direction: column;
   }
 }
 
-.modal select {
+.pm-modal select {
   padding: 12px;
   border-radius: 8px;
   border: none;
@@ -350,13 +350,13 @@ color:white;
 
 
 /* focus effect */
-.modal select:focus {
+.pm-modal select:focus {
   border-color: #B23A3F;
   box-shadow: 0 0 0 2px rgba(178,58,63,0.3);
 }
 
 /* dropdown options fix */
-.modal select option {
+.pm-modal select option {
   /* background: #1F2A44; */
   color: #1F2A44;
 }
@@ -386,7 +386,7 @@ color:white;
   overflow: visible;
 }
 
-.view-btn {
+.pm-view-btn {
   border: none;
   background: none;
   color: #007bff;
@@ -398,20 +398,20 @@ color:white;
 
 
 
-/* 
-.view-btn-inline {
+
+.pm-view-btn-inline {
   color: #ff6b81;
   font-weight: 600;
   cursor: pointer;
   margin-left: 5px;
 }
 
-.view-btn-inline:hover {
+.pm-view-btn-inline:hover {
   text-decoration: underline;
 }
 
 
-.view-btn {
+.pm-view-btn {
   background: #ff6b81;
   color: white;
   border: none;
@@ -421,9 +421,9 @@ color:white;
   margin-top: 5px;
 }
 
-.view-btn:hover {
+.pm-view-btn:hover {
   background: #ff4d6d;
-} */
+}
 
 
 

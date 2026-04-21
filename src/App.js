@@ -79,6 +79,17 @@ import { NotificationProvider } from "./context/NotificationContext";
 
 
 
+
+
+import CategoryList from "./pages/CategoryList";
+import CategoryProducts from "./pages/CategoryProducts";
+
+import CategoryPageDynamic from "./pages/CategoryPageDynamic";
+
+
+
+
+
 function App() {
 
   const [showLogin, setShowLogin] = useState(false);
@@ -144,6 +155,17 @@ function App() {
 
 
       {/* PRODUCTS ROUTES */}
+
+        <Route path="/" element={<CategoryList />} />
+
+        {/* 🔥 CATEGORY PAGE */}
+        <Route path="/category/:name" element={<CategoryProducts />} />
+        
+        <Route path="/category/:name" element={<CategoryPageDynamic />} />
+
+
+
+      
         <Route path="/skin-care" element={<SkinCare />} />
         <Route path="/hair-care" element={<HairCare />} />
         <Route path="/baby-care" element={<BabyCare />} />

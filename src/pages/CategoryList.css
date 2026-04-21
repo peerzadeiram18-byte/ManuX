@@ -1,0 +1,219 @@
+/* ===== PAGE ===== */
+.cat-container {
+
+ 
+  padding: 40px 20px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 CENTER EVERYTHING */
+}
+
+/* TITLE */
+.cat-title {
+  font-size: 37px;
+  margin-bottom: 40px;
+  color: #0F2544;
+  font-weight: 700;
+  text-align: center;
+
+
+    width: 100%;
+  max-width: 1100px; /* 🔥 CENTER WIDTH CONTROL */
+  
+  
+}
+
+/* GRID */
+.cat-grid {
+  width: 100%;
+  max-width: 1100px; /* 🔥 CENTER WIDTH CONTROL */
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.cat-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.cat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* TOP LINE DESIGN */
+.cat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0F2544, #C1121F);
+}
+
+/* NAME */
+.cat-card h3 {
+  color: #0F2544;
+  margin-bottom: 18px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/* BUTTONS */
+.cat-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* BUTTON COMMON */
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* EDIT */
+.edit-btn {
+  background: #0F2544;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #081b30;
+  transform: scale(1.05);
+}
+
+/* DELETE */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+---
+
+/* ===== MODAL ===== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* INPUT */
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* BUTTONS */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  flex: 1;
+  background: #0F2544;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: #aaa;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .cat-title {
+    font-size: 26px;
+  }
+
+  .cat-grid {
+    gap: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .cat-container {
+    padding: 20px 30px;
+      margin-top: 30px; 
+  }
+
+  .cat-title {
+    font-size: 22px;
+  }
+
+  .cat-card {
+    padding: 20px 15px;
+  }
+
+  .cat-actions {
+    flex-direction: column; /* 🔥 stack buttons */
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}

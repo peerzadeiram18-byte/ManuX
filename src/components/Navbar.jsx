@@ -9,10 +9,10 @@ import { FaChevronDown } from "react-icons/fa";
 import "./Navbar.css";
 import { FaSearch, FaRegStar, FaBell, FaWhatsapp } from "react-icons/fa";
 import logo from "./logo.png";
-import { NavLink, Link } from "react-router-dom";
-
+// import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import { useRef } from "react";
 
@@ -20,10 +20,43 @@ import { useContext } from "react";
 import { NotificationContext } from "../context/NotificationContext";
 
 
+import axios from "axios";
+// import { Link } from "react-router-dom";
 
+
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
 const Navbar = () => {
+
+
+   const [categories, setCategories] = useState([]);
+  const [openProductsDropdown, setOpenProductsDropdown] = useState(false);
+
+  const fetchCategories = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/categories`);
+      setCategories(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+
+    // 🔥 auto update when new category added
+    const handleUpdate = () => fetchCategories();
+    window.addEventListener("categoryAdded", handleUpdate);
+
+    return () => {
+      window.removeEventListener("categoryAdded", handleUpdate);
+    };
+  }, []);
+
+
+
 
 const { notifications } = useContext(NotificationContext);
 
@@ -51,7 +84,7 @@ const [openScienceDropdown, setOpenScienceDropdown] = useState(false);
 
 
   // 🔹 Add this for Products dropdown
-const [openProductsDropdown, setOpenProductsDropdown] = useState(false);
+// const [openProductsDropdown, setOpenProductsDropdown] = useState(false);
 
 
   
@@ -516,7 +549,24 @@ onClick={() => {
     Products <FaChevronDown className="dropdown-icon" />
   </span>
 
+
   <div className={`dropdown-menu ${openProductsDropdown ? "show-dropdown" : ""}`}>
+  
+  {categories.map((cat) => (
+    <Link
+      key={cat._id}
+      to={`/category/${cat.name.toLowerCase().replace(/\s+/g, "-")}`}
+      onClick={() => {
+        setOpenProductsDropdown(false);
+      }}
+    >
+      {cat.name.replace(/"/g, "")}
+    </Link>
+  ))}
+
+</div>
+
+  {/* <div className={`dropdown-menu ${openProductsDropdown ? "show-dropdown" : ""}`}>
 
     <Link to="/skin-care" onClick={() => {
       setMobileMenu(false);
@@ -602,8 +652,8 @@ onClick={() => {
    Color Cosmetics
     </Link>
 
-  </div>
-</div>
+  </div>*/}
+</div> 
 
 
 
@@ -883,6 +933,22 @@ onClick={() => {
     }}>
       Contact List
     </Link>
+
+
+        <Link to="/admin/dashboard/categories" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}>
+      Categories
+    </Link>
+
+        <Link to="/admin/dashboard/category-list" onClick={() => {
+      setMobileMenu(false);
+      setOpenMenu(false);
+    }}>
+    Category List
+    </Link>
+
 
   </div>
 </div>
