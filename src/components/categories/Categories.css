@@ -1,4 +1,4 @@
-.categories {
+.categories1 {
     padding: 50px 0 70px;   /* side padding hata diya */
     width: 100%;
     overflow: hidden;  
@@ -12,14 +12,14 @@
   inset 0 0 40px rgba(94,167,135,0.08);
 }
 
-.cat-wrapper {
+.cat1-wrapper {
   max-width: 1400px;   /* bada karo */
   margin: 0 auto;
   padding: 0 20px;     /* controlled spacing */
   position: relative;
 }
 
-.cat-container {
+.cat1-container {
   display: flex;
   gap: 18px;
   overflow-x: auto;
@@ -29,12 +29,12 @@
   flex-wrap: nowrap;        /* 🔥 IMPORTANT: ONE ROW ONLY */ 
 }
 
-.cat-container::-webkit-scrollbar {
+.cat1-container::-webkit-scrollbar {
   display: none;
 }
 
 /* arrows */
-.cat-btn {
+.cat1-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -51,22 +51,22 @@
 .left { left: 6px; }
 .right { right: 6px; }
 
-.cat-container > *:first-child {
+.cat1-container > *:first-child {
   margin-left: 4px;
 }
 
-.cat-container > *:last-child {
+.cat1-container > *:last-child {
   margin-right: 4px;
 }
 
 /*heading */
 
-.cat-heading {
+.cat1-heading {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.cat-heading h2 {
+.cat1-heading h2 {
   font-size: 31px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -74,7 +74,7 @@
   color: #1F2A44;
 }
 
-.cat-heading p {
+.cat1-heading p {
   font-size: 17px;
   color: #5C6473;
 }
@@ -83,7 +83,7 @@
    CATEGORY SECTION (FINAL)
 =============================== */
 
-.categories {
+.categories1 {
   padding: 50px 0 70px;
   width: 100%;
   overflow: hidden;
@@ -94,7 +94,7 @@
 }
 
 /* WRAPPER */
-.cat-wrapper {
+.cat1-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
@@ -105,7 +105,7 @@
    SLIDER (IMPORTANT FIX)
 =============================== */
 
-.cat-container {
+.cat1-container {
   display: flex;
   flex-wrap: nowrap;        /* 🔥 IMPORTANT: ONE ROW ONLY */
   gap: 18px;
@@ -114,7 +114,7 @@
   padding: 10px 0;
 }
 
-.cat-container::-webkit-scrollbar {
+.cat1-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -122,7 +122,7 @@
    CARD FIX (VERY IMPORTANT)
 =============================== */
 
-.cat-container > * {
+.cat1-container > * {
   flex: 0 0 auto;          /* 🔥 Prevent shrink */
   width: 180px;            /* Same size cards */
 }
@@ -131,7 +131,7 @@
    BUTTONS
 =============================== */
 
-.cat-btn {
+.cat1-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -149,11 +149,11 @@
 .right { right: 6px; }
 
 /* EDGE SPACING */
-.cat-container > *:first-child {
+.cat1-container > *:first-child {
   margin-left: 4px;
 }
 
-.cat-container > *:last-child {
+.cat1-container > *:last-child {
   margin-right: 4px;
 }
 
@@ -161,12 +161,12 @@
    HEADING
 =============================== */
 
-.cat-heading {
+.cat1-heading {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.cat-heading h2 {
+.cat1-heading h2 {
   font-size: 31px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -174,7 +174,7 @@
   color: #1F2A44;
 }
 
-.cat-heading p {
+.cat1-heading p {
   font-size: 17px;
   color: #5C6473;
 }
@@ -184,21 +184,21 @@
 =============================== */
 
 @media (max-width: 768px) {
-  .cat-container > * {
+  .cat1-container > * {
     width: 140px;
   }
 
-  .cat-heading h2 {
+  .cat1-heading h2 {
     font-size: 24px;
   }
 
-  .cat-heading p {
+  .cat1-heading p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .cat-btn {
+  .cat1-btn {
     display: none;
   }
 }

@@ -20,23 +20,23 @@ export default function Categories() {
   };
 
   return (
-    <section className="categories">
+    <section className="categories1">
 
       {/* HEADING */}
-      <div className="cat-heading">
+      <div className="cat1-heading">
         <h2>Explore Our Collections</h2>
         <p>Discover products crafted for your beauty ritual</p>
       </div>
 
-      <div className="cat-wrapper">
+      <div className="cat1-wrapper">
 
         {/* LEFT BUTTON */}
-        <button className="cat-btn left" onClick={scrollLeft}>
+        <button className="cat1-btn left" onClick={scrollLeft}>
           <FaChevronLeft />
         </button>
 
         {/* SLIDER */}
-        <div className="cat-container" ref={sliderRef}>
+        <div className="cat1-container" ref={sliderRef}>
 
           {products.map((product) => (
             <CategoryCard key={product._id} product={product} />
@@ -45,7 +45,7 @@ export default function Categories() {
         </div>
 
         {/* RIGHT BUTTON */}
-        <button className="cat-btn right" onClick={scrollRight}>
+        <button className="cat1-btn right" onClick={scrollRight}>
           <FaChevronRight />
         </button>
 
