@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./CategoryList.css";
-
 import { useNavigate } from "react-router-dom";
 
+// 🔥 ADD THIS
+import { toast } from "react-toastify";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -20,6 +21,7 @@ export default function CategoryList() {
       setCategories(res.data);
     } catch (err) {
       console.log(err);
+      toast.error("Failed to load categories ❌");
     } finally {
       setLoading(false);
     }
@@ -30,6 +32,7 @@ export default function CategoryList() {
 
     const handleCategoryAdded = () => {
       fetchCategories();
+      toast.success("Category list updated 🔄");
     };
 
     window.addEventListener("categoryAdded", handleCategoryAdded);
@@ -40,21 +43,96 @@ export default function CategoryList() {
   }, []);
 
   // ✅ DELETE
-  const deleteCategory = async (id) => {
-    if (!window.confirm("Delete this category?")) return;
 
-    try {
-      await axios.delete(`${BASE_URL}/api/categories/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-      fetchCategories();
-    } catch (err) {
-      console.log(err);
-      alert("Delete failed");
+  const deleteCategory = (id) => {
+  toast(
+    ({ closeToast }) => (
+      <div style={{ textAlign: "center" }}>
+        <p style={{ marginBottom: "10px", fontWeight: "500" }}>
+          Delete this category?
+        </p>
+
+        <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+          
+          {/* YES BUTTON */}
+          <button
+            style={{
+              background: "#e74c3c",
+              color: "#fff",
+              border: "none",
+              padding: "6px 12px",
+              borderRadius: "6px",
+              cursor: "pointer"
+            }}
+            onClick={async () => {
+              try {
+                await axios.delete(`${BASE_URL}/api/categories/${id}`, {
+                  headers: {
+                    Authorization: `Bearer ${token}`
+                  }
+                });
+
+                toast.success("Deleted successfully 🗑️");
+                fetchCategories();
+
+              } catch (err) {
+                console.log(err);
+                toast.error("Delete failed ❌");
+              }
+
+              closeToast();
+            }}
+          >
+            Yes
+          </button>
+
+          {/* CANCEL BUTTON */}
+          <button
+            style={{
+              background: "#64748b",
+              color: "#fff",
+              border: "none",
+              padding: "6px 12px",
+              borderRadius: "6px",
+              cursor: "pointer"
+            }}
+            onClick={closeToast}
+          >
+            Cancel
+          </button>
+
+        </div>
+      </div>
+    ),
+    {
+      autoClose: false,
+      closeOnClick: false,
+      style: {
+        background: "#0f172a",
+        color: "#fff",
+        borderRadius: "10px"
+      }
     }
-  };
+  );
+};
+  // const deleteCategory = async (id) => {
+  //   if (!window.confirm("Delete this category?")) return;
+
+  //   try {
+  //     await axios.delete(`${BASE_URL}/api/categories/${id}`, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     });
+
+  //     toast.success("Category deleted successfully 🗑️");
+  //     fetchCategories();
+
+  //   } catch (err) {
+  //     console.log(err);
+  //     toast.error("Delete failed ❌");
+  //   }
+  // };
 
   // ✅ UPDATE
   const updateCategory = async () => {
@@ -69,25 +147,23 @@ export default function CategoryList() {
         }
       );
 
+      toast.success("Category updated successfully ✨");
+
       setEditing(null);
       fetchCategories();
+
     } catch (err) {
       console.log(err);
-      alert("Update failed");
+      toast.error("Update failed ❌");
     }
   };
 
-
-
   const navigate = useNavigate();
-
-
-
 
   return (
     <div className="cat-container">
 
-      <h2 className="cat-title">Category Management</h2>
+      <h2 className="cat-title">Category List</h2>
 
       {loading ? (
         <p className="loading">Loading...</p>
@@ -98,14 +174,12 @@ export default function CategoryList() {
           {categories.map((cat) => (
             <div key={cat._id} className="cat-card">
 
-              {/* <h3>{cat.name}</h3> */}
-
               <h3 
-  onClick={() => navigate(`/category/${cat.name}`)}
-  style={{ cursor: "pointer" }}
->
-  {cat.name}
-</h3>
+                onClick={() => navigate(`/category/${cat.name}`)}
+                style={{ cursor: "pointer" }}
+              >
+                {cat.name}
+              </h3>
 
               <div className="cat-actions">
                 <button

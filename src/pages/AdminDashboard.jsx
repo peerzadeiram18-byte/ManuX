@@ -117,11 +117,11 @@ const fetchCount = async () => {
     Categories
   </Link>
 </li>
-<li>
+{/* <li>
   <Link to="/admin/dashboard/category-list" style={{ color: "white", textDecoration: "none" }}>
     Category List
   </Link>
-</li>
+</li> */}
 
 
 
@@ -151,6 +151,7 @@ const fetchCount = async () => {
   element={
     <>
       <CategoryPage />
+      <CategoryList />
     </>
   }
 />

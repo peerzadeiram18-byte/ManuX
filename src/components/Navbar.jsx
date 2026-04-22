@@ -942,12 +942,12 @@ onClick={() => {
       Categories
     </Link>
 
-        <Link to="/admin/dashboard/category-list" onClick={() => {
+        {/* <Link to="/admin/dashboard/category-list" onClick={() => {
       setMobileMenu(false);
       setOpenMenu(false);
     }}>
     Category List
-    </Link>
+    </Link> */}
 
 
   </div>
