@@ -102,14 +102,8 @@ const { user, role, logout } = useAuth();
 
   const [searchTerm, setSearchTerm] = useState("");
 
-
-  const searchData = [
-  { name: "Skin Care", path: "/skin-care" },
-  { name: "Hair Care", path: "/hair-care" },
-  { name: "Baby Care", path: "/baby-care" },
-  { name: "Pet Care", path: "/pet-care" },
-  { name: "Men Care", path: "/mens-care" },
-  { name: "Pregnancy Care", path: "/pregnancy-care" },
+// 1️⃣ static pages
+const staticPages = [
   { name: "Ayurvedic Science", path: "/ayurveda"},
   { name: "Ethical Ingredient Sourcing", path: "/ethical-ingredient-sourcing" },
   { name: "Sustainability Responsibility", path: "/sustainability-responsibility" },
@@ -125,6 +119,16 @@ const { user, role, logout } = useAuth();
   { name: "Contact", path: "/contact" }
 ];
 
+// 2️⃣ dynamic categories
+const dynamicSearchData = categories.map((cat) => ({
+  name: cat.name,
+  path: `/category/${cat.name.toLowerCase().replace(/\s+/g, "-")}`,
+}));
+
+// 3️⃣ combine
+const searchData = [...dynamicSearchData, ...staticPages];
+
+// 4️⃣ filter (LAST me hona chahiye)
 const filteredResults = searchTerm
   ? searchData
       .filter((item) =>
@@ -132,10 +136,6 @@ const filteredResults = searchTerm
       )
       .slice(0, 6)
   : [];
-
-
-
-
 
 
 // useEffect(() => {
@@ -252,12 +252,18 @@ useEffect(() => {
           setSearchTerm("");
           setMobileMenu(false); // 🔥 ADD THIS
 
+
+          setOpenSearch(false);  // 🔥 ADD THIS
         }}
       >
         {item.name}
       </div>
     ))}
   </div>
+)}
+
+{searchTerm && filteredResults.length === 0 && (
+  <div className="search-item">No results found</div>
 )}
 </div>
  

@@ -109,7 +109,7 @@ const filteredContacts = contacts.filter((item) => {
 
   return (
     <div className="cl-container">
-      <h2 className="cl-title">Contact Management</h2>
+      <h2 className="cl-title">Contact List</h2>
 
       {/* Search */}
       <input

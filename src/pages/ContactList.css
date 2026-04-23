@@ -1,5 +1,5 @@
 .cl-container {
-  padding: 20px;
+  padding: 30px;
 }
 
 .cl-title {
@@ -52,9 +52,17 @@
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
+   .cl-title {
+    /* font-size: 20px; */
+    margin-top: 20px;
+  }
+
+ 
   .cl-search {
     width: 100%;
   }
+
+
 
   .cl-table th,
   .cl-table td {
@@ -65,7 +73,8 @@
 
 @media (max-width: 480px) {
   .cl-title {
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 20px;
   }
 
   .cl-table th,
