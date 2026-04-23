@@ -1,8 +1,12 @@
 //import React, { useState } from "react";
 import { Link } from "react-router-dom";   // ✅ YE LINE ADD KARO
 import "./Footer.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
+import { ProductContext } from "../context/ProductContext"; // path check kar lena
+import axios from "axios";
 
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
 const FooterComponent = () => {
@@ -13,6 +17,7 @@ const [openResearch, setOpenResearch] = useState(false);
 const [openScience, setOpenScience] = useState(false);
 const [openCompany, setOpenCompany] = useState(false);
 
+const [categories, setCategories] = useState([]);
 
 const footerRef = useRef();
 
@@ -36,6 +41,28 @@ useEffect(() => {
 
   return () => {
     document.removeEventListener("click", handleClickOutside);
+  };
+}, []);
+
+
+const fetchCategories = async () => {
+  try {
+    const res = await axios.get(`${BASE_URL}/api/categories`);
+    setCategories(res.data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+useEffect(() => {
+  fetchCategories();
+
+  // 🔥 auto update jab new category add ho
+  const handleUpdate = () => fetchCategories();
+  window.addEventListener("categoryAdded", handleUpdate);
+
+  return () => {
+    window.removeEventListener("categoryAdded", handleUpdate);
   };
 }, []);
 
@@ -86,31 +113,41 @@ useEffect(() => {
   </li>
 
   {/* PRODUCTS */}
-  <li>
-    <span onClick={() => {
+<li onClick={(e) => e.stopPropagation()}>
+  <span
+    onClick={() => {
       setOpenProducts(!openProducts);
       setOpenTech(false);
       setOpenResearch(false);
       setOpenScience(false);
       setOpenCompany(false);
-    }} className="footer-title">
-      Products ▾
-    </span>
-
-    {openProducts && (
-      <ul className="footer-submenu">
-        <li><Link to="/skin-care" onClick={handleScrollTop}>Skin Care</Link></li>
-        <li><Link to="/hair-care" onClick={handleScrollTop}>Hair Care</Link></li>
-        <li><Link to="/baby-care" onClick={handleScrollTop}>Baby Care</Link></li>
-        <li><Link to="/pet-care" onClick={handleScrollTop}>Pet Care</Link></li>
-        <li><Link to="/mens-care" onClick={handleScrollTop}>Men’s Care</Link></li>
-        {/* <li><Link to="/pregnancy-care" onClick={handleScrollTop}>Pregnancy Care</Link></li> */}
-        <li><Link to="/digital-defense" onClick={handleScrollTop}>Digital Defense</Link></li>
-        <li><Link to="/fitness" onClick={handleScrollTop}>Fitness</Link></li>
-        <li><Link to="/color-cosmetics" onClick={handleScrollTop}>Color Cosmetics</Link></li>
-      </ul>
+    }}
+    className="footer-title"
+  >
+    Products ▾
+  </span>
+{openProducts && (
+  <ul className="footer-submenu">
+    {categories.length > 0 ? (
+      categories.map((cat) => (
+        <li key={cat._id}>
+          <Link
+            to={`/category/${cat.name.toLowerCase().replace(/\s+/g, "-")}`}
+            onClick={() => {
+              handleScrollTop();
+              setOpenProducts(false);
+            }}
+          >
+            {cat.name.replace(/"/g, "")}
+          </Link>
+        </li>
+      ))
+    ) : (
+      <li>Loading...</li>
     )}
-  </li>
+  </ul>
+)}
+</li>
 
   {/* RESEARCH */}
   <li>
